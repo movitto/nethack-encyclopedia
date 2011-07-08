@@ -1,0 +1,6 @@
+I combined the org directory in the following two jars:
+  org.eclipse.mylyn.wikitext.core_1.4.0.v20110316-0100.jar and
+  org.eclipse.mylyn.wikitext.mediawiki.core_1.4.0.v20110316-0100.jar 
+
+To create:
+  org.eclipse.mylyn.wikitext_1.4.0.v20110316-0100.jar

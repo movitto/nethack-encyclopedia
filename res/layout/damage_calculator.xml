@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+android:scrollbars="vertical">
+<LinearLayout android:orientation="vertical"  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView android:id="@+id/weapon_damage" android:layout_width="match_parent" android:gravity="center_vertical" android:layout_height="20px"/>
+    <TextView android:text="Lookup Weapon" android:textColor="@color/blue"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent" android:layout_height="45px"/>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+    	<TextView android:text="Strength: " android:gravity="left" android:layout_gravity="right|center_vertical"
+                  android:layout_width="0dip" android:layout_height="30px" android:layout_weight=".50"/>
+        <EditText android:id="@+id/strengthInput"   android:gravity="right"
+                  android:numeric="decimal"  android:imeOptions="actionSend|flagNoEnterAction"
+			      android:maxLines="1" android:maxLength="4"  android:layout_gravity="center_vertical"
+                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="50px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+    	<TextView android:text="Min Weapon Damage: " android:gravity="left" 
+                  android:layout_height="30px" android:layout_gravity="right|center_vertical" android:layout_width="0dip" android:layout_weight=".50"/>
+        <EditText android:id="@+id/minDmgInput"
+                  android:numeric="decimal"  android:gravity="right"
+			      android:imeOptions="actionSend|flagNoEnterAction"
+			      android:maxLines="1" android:maxLength="4"
+                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="50px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+    	<TextView android:text="Max Weapon Damage: " android:gravity="left"  android:layout_gravity="right|center_vertical"
+                  android:layout_height="30px" android:layout_width="0dip" android:layout_weight=".50"/>
+        <EditText android:id="@+id/maxDmgInput"
+                  android:numeric="decimal"  android:gravity="right"
+			      android:imeOptions="actionSend|flagNoEnterAction"
+			      android:maxLines="1" android:maxLength="4"
+                  android:layout_weight=".10" android:layout_width="0dip" android:layout_marginRight="25px" android:layout_height="50px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+      	<TextView android:text="Weapon Enhancement: " android:gravity="left"  android:layout_gravity="right|center_vertical"
+                  android:layout_height="30px" android:layout_weight=".50" android:layout_width="0dip"/>
+        <EditText android:id="@+id/weaponEnhancementInput"
+                  android:numeric="decimal"  android:gravity="right"
+			      android:imeOptions="actionSend|flagNoEnterAction"
+			      android:maxLines="1" android:maxLength="4"
+                  android:layout_height="50px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
+    </LinearLayout>
+    <!-- TODO when we support 'lookup weapon' change min/max weapon damage when radio button is toggled -->
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+      <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_large_monster"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Large Monster" />
+        <RadioButton android:id="@+id/radio_small_monster"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Small Monster" android:layout_marginLeft="10px"/>
+      </RadioGroup>
+    </LinearLayout>
+    
+    <!-- TODO turn into a collapsable section: -->
+    <!-- TODO relative damage bonus and modifier -->
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+      	<TextView android:text="Ring of Increased Damage: " android:gravity="left" android:layout_gravity="right|center_vertical"
+                  android:layout_height="30px" android:layout_weight=".50" android:layout_width="0dip"/>
+        <EditText android:id="@+id/ringIncreasedDamageInput"
+                  android:numeric="decimal"  android:gravity="right"
+			      android:imeOptions="actionSend|flagNoEnterAction"
+			      android:maxLines="1"
+			      android:maxLength="4"
+                  android:layout_height="50px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/undeadBlessedWeaponInput"
+                  android:gravity="right"
+                  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fighting undead w/ a blessed weapon" android:paddingTop="20px" android:paddingRight="10px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/poisonWeaponInput"
+                  android:gravity="right"
+                  android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="20px" android:text="Poisoned Weapon" android:paddingRight="10px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+    			  android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/drainingLifeInput"
+                  android:gravity="right"
+                  android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingRight="10px" android:paddingTop="20px" android:text="Life Draining Weapon"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

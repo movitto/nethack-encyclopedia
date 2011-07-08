@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">NethackEncyclopedia</string>
+    <string name="app_name">NetHack Encyclopedia</string>
+    <string name="authors">Authors: Mo Morsi (mo@morsi.org)</string>
+    <string name="logo">"@"</string>
+    <string name="project_url">http://projects.morsi.org/nethack-encyclopedia</string>
+    <string name="project_license">Freely distributed under the MIT license</string>
+    <string name="armor_damage">Min/Max Damage Taken:</string>
+    <string name="armor_hit_prob">Min/Max Hit Probability:</string>
+    <string name="weapon_damage">Min/Max Weapon Damage:</string>
+    <string name="quick_stats_prompt">Quick Stats:</string>
+    <string-array name="quick_stats_array">
+        <item></item>
+        <item>Potions</item>
+        <item>Scrolls</item>
+        <item>Gems</item>
+    </string-array>
+    <string name="calculator_prompt">Calculator:</string>
+    <string-array name="calculator_array">
+        <item></item>
+        <item>Armor</item>
+        <item>Damage</item>
+    </string-array>
+</resources>

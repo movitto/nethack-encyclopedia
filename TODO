@@ -1,0 +1,52 @@
+FIXME
+------------------
+- encyclopedia activity needs main menu (cannot derive from BaseNethackActivity since it derives from ListActivity)
+
+- replace all static strings in java and layouts w/ values derived from strings resource (internationalize them too)
+
+- resolve app permissions (need to store calculator values persistantly, thats it)
+
+TODO
+------------------
+- more quick stats
+ - Amulets, Armor, Artifacts, Comestibles, Dwarvish items, Elven items, Item attributes, Materials, Potions, Rings, Scrolls, Spellbooks, Tools, Wands, Weapons 
+ - Beastery, Traps, Quests, Gods, Spells, Spellbooks, Races, Classes
+
+- more calculator tools
+ - spell success rate
+ - add 'lookup monster' and 'lookup weapon' features
+
+- persistantly story last selection on quick stats and calculator spinners
+
+- collapsable sections on the damage calculator
+
+- tool to integrate / backup / restore nethack-android save files
+
+- tool to launch nethack encyclopedia right from within nethack
+
+- provide option to automatically pull nethack stats into encyclopedia app
+
+- include a copy of the nethack source in the encyclopedia
+
+- different ways to sort encyclopedia topics, eg alphabetical, by most popular or whatever else (paginated)
+
+- performance and compression
+
+- writup & implement tutorial
+
+- test suite & internationalization
+
+- theming and 'pretification' (better ui navigations)
+
+- refactor / reorganize classes / modules (?)
+
+- refactor / standardize class and variable names (?)
+
+- android search tool integration (both search button and system search box)
+
+- query nethack wiki in encyclopedia, falling back to local copy if net is not accessible
+
+- link to the Nethack Encyclopedia project page on the about dialog
+
+- expanded README, step by step guide on getting eclipse w/ android up on linux
+

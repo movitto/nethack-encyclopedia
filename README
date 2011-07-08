@@ -1,0 +1,58 @@
+Nethack Encylopedia for Android
+Licensed under the MIT License
+Copyright (C) 2011 by 
+ - Mo Morsi <mo@morsi.org>
+ - <add your name here>
+
+I. Learn
+-------------------------------
+This is a small compedium of knowlege meant to complement
+the Nethack Android application and assist explorers of the
+Mazes of Menace.
+
+II. Install
+-------------------------------
+Just search for 'Nethack Encyclopedia' in the android
+marketplace and install from there. Its free!
+
+
+III. Build
+-------------------------------
+- For general Android SDK install instructions:
+  http://developer.android.com/sdk/installing.html
+
+- For Fedora specific Android install instructions:
+  https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development
+
+- This usually involves:
+    - Installing eclipse, either via yum, apt-get, or whatever
+    - Installing the android eclipse plugin via the eclipse
+      plugin interface
+    - Downloading and installing the android SDK
+    - Setting up and starting an android device emulator
+
+- Next clone the Nethack Encyclopedia project with git
+  (you may have to install this beforehand)
+
+    git clone git://github.com/movitto/nethack-encyclopedia.git
+
+- Next import the Nethack Encyclopedia into eclipse
+   - open eclipse
+   - File > Import
+   - General > Existing Projects into workspace > Select Project Checkout Directory
+
+- Finally select the project, and click 'run' to start it in the emulator!
+
+IV. Contribute
+-------------------------------
+There are many tasks in the TODO document left TBD. Some are big,
+some are small. Feel free to implement and then email me a patch
+at mo@morsi.com (preferibly generating it with 'git am' and sending
+it via 'git send-email').
+
+All patch contributes agree to license their changes under the MIT
+license. The author of every patch that gets added to the repo, no
+matter how small, will get their name added to the authors list here,
+and in the 'about' dialog in the app. I will periodically push
+updates to the Nethack Encyclopedia on the Android Marketplace with
+these updates.

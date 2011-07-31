@@ -129,7 +129,7 @@ public class QuickStatsActivity extends BaseNethackActivity {
 		    	// handle the first row specially
 		        if(header_row){
 		        	labelTV.setOnClickListener(new ColumnClickedListener());
-		        	labelTV.setTextColor(R.color.blue);
+		        	labelTV.setTextColor(getResources().getColor(R.color.light_blue));
 		        }
 	            tr.addView(labelTV);
     		}

@@ -4,7 +4,10 @@
       android:versionCode="1"
       android:versionName="1.0"
       android:installLocation="preferExternal">
-    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <uses-sdk android:minSdkVersion="2" />
+    <application android:icon="@drawable/icon"
+                 android:label="@string/app_name"
+                 android:debuggable="true">
         <activity android:name="NethackEncyclopedia"
                   android:label="@string/app_name">
             <intent-filter>
@@ -29,6 +32,12 @@
 	        <intent-filter>
 	            <action android:name="android.intent.action.MAIN"/>
 	        </intent-filter>  
+        </activity>
+        <activity android:name="org.morsi.android.nethack.TutorialActivity"
+                  android:label="@string/app_name">
+	        <intent-filter>
+	            <action android:name="android.intent.action.MAIN"/>
+	        </intent-filter>
         </activity>
     </application>
 </manifest>

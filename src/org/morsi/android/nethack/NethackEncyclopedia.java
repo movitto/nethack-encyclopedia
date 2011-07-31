@@ -34,8 +34,10 @@ public class NethackEncyclopedia extends BaseNethackActivity {
     	Intent myIntent = new Intent(NethackEncyclopedia.this, CalculatorActivity.class);
     	NethackEncyclopedia.this.startActivity(myIntent);
     }
-    //public void onClickTutorialButton(View target) {
-    //}
+    public void onClickTutorialButton(View target) {
+      Intent myIntent = new Intent(NethackEncyclopedia.this,TutorialActivity.class);
+      NethackEncyclopedia.this.startActivity(myIntent);
+    }
     public void onClickAboutButton(View target) {
     	showDialog(DIALOG_ABOUT_ID);
     }

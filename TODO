@@ -4,8 +4,6 @@ FIXME
 
 - replace all static strings in java and layouts w/ values derived from strings resource (internationalize them too)
 
-- resolve app permissions (need to store calculator values persistantly, thats it)
-
 TODO
 ------------------
 - more quick stats
@@ -32,7 +30,7 @@ TODO
 
 - performance and compression
 
-- writup & implement tutorial
+- writup & implement tutorial (interactive?)
 
 - test suite & internationalization
 

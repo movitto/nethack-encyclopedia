@@ -6,9 +6,15 @@
     <string name="logo">"@"</string>
     <string name="project_url">http://github.com/movitto/nethack-encyclopedia</string>
     <string name="project_license">Freely distributed under the MIT license</string>
+
+    <string name="about_dialog_title">About</string>
+
+    <string name="total_hit_prob">Total: </string>
+    <string name="attack_number">Attack #</string>
     <string name="armor_damage">Min/Max Damage Taken:</string>
     <string name="armor_hit_prob">Min/Max Hit Probability:</string>
     <string name="weapon_damage">Min/Max Weapon Damage:</string>
+
     <string name="quick_stats_prompt">Quick Stats:</string>
     <string-array name="quick_stats_array">
         <item></item>
@@ -16,10 +22,18 @@
         <item>Scrolls</item>
         <item>Gems</item>
     </string-array>
+    <string name="potions_quick_stat">Potions</string>
+    <string name="scrolls_quick_stat">Scrolls</string>
+    <string name="gems_quick_stat">Gems</string>
+
+
     <string name="calculator_prompt">Calculator:</string>
     <string-array name="calculator_array">
         <item></item>
         <item>Armor</item>
         <item>Damage</item>
     </string-array>
+    <string name="armor_calculator">Armor</string>
+    <string name="damage_calculator">Damage</string>
+
 </resources>

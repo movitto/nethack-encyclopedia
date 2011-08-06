@@ -50,9 +50,9 @@ public class QuickStatsActivity extends BaseNethackActivity {
         
         // retrieve stats from xml resources
         stats = new HashMap<String, List<List<String>>>();
-        getStatsFromXml("Potions", R.xml.potions);
-        getStatsFromXml("Gems",    R.xml.gems);
-        getStatsFromXml("Scrolls", R.xml.scrolls);
+        getStatsFromXml(this.getString(R.string.potions_quick_stat), R.xml.potions);
+        getStatsFromXml(this.getString(R.string.gems_quick_stat),    R.xml.gems);
+        getStatsFromXml(this.getString(R.string.scrolls_quick_stat), R.xml.scrolls);
 
         // populate spinner and wire up changes
         Spinner spinner = (Spinner) findViewById(R.id.quick_stats_spinner);

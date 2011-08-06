@@ -1,10 +1,6 @@
 FIXME
 ------------------
-- encylopedia performance (replace newlines w/ delim, paging)
-
 - encyclopedia activity needs main menu (cannot derive from BaseNethackActivity since it derives from ListActivity)
-
-- replace all static strings in java and layouts w/ values derived from strings resource (internationalize them too)
 
 TODO
 ------------------
@@ -15,6 +11,8 @@ TODO
 - more calculator tools
  - spell success rate
  - add 'lookup monster' and 'lookup weapon' features
+
+- paginated encyclopedia (perhaps w/ first level alphabetical menu)
 
 - persistantly story last selection on quick stats and calculator spinners
 

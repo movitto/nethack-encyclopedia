@@ -14,12 +14,15 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 
+import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -35,23 +38,26 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import org.morsi.android.nethack.R;
 import org.morsi.android.nethack.util.Android;
+import org.morsi.android.nethack.util.AndroidMenu;
 import org.morsi.android.nethack.util.Encyclopedia;
 import org.morsi.android.nethack.util.EncyclopediaEntry;
 
 // Provides access to view html based Nethack Encyclopedia articles
 public class EncyclopediaActivity extends ListActivity {
+	
+	// Override menu / about dialog handlers
+    @Override
+    public boolean onSearchRequested() {return AndroidMenu.onEncyclopediaSearchRequested(this); }
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
+    @Override
+    protected Dialog onCreateDialog(int id) { return AndroidMenu.onCreateDialog(this, id); }
+
+	
 		// Store a mapping of topic names to EncylopediaEntry objects
 	    public static Encyclopedia encyclopedia;
-	
-	    // Override search to simply bring up the android keyboard.
-	    //   Since setTextFilterEnabled is set to true below, typing
-	    //   text in this listview will filter the list automatically
-	    @Override
-	    public boolean onSearchRequested() {
-	    	InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-	    	mgr.showSoftInput(getListView(), 0); // InputMethodManager.SHOW_IMPLICIT to only display if no keyboard is open
-	    	return false;
-	    }
 	    
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,3 @@
-FIXME
-------------------
-- encyclopedia activity needs main menu (cannot derive from BaseNethackActivity since it derives from ListActivity)
-
 TODO
 ------------------
 - more quick stats

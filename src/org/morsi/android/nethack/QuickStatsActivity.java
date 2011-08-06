@@ -17,14 +17,19 @@ import java.util.List;
 import java.util.Map;
 
 import org.morsi.android.nethack.R;
+import org.morsi.android.nethack.util.AndroidMenu;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -37,7 +42,17 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TableRow.LayoutParams;
 
 // User friendly view to various lists of builtin Nethack stats
-public class QuickStatsActivity extends BaseNethackActivity {
+public class QuickStatsActivity extends Activity {
+	// Override menu / about dialog handlers
+    @Override
+    public boolean onSearchRequested() { return AndroidMenu.onSearchRequested(this); }
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
+    @Override
+    protected Dialog onCreateDialog(int id) { return AndroidMenu.onCreateDialog(this, id); }
+	
 	// Store quick stats as a mapping between object names and a list
 	//   of those objects. Each value contains a list of attributes
 	//   representing the values of the stats on that object

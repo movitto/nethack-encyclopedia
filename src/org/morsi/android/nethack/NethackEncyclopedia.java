@@ -8,13 +8,29 @@
 package org.morsi.android.nethack;
 
 import org.morsi.android.nethack.R;
+import org.morsi.android.nethack.util.AndroidMenu;
+
 import android.os.Bundle;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 // Main NethackEncyclopedia entry point activity,
 //   simply provide means which to access sub-activities
-public class NethackEncyclopedia extends BaseNethackActivity {
+public class NethackEncyclopedia extends Activity {
+	// Override menu / about dialog handlers
+    @Override
+    public boolean onSearchRequested() { return AndroidMenu.onSearchRequested(this); }
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
+    @Override
+    protected Dialog onCreateDialog(int id) { return AndroidMenu.onCreateDialog(this, id); }
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,7 +55,7 @@ public class NethackEncyclopedia extends BaseNethackActivity {
       NethackEncyclopedia.this.startActivity(myIntent);
     }
     public void onClickAboutButton(View target) {
-    	showDialog(DIALOG_ABOUT_ID);
+    	showDialog(AndroidMenu.DIALOG_ABOUT_ID);
     }
     
     

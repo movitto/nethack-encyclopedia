@@ -7,10 +7,16 @@
 
 package org.morsi.android.nethack;
 
+import org.morsi.android.nethack.util.AndroidMenu;
+
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -27,7 +33,18 @@ import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 // Tools to calculate Nethack stats based on user input
-public class CalculatorActivity extends BaseNethackActivity {
+public class CalculatorActivity extends Activity {
+	
+	// Override menu / about dialog handlers
+    @Override
+    public boolean onSearchRequested() { return AndroidMenu.onSearchRequested(this); }
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
+    @Override
+    protected Dialog onCreateDialog(int id) { return AndroidMenu.onCreateDialog(this, id); }
+	
 	
 	// Store calculator values persistently
 	public static final String PREFS_NAME = "NethackCalcValues";
@@ -39,7 +56,7 @@ public class CalculatorActivity extends BaseNethackActivity {
 	// Damage calculator values
 	private int strength, min_weapon_damage, max_weapon_damage, weapon_enhancement, ring_increased_damage;
 	private boolean fighting_undead_with_blessed, poisoned_weapon, life_draining_weapon;
-	
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

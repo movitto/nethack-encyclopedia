@@ -382,7 +382,7 @@ public class CalculatorActivity extends Activity {
     		}
          }
 
-        public void onNothingSelected(AdapterView parent) {
+        public void onNothingSelected(AdapterView<?> parent) {
         }
     }   
     

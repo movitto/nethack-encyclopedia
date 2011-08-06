@@ -83,7 +83,7 @@ public class QuickStatsActivity extends Activity {
         	if(!selected.equals("")) displayStats(selected, (View) parent.getParent());
          }
 
-        public void onNothingSelected(AdapterView parent) {
+        public void onNothingSelected(AdapterView<?> parent) {
         }
     }
     

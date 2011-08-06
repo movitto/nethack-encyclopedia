@@ -18,7 +18,7 @@ require 'rubygems'
 require 'rexml/document'
 require 'wikicloth'
 
-IGNORE_FILENAME_PATTERNS  = 
+IGNORE_FILENAME_PATTERNS  =
   [/^Talk:.*/,   /^User:.*/, /^User talk:.*/, /^Blog:.*/,
    /^File:.*/, /^File talk:.*/, /^Forum:.*/,  /^Source:.*/,
    /^Source talk:.*/, /^.*\.c/, /^.*\.h/,
@@ -49,7 +49,7 @@ pages = doc.root.children.
             IGNORE_FILENAME_PATTERNS.select { |fn| c.elements['title'].text =~ fn }.empty? }.
           sort   { |c1,c2| c1.elements['title'].text <=> c2.elements['title'].text }
 
-pages.each { |p| 
+pages.each { |p|
   unless File.exist?("split/#{registry_count}") && (File.size("split/#{registry_count}") < MAX_FILE_SIZE)
     puts "Closing previous catalog file ##{registry_count}, opening new ##{registry_count += 1}"
     output_file = File.open("split/#{registry_count}", "w")

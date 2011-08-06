@@ -8,7 +8,7 @@
   <TextView
       android:text="quick stats"
       android:id="@+id/quickstats_button"
-      android:clickable="true" 
+      android:clickable="true"
       android:onClick="onClickQuickStatsButton"
       android:textSize="15pt"
       android:layout_width="fill_parent"
@@ -16,19 +16,19 @@
       android:gravity="center_vertical|center_horizontal"
       android:layout_weight="1"/>
   <ImageView
-	  xmlns:android="http://schemas.android.com/apk/res/android"
-	  android:src="@android:drawable/divider_horizontal_dark"
-	  android:layout_width="fill_parent"
-	  android:layout_height="wrap_content"
-	  android:scaleType="fitXY"
-	  android:paddingLeft="5dp"
-	  android:paddingRight="5dp"
-	  android:paddingBottom="2dp"
-	  android:paddingTop="2dp" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@android:drawable/divider_horizontal_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" />
   <TextView
       android:text="encyclopedia"
       android:id="@+id/encyclopedia_button"
-      android:clickable="true" 
+      android:clickable="true"
       android:onClick="onClickEncyclopediaButton"
       android:textSize="15pt"
       android:layout_width="fill_parent"
@@ -36,19 +36,19 @@
       android:gravity="center_vertical|center_horizontal"
       android:layout_weight="1"/>
   <ImageView
-	  xmlns:android="http://schemas.android.com/apk/res/android"
-	  android:src="@android:drawable/divider_horizontal_dark"
-	  android:layout_width="fill_parent"
-	  android:layout_height="wrap_content"
-	  android:scaleType="fitXY"
-	  android:paddingLeft="5dp"
-	  android:paddingRight="5dp"
-	  android:paddingBottom="2dp"
-	  android:paddingTop="2dp" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@android:drawable/divider_horizontal_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" />
   <TextView
       android:text="calculator"
       android:id="@+id/calculator_button"
-      android:clickable="true" 
+      android:clickable="true"
       android:onClick="onClickCalculatorButton"
       android:textSize="15pt"
       android:layout_width="fill_parent"
@@ -56,19 +56,19 @@
       android:gravity="center_vertical|center_horizontal"
       android:layout_weight="1"/>
   <ImageView
-	  xmlns:android="http://schemas.android.com/apk/res/android"
-	  android:src="@android:drawable/divider_horizontal_dark"
-	  android:layout_width="fill_parent"
-	  android:layout_height="wrap_content"
-	  android:scaleType="fitXY"
-	  android:paddingLeft="5dp"
-	  android:paddingRight="5dp"
-	  android:paddingBottom="2dp"
-	  android:paddingTop="2dp" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@android:drawable/divider_horizontal_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" />
   <TextView
       android:text="tutorial"
       android:id="@+id/tutorial_button"
-      android:clickable="true" 
+      android:clickable="true"
       android:onClick="onClickTutorialButton"
       android:textSize="15pt"
       android:layout_width="fill_parent"
@@ -76,19 +76,19 @@
       android:gravity="center_vertical|center_horizontal"
       android:layout_weight="1"/>
   <ImageView
-	  xmlns:android="http://schemas.android.com/apk/res/android"
-	  android:src="@android:drawable/divider_horizontal_dark"
-	  android:layout_width="fill_parent"
-	  android:layout_height="wrap_content"
-	  android:scaleType="fitXY"
-	  android:paddingLeft="5dp"
-	  android:paddingRight="5dp"
-	  android:paddingBottom="2dp"
-	  android:paddingTop="2dp" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@android:drawable/divider_horizontal_dark"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scaleType="fitXY"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp" />
   <TextView
       android:text="about"
       android:id="@+id/about_button"
-      android:clickable="true" 
+      android:clickable="true"
       android:onClick="onClickAboutButton"
       android:textSize="15pt"
       android:layout_width="fill_parent"

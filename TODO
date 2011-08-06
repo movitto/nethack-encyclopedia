@@ -1,5 +1,7 @@
 FIXME
 ------------------
+- encylopedia performance (replace newlines w/ delim, paging)
+
 - encyclopedia activity needs main menu (cannot derive from BaseNethackActivity since it derives from ListActivity)
 
 - replace all static strings in java and layouts w/ values derived from strings resource (internationalize them too)

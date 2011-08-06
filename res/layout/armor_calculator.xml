@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent" android:layout_height="match_parent" 
+  android:layout_width="match_parent" android:layout_height="match_parent"
   android:orientation="vertical">
   <TextView android:text="Lookup Monster" android:textColor="@color/blue"
             android:gravity="center_vertical"
@@ -12,9 +12,9 @@
                   android:layout_width="match_parent" android:layout_height="40px"/>
         <EditText android:id="@+id/acInput"
                   android:numeric="decimal|signed"
-			      android:imeOptions="actionSend|flagNoEnterAction"
-			      android:maxLines="1"
-			      android:maxLength="4"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:maxLines="1"
+            android:maxLength="4"
                   android:layout_width="match_parent" android:layout_height="wrap_content"/>
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
@@ -22,9 +22,9 @@
                   android:layout_width="match_parent" android:layout_height="40px"/>
         <EditText android:id="@+id/mlevelInput"
                   android:numeric="decimal"
-			      android:imeOptions="actionSend|flagNoEnterAction"
-			      android:maxLines="1"
-			      android:maxLength="4"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:maxLines="1"
+            android:maxLength="4"
                   android:layout_width="match_parent" android:layout_height="wrap_content"/>
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
@@ -32,9 +32,9 @@
                   android:layout_width="match_parent" android:layout_height="40px"/>
         <EditText android:id="@+id/mdamageInput"
                   android:numeric="decimal"
-			      android:imeOptions="actionSend|flagNoEnterAction"
-			      android:maxLines="1"
-			      android:maxLength="4"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:maxLines="1"
+            android:maxLength="4"
                   android:layout_width="match_parent" android:layout_height="wrap_content"/>
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
@@ -42,9 +42,9 @@
                   android:layout_width="match_parent" android:layout_height="40px"/>
         <EditText android:id="@+id/mattacksInput"
                   android:numeric="decimal"
-			      android:imeOptions="actionSend|flagNoEnterAction"
-			      android:maxLines="1"
-			      android:maxLength="4"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:maxLines="1"
+            android:maxLength="4"
                   android:layout_width="match_parent" android:layout_height="wrap_content"/>
       </LinearLayout>
   </LinearLayout>

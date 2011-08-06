@@ -7,8 +7,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
-
-import android.content.Context;
 import android.content.res.AssetManager;
 
 public class Android {

@@ -66,7 +66,7 @@ public class BaseNethackActivity  extends Activity  {
         switch(id) {
         case DIALOG_ABOUT_ID:
         	dialog.setContentView(R.layout.about);
-        	dialog.setTitle("About");
+        	dialog.setTitle(this.getString(R.string.about_dialog_title));
         	Button close = (Button)dialog.findViewById(R.id.about_close);
         	close.setOnClickListener(new DialogCloseListener(dialog));
         }

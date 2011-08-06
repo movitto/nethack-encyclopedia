@@ -205,13 +205,13 @@ public class CalculatorActivity extends BaseNethackActivity {
 	 	TableRow tr = new TableRow(this.getBaseContext());
 	 	TextView labelTV = new TextView(this.getBaseContext());
         labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-        labelTV.setText("Total: ");
+        labelTV.setText(this.getString(R.string.total_hit_prob));
         labelTV.setPadding(5, 5, 5, 5);
         tr.addView(labelTV);
         for(int i = 0; i < monster_attacks; i++){
         	labelTV = new TextView(this.getBaseContext());
 	        labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-	        labelTV.setText("Attack #" + Integer.toString(i+1));
+	        labelTV.setText(this.getString(R.string.attack_number) + Integer.toString(i+1));
 	        labelTV.setPadding(5, 5, 5, 5);
             tr.addView(labelTV);
             max_probabilities[i] = best_target/(20+i);
@@ -353,10 +353,10 @@ public class CalculatorActivity extends BaseNethackActivity {
          // Handles calculator spinner changes
          public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
     		String selected = parent.getItemAtPosition(pos).toString();
-    		if(selected.equals("Armor")){
+    		if(selected.equals(view.getContext().getString(R.string.armor_calculator))){
     			showView(R.id.armor_calculator);
     			hideView(R.id.damage_calculator);
-    		}else if(selected.equals("Damage")){
+    		}else if(selected.equals(view.getContext().getString(R.string.damage_calculator))){
     			showView(R.id.damage_calculator);
     			hideView(R.id.armor_calculator);
     		}else{

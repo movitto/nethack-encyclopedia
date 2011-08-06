@@ -15,14 +15,21 @@
 #################################################
 
 require 'rubygems'
-require 'rexml/document' # FIXME would rather use a libxml2 based parser
+require 'rexml/document'
+require 'wikicloth'
 
 IGNORE_FILENAME_PATTERNS  = 
   [/^Talk:.*/,   /^User:.*/, /^User talk:.*/, /^Blog:.*/,
    /^File:.*/, /^File talk:.*/, /^Forum:.*/,  /^Source:.*/,
-   /^Source talk:.*/, /^.*\.c/, /^.*\.h/]
+   /^Source talk:.*/, /^.*\.c/, /^.*\.h/,
 
-MAX_FILE_SIZE = 800000 # in bytes
+   # FIXME these should not be ignored but they break the wikicloth parser:
+   /^Template.*/, /.*\/Archive.*/, /^Custom map symbols.*/, /^Enlightenment.*/,
+   /^Human \(monster attribute\).*/, /^Hallucinatory messages.*/, /^Magic flute.*/]
+
+MAX_FILE_SIZE = 500000 # in bytes
+
+REGISTRY_DELIM=5.chr   # some random non-printable ascii
 
 if ARGV.size != 1 || !File.exist?(ARGV[0])
   puts "Must specify valid xml source on the command line"
@@ -33,34 +40,27 @@ end
 doc = REXML::Document.new(File.read(ARGV[0]))
 puts "Starting traversal"
 
-# pull a sorted list of pages out of the document
-registry = []
-pages = REXML::XPath.match(doc, "/mediawiki/page")
-pages.each { |p| 
-  title, text = p.elements['title'], p.elements['revision'].elements['text']
-  unless title.nil? || text.nil? ||
-    !IGNORE_FILENAME_PATTERNS.select { |fn| title.text =~ fn }.empty?
-      puts "Pulling article '#{title.text}' out of source"
-      i = registry.size
-      i-= 1 while (i-1) >= 0 && registry[i-1]['title'] > title.text
-      registry.insert(i, {})
-      registry[i]['title'] = title.text
-      registry[i]['text']  = text.text
-  end
-}
+# pull a articles out of the document and covert
+i, registry_count, pos = 0, 0, 0
+registry_file, output_file =  File.open("split/registry", "w"), nil
+pages = doc.root.children.
+          select { |c|
+            c.node_type != :text && c.name == "page" && !c.elements['title'].nil? &&
+            IGNORE_FILENAME_PATTERNS.select { |fn| c.elements['title'].text =~ fn }.empty? }.
+          sort   { |c1,c2| c1.elements['title'].text <=> c2.elements['title'].text }
 
-# write the pages to the fs
-i,r,total = 0,0,registry.size
-registry_file, output_file = File.open("split/registry", "w"), nil
-registry.each { |ri|
-  title, text = ri['title'], ri['text']
-  unless File.exist?("split/#{r}.xml") && (File.size("split/#{r}.xml") < MAX_FILE_SIZE)
-    puts "Closing previous catalog file ##{r}.xml, opening new ##{r += 1}.xml"
-    output_file.write "</pages>" unless output_file.nil?
-    output_file = File.open("split/#{r}.xml", "w")
-    output_file.write "<pages>\n"
+pages.each { |p| 
+  unless File.exist?("split/#{registry_count}") && (File.size("split/#{registry_count}") < MAX_FILE_SIZE)
+    puts "Closing previous catalog file ##{registry_count}, opening new ##{registry_count += 1}"
+    output_file = File.open("split/#{registry_count}", "w")
+    pos = 0
   end
-  puts "Processing page ##{i+=1}(#{title}) out of ##{total}, writing to split/#{r}.xml"
-  output_file.write "<page name='#{REXML::Text.normalize(title)}'>\n#{REXML::Text.normalize(text)}\n</page>\n"
-  registry_file.write "#{title}:#{r}\n"
+
+  puts "Pulling article '#{p.elements['title'].text}' (#{i+=1}/#{pages.size}) out of source"
+  text = WikiCloth::Parser.new(:data => p.elements['revision'].elements['text'].text).to_html.strip.gsub(/\s+/, ' ')
+
+  output_file.write   text
+  registry_file.write "#{p.elements['title'].text}#{REGISTRY_DELIM}" +
+                      "#{registry_count}#{REGISTRY_DELIM}" +
+                      "#{pos}#{REGISTRY_DELIM}#{pos += text.size}#{REGISTRY_DELIM}"
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="About" parent="@android:style/Theme.Dialog">
+		<item name="android:windowTitleStyle">@style/AboutDialogTitle</item>
+	</style>
+
+	<style name="AboutDialogTitle" parent="@android:style/DialogWindowTitle">
+		<item name="android:gravity">center_horizontal</item>
+	</style>  
+</resources>

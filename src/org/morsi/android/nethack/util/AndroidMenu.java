@@ -3,17 +3,23 @@ package org.morsi.android.nethack.util;
 import org.morsi.android.nethack.EncyclopediaActivity;
 import org.morsi.android.nethack.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.text.util.Linkify;
+import android.text.util.Linkify.TransformFilter;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 // Helper methods around the main android menu
 public class AndroidMenu {
@@ -63,14 +69,27 @@ public class AndroidMenu {
     // Handle the 'About' dialog creation
     static public final int DIALOG_ABOUT_ID = 0;
     public static Dialog onCreateDialog(Activity activity, int id) {
-      Dialog dialog = new Dialog(activity);
+      Dialog dialog = new Dialog(activity, R.style.About);
 
         switch(id) {
         case DIALOG_ABOUT_ID:
           dialog.setContentView(R.layout.about);
           dialog.setTitle(activity.getString(R.string.about_dialog_title));
+
+          // wire up close button
           Button close = (Button)dialog.findViewById(R.id.about_close);
           close.setOnClickListener(new DialogCloseListener(dialog));
+
+          // wire up project homepage link
+          TransformFilter filter = new TransformFilter() {
+              public final String transformUrl(final Matcher match, String url) {
+                  return "";
+              }
+          };
+          Pattern pattern = Pattern.compile(activity.getString(R.string.app_name));
+          String  scheme =    activity.getString(R.string.project_url);
+          TextView tv = (TextView) dialog.findViewById(R.id.about_title);
+          Linkify.addLinks(tv, pattern, scheme, null, filter);
         }
         return dialog;
     }

@@ -1,4 +1,4 @@
-package org.morsi.android.nethack.util;
+package org.morsi.android.nethack.redux.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

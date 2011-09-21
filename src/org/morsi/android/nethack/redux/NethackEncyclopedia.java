@@ -5,10 +5,10 @@
  * Distributed under the MIT License
  **********************************/
 
-package org.morsi.android.nethack;
+package org.morsi.android.nethack.redux;
 
-import org.morsi.android.nethack.R;
-import org.morsi.android.nethack.util.AndroidMenu;
+import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.AndroidMenu;
 
 import android.os.Bundle;
 import android.app.Activity;

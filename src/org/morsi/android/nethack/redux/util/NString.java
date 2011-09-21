@@ -1,4 +1,4 @@
-package org.morsi.android.nethack.util;
+package org.morsi.android.nethack.redux.util;
 
 // A wrapper around an array of non-unicode bytes to
 // get around inconsistencies w/ string handling between

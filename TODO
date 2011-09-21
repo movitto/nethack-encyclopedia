@@ -1,38 +1,44 @@
 TODO
 ------------------
-- pull content from new nethack wiki
-  - http://nethackwiki.com
-  - also pull in images from wiki
+- quick stats:
+  - more stats:
+    - Amulets, Armor, Artifacts, Comestibles, Dwarvish items, Elven items,
+    - Item attributes, Materials, Potions, Rings, Scrolls, Spellbooks, Wands,
+    - Weapons, Beastery, Traps, Quests, Gods, Spells, Spellbooks, Races, Classes
+  - when a row is clicked, popup w/ details
+  - performance improvments
+  - cache last drop down selection
 
-- more quick stats
- - Amulets, Armor, Artifacts, Comestibles, Dwarvish items, Elven items, Item attributes, Materials, Potions, Rings, Scrolls, Spellbooks, Wands, Weapons 
- - Beastery, Traps, Quests, Gods, Spells, Spellbooks, Races, Classes
- - when a row is clicked on, popup window w/ more details
+- encyclopedia:
+  - performance improvements
+  - remove edit links
+  - paginated (perhaps w/ first level alphabetical menu)
+  - add anchor support
+  - different ways to sort encyclopedia topics
 
-- more calculator tools and interface improvements
- - spell success rate
- - add 'lookup monster' and 'lookup weapon' features
+- calculator:
+  - more tools:
+    - spell success rate
+  - flush out 'lookup monster' and 'lookup weapon' links
+  - interface improvements
+    - collapsable sections
+  - persistantly store last selection of spinner and input values
 
-- paginated encyclopedia (perhaps w/ first level alphabetical menu)
+- tutorial:
+  - implement (interactive?)
 
-- persistantly store last selection on quick stats and calculator spinners
+- parser.rb
+  - pull in content from new wiki http://nethackwiki.com
+  - pull in images from wiki
+  - remove pages which are simply redirects of others
 
-- collapsable sections on the damage calculator
+- other:
+  - tool to integrate / backup / restore nethack-android save files
+  - tool to launch nethack encyclopedia right from within nethack
+  - provide option to pull in player stats directly from game
+  - include a copy of the nethack source in the app
+  - test suite
+  - internationalization
+  - android search tool integration (both search button and system search box)
+  - support multiple screen sizes / resolutions / styles, remove hard coded values
 
-- tool to integrate / backup / restore nethack-android save files
-
-- tool to launch nethack encyclopedia right from within nethack
-
-- provide option to automatically pull nethack stats into encyclopedia app
-
-- include a copy of the nethack source in the encyclopedia
-
-- different ways to sort encyclopedia topics, eg alphabetical, by most popular or whatever else (paginated)
-
-- writup & implement tutorial (interactive?)
-
-- test suite & internationalization
-
-- android search tool integration (both search button and system search box)
-
-- popup detailed quick stat when a row is clicked

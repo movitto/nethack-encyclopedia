@@ -4,7 +4,7 @@
  * Copyright (C) 2011: Mo Morsi <mo@morsi.org>
  * Distributed under the MIT License
  **********************************/
-package org.morsi.android.nethack;
+package org.morsi.android.nethack.redux;
 
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -26,12 +26,12 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-import org.morsi.android.nethack.R;
-import org.morsi.android.nethack.util.NString;
-import org.morsi.android.nethack.util.Android;
-import org.morsi.android.nethack.util.AndroidMenu;
-import org.morsi.android.nethack.util.Encyclopedia;
-import org.morsi.android.nethack.util.EncyclopediaEntry;
+import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.Android;
+import org.morsi.android.nethack.redux.util.AndroidMenu;
+import org.morsi.android.nethack.redux.util.Encyclopedia;
+import org.morsi.android.nethack.redux.util.EncyclopediaEntry;
+import org.morsi.android.nethack.redux.util.NString;
 
 // Provides access to view html based Nethack Encyclopedia articles
 public class EncyclopediaActivity extends ListActivity {
@@ -92,7 +92,7 @@ public class EncyclopediaActivity extends ListActivity {
             LayoutInflater inflater = (LayoutInflater) EncyclopediaActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.encyclopedia_popup,
                     (ViewGroup) findViewById(R.id.encyclopedia_page_popup));
-            PopupWindow pw = new PopupWindow(layout, 450, 620, true);
+            PopupWindow pw = new PopupWindow(layout, 230, 400, true);
 
             TextView text = (TextView) layout.findViewById(R.id.encyclopedia_page_title);
             text.setText(entry.topic);

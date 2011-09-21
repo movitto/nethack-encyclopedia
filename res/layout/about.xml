@@ -7,29 +7,29 @@ android:layout_height="match_parent">
 	  android:layout_width="match_parent"
 	  android:layout_height="wrap_content">
 		<LinearLayout android:orientation="vertical"
-		android:layout_width="150px"
+		android:layout_width="120px"
 		android:layout_height="wrap_content">
 		    <TextView android:id="@+id/about_title"
 		      android:layout_height="wrap_content"
 		      android:layout_width="wrap_content"
 		      android:gravity="center_vertical"
 		      android:text="@string/app_name"
-		      android:textSize="12px" android:paddingTop="70px" android:paddingLeft="5px"/>
+		      android:textSize="10px" android:paddingTop="70px" android:paddingLeft="5px"/>
 		    <TextView android:id="@+id/about_license"
 		      android:layout_height="wrap_content"
 		      android:layout_width="wrap_content"
 		      android:gravity="center_vertical"
 		      android:text="@string/project_authors"
-		      android:textSize="12px"  android:paddingLeft="5px" />
+		      android:textSize="10px"  android:paddingLeft="5px" />
 		    <TextView android:id="@+id/about_license"
 		      android:layout_height="wrap_content"
 		      android:layout_width="wrap_content"
 		      android:gravity="center_vertical"
 		      android:text="@string/project_license"
-		      android:textSize="12px"  android:paddingLeft="5px" />
+		      android:textSize="10px"  android:paddingLeft="5px" />
 		</LinearLayout>
 		<ImageView
-		  android:layout_width="150px"
+		  android:layout_width="100px"
 		  android:layout_height="200px"
 		  android:src="@drawable/about"/>
 	</LinearLayout>

@@ -5,7 +5,7 @@
  * Distributed under the MIT License
  **********************************/
 
-package org.morsi.android.nethack;
+package org.morsi.android.nethack.redux;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,8 +15,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.morsi.android.nethack.R;
-import org.morsi.android.nethack.util.AndroidMenu;
+import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.AndroidMenu;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -148,7 +148,7 @@ public class QuickStatsActivity extends Activity {
           labelTV.setTextSize(11);
           labelTV.setPadding(4, 4, 4, 4);
           labelTV.setGravity(Gravity.CENTER);
-    	  labelTV.setMaxWidth(125);
+    	  labelTV.setMaxWidth(40);
           labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
 
           // wire up clicks to the header row to sort the table

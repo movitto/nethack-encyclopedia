@@ -8,14 +8,14 @@
   <LinearLayout android:layout_weight="1" android:gravity="center_vertical"
    android:layout_width="fill_parent" android:layout_height="wrap_content">
       <ImageView android:src="@drawable/quick_stats" android:paddingLeft="15dp"
-       android:layout_width="120px" android:layout_height="120px"
+       android:layout_width="60px" android:layout_height="60px"
        android:onClick="onClickQuickStatsButton"/>
 	  <TextView
 	      android:text="quick stats"
 	      android:id="@+id/quickstats_button"
 	      android:clickable="true"
 	      android:onClick="onClickQuickStatsButton"
-	      android:textSize="15pt"
+	      android:textSize="12pt"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
 	      android:gravity="center_vertical|left"
@@ -36,14 +36,14 @@
   <LinearLayout android:layout_weight="1"  android:gravity="center_vertical"
    android:layout_width="fill_parent" android:layout_height="wrap_content">
       <ImageView android:src="@drawable/encyclopedia" android:paddingLeft="15dp"
-       android:layout_width="120px" android:layout_height="120px"
+       android:layout_width="60px" android:layout_height="60px"
        android:onClick="onClickEncyclopediaButton"/>
 	  <TextView
 	      android:text="encyclopedia"
 	      android:id="@+id/encyclopedia_button"
 	      android:clickable="true"
 	      android:onClick="onClickEncyclopediaButton"
-	      android:textSize="15pt"
+	      android:textSize="12pt"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
 	      android:gravity="center_vertical|left"
@@ -64,14 +64,14 @@
   <LinearLayout android:layout_weight="1"  android:gravity="center_vertical"
    android:layout_width="fill_parent" android:layout_height="wrap_content">
 	  <ImageView android:src="@drawable/calculator" android:paddingLeft="15dp"
-	       android:layout_width="120px" android:layout_height="120px"
+	       android:layout_width="60px" android:layout_height="60px"
 	       android:onClick="onClickCalculatorButton"/>
 	  <TextView
 	      android:text="calculator"
 	      android:id="@+id/calculator_button"
 	      android:clickable="true"
 	      android:onClick="onClickCalculatorButton"
-	      android:textSize="15pt"
+	      android:textSize="12pt"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
 	      android:gravity="center_vertical|left"
@@ -92,14 +92,14 @@
   <LinearLayout android:layout_weight="1"  android:gravity="center_vertical"
    android:layout_width="fill_parent" android:layout_height="wrap_content">
 	  <ImageView android:src="@drawable/tutorial" android:paddingLeft="15dp"
-	       android:layout_width="120px" android:layout_height="120px"
+	       android:layout_width="60px" android:layout_height="60px"
 	       android:onClick="onClickTutorialButton"/>
 	  <TextView
 	      android:text="tutorial"
 	      android:id="@+id/tutorial_button"
 	      android:clickable="true"
 	      android:onClick="onClickTutorialButton"
-	      android:textSize="15pt"
+	      android:textSize="12pt"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
 	      android:gravity="center_vertical|left"
@@ -121,14 +121,14 @@
   <LinearLayout android:layout_weight="1"  android:gravity="center_vertical"
    android:layout_width="fill_parent" android:layout_height="wrap_content">
  	  <ImageView android:src="@drawable/about" android:paddingLeft="15dp"
-	       android:layout_width="120px" android:layout_height="120px"
+	       android:layout_width="60px" android:layout_height="60px"
 	       android:onClick="onClickAboutButton"/>
 	  <TextView
 	      android:text="about"
 	      android:id="@+id/about_button"
 	      android:clickable="true"
 	      android:onClick="onClickAboutButton"
-	      android:textSize="15pt"
+	      android:textSize="12pt"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
 	      android:gravity="center_vertical|left"

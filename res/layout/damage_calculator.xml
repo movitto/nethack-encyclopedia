@@ -8,7 +8,7 @@ android:scrollbars="vertical">
     <TextView android:id="@+id/weapon_damage" android:layout_width="match_parent" android:gravity="center_vertical" android:layout_height="30px"/>
     <TextView android:text="Lookup Weapon" android:textColor="@color/blue"
               android:gravity="center_vertical"
-              android:layout_width="match_parent" android:layout_height="45px"/>
+              android:layout_width="match_parent" android:layout_height="25px"/>
     <LinearLayout android:orientation="horizontal"
             android:layout_width="match_parent" android:layout_height="wrap_content">
       <TextView android:text="Strength: " android:gravity="left" android:layout_gravity="right|center_vertical"
@@ -16,7 +16,7 @@ android:scrollbars="vertical">
         <EditText android:id="@+id/strengthInput"   android:gravity="right"
                   android:numeric="decimal"  android:imeOptions="actionSend|flagNoEnterAction"
             android:maxLines="1" android:maxLength="4"  android:layout_gravity="center_vertical"
-                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="60px"/>
+                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="30px"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
             android:layout_width="match_parent" android:layout_height="wrap_content">
@@ -26,7 +26,7 @@ android:scrollbars="vertical">
                   android:numeric="decimal"  android:gravity="right"
             android:imeOptions="actionSend|flagNoEnterAction"
             android:maxLines="1" android:maxLength="4"
-                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="60px"/>
+                  android:layout_width="0dip" android:layout_weight=".10" android:layout_marginRight="25px" android:layout_height="30px"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
             android:layout_width="match_parent" android:layout_height="wrap_content">
@@ -36,7 +36,7 @@ android:scrollbars="vertical">
                   android:numeric="decimal"  android:gravity="right"
             android:imeOptions="actionSend|flagNoEnterAction"
             android:maxLines="1" android:maxLength="4"
-                  android:layout_weight=".10" android:layout_width="0dip" android:layout_marginRight="25px" android:layout_height="60px"/>
+                  android:layout_weight=".10" android:layout_width="0dip" android:layout_marginRight="25px" android:layout_height="30px"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
             android:layout_width="match_parent" android:layout_height="wrap_content">
@@ -46,7 +46,7 @@ android:scrollbars="vertical">
                   android:numeric="decimal"  android:gravity="right"
             android:imeOptions="actionSend|flagNoEnterAction"
             android:maxLines="1" android:maxLength="4"
-                  android:layout_height="60px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
+                  android:layout_height="30px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
     </LinearLayout>
     <!-- TODO when we support 'lookup weapon' change min/max weapon damage when radio button is toggled -->
     <LinearLayout android:orientation="horizontal"
@@ -74,7 +74,7 @@ android:scrollbars="vertical">
             android:imeOptions="actionSend|flagNoEnterAction"
             android:maxLines="1"
             android:maxLength="4"
-                  android:layout_height="60px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
+                  android:layout_height="30px" android:layout_marginRight="25px" android:layout_weight="0.1" android:layout_width="0dip"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal"
             android:layout_width="match_parent" android:layout_height="wrap_content">

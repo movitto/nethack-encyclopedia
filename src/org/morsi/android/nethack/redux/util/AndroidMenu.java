@@ -1,7 +1,7 @@
-package org.morsi.android.nethack.util;
+package org.morsi.android.nethack.redux.util;
 
-import org.morsi.android.nethack.EncyclopediaActivity;
-import org.morsi.android.nethack.R;
+import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.EncyclopediaActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package org.morsi.android.nethack.util;
+package org.morsi.android.nethack.redux.util;
 
 //Encapsulates an encyclopedia article
 public class EncyclopediaEntry {

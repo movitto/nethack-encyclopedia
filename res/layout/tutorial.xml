@@ -14,5 +14,5 @@
     android:text="Tutorial Coming Soon" >
 </TextView>
 <ImageView android:src="@drawable/tutorial" android:gravity="center_horizontal"
-	       android:layout_width="fill_parent" android:layout_height="200px"/>
+	       android:layout_width="fill_parent" android:layout_height="150px"/>
 </LinearLayout>

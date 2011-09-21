@@ -15,22 +15,16 @@ public class EncyclopediaEntry {
   public int end_index;
 
   // Actual content of the article
-  public String content;
+  public NString content;
 
   // Indicates if the article has been processed
   //  after it has been read from the file
   public boolean converted;
 
-  // Indicates if this article redirects to another
-  public boolean is_redirect;
-
-  // Title of the article this one redirects to
-  public String redirect_to;
-
   public EncyclopediaEntry(String rtopic, int rcatalog_number, int rstart_index, int rend_index){
     topic = rtopic; catalog_number = rcatalog_number;
     start_index = rstart_index; end_index = rend_index;
-    converted = false; is_redirect = false;
+    converted = false;
   }
 
   public static String topicToKey(String rtopic){
@@ -38,8 +32,9 @@ public class EncyclopediaEntry {
   }
 
   // Pulls article content from the string catalog page which it resides
-  public void populateContent(String catalog_page){
-    if(content == null) content = catalog_page.substring(start_index, end_index);
-    // FIXME set is_redirect and redirect_to
+  public void populateContent(NString catalog_page){
+    if(content == null){
+    	content = catalog_page.substring(start_index, end_index);
+    }
   }
 }

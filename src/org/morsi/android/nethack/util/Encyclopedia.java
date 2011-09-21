@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Encyclopedia {
-    static final char REGISTRY_DELIM = 5;
-    static String registry;
+    static final byte REGISTRY_DELIM = 5;
+    static NString registry;
 
   public Map<String, EncyclopediaEntry> topics;
   public ArrayList<String> topic_names;
@@ -17,12 +17,12 @@ public class Encyclopedia {
   }
 
   // Pull the list of topics out of the registry file
-  public void parseTopics(String rregistry){
+  public void parseTopics(NString rregistry){
     registry = rregistry;
     for(int i = 0, d = 0, s = 0; i < registry.length(); ++i){
-        char c = registry.charAt(i);
+        byte c = registry.byteAt(i);
         if(c == REGISTRY_DELIM){
-          if((d++) % 4 == 0) add_topic(registry.substring(s, i));
+          if((d++) % 4 == 0) add_topic(registry.substring(s, i).toString());
             s = i+1;
         }
       }
@@ -33,14 +33,14 @@ public class Encyclopedia {
     EncyclopediaEntry e = get(EncyclopediaEntry.topicToKey(topic));
     if(e == null){
       for(int i = 0, s = 0; i < registry.length(); ++i){
-          if(registry.charAt(i) == REGISTRY_DELIM){
-            if(registry.subSequence(s, i).equals(topic)){
+          if(registry.byteAt(i) == REGISTRY_DELIM){
+            if(registry.substring(s, i).toString().equals(topic)){
               int i1 = registry.indexOf(REGISTRY_DELIM, i+1),
                   i2 = registry.indexOf(REGISTRY_DELIM, i1+1),
                   i3 = registry.indexOf(REGISTRY_DELIM, i2+1);
-              String s1 = registry.substring(i+1, i1),
-                     s2 = registry.substring(i1+1, i2),
-                     s3 = registry.substring(i2+1, i3);
+              String s1 = registry.substring(i+1,  i1).toString(),
+                     s2 = registry.substring(i1+1, i2).toString(),
+                     s3 = registry.substring(i2+1, i3).toString();
               e = new EncyclopediaEntry(topic,
                   Integer.parseInt(s1),
                   Integer.parseInt(s2),

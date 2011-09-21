@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import org.morsi.android.nethack.R;
+import org.morsi.android.nethack.util.NString;
 import org.morsi.android.nethack.util.Android;
 import org.morsi.android.nethack.util.AndroidMenu;
 import org.morsi.android.nethack.util.Encyclopedia;
@@ -38,7 +39,7 @@ public class EncyclopediaActivity extends ListActivity {
   // Override menu / about dialog handlers
     @Override
     public boolean onSearchRequested() {return AndroidMenu.onEncyclopediaSearchRequested(this); }
-  @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
@@ -55,7 +56,8 @@ public class EncyclopediaActivity extends ListActivity {
       super.onCreate(savedInstanceState);
 
       // parse the list of topics from a registry file
-      encyclopedia.parseTopics(Android.assetToString(getAssets(), "encyclopedia/registry"));
+      NString registry = Android.assetToNString(getAssets(), "encyclopedia/registry");     
+      encyclopedia.parseTopics(registry);
 
       // automatically wires the list of topic names to
       //  list items to display
@@ -77,7 +79,8 @@ public class EncyclopediaActivity extends ListActivity {
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
       String topic = ((TextView) view).getText().toString();
       EncyclopediaEntry entry = EncyclopediaActivity.encyclopedia.lookup(topic);
-      entry.populateContent(Android.assetToString(getAssets(), "encyclopedia/" + Integer.toString(entry.catalog_number)));
+      NString catalog_page = Android.assetToNString(getAssets(), "encyclopedia/" + Integer.toString(entry.catalog_number));
+      entry.populateContent(catalog_page);
           initiatePopupWindow(entry);
     }
     }
@@ -89,7 +92,7 @@ public class EncyclopediaActivity extends ListActivity {
             LayoutInflater inflater = (LayoutInflater) EncyclopediaActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.encyclopedia_popup,
                     (ViewGroup) findViewById(R.id.encyclopedia_page_popup));
-            PopupWindow pw = new PopupWindow(layout, 300, 470, true);
+            PopupWindow pw = new PopupWindow(layout, 450, 620, true);
 
             TextView text = (TextView) layout.findViewById(R.id.encyclopedia_page_title);
             text.setText(entry.topic);
@@ -100,7 +103,7 @@ public class EncyclopediaActivity extends ListActivity {
               @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url)
                 {
-                if(url.substring(0, 6).equals("/wiki/")){
+                if(url.substring(0, 22).equals("/wiki/")){
                   String new_topic = url.substring(6, url.length());
                   initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(new_topic));
                   return true;
@@ -109,14 +112,10 @@ public class EncyclopediaActivity extends ListActivity {
                 }
             });
 
-      if(!entry.is_redirect){
-        // if we are not redirecting, display page
-        // http://code.google.com/p/android-rss/issues/detail?id=15
-        web_view.loadData(entry.content,  "text/html", "utf-8");
-        pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
-      }else{
-        initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(entry.redirect_to));
-      }
+            // need to use loadDataWithBaseURL
+            // http://code.google.com/p/android-rss/issues/detail?id=15
+            web_view.loadDataWithBaseURL("fake://morsi.org", entry.content.toString(),  "text/html", "utf-8", null);
+            pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
             Button cancelButton = (Button) layout.findViewById(R.id.encyclopedia_page_close);
             cancelButton.setOnClickListener(new EncyclopediaPageClosedListener(pw));

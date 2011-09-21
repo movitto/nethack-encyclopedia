@@ -4,7 +4,7 @@
 		<item name="android:windowTitleStyle">@style/AboutDialogTitle</item>
 	</style>
 
-	<style name="AboutDialogTitle" parent="@android:style/DialogWindowTitle">
+	<style name="AboutDialogTitle" parent="@*android:style/DialogWindowTitle">
 		<item name="android:gravity">center_horizontal</item>
 	</style>  
 </resources>

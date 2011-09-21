@@ -4,12 +4,12 @@
   android:orientation="vertical">
   <TextView android:text="Lookup Monster" android:textColor="@color/blue"
             android:gravity="center_vertical"
-            android:layout_width="match_parent" android:layout_height="20px"/>
+            android:layout_width="match_parent" android:layout_height="30px"/>
   <LinearLayout android:orientation="horizontal"
     android:layout_width="match_parent" android:layout_height="wrap_content">
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
         <TextView android:text="AC" android:gravity="center_horizontal|center_vertical"
-                  android:layout_width="match_parent" android:layout_height="40px"/>
+                  android:layout_width="match_parent" android:layout_height="60px"/>
         <EditText android:id="@+id/acInput"
                   android:numeric="decimal|signed"
             android:imeOptions="actionSend|flagNoEnterAction"
@@ -19,7 +19,7 @@
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
         <TextView android:text="Monster Level"  android:gravity="center_horizontal"
-                  android:layout_width="match_parent" android:layout_height="40px"/>
+                  android:layout_width="match_parent" android:layout_height="60px"/>
         <EditText android:id="@+id/mlevelInput"
                   android:numeric="decimal"
             android:imeOptions="actionSend|flagNoEnterAction"
@@ -29,7 +29,7 @@
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
         <TextView android:text="Monster Damage"  android:gravity="center_horizontal"
-                  android:layout_width="match_parent" android:layout_height="40px"/>
+                  android:layout_width="match_parent" android:layout_height="60px"/>
         <EditText android:id="@+id/mdamageInput"
                   android:numeric="decimal"
             android:imeOptions="actionSend|flagNoEnterAction"
@@ -39,7 +39,7 @@
       </LinearLayout>
       <LinearLayout android:layout_weight=".20" android:layout_width="match_parent" android:orientation="vertical" android:layout_height="wrap_content">
         <TextView android:text="Monster Attacks"  android:gravity="center_horizontal"
-                  android:layout_width="match_parent" android:layout_height="40px"/>
+                  android:layout_width="match_parent" android:layout_height="60px"/>
         <EditText android:id="@+id/mattacksInput"
                   android:numeric="decimal"
             android:imeOptions="actionSend|flagNoEnterAction"

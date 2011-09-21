@@ -35,10 +35,10 @@ import android.widget.TextView;
 // Tools to calculate Nethack stats based on user input
 public class CalculatorActivity extends Activity {
 
-  // Override menu / about dialog handlers
+    // Override menu / about dialog handlers
     @Override
     public boolean onSearchRequested() { return AndroidMenu.onSearchRequested(this); }
-  @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }

@@ -19,6 +19,12 @@ android:layout_height="match_parent">
 		      android:layout_height="wrap_content"
 		      android:layout_width="wrap_content"
 		      android:gravity="center_vertical"
+		      android:text="@string/project_authors"
+		      android:textSize="12px"  android:paddingLeft="5px" />
+		    <TextView android:id="@+id/about_license"
+		      android:layout_height="wrap_content"
+		      android:layout_width="wrap_content"
+		      android:gravity="center_vertical"
 		      android:text="@string/project_license"
 		      android:textSize="12px"  android:paddingLeft="5px" />
 		</LinearLayout>

@@ -12,7 +12,7 @@
    <WebView android:id="@+id/encyclopedia_page_content"
             android:layout_width="fill_parent"
             android:layout_marginTop="5px"
-          android:layout_height="385px"></WebView>
+          android:layout_height="505px"></WebView>
      <Button android:id="@+id/encyclopedia_page_close"
        android:layout_width="fill_parent"
              android:layout_height="wrap_content"

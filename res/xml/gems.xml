@@ -3,10 +3,9 @@
   <row>
     <item>Name</item>
     <item>Description</item>
-    <item>Cost (zm)</item>
-    <item>Weight</item>
-    <item>Hardness</item>
-    <item>Material</item>
+    <item>Cost</item>
+    <item>Wght</item>
+    <item>Hardness/Material</item>
   </row>
 
   <row>
@@ -14,8 +13,7 @@
     <item>white gem</item>
     <item>4500</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -23,8 +21,7 @@
     <item>white gem</item>
     <item>4000</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -32,8 +29,7 @@
     <item>red gem</item>
     <item>3500</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -41,8 +37,7 @@
     <item>orange gem</item>
     <item>3250</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -50,8 +45,7 @@
     <item>blue gem</item>
     <item>3000</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -59,8 +53,7 @@
     <item>black gem</item>
     <item>2500</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -68,8 +61,7 @@
     <item>green gem</item>
     <item>2500</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -77,8 +69,7 @@
     <item>green gem/blue gem</item>
     <item>2000</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -86,8 +77,7 @@
     <item>yellow gem</item>
     <item>1500</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -95,8 +85,7 @@
     <item>green gem/blue gem</item>
     <item>1500</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -104,8 +93,7 @@
     <item>yellowish brown gem</item>
     <item>1000</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -113,8 +101,7 @@
     <item>yellowish brown gem</item>
     <item>900</item>
     <item>1</item>
-    <item>HARD</item>
-    <item>gemstone</item>
+    <item>hard gemstone</item>
   </row>
 
   <row>
@@ -122,8 +109,7 @@
     <item>black gem</item>
     <item>850</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -131,8 +117,7 @@
     <item>white gem</item>
     <item>800</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -140,8 +125,7 @@
     <item>yellow gem</item>
     <item>700</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -149,8 +133,7 @@
     <item>red gem</item>
     <item>700</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -158,8 +141,7 @@
     <item>violet gem</item>
     <item>600</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -167,17 +149,15 @@
     <item>red gem</item>
     <item>500</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
     <item>fluorite stone</item>
-    <item>green gem/blue gem/white gem/violet gem</item>
+    <item>green/blue/white/violet gem</item>
     <item>400</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -185,8 +165,7 @@
     <item>green gem</item>
     <item>300</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -194,8 +173,7 @@
     <item>black gem</item>
     <item>200</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -203,8 +181,7 @@
     <item>orange gem</item>
     <item>200</item>
     <item>1</item>
-    <item>soft</item>
-    <item>gemstone</item>
+    <item>soft gemstone</item>
   </row>
 
   <row>
@@ -212,7 +189,7 @@
     <item>white gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -220,7 +197,7 @@
     <item>blue gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -228,7 +205,7 @@
     <item>red gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -236,7 +213,7 @@
     <item>yellowish brown gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -244,7 +221,7 @@
     <item>orange gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -252,7 +229,7 @@
     <item>yellow gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -260,7 +237,7 @@
     <item>black gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -268,7 +245,7 @@
     <item>green gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -276,7 +253,7 @@
     <item>violet gem</item>
     <item>0</item>
     <item>1</item>
-    <item>soft  glass</item>
+    <item>soft glass</item>
   </row>
 
   <row>
@@ -284,7 +261,7 @@
     <item>gray stone</item>
     <item>60</item>
     <item>10</item>
-    <item>soft  mineral</item>
+    <item>soft mineral</item>
   </row>
 
   <row>
@@ -292,7 +269,7 @@
     <item>gray stone</item>
     <item>1</item>
     <item>500</item>
-    <item>soft  mineral</item>
+    <item>soft mineral</item>
   </row>
 
   <row>
@@ -300,7 +277,7 @@
     <item>gray stone</item>
     <item>45</item>
     <item>10</item>
-    <item>soft  mineral</item>
+    <item>soft mineral</item>
   </row>
 
   <row>
@@ -308,7 +285,7 @@
     <item>gray stone</item>
     <item>1</item>
     <item>10</item>
-    <item>soft  mineral</item>
+    <item>soft mineral</item>
   </row>
 
   <row>
@@ -316,7 +293,7 @@
     <item>rock</item>
     <item>0</item>
     <item>10</item>
-    <item>soft  mineral</item>
+    <item>soft mineral</item>
   </row>
 
 </rows>

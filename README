@@ -41,6 +41,9 @@ III. Build
    - File > Import
    - General > Existing Projects into workspace > Select Project Checkout Directory
 
+- To retrieve the encyclopedia content, simply pop open a terminal and run:
+   $ ruby util/parser/parser.rb
+
 - Finally select the project, and click 'run' to start it in the emulator!
 
 IV. Contribute

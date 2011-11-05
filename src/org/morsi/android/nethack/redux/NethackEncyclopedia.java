@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,8 +37,12 @@ public class NethackEncyclopedia extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        
+        // loading the encyclopedia might take a while due to a lot of
+        // content so launch the worker thread immediately
+        EncyclopediaActivity.load_encyclopedia(this);
     }
-
+    
     public void onClickQuickStatsButton(View target) {
       Intent myIntent = new Intent(NethackEncyclopedia.this, QuickStatsActivity.class);
       NethackEncyclopedia.this.startActivity(myIntent);

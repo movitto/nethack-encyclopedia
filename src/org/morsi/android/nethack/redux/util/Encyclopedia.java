@@ -4,16 +4,25 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 public class Encyclopedia {
     static final byte REGISTRY_DELIM = 5;
     static NString registry;
+    
+    public static final String symbol_string = "!@%*";
+    public static final String number_string = "#";
 
-  public Map<String, EncyclopediaEntry> topics;
-  public ArrayList<String> topic_names;
+    // mapping of topic names to encyclopedia entries
+    public Map<String, EncyclopediaEntry> topics;
+  
+    // mapping of encyclopedia section names to lists of topic names 
+    public Map<String, ArrayList<String>> topic_names;
 
   public Encyclopedia(){
     topics = new HashMap<String, EncyclopediaEntry>();
-    topic_names = new ArrayList<String>();
+    topic_names = new HashMap<String, ArrayList<String>>();
   }
 
   // Pull the list of topics out of the registry file
@@ -60,7 +69,27 @@ public class Encyclopedia {
   }
 
   public void add_topic(String topic){
-    topic_names.add(topic);
+	  String section = null;
+	  Pattern pattern = Pattern.compile("^[^[1-9a-zA-Z]].*");
+	  Matcher matcher = pattern.matcher(topic);
+	  if(matcher.find()) section = Encyclopedia.symbol_string;
+	  
+	  if(section == null){
+		  pattern = Pattern.compile("^[1-9].*");
+		  matcher = pattern.matcher(topic);
+		  if(matcher.find()) section = Encyclopedia.number_string;
+	  }
+	  
+	  if(section == null){
+		  pattern = Pattern.compile("^([a-zA-Z]).*", Pattern.CASE_INSENSITIVE);
+		  matcher = pattern.matcher(topic);
+		  if(matcher.find()) section = matcher.group(1);
+	  }
+	  
+	  if(section != null){ // TODO what to do if it is?
+		  if(!topic_names.containsKey(section.toLowerCase())) topic_names.put(section.toLowerCase(), new ArrayList<String>());
+		  topic_names.get(section.toLowerCase()).add(topic);
+	  }
   }
 
   public EncyclopediaEntry get(String topic){
@@ -72,6 +101,14 @@ public class Encyclopedia {
   }
 
   public ArrayList<String> topicNames(){
-    return topic_names;
+	  ArrayList<String> res = new ArrayList<String>();
+	  for(String section : topic_names.keySet())
+		  for(String topic_name : topic_names.get(section))
+			  res.add(topic_name);
+    return res;
+  }
+  
+  public ArrayList<String> topicNames(String starting_with){
+	  return topic_names.get(starting_with.toLowerCase());
   }
 }

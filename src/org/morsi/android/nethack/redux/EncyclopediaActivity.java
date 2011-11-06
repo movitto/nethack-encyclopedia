@@ -82,9 +82,10 @@ public class EncyclopediaActivity extends ListActivity {
     //  need to pass in a context so as to retrieve encyclopedia from application's assets
     private static class LoadEncyclopediaTask extends AsyncTask<Context, Void, Void> {
         protected Void doInBackground(Context... c) {
-        	// parse the list of topics from a registry file
-            NString registry = Android.assetToNString(c[0].getAssets(), "encyclopedia/registry");     
-            encyclopedia.retrieveTopics(registry);
+        	// parse the list of topics and redirects from a registry file
+            NString registry  = Android.assetToNString(c[0].getAssets(), "encyclopedia/registry");     
+            NString redirects = Android.assetToNString(c[0].getAssets(), "encyclopedia/redirects");     
+            encyclopedia.retrieveTopics(registry, redirects);
             return null;
         }
     }
@@ -117,7 +118,7 @@ public class EncyclopediaActivity extends ListActivity {
     		setListAdapter(new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(section)));
     	}else{
     		String topic = ((TextView) view).getText().toString();
-    		initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(topic).populate(view.getContext()));
+    		initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(topic));
     	}
       }
     }
@@ -142,7 +143,7 @@ public class EncyclopediaActivity extends ListActivity {
                 {
                 if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
                   String new_topic = url.substring(22, url.length());
-                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(new_topic).populate(view.getContext()));
+                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(new_topic));
                   return true;
                 }
                 return false;
@@ -151,7 +152,7 @@ public class EncyclopediaActivity extends ListActivity {
 
             // need to use loadDataWithBaseURL
             // http://code.google.com/p/android-rss/issues/detail?id=15
-            web_view.loadDataWithBaseURL("fake://morsi.org", entry.content.toString(),  "text/html", "utf-8", null);
+            web_view.loadDataWithBaseURL("fake://morsi.org", entry.get_content(web_view.getContext()).toString(),  "text/html", "utf-8", null);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
             Button cancelButton = (Button) layout.findViewById(R.id.encyclopedia_page_close);

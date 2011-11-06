@@ -19,28 +19,32 @@ public class EncyclopediaEntry {
   // Actual content of the article
   public NString content;
 
-  // Indicates if the article has been processed
-  //  after it has been read from the file
-  public boolean converted;
+  // Encyclopedia entry which we are redirecting to (if applicable)
+  EncyclopediaEntry redirect_to;
 
+  // Constructor for an encyclopedia entry we have in the catalog
   public EncyclopediaEntry(String rtopic, int rcatalog_number, int rstart_index, int rend_index){
     topic = rtopic; catalog_number = rcatalog_number;
     start_index = rstart_index; end_index = rend_index;
-    converted = false;
-  }
-
-  // Pulls article content from the string catalog page which it resides, returns reference to this
-  public EncyclopediaEntry populate(NString catalog_page){
-    if(content == null){
-    	content = catalog_page.substring(start_index, end_index);
-    }
-    return this;
+    content = null; redirect_to = null;
   }
   
-  // First generates the catalog page then pulls article content from it
-  public EncyclopediaEntry populate(Context context){
-	  NString catalog_page = Android.assetToNString(context.getAssets(), "encyclopedia/" + Integer.toString(catalog_number));
-	  populate(catalog_page);
-	  return this;
+  // Constructor for an encyclopedia entry we redirect to
+  public EncyclopediaEntry(String rtopic, EncyclopediaEntry rRedirectTo){
+	  topic = rtopic;
+	  content = null;
+	  redirect_to = rRedirectTo;
+  }
+
+  // Retrieves the content of the entry, pulling it from the appropriate source if neccesary
+  public String get_content(Context context){
+	  if(redirect_to != null){
+		  return redirect_to.get_content(context);
+	  }else if(content == null){
+		NString catalog_page = Android.assetToNString(context.getAssets(), "encyclopedia/" + Integer.toString(catalog_number));
+    	content = catalog_page.substring(start_index, end_index);
+    	return content.toString();
+    }
+	return "Encyclopedia content not found"; // TODO should we raise an exception here?
   }
 }

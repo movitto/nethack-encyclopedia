@@ -32,24 +32,32 @@ public class Encyclopedia {
     	  topic_names.put(section, new ArrayList<String>());
     }
 
-    // Pull the list of topics out of the registry file
-    public void retrieveTopics(NString rregistry){
+    public EncyclopediaEntry get(String topic){
+      return topics.get(Encyclopedia.topicToKey(topic));
+    }
+    
+    public ArrayList<String> topicNames(String starting_with){
+  	  return topic_names.get(starting_with.toLowerCase());
+    }
+
+    // Pull the list of topics out of the registry and redirects files
+    public void retrieveTopics(NString registry, NString redirects){
       // used to determine which topic_names section topic should go under
       Pattern symbollic_pattern = Pattern.compile("^[^[0-9a-zA-Z]].*");	
       Pattern numeric_pattern   = Pattern.compile("^[0-9].*");
       Pattern alpha_pattern     = Pattern.compile("^([a-zA-Z]).*", Pattern.CASE_INSENSITIVE);
       
       // iterate through the registry, one byte at a time
-      for(int i = 0, s = 0; i < rregistry.length(); ++i){
-        if(rregistry.byteAt(i) == REGISTRY_DELIM){
-          // pull out catalog page, start index, end index
-		  String topic = rregistry.substring(s, i).toString();
-          int i1 = rregistry.indexOf(REGISTRY_DELIM, i+1),
-              i2 = rregistry.indexOf(REGISTRY_DELIM, i1+1),
-              i3 = rregistry.indexOf(REGISTRY_DELIM, i2+1);
-          String s1 = rregistry.substring(i+1,  i1).toString(),
-                 s2 = rregistry.substring(i1+1, i2).toString(),
-                 s3 = rregistry.substring(i2+1, i3).toString();
+      for(int i = 0, s = 0; i < registry.length(); ++i){
+        if(registry.byteAt(i) == REGISTRY_DELIM){
+          // pull out topic, catalog page, start index, end index
+		  String topic = registry.substring(s, i).toString();
+          int i1 = registry.indexOf(REGISTRY_DELIM, i+1),
+              i2 = registry.indexOf(REGISTRY_DELIM, i1+1),
+              i3 = registry.indexOf(REGISTRY_DELIM, i2+1);
+          String s1 = registry.substring(i+1,  i1).toString(),
+                 s2 = registry.substring(i1+1, i2).toString(),
+                 s3 = registry.substring(i2+1, i3).toString();
           
           // create new encyclopedia entry
           EncyclopediaEntry e = new EncyclopediaEntry(topic,
@@ -69,20 +77,35 @@ public class Encyclopedia {
 	      s = i3+1; i = i3 + 1;
 		}
       }
+      
+      // iterate of the redirects one byte at a time
+      for(int i = 0, s = 0; i < redirects.length(); ++i){
+          if(redirects.byteAt(i) == REGISTRY_DELIM){
+        	  // pull out topic
+        	  String topic = redirects.substring(s, i).toString();
+        	  
+        	  // pull out what it redirects to
+        	  int i1 = redirects.indexOf(REGISTRY_DELIM, i+1);
+        	  String s1 = redirects.substring(i+1,  i1).toString();
+        	  
+        	  // lookup entry it redirects to
+        	  EncyclopediaEntry redirect = topics.get(Encyclopedia.topicToKey(s1));
+        	  
+        	  // create new encyclopedia entry
+        	  EncyclopediaEntry e = new EncyclopediaEntry(topic, redirect);
+        	  
+        	  // add it to topics 
+        	  // for now don't store it in topic_names so they don't appear in master encyclopdia list
+              topics.put(Encyclopedia.topicToKey(e.topic), e);
+              /*if(symbollic_pattern.matcher(topic).find())    topic_names.get(Encyclopedia.symbol_string).add(topic);
+              else if(numeric_pattern.matcher(topic).find()) topic_names.get(Encyclopedia.number_string).add(topic);
+              else{
+            	  Matcher matcher = alpha_pattern.matcher(topic);
+            	  if(matcher.find()) topic_names.get(matcher.group(1).toLowerCase()).add(topic);
+              }*/
+              
+    	      s = i1+1; i = i1 + 1;
+          }
+      }
     }
-
-  public EncyclopediaEntry get(String topic){
-    return topics.get(Encyclopedia.topicToKey(topic));
-  }
-
-  public ArrayList<String> topicNames(){
-	  ArrayList<String> res = new ArrayList<String>();
-	  for(ArrayList<String> section : topic_names.values())
-		  res.addAll(section);
-    return res;
-  }
-  
-  public ArrayList<String> topicNames(String starting_with){
-	  return topic_names.get(starting_with.toLowerCase());
-  }
 }

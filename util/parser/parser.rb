@@ -25,7 +25,8 @@ MW_URL      = "http://nethackwiki.com"
 
 # articles to ignore in the app
 IGNORE_FILENAME_PATTERNS  =
-  [/^.*\.c/, /^.*\.h/, /^NetHack [0-9]\.[0-9].*/, /^All pages.*$/ ]
+  [/^.*\.c/, /^.*\.h/, /^NetHack [0-9]\.[0-9].*/, /^[0-9]$/,
+   /^All pages.*$/, /^Next page.*$/, /^Previous page.*$/ ]
 
 # paginate encyclopedia to conform to android restrictions
 MAX_FILE_SIZE = 500000
@@ -73,8 +74,9 @@ n.xpath("//td[@class='mw-allpages-alphaindexline']").each{ |first|
   all_pages_pages << "from=#{first.children[0].inner_text.gsub(/\s/, '_')}&to=#{second.children[0].inner_text.gsub(/\s/, '_')}"
 }
 
-# retrieve the list of pages out of the section pages
+# retrieve the list of pages and redirects out of the section pages
 pages = []
+redirects = []
 all_pages_pages.each { |app|
   all_pages = Curl::Easy.http_get(MW_URL + "/mediawiki/index.php?title=Special:AllPages&#{app}").body_str
   n = Nokogiri.HTML(all_pages)
@@ -83,6 +85,12 @@ all_pages_pages.each { |app|
     page = a.inner_text
     if IGNORE_FILENAME_PATTERNS.select { |ifp| page =~ ifp }.empty?
       pages << page
+    end
+  }
+  n.xpath("//td/div[@class='allpagesredirect']/a").each { |a|
+    redirect = a.inner_text
+    if IGNORE_FILENAME_PATTERNS.select { |ifp| redirect =~ ifp }.empty?
+      redirects << redirect
     end
   }
 }
@@ -121,6 +129,19 @@ pages.each { |title|
   registry_file.write "#{title}#{REGISTRY_DELIM}" +
                       "#{registry_count}#{REGISTRY_DELIM}" +
                       "#{pos}#{REGISTRY_DELIM}#{pos += text.size}#{REGISTRY_DELIM}"
+}
+
+i = 0
+
+# retrieve all redirects
+puts "#{COLORS[:green]} Retrieving wiki redirects..."
+redirect_file, output_file =  File.open("#{DST_DIR}/redirects", "w"), nil
+redirects.each { |title|
+  puts "  #{COLORS[:green]}(#{Time.now.strftime('%I:%M:%S%p')}) Retrieving redirect (#{i+=1}/#{redirects.size}): '#{title}'" ; STDOUT.flush
+  text = Curl::Easy.http_get(MW_URL + '/wiki/' + title.gsub(/\s/, '_')).body_str
+  redirect = Nokogiri::HTML(text).xpath("//h1[@id='firstHeading']").inner_text
+  redirect_file.write "#{title}#{REGISTRY_DELIM}" +
+                      "#{redirect}#{REGISTRY_DELIM}"
 }
 
 printf "#{COLORS[:blue]} Compressing encyclopedia..." ; STDOUT.flush

@@ -1,6 +1,6 @@
 package org.morsi.android.nethack.redux.util;
 
-import android.content.res.AssetManager;
+import android.content.Context;
 
 //Encapsulates an encyclopedia article
 public class EncyclopediaEntry {
@@ -29,10 +29,6 @@ public class EncyclopediaEntry {
     converted = false;
   }
 
-  public static String topicToKey(String rtopic){
-    return rtopic.toLowerCase().replaceAll("\\s", "_");
-  }
-
   // Pulls article content from the string catalog page which it resides, returns reference to this
   public EncyclopediaEntry populate(NString catalog_page){
     if(content == null){
@@ -42,8 +38,8 @@ public class EncyclopediaEntry {
   }
   
   // First generates the catalog page then pulls article content from it
-  public EncyclopediaEntry populate(AssetManager assets){
-	  NString catalog_page = Android.assetToNString(assets, "encyclopedia/" + Integer.toString(catalog_number));
+  public EncyclopediaEntry populate(Context context){
+	  NString catalog_page = Android.assetToNString(context.getAssets(), "encyclopedia/" + Integer.toString(catalog_number));
 	  populate(catalog_page);
 	  return this;
   }

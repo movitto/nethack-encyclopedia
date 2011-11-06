@@ -14,7 +14,6 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -85,7 +84,7 @@ public class EncyclopediaActivity extends ListActivity {
         protected Void doInBackground(Context... c) {
         	// parse the list of topics from a registry file
             NString registry = Android.assetToNString(c[0].getAssets(), "encyclopedia/registry");     
-            encyclopedia.parseTopics(registry);
+            encyclopedia.retrieveTopics(registry);
             return null;
         }
     }
@@ -118,7 +117,7 @@ public class EncyclopediaActivity extends ListActivity {
     		setListAdapter(new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(section)));
     	}else{
     		String topic = ((TextView) view).getText().toString();
-    		initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(topic).populate(getAssets()));
+    		initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(topic).populate(view.getContext()));
     	}
       }
     }
@@ -143,7 +142,7 @@ public class EncyclopediaActivity extends ListActivity {
                 {
                 if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
                   String new_topic = url.substring(22, url.length());
-                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(new_topic).populate(getAssets()));
+                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.get(new_topic).populate(view.getContext()));
                   return true;
                 }
                 return false;

@@ -70,12 +70,12 @@ public class Encyclopedia {
 
   public void add_topic(String topic){
 	  String section = null;
-	  Pattern pattern = Pattern.compile("^[^[1-9a-zA-Z]].*");
+	  Pattern pattern = Pattern.compile("^[^[0-9a-zA-Z]].*");
 	  Matcher matcher = pattern.matcher(topic);
 	  if(matcher.find()) section = Encyclopedia.symbol_string;
 	  
 	  if(section == null){
-		  pattern = Pattern.compile("^[1-9].*");
+		  pattern = Pattern.compile("^[0-9].*");
 		  matcher = pattern.matcher(topic);
 		  if(matcher.find()) section = Encyclopedia.number_string;
 	  }

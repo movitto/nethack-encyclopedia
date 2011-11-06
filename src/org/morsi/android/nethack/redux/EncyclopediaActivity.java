@@ -118,10 +118,7 @@ public class EncyclopediaActivity extends ListActivity {
     		setListAdapter(new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(section)));
     	}else{
     		String topic = ((TextView) view).getText().toString();
-    		EncyclopediaEntry entry = EncyclopediaActivity.encyclopedia.lookup(topic);
-    		NString catalog_page = Android.assetToNString(getAssets(), "encyclopedia/" + Integer.toString(entry.catalog_number));
-    		entry.populateContent(catalog_page);
-    		initiatePopupWindow(entry);
+    		initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(topic).populate(getAssets()));
     	}
       }
     }
@@ -144,9 +141,9 @@ public class EncyclopediaActivity extends ListActivity {
               @Override
                 public boolean shouldOverrideUrlLoading(WebView view, String url)
                 {
-                if(url.substring(0, 22).equals("/wiki/")){
-                  String new_topic = url.substring(6, url.length());
-                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(new_topic));
+                if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
+                  String new_topic = url.substring(22, url.length());
+                  initiatePopupWindow(EncyclopediaActivity.encyclopedia.lookup(new_topic).populate(getAssets()));
                   return true;
                 }
                 return false;

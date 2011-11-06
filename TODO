@@ -10,9 +10,7 @@ TODO
   - cache last drop down selection
 
 - encyclopedia:
-  - performance improvements
   - remove edit links
-  - paginated (perhaps w/ first level alphabetical menu)
   - add anchor support
   - different ways to sort encyclopedia topics
 
@@ -41,4 +39,3 @@ TODO
   - internationalization
   - android search tool integration (both search button and system search box)
   - support multiple screen sizes / resolutions / styles, remove hard coded values
-

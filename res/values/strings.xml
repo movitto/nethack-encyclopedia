@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">NethackEncyclopedia</string>
-    <string name="app_name">NetHack Encyclopedia Redux</string>
+    <string name="app_name">Nethack Encyclopedia</string>
     <string name="project_url">http://github.com/movitto/nethack-encyclopedia</string>
-    <string name="project_license">Freely distributed under the MIT license</string>
-    <string name="project_authors">Written by Mo Morsi</string>
+    
+    <string name="project_license_text">Freely distributed under the MIT license</string>
+    <string name="project_license">MIT license</string>
+    <string name="project_license_url">http://www.opensource.org/licenses/mit-license.php</string>
+    
+    <string name="project_author_text">Written by Mo Morsi</string>
+    <string name="project_author">Mo Morsi</string>
+    <string name="project_author_url">http://mo.morsi.org</string>
 
     <string name="about_dialog_title">About</string>
 

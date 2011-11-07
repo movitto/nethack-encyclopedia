@@ -55,6 +55,7 @@ public class Encyclopedia {
           int i1 = registry.indexOf(REGISTRY_DELIM, i+1),
               i2 = registry.indexOf(REGISTRY_DELIM, i1+1),
               i3 = registry.indexOf(REGISTRY_DELIM, i2+1);
+
           String s1 = registry.substring(i+1,  i1).toString(),
                  s2 = registry.substring(i1+1, i2).toString(),
                  s3 = registry.substring(i2+1, i3).toString();

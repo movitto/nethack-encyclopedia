@@ -4,75 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" android:paddingLeft="15px" android:paddingRight="15px">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:weightSum="1">
-
-        <TextView
- 			android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/armor_damage" android:layout_weight=".75" android:layout_marginBottom="7px"/>
-
-        <TextView android:id="@+id/armor_damage_taken"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" android:layout_weight=".25" android:gravity="right" android:textStyle="bold"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:weightSum="1">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/total_armor_hit_prob" android:layout_weight="0.75" android:layout_marginBottom="7px"/>
-
-        <TextView
-            android:id="@+id/total_armor_hit_probability"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" android:layout_weight="0.25" android:gravity="right" android:textStyle="bold"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:text="@string/armor_hit_prob_per_attack"/>
-               
-    <TableLayout
-        android:id="@+id/armor_prob_table"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top">
-
-        <TableRow
-            android:id="@+id/armor_prob_table_row"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:gravity="top" >
-        </TableRow>
-
-    </TableLayout>
-    <!-- TODO: notes -->
-
-    <ImageView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="7dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="7dp"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_dark"/>
-
-    <LinearLayout
+        <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -190,5 +122,74 @@
         </LinearLayout>
         
     </LinearLayout>
+    
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="7dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="7dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark"/>
+        
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:weightSum="1">
+
+        <TextView
+ 			android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/armor_damage" android:layout_weight=".75" android:layout_marginBottom="7px" android:layout_marginTop="7px"/>
+
+        <TextView android:id="@+id/armor_damage_taken"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight=".25" android:gravity="right" android:textStyle="bold" android:layout_marginTop="7px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/total_armor_hit_prob" android:layout_weight="0.75" android:layout_marginBottom="7px"/>
+
+        <TextView
+            android:id="@+id/total_armor_hit_probability"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="0.25" android:gravity="right" android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/armor_hit_prob_per_attack"/>
+               
+    <TableLayout
+        android:id="@+id/armor_prob_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top">
+
+        <TableRow
+            android:id="@+id/armor_prob_table_row"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="top" >
+        </TableRow>
+
+    </TableLayout>
+    <!-- TODO: notes -->
 
 </LinearLayout>

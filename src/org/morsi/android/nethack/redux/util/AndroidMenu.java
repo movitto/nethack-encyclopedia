@@ -90,6 +90,18 @@ public class AndroidMenu {
           String  scheme =    activity.getString(R.string.project_url);
           TextView tv = (TextView) dialog.findViewById(R.id.about_title);
           Linkify.addLinks(tv, pattern, scheme, null, filter);
+          
+          // wire up author url
+          pattern = Pattern.compile(activity.getString(R.string.project_author));
+          scheme =    activity.getString(R.string.project_author_url);
+          tv = (TextView) dialog.findViewById(R.id.about_authors);
+          Linkify.addLinks(tv, pattern, scheme, null, filter);
+          
+          // wire up license url
+          pattern = Pattern.compile(activity.getString(R.string.project_license));
+          scheme =    activity.getString(R.string.project_license_url);
+          tv = (TextView) dialog.findViewById(R.id.about_license);
+          Linkify.addLinks(tv, pattern, scheme, null, filter);
         }
         return dialog;
     }

@@ -13,9 +13,11 @@ import org.morsi.android.nethack.redux.util.AndroidMenu;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -170,14 +172,14 @@ public class CalculatorActivity extends Activity {
 
     // Update calculated values based on armor calculator inputs
     public void updateArmorCalculator(){
-    // grab values from text boxes and store
-    SharedPreferences.Editor editor = settings.edit();
+        // grab values from text boxes and store
+        SharedPreferences.Editor editor = settings.edit();
 
-    // TOOD edit_text validation should be a numeric regex
-    EditText edit_box = (EditText)findViewById(R.id.acInput);
-    String edit_text  = edit_box.getText().toString();
-    if(!edit_text.equals("") && !edit_text.equals("-")) ac = Integer.parseInt(edit_box.getText().toString());
-    else ac = 0;
+        // TOOD edit_text validation should be a numeric regex
+        EditText edit_box = (EditText)findViewById(R.id.acInput);
+        String edit_text  = edit_box.getText().toString();
+        if(!edit_text.equals("") && !edit_text.equals("-")) ac = Integer.parseInt(edit_box.getText().toString());
+        else ac = 0;
         editor.putInt("ac", ac);
 
         edit_box  = (EditText)findViewById(R.id.mlevelInput);
@@ -202,12 +204,10 @@ public class CalculatorActivity extends Activity {
         editor.putInt("monster_attacks", monster_attacks);
 
         // calculate and display damage
-    TextView tv = (TextView)findViewById(R.id.armor_damage_taken);
-    tv.setText(this.getString(R.string.armor_damage) + " " +
-           Integer.toString(minArmorDamage()) + "/" +
-           Integer.toString(maxArmorDamage()));
+        TextView tv = (TextView)findViewById(R.id.armor_damage_taken);
+        tv.setText(Integer.toString(minArmorDamage()) + "/" + Integer.toString(maxArmorDamage()));
 
-    // calculate hit probability
+        // calculate hit probability
         float worst_target = 10 + ac + monster_level;
         if (worst_target <= 0) worst_target = 1;
         float best_target = 0;
@@ -216,46 +216,30 @@ public class CalculatorActivity extends Activity {
         float max_total = 0, min_total = 0;
         float[] max_probabilities = new float[monster_attacks];
         float[] min_probabilities = new float[monster_attacks];
-
-        // display hit probability table headers
-    TableLayout table = (TableLayout) findViewById(R.id.armor_prob_table);
-    table.removeAllViews();
-    TableRow tr = new TableRow(this.getBaseContext());
-    TextView labelTV = new TextView(this.getBaseContext());
-        labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-        labelTV.setText(this.getString(R.string.total_hit_prob));
-        labelTV.setPadding(5, 5, 5, 5);
-        tr.addView(labelTV);
         for(int i = 0; i < monster_attacks; i++){
-          labelTV = new TextView(this.getBaseContext());
-          labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-          labelTV.setText(this.getString(R.string.attack_number) + Integer.toString(i+1));
-          labelTV.setPadding(5, 5, 5, 5);
-            tr.addView(labelTV);
             max_probabilities[i] = best_target/(20+i);
             min_probabilities[i] = worst_target/(20+i);
             max_total += max_probabilities[i] / monster_attacks;
             min_total += min_probabilities[i] / monster_attacks;
         }
-        table.addView(tr, new TableLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+        
+        // display total hit probability
+        TextView labelTV = (TextView)findViewById(R.id.total_armor_hit_probability);
+        labelTV.setText(String.format("%.2f", min_total) + "/" + String.format("%.2f", max_total));
 
-        // display hit probability table body
-        tr = new TableRow(this.getBaseContext());
-    labelTV = new TextView(this.getBaseContext());
-        labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-        labelTV.setText(String.format("%.2f", min_total) + "/" +
-                String.format("%.2f", max_total));
-        labelTV.setPadding(5, 5, 5, 5);
-        tr.addView(labelTV);
+        // display hit probability table
+        TableRow tr = (TableRow)findViewById(R.id.armor_prob_table_row);
+        tr.removeAllViews();        
         for(int i = 0; i < monster_attacks; i++){
-          labelTV = new TextView(this.getBaseContext());
-            labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.WRAP_CONTENT));
-            labelTV.setText(String.format("%.2f", min_probabilities[i]) + "/" +
-                    String.format("%.2f", max_probabilities[i]));
+            labelTV = new TextView(this.getBaseContext());
+            labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+            labelTV.setGravity(Gravity.CENTER_HORIZONTAL);
+            labelTV.setTypeface(null, Typeface.BOLD);
+            labelTV.setText("#" + Integer.toString(i+1) + ": " +
+            		String.format("%.2f", min_probabilities[i]) + "/" + String.format("%.2f", max_probabilities[i]));
             labelTV.setPadding(5, 5, 5, 5);
             tr.addView(labelTV);
         }
-        table.addView(tr, new TableLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
     }
 
     // Calculate and return strength bonus

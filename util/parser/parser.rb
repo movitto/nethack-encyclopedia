@@ -130,6 +130,7 @@ pages.each { |title|
                       "#{registry_count}#{REGISTRY_DELIM}" +
                       "#{pos}#{REGISTRY_DELIM}#{pos += text.size}#{REGISTRY_DELIM}"
 }
+registry_file.flush
 
 i = 0
 
@@ -143,6 +144,7 @@ redirects.each { |title|
   redirect_file.write "#{title}#{REGISTRY_DELIM}" +
                       "#{redirect}#{REGISTRY_DELIM}"
 }
+redirect_file.flush
 
 printf "#{COLORS[:blue]} Compressing encyclopedia..." ; STDOUT.flush
 Dir[DST_DIR + "/*"].each { |f| `gzip #{f}` }

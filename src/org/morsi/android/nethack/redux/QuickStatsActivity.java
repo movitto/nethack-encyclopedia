@@ -83,7 +83,7 @@ public class QuickStatsActivity extends Activity {
          public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
           clearStats((View) parent.getParent());
           String selected = parent.getItemAtPosition(pos).toString();
-          if(!selected.equals("")) displayStats(selected, (View) parent.getParent());
+          if(pos != 0) displayStats(selected, (View) parent.getParent());
          }
 
         public void onNothingSelected(AdapterView<?> parent) {

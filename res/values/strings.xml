@@ -16,7 +16,7 @@
 
     <string name="quick_stats_prompt">Quick Stats:</string>
     <string-array name="quick_stats_array">
-        <item></item>
+        <item>Select Statistic...</item>
         <item>Potions</item>
         <item>Scrolls</item>
         <item>Gems</item>
@@ -30,7 +30,7 @@
 
     <string name="calculator_prompt">Calculator:</string>
     <string-array name="calculator_array">
-        <item></item>
+        <item>Select Tool...</item>
         <item>Armor</item>
         <item>Damage</item>
     </string-array>

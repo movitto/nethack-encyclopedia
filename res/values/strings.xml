@@ -14,10 +14,10 @@
 
     <string name="about_dialog_title">About</string>
 
-    <string name="total_hit_prob">Total: </string>
-    <string name="attack_number">Attack #</string>
-    <string name="armor_damage">Min/Max Damage Taken:</string>
-    <string name="armor_hit_prob">Min/Max Hit Probability:</string>
+    <string name="attack_number">#</string>
+    <string name="armor_damage">Damage Taken (min/max):</string>
+    <string name="total_armor_hit_prob">Total Hit Probability (min/max):</string>
+    <string name="armor_hit_prob_per_attack">Hit Probability (per attack):</string>
     <string name="weapon_damage">Min/Max Weapon Damage:</string>
 
     <string name="quick_stats_prompt">Quick Stats:</string>

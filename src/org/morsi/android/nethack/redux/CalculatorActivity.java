@@ -23,17 +23,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 // Tools to calculate Nethack stats based on user input
 public class CalculatorActivity extends Activity {
@@ -75,12 +75,18 @@ public class CalculatorActivity extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new CalculatorSelectedListener());
+        
+        // setup damage feature toggle buttons
+        Button button = (Button) findViewById(R.id.monster_size_button);
+        button.setText(this.getResources().getStringArray(R.array.monster_size_array)[0]);
+        button = (Button) findViewById(R.id.ring_increased_damage_button);
+        button.setText(this.getResources().getStringArray(R.array.with_without_array)[0]);
 
         // retrieve any stored preferences for armor calc
         settings = getSharedPreferences(PREFS_NAME, 0);
         ac = settings.getInt("ac", 10);
         monster_level   = settings.getInt("monster_level",   1);
-        monster_damage  = settings.getInt("monster_damage", 5);
+        monster_damage  = settings.getInt("monster_damage",  5);
         monster_attacks = settings.getInt("monster_attacks", 1);
 
         // retrieve any stored preferences for damage calc
@@ -138,17 +144,17 @@ public class CalculatorActivity extends Activity {
         edit_box.setText(Integer.toString(ring_increased_damage));
         edit_box.addTextChangedListener(devent_listener);
 
-        CheckBox check_box = (CheckBox)findViewById(R.id.undeadBlessedWeaponInput);
-        check_box.setChecked(fighting_undead_with_blessed);
-        check_box.setOnClickListener(devent_listener);
+        ToggleButton tbutton = (ToggleButton)findViewById(R.id.undeadBlessedWeaponInput);
+        tbutton.setChecked(fighting_undead_with_blessed);
+        tbutton.setOnClickListener(devent_listener);
 
-        check_box = (CheckBox)findViewById(R.id.poisonWeaponInput);
-        check_box.setChecked(poisoned_weapon);
-        check_box.setOnClickListener(devent_listener);
+        tbutton = (ToggleButton)findViewById(R.id.poisonWeaponInput);
+        tbutton.setChecked(poisoned_weapon);
+        tbutton.setOnClickListener(devent_listener);
 
-        check_box = (CheckBox)findViewById(R.id.drainingLifeInput);
-        check_box.setChecked(life_draining_weapon);
-        check_box.setOnClickListener(devent_listener);
+        tbutton = (ToggleButton)findViewById(R.id.drainingLifeInput);
+        tbutton.setChecked(life_draining_weapon);
+        tbutton.setOnClickListener(devent_listener);
 
         updateArmorCalculator();
         updateDamageCalculator();
@@ -312,23 +318,21 @@ public class CalculatorActivity extends Activity {
         else ring_increased_damage = 0;
         editor.putInt("ring_increased_damage", ring_increased_damage);
 
-        CheckBox check_box = (CheckBox)findViewById(R.id.undeadBlessedWeaponInput);
-        fighting_undead_with_blessed = check_box.isChecked();
+        ToggleButton tbutton = (ToggleButton)findViewById(R.id.undeadBlessedWeaponInput);
+        fighting_undead_with_blessed = tbutton.isChecked();
         editor.putBoolean("fighting_undead_with_blessed", fighting_undead_with_blessed);
 
-        check_box = (CheckBox)findViewById(R.id.poisonWeaponInput);
-        poisoned_weapon = check_box.isChecked();
+        tbutton = (ToggleButton)findViewById(R.id.poisonWeaponInput);
+        poisoned_weapon = tbutton.isChecked();
         editor.putBoolean("poisoned_weapon", poisoned_weapon);
 
-        check_box = (CheckBox)findViewById(R.id.drainingLifeInput);
-        life_draining_weapon = check_box.isChecked();
+        tbutton = (ToggleButton)findViewById(R.id.drainingLifeInput);
+        life_draining_weapon = tbutton.isChecked();
         editor.putBoolean("life_draining_weapon", life_draining_weapon);
 
-      // calculate and display damage
-    TextView tv = (TextView)findViewById(R.id.weapon_damage);
-    tv.setText(this.getString(R.string.weapon_damage) + " " +
-           Integer.toString(minWeaponDamage()) + "/" +
-           Integer.toString(maxWeaponDamage()));
+        // calculate and display damage
+        TextView tv = (TextView)findViewById(R.id.weapon_damage);
+        tv.setText(Integer.toString(minWeaponDamage()) + "/" + Integer.toString(maxWeaponDamage()));
     }
 
     // Handles calculator spinner changes,
@@ -401,4 +405,42 @@ public class CalculatorActivity extends Activity {
       activity.updateDamageCalculator();
     }
     }
+    
+    public void onClickDamageFeatureToggleButton(View target) {
+    	int res_id = target.getId(); int input_id = -1;
+    	if(res_id == R.id.monster_size_button)
+    		res_id = R.array.monster_size_array;
+    	else if(res_id == R.id.ring_increased_damage_button){
+    		res_id = R.array.with_without_array;
+    		input_id = R.id.ringIncreasedDamageInput;
+    	}
+    	
+    	Button button = (Button) target;
+    	String current_text = button.getText().toString();
+    	int current_index = -1;
+    	String[] values = this.getResources().getStringArray(res_id);
+    	for(int i = 0; i < values.length; ++i){
+    		if(values[i].equals(current_text)){
+    			current_index = i;
+    			break;
+    		}
+    	}
+    	if(current_index == -1 || current_index == values.length - 1) current_index = 0;
+    	else current_index = current_index+1;
+    	
+        ((Button)target).setText(values[current_index]);
+        
+        if(input_id != -1){
+        	EditText edit = ((EditText)this.findViewById(input_id));
+        	if(current_index == values.length - 1){
+        		edit.setVisibility(View.INVISIBLE);
+        		edit.setLayoutParams(new LayoutParams(0, 0, 0));
+        		edit.setText("0");
+        	}else{
+        		edit.setVisibility(View.VISIBLE);
+        		edit.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 0.5f));
+        	}
+        	updateDamageCalculator();
+        }
+      }
 }

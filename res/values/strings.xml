@@ -29,6 +29,7 @@
         <item>Armor</item>
         <item>Rings</item>
         <item>Tools</item>
+        <item>Wands</item>
     </string-array>
     <string name="potions_quick_stat">Potions</string>
     <string name="scrolls_quick_stat">Scrolls</string>
@@ -36,7 +37,7 @@
     <string name="armor_quick_stat">Armor</string>
     <string name="rings_quick_stat">Rings</string>
     <string name="tools_quick_stat">Tools</string>
-
+    <string name="wands_quick_stat">Wands</string>
 
     <string name="calculator_prompt">Calculator:</string>
     <string-array name="calculator_array">

@@ -65,6 +65,7 @@ public class QuickStatsActivity extends Activity {
         getStatsFromXml(this.getString(R.string.armor_quick_stat),   R.xml.armor);
         getStatsFromXml(this.getString(R.string.rings_quick_stat),   R.xml.rings);
         getStatsFromXml(this.getString(R.string.tools_quick_stat),   R.xml.tools);
+        getStatsFromXml(this.getString(R.string.wands_quick_stat),   R.xml.wands);
 
         // populate spinner and wire up changes
         Spinner spinner = (Spinner) findViewById(R.id.quick_stats_spinner);

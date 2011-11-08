@@ -9,14 +9,12 @@ package org.morsi.android.nethack.redux;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.util.AndroidMenu;
+import org.morsi.android.nethack.redux.util.QuickStat;
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -44,17 +42,15 @@ public class QuickStatsActivity extends Activity {
   // Override menu / about dialog handlers
     @Override
     public boolean onSearchRequested() { return AndroidMenu.onSearchRequested(this); }
-  @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) { return AndroidMenu.onCreateOptionsMenu(this, menu); }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) { return AndroidMenu.onOptionsItemSelected(this, item); }
     @Override
     protected Dialog onCreateDialog(int id) { return AndroidMenu.onCreateDialog(this, id); }
 
-  // Store quick stats as a mapping between object names and a list
-  //   of those objects. Each value contains a list of attributes
-  //   representing the values of the stats on that object
-  Map<String, List<List<String>>> stats;
+    // List of quick stat categories containing stats
+    ArrayList<QuickStatCategory> stats;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,11 +58,11 @@ public class QuickStatsActivity extends Activity {
         setContentView(R.layout.quick_stats);
 
         // retrieve stats from xml resources
-        stats = new HashMap<String, List<List<String>>>();
+        stats = new ArrayList<QuickStatCategory>();
         getStatsFromXml(this.getString(R.string.potions_quick_stat), R.xml.potions);
         getStatsFromXml(this.getString(R.string.gems_quick_stat),    R.xml.gems);
         getStatsFromXml(this.getString(R.string.scrolls_quick_stat), R.xml.scrolls);
-        getStatsFromXml(this.getString(R.string.tools_quick_stat), R.xml.tools);
+        getStatsFromXml(this.getString(R.string.tools_quick_stat),   R.xml.tools);
 
         // populate spinner and wire up changes
         Spinner spinner = (Spinner) findViewById(R.id.quick_stats_spinner);
@@ -77,177 +73,163 @@ public class QuickStatsActivity extends Activity {
         spinner.setOnItemSelectedListener(new QuickStatsSelectedListener());
     }
 
-
     // Handles quick stats spinner changes
     class QuickStatsSelectedListener implements OnItemSelectedListener {
          public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-          clearStats((View) parent.getParent());
-          String selected = parent.getItemAtPosition(pos).toString();
-          if(pos != 0) displayStats(selected, (View) parent.getParent());
+             clearStats((View) parent.getParent());
+             QuickStatCategory selected = selectedQuickStat(parent);
+             if(pos != 0) displayStats(selected, (View) parent.getParent());
          }
 
-        public void onNothingSelected(AdapterView<?> parent) {
-        }
+         public void onNothingSelected(AdapterView<?> parent) {
+         }
     }
 
+    // Retrieve and return the stats stored in the specified android xml resource
+    private void getStatsFromXml(String stat_to_parse, int xml_resource) {
+      QuickStatCategory category = new QuickStatCategory(stat_to_parse);
+      stats.add(category);
+
+      ArrayList<String> current_row = null;
+
+      try{
+        XmlResourceParser xpp = getResources().getXml(xml_resource);
+        int eventType =  xpp.next(); 
+        String element_name = ""; String weight = "";
+        while (eventType != XmlPullParser.END_DOCUMENT){
+      	  if(eventType == XmlPullParser.START_TAG){
+    		  element_name =  xpp.getName();
+    		  if(element_name.equals("row"))
+    			  current_row = new ArrayList<String>();
+    		  else if(element_name.equals("column"))
+    			  weight = xpp.getAttributeValue(null, "weight");
+    		  
+    	  }else if(eventType == XmlPullParser.TEXT){
+    		  if(element_name.equals("item"))
+    			  current_row.add(xpp.getText());
+    		  else if(element_name.equals("column")){
+    			  Float fweight = weight != null ? Float.parseFloat(weight) : -1;
+    			  category.add_column(xpp.getText(), fweight);
+    		  }
+    		  
+    	  }else if(eventType == XmlPullParser.END_TAG && xpp.getName().equals("row"))
+    		  category.add_stats(current_row);
+    		  
+    	  eventType = xpp.next();
+        }
+      }catch(IOException e) {
+      }catch(XmlPullParserException e) {  }
+    }
+    
     // Clears the quick stats table
     private void clearStats(View quick_stats_view){
       TableLayout table = (TableLayout) quick_stats_view.findViewById(R.id.quick_stats_table);
-    table.removeAllViews();
-    }
-
-    // Retrieve and return the stats stored in the specified android
-    //  xml resource
-    private void getStatsFromXml(String stat_to_parse, int xml_resource) {
-    stats.put(stat_to_parse, new ArrayList<List<String>>());
-    List<List<String>> qstats = stats.get(stat_to_parse);
-    List<String> qstat = new ArrayList<String>();
-
-        XmlResourceParser xpp = getResources().getXml(xml_resource);
-        String element_name = "";
-        try{
-          xpp.next();
-          int eventType = xpp.getEventType();
-          while (eventType != XmlPullParser.END_DOCUMENT){
-        	  if(eventType == XmlPullParser.START_TAG){
-        		  element_name =  xpp.getName();
-        		  if(element_name.equals("row")){
-        			  qstat = new ArrayList<String>();
-        			  qstats.add(qstat);
-        		  }
-        	  }
-        	  else if(eventType == XmlPullParser.TEXT && element_name.equals("item")) {
-        		  qstat.add(xpp.getText());
-        	  }
-        	  eventType = xpp.next();
-          }
-        }catch(IOException e) {
-        }catch(XmlPullParserException e) {}
+      table.removeAllViews();
     }
 
     // Display the specified stat on the table in the view
     // FIXME this method could use alot of work (remove specific styling here, theme it and/or pull from xml)
-    private void displayStats(String stat_to_display, View quick_stats_view){
+    private void displayStats(QuickStatCategory category, View quick_stats_view){
       TableLayout table = (TableLayout) quick_stats_view.findViewById(R.id.quick_stats_table);
-      List<List<String>> qstats = stats.get(stat_to_display);
-      boolean header_row = true; int cols = -1;
-
-      // iterate over each statistic row
-      for(List<String> qstat : qstats){
-    	boolean alternate_col = false;
-        TableRow tr = new TableRow(quick_stats_view.getContext());
-        tr.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-
-        // iterate over each column in row
-        for(String qstat_item : qstat){
-
-          // set column display properties
-          TextView labelTV = new TextView(quick_stats_view.getContext());
-          labelTV.setText(qstat_item);
-          labelTV.setEllipsize(TruncateAt.MARQUEE);
-          labelTV.setTextSize(11);
-          labelTV.setPadding(4, 4, 4, 4);
-          labelTV.setGravity(Gravity.CENTER);
-    	  labelTV.setMaxWidth(40);
-          labelTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
-
-          // wire up clicks to the header row to sort the table
-          if(header_row){
-            labelTV.setOnClickListener(new ColumnClickedListener());
-            labelTV.setTextColor(getResources().getColor(R.color.light_blue));
-
-          // alternate colors on columns
-          }else{
-        	  labelTV.setBackgroundResource((alternate_col = !alternate_col) ?
-        			                         R.color.gray : R.color.light_gray);
-          }
-
-          // add column to row
-          tr.addView(labelTV);
-        }
-        
-        // fill in blank columns
-        if(qstat.size() < cols){
-        	for(int i = 0; i < cols - qstat.size(); ++i){
-        		TextView blank = new TextView(quick_stats_view.getContext());
-            	blank.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
-            	blank.setBackgroundResource((alternate_col = !alternate_col) ?
-                        R.color.gray : R.color.light_gray);
-        		tr.addView(blank);
-        	}
-        	//((LayoutParams)tr.getChildAt(tr.getChildCount() - 1).getLayoutParams()).span =
-        	//	cols - qstat.size() + 1;
-        }
-
-        // add row to table
-        table.addView(tr, new TableLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-        
-    	// add a border beneath header row
-        if(header_row){
-        	cols = qstat.size();
-        	TableRow border_row = new TableRow(quick_stats_view.getContext());
-        	LayoutParams lp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
-        	lp.setMargins(1, 1, 1, 2);
-        	border_row.setPadding(1, 1, 1, 2);
-        	border_row.setLayoutParams(lp);
-        	border_row.setBackgroundResource(R.color.white);
-        	table.addView(border_row, lp);
-            header_row = false;
-        }
-
+ 
+      List<String> columns   = category.get_columns();
+      List<Float> weights    = category.get_weights();
+      List<QuickStat> rstats = category.get_stats();
+      
+      // add header row to table
+	  TableRow tr = new TableRow(quick_stats_view.getContext());
+      for(int i = 0; i < columns.size(); ++i){
+    	  TextView tv = new TextView(quick_stats_view.getContext());
+          tv.setText(columns.get(i));
+          tv.setEllipsize(TruncateAt.MARQUEE);
+          
+          // wire up click listener to stort columns
+          tv.setOnClickListener(new ColumnClickedListener());
+          tv.setTextColor(getResources().getColor(R.color.light_blue));
+          
+          // if no weight specified, weigh all columns equally
+          float weight = weights.get(i);
+          if(weight == -1) weights.set(i, new Double(1.0/weights.size()).floatValue());
+          
+          tv.setGravity(Gravity.CENTER);
+          tv.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+          tr.addView(tv);
       }
+	  tr.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+	  table.addView(tr, new TableLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+	  
+	  // add border row beneath header
+	  TableRow border_row = new TableRow(quick_stats_view.getContext());
+  	  LayoutParams lp = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
+  	  lp.setMargins(1, 1, 1, 2);
+  	  border_row.setPadding(1, 1, 1, 2);
+  	  border_row.setLayoutParams(lp);
+  	  border_row.setBackgroundResource(R.color.white);
+  	  table.addView(border_row, lp);
+	  
+  	  boolean alternate_col;
+  	  
+  	  // add each quick stat to table
+  	  for(QuickStat stat : rstats){
+  		  tr = new TableRow(quick_stats_view.getContext());
+          tr.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+          
+          alternate_col = false;
+          
+  		  for(int i = 0; i < columns.size(); ++i){
+  			String value = stat.get_value(i); 
+  			if(value != null){
+  	  			TextView tv = new TextView(quick_stats_view.getContext());
+	            tv.setText(value);
+	            tv.setEllipsize(TruncateAt.MARQUEE);
+	            
+	            // alternate background colors
+	            tv.setBackgroundResource((alternate_col = !alternate_col) ? R.color.gray : R.color.light_gray);
+
+	            tv.setGravity(Gravity.CENTER);
+	            tv.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+	            tr.addView(tv);
+  			}
+  		  }
+  		  
+          // fill in empty columns
+          for(int i = stat.num_values(); i < columns.size(); ++i){
+            TextView blank = new TextView(quick_stats_view.getContext());
+            blank.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+            blank.setBackgroundResource((alternate_col = !alternate_col) ? R.color.gray : R.color.light_gray);
+        	tr.addView(blank);
+          }
+  		  
+  		  table.addView(tr, new TableLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+  	  }
+  	  
+          // set column display properties
+          /*labelTV.setTextSize(11);
+          labelTV.setPadding(4, 4, 4, 4);
+    	  labelTV.setMaxWidth(40);*/
+    }
+    
+    private String selectedQuickStatName(View parent){
+    	return ((Spinner)parent.findViewById(R.id.quick_stats_spinner)).getSelectedItem().toString();
     }
 
     // Returns the current stat selected in the spinner
-    private String selectedStat(View parent){
-      return ((Spinner)parent.findViewById(R.id.quick_stats_spinner)).getSelectedItem().toString();
-    }
-
-    // Variables used for table sorting
-    private int sort_column = -1;
-    private boolean reverse  = false;
-
-    // Sorts the specified stat based on the specified column
-    private void sortStats(String stat, String column){
-      List<List<String>> qstats = stats.get(stat);
-      List<String> headers = qstats.remove(0); // pop headers of stats list
-
-      // find column we're sorting by
-      for(sort_column = 0; sort_column < headers.size(); ++sort_column)
-        if(headers.get(sort_column).equals(column))
-          break;
-
-      // actually perform the sort using a custom comparator
-      Collections.sort(qstats, new Comparator<List<String>>() {
-        public int compare(List<String> s1, List<String> s2) {
-         String item1 = sort_column < s1.size() ? s1.get(sort_column) : "";
-         String item2 = sort_column < s2.size() ? s2.get(sort_column) : "";
-
-         // first try to convert numeric columns to floats b4 comparing
-        try{
-          float f1 = Float.parseFloat(item1);
-          float f2 = Float.parseFloat(item2);
-          if (f1 == f2) return 0;
-          if ((reverse && f1 > f2) || (!reverse && f1 < f2)) return 1;
-          return -1;
-        } catch( Exception e ){}
-          if (!reverse)
-            return item1.compareTo(item2);
-          return item2.compareTo(item1);
-        }
-      });
-    reverse = !reverse;
-      qstats.add(0, headers);
+    private QuickStatCategory selectedQuickStat(View parent){
+        String selected = selectedQuickStatName(parent);
+        for(QuickStatCategory category : stats)
+    	    if(category.name.equals(selected))
+    	        return category;
+        return null;
     }
 
     // Handles clicks to the column headers by sorting the table
     class ColumnClickedListener implements OnClickListener {
-    public void onClick(View v) {
-      View parent = (View)v.getParent().getParent().getParent().getParent().getParent();
-      String selected = selectedStat(parent);
-      sortStats(selected, ((TextView)v).getText().toString());
-      clearStats(parent);
-      displayStats(selected, parent);
-    }
+	    public void onClick(View v) {
+	        View parent = (View)v.getParent().getParent().getParent().getParent().getParent();
+	        QuickStatCategory selected = selectedQuickStat(parent); 
+	        selected.sort_stats(((TextView)v).getText().toString());
+	        clearStats(parent);
+	        displayStats(selected, parent);
+	    }
     }
 }

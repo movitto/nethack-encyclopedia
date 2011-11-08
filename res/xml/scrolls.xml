@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rows>
-  <row name="columns">
-    <item>Scroll</item>
-    <item>Cost</item>
-    <item>Weight</item>
-    <item>Probability</item>
-    <item>Ink</item>
-    <item>Appearance</item>
-  </row>
+<quick_stat>
+  <columns>
+    <column weight="0.4">Scroll</column>
+    <column weight="0.1">Cost</column>
+    <column weight="0.1">Weight</column>
+    <column weight="0.1">Probability</column>
+    <column weight="0.1">Ink</column>
+    <column weight="0.2">Appearance</column>
+  </columns>
   <row>
     <item>mail</item>
     <item>0</item>
@@ -192,4 +192,4 @@
     <item>20</item>
     <item>random</item>
   </row>
-</rows>
+</quick_stat>

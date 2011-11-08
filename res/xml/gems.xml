@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rows>
-  <row>
-    <item>Name</item>
-    <item>Description</item>
-    <item>Cost</item>
-    <item>Wght</item>
-    <item>Hardness/Material</item>
-  </row>
+<quick_stat>
+  <columns>
+    <column weight="0.3">Name</column>
+    <column weight="0.2">Description</column>
+    <column weight="0.1">Cost</column>
+    <column weight="0.08">Wght</column>
+    <column weight="0.32">Hardness/Material</column>
+  </columns>
 
   <row>
     <item>dilithium crystal</item>
@@ -296,4 +296,4 @@
     <item>soft mineral</item>
   </row>
 
-</rows>
+</quick_stat>

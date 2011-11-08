@@ -1,0 +1,41 @@
+#!/usr/bin/ruby
+# convert a html table which we manually grabbed 
+# from the wiki to a quick stat xml file
+
+require 'rubygems'
+require 'nokogiri'
+
+# read input
+n = Nokogiri::XML(File.open("in", "r"))
+
+# write header
+out = "<quick_stat>\n"
+
+# write columns
+out += " <columns>\n"
+n.xpath("//tr/th").each { |h| 
+  out += "  <column>" + h.inner_text.gsub(/\n/, '').gsub(/\s+/, ' ').gsub(/\s$/, '').gsub(/^\s/, '') + "</column>\n"
+}
+out += " </columns>\n\n"
+
+# write data
+n.xpath("//tr").each { |h| 
+  values = h.xpath("td")
+  if values.size > 0
+    out += " <row>\n" 
+    values.each { |i| 
+      value = i.inner_text.gsub(/\n/, '').gsub(/\s+/, ' ').gsub(/\s$/, '').gsub(/^\s/, '')
+      value = '--' if value == ''
+      out += "  <item>"+ value +"</item>\n"  
+    } 
+    out += " </row>\n\n" 
+  end
+}
+
+# write footer
+out += "</quick_stat>"
+
+# write output to file
+f = File.open("out", "w")
+f.write(out)
+f.flush

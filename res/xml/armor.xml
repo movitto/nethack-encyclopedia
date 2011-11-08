@@ -1,0 +1,801 @@
+<quick_stat>
+ <columns>
+  <column weight="0.25">Name</column>
+  <column weight="0.06">$</column>
+  <column weight="0.06">Wgt</column>
+  <column weight="0.05">AC</column>
+  <column weight="0.13">Mat</column>
+  <column weight="0.1">Effect</column>
+  <column weight="0.05">MC</column>
+  <column weight="0.06">Mag</column>
+  <column weight="0.24">Appearance</column>
+ </columns>
+
+ <row>
+  <item>Shirts</item>
+ </row>
+
+ <row>
+  <item>Hawaiian shirt</item>
+  <item>3</item>
+  <item>5</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>Shop</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>T-shirt</item>
+  <item>2</item>
+  <item>5</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>Shop</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>Suits</item>
+ </row>
+
+ <row>
+  <item>leather jacket</item>
+  <item>10</item>
+  <item>30</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>leather armor</item>
+  <item>5</item>
+  <item>150</item>
+  <item>2</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>orcish ring mail</item>
+  <item>80</item>
+  <item>250</item>
+  <item>2</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>crude ring mail</item>
+ </row>
+
+ <row>
+  <item>studded leather armor</item>
+  <item>15</item>
+  <item>200</item>
+  <item>3</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring mail</item>
+  <item>100</item>
+  <item>250</item>
+  <item>3</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>scale mail</item>
+  <item>45</item>
+  <item>250</item>
+  <item>4</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>orcish chain mail</item>
+  <item>75</item>
+  <item>300</item>
+  <item>4</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>crude chain mail</item>
+ </row>
+
+ <row>
+  <item>chain mail</item>
+  <item>75</item>
+  <item>300</item>
+  <item>5</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>elven mithril-coat</item>
+  <item>240</item>
+  <item>150</item>
+  <item>5</item>
+  <item>mithril</item>
+  <item>--</item>
+  <item>3</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>splint mail</item>
+  <item>80</item>
+  <item>400</item>
+  <item>6</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>banded mail</item>
+  <item>90</item>
+  <item>350</item>
+  <item>6</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>dwarvish mithril-coat</item>
+  <item>240</item>
+  <item>150</item>
+  <item>6</item>
+  <item>mithril</item>
+  <item>--</item>
+  <item>3</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>bronze plate mail</item>
+  <item>400</item>
+  <item>450</item>
+  <item>6</item>
+  <item>copper</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>plate mail (tanko)</item>
+  <item>600</item>
+  <item>450</item>
+  <item>7</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>2</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>crystal plate mail</item>
+  <item>820</item>
+  <item>450</item>
+  <item>7</item>
+  <item>glass</item>
+  <item>--</item>
+  <item>2</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>Dragon Suits</item>
+ </row>
+
+ <row>
+  <item>dragon scales</item>
+  <item>500</item>
+  <item>40</item>
+  <item>3</item>
+  <item>dragon</item>
+  <item>Resist%</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>dragon scale mail</item>
+  <item>900</item>
+  <item>40</item>
+  <item>9</item>
+  <item>dragon</item>
+  <item>Resist%</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>Cloaks</item>
+ </row>
+
+ <row>
+  <item>mummy wrapping</item>
+  <item>2</item>
+  <item>3</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>Vis</item>
+  <item>1</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>orcish cloak</item>
+  <item>40</item>
+  <item>10</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>--</item>
+  <item>2</item>
+  <item>--</item>
+  <item>coarse mantelet</item>
+ </row>
+
+ <row>
+  <item>dwarvish cloak</item>
+  <item>50</item>
+  <item>10</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>--</item>
+  <item>2</item>
+  <item>--</item>
+  <item>hooded cloak</item>
+ </row>
+
+ <row>
+  <item>leather cloak</item>
+  <item>40</item>
+  <item>15</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>1</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>cloak of displacement</item>
+  <item>50</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Displ</item>
+  <item>2</item>
+  <item>Yes</item>
+  <item>*piece of cloth</item>
+ </row>
+
+ <row>
+  <item>oilskin cloak</item>
+  <item>50</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Water</item>
+  <item>3</item>
+  <item>--</item>
+  <item>slippery cloak</item>
+ </row>
+
+ <row>
+  <item>alchemy smock</item>
+  <item>50</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Poi+Acd</item>
+  <item>1</item>
+  <item>Yes</item>
+  <item>apron</item>
+ </row>
+
+ <row>
+  <item>cloak of invisibility</item>
+  <item>60</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Invis</item>
+  <item>2</item>
+  <item>Yes</item>
+  <item>*opera cloak</item>
+ </row>
+
+ <row>
+  <item>cloak of magic resistance</item>
+  <item>60</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Magic</item>
+  <item>3</item>
+  <item>Yes</item>
+  <item>*ornamental cope</item>
+ </row>
+
+ <row>
+  <item>elven cloak</item>
+  <item>60</item>
+  <item>10</item>
+  <item>1</item>
+  <item>cloth</item>
+  <item>Stlth</item>
+  <item>3</item>
+  <item>Yes</item>
+  <item>faded pall</item>
+ </row>
+
+ <row>
+  <item>robe</item>
+  <item>50</item>
+  <item>15</item>
+  <item>2</item>
+  <item>cloth</item>
+  <item>Spell</item>
+  <item>3</item>
+  <item>Yes</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>cloak of protection</item>
+  <item>50</item>
+  <item>10</item>
+  <item>3</item>
+  <item>cloth</item>
+  <item>Prot</item>
+  <item>3</item>
+  <item>Yes</item>
+  <item>*tattered cape</item>
+ </row>
+
+ <row>
+  <item>Helms</item>
+ </row>
+
+ <row>
+  <item>fedora</item>
+  <item>1</item>
+  <item>3</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>dunce cap</item>
+  <item>1</item>
+  <item>4</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>Stupid</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>conical hat</item>
+ </row>
+
+ <row>
+  <item>cornuthaum</item>
+  <item>80</item>
+  <item>4</item>
+  <item>0</item>
+  <item>cloth</item>
+  <item>Clair</item>
+  <item>2</item>
+  <item>Yes</item>
+  <item>conical hat</item>
+ </row>
+
+ <row>
+  <item>dented pot</item>
+  <item>8</item>
+  <item>10</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>elven leather helm</item>
+  <item>8</item>
+  <item>3</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>leather hat</item>
+ </row>
+
+ <row>
+  <item>helmet (kabuto)</item>
+  <item>10</item>
+  <item>30</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>*plumed helmet</item>
+ </row>
+
+ <row>
+  <item>orcish helm</item>
+  <item>10</item>
+  <item>30</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>iron skull cap</item>
+ </row>
+
+ <row>
+  <item>helm of brilliance</item>
+  <item>50</item>
+  <item>50</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>Int+Wis</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*etched helmet</item>
+ </row>
+
+ <row>
+  <item>helm of opposite alignment</item>
+  <item>50</item>
+  <item>50</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>Align</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*crested helmet</item>
+ </row>
+
+ <row>
+  <item>helm of telepathy</item>
+  <item>50</item>
+  <item>50</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>ESP</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*visored helmet</item>
+ </row>
+
+ <row>
+  <item>dwarvish iron helm</item>
+  <item>20</item>
+  <item>40</item>
+  <item>2</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>hard hat</item>
+ </row>
+
+ <row>
+  <item>Gloves</item>
+ </row>
+
+ <row>
+  <item>leather gloves (yugake)</item>
+  <item>8</item>
+  <item>10</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>*old gloves</item>
+ </row>
+
+ <row>
+  <item>gauntlets of dexterity</item>
+  <item>50</item>
+  <item>10</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Dex</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*padded gloves</item>
+ </row>
+
+ <row>
+  <item>gauntlets of fumbling</item>
+  <item>50</item>
+  <item>10</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Fumble</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*riding gloves</item>
+ </row>
+
+ <row>
+  <item>gauntlets of power</item>
+  <item>50</item>
+  <item>30</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>Str</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*fencing gloves</item>
+ </row>
+
+ <row>
+  <item>Shields</item>
+ </row>
+
+ <row>
+  <item>small shield</item>
+  <item>3</item>
+  <item>30</item>
+  <item>1</item>
+  <item>wood</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>orcish shield</item>
+  <item>7</item>
+  <item>50</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>red-eyed</item>
+ </row>
+
+ <row>
+  <item>Uruk-hai shield</item>
+  <item>7</item>
+  <item>50</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>white-handed</item>
+ </row>
+
+ <row>
+  <item>elven shield</item>
+  <item>7</item>
+  <item>40</item>
+  <item>2</item>
+  <item>wood</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>blue and green</item>
+ </row>
+
+ <row>
+  <item>dwarvish roundshield</item>
+  <item>10</item>
+  <item>100</item>
+  <item>2</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>large round</item>
+ </row>
+
+ <row>
+  <item>large shield</item>
+  <item>10</item>
+  <item>100</item>
+  <item>2</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>shield of reflection</item>
+  <item>50</item>
+  <item>50</item>
+  <item>2</item>
+  <item>silver</item>
+  <item>Reflect</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>polished silver</item>
+ </row>
+
+ <row>
+  <item>Boots</item>
+ </row>
+
+ <row>
+  <item>low boots</item>
+  <item>8</item>
+  <item>10</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>walking shoes</item>
+ </row>
+
+ <row>
+  <item>elven boots</item>
+  <item>8</item>
+  <item>15</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Stlth</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*mud boots</item>
+ </row>
+
+ <row>
+  <item>kicking boots</item>
+  <item>8</item>
+  <item>15</item>
+  <item>1</item>
+  <item>iron</item>
+  <item>Kick</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*buckled boots</item>
+ </row>
+
+ <row>
+  <item>fumble boots</item>
+  <item>30</item>
+  <item>20</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Fumble</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*riding boots</item>
+ </row>
+
+ <row>
+  <item>levitation boots</item>
+  <item>30</item>
+  <item>15</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Lev</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*snow boots</item>
+ </row>
+
+ <row>
+  <item>jumping boots</item>
+  <item>50</item>
+  <item>20</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Jump</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*hiking boots</item>
+ </row>
+
+ <row>
+  <item>speed boots</item>
+  <item>50</item>
+  <item>20</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>Speed</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*combat boots</item>
+ </row>
+
+ <row>
+  <item>water walking boots</item>
+  <item>50</item>
+  <item>20</item>
+  <item>1</item>
+  <item>leather</item>
+  <item>WWalk</item>
+  <item>--</item>
+  <item>Yes</item>
+  <item>*jungle boots</item>
+ </row>
+
+ <row>
+  <item>high boots</item>
+  <item>12</item>
+  <item>20</item>
+  <item>2</item>
+  <item>leather</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>jackboots</item>
+ </row>
+
+ <row>
+  <item>iron shoes</item>
+  <item>16</item>
+  <item>50</item>
+  <item>2</item>
+  <item>iron</item>
+  <item>--</item>
+  <item>--</item>
+  <item>--</item>
+  <item>hard shoes</item>
+ </row>
+
+</quick_stat>

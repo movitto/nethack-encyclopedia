@@ -27,12 +27,14 @@
         <item>Scrolls</item>
         <item>Gems</item>
         <item>Armor</item>
+        <item>Rings</item>
         <item>Tools</item>
     </string-array>
     <string name="potions_quick_stat">Potions</string>
     <string name="scrolls_quick_stat">Scrolls</string>
     <string name="gems_quick_stat">Gems</string>
     <string name="armor_quick_stat">Armor</string>
+    <string name="rings_quick_stat">Rings</string>
     <string name="tools_quick_stat">Tools</string>
 
 

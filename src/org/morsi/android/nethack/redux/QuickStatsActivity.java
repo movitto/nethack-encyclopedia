@@ -20,16 +20,22 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.text.TextUtils.TruncateAt;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -189,6 +195,9 @@ public class QuickStatsActivity extends Activity {
 	            // alternate background colors
 	            tv.setBackgroundResource((alternate_col = !alternate_col) ? R.color.gray : R.color.light_gray);
 
+  	            // wire up click listener to view row details
+	            tv.setOnClickListener(new RowClickedListener());
+	            
 	            tv.setGravity(Gravity.CENTER);
 	            tv.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
 	            tr.addView(tv);
@@ -235,4 +244,55 @@ public class QuickStatsActivity extends Activity {
 	        displayStats(selected, parent);
 	    }
     }
+    
+    // Handles clicks to the rows by popuping w/ more more details
+    class RowClickedListener implements OnClickListener {
+    	public void onClick(View v) {
+    		// get the quick stat corresponding to the row
+    		View row = (View)v.getParent();
+    		TableLayout table = (TableLayout)row.getParent();
+    		int index;
+    		for(index = 0; index < table.getChildCount(); ++index)
+    			if(table.getChildAt(index) == row)
+    				break;
+    		
+    		View select = (View)v.getParent().getParent().getParent().getParent().getParent();
+    		QuickStatCategory category = selectedQuickStat(select);
+    		QuickStat stat = category.get_stats().get(index);
+    		displayStatDetails(stat, category.name, category.get_columns());
+    	}
+    }
+    
+    private void displayStatDetails(QuickStat stat, String category, ArrayList<String> labels){
+    	  LayoutInflater inflater = (LayoutInflater) QuickStatsActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+          View layout = inflater.inflate(R.layout.quick_stat_popup, (ViewGroup) findViewById(R.id.quick_stat_page_popup));
+          PopupWindow pw = new PopupWindow(layout, 230, 400, true);
+
+          TextView text = (TextView) layout.findViewById(R.id.quick_stat_page_title);
+          text.setText(category);
+          
+          String content = "";
+          for(int i = 0; i < labels.size(); ++i)
+        	  content += labels.get(i) + ": " +stat.get_value(i) + "\n";
+          
+          text = (TextView) layout.findViewById(R.id.quick_stat_page_content);
+          text.setText(content);
+          
+          pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
+          
+          Button closeButton = (Button) layout.findViewById(R.id.quick_stat_page_close);
+          closeButton.setOnClickListener(new QuickStatPopupCloseListener(pw));
+    }
+    
+    // Handles clicks to the closed button on the popup page
+    private class QuickStatPopupCloseListener implements Button.OnClickListener {
+        private PopupWindow popup_window;
+
+        public QuickStatPopupCloseListener(PopupWindow lpw){
+          popup_window = lpw;
+        }
+        public void onClick(View v) {
+          popup_window.dismiss();
+        }
+    };
 }

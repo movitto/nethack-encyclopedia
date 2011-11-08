@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rows>
-    <row name="columns">
-        <item>Potion</item>
-        <item>Cost</item>
-        <item>Weight</item>
-        <item>Probability</item>
-        <item>Appearance</item>
-    </row>
+<quick_stat>
+    <columns>
+        <column weight="0.32">Potion</column>
+        <column weight="0.15">Cost</column>
+        <column weight="0.15">Weight</column>
+        <column weight="0.13">Probability</column>
+        <column weight="0.25">Appearance</column>
+    </columns>
     <row>
         <item>water (uncursed)</item>
         <item>0</item>
@@ -203,4 +203,4 @@
         <item>4.2%</item>
         <item>random</item>
     </row>
-</rows>
+</quick_stat>

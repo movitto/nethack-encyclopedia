@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rows>
-  <row>
-    <item>Name</item>
-    <item>Cost</item>
-    <item>Weight</item>
-    <item>Use</item>
-  </row>
+<quick_stat>
+  <columns>
+    <column weight="0.32">Name</column>
+    <column weight="0.13">Cost</column>
+    <column weight="0.13">Weight</column>
+    <column weight="0.42">Use</column>
+  </columns>
 
   <!--<row><item>Character accessories</item></row>-->
   
@@ -418,4 +418,4 @@
     <item>Preventing Monster Regeneration, Tinning corpses for Intrinsics</item>
   </row>
   
-</rows>
+</quick_stat>

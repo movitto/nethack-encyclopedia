@@ -45,9 +45,12 @@ public class DamageCalculator {
 	        // setup damage feature toggle buttons
 	        Button button = (Button) activity.findViewById(R.id.monster_size_button);
 	        button.setText(activity.getResources().getStringArray(R.array.monster_size_array)[0]);
+	        button.setOnClickListener(new DamageCalculatorFeatureToggledListener());
+	        
 	        button = (Button) activity.findViewById(R.id.ring_increased_damage_button);
 	        button.setText(activity.getResources().getStringArray(R.array.with_without_array)[0]);
-
+	        button.setOnClickListener(new DamageCalculatorFeatureToggledListener());
+	        
 	        // restore stored preferences and
 	        // wire up listeners of damage calculator input events
 	        DamageCalculatorInputChangedListener devent_listener = new DamageCalculatorInputChangedListener();
@@ -97,6 +100,13 @@ public class DamageCalculator {
 	      
 	      public void onClick(View v) {
 	    	  updateView();
+	      }
+	  }
+	  
+	  // Handles damage feature toggles input changes
+	  class DamageCalculatorFeatureToggledListener implements OnClickListener {
+		  public void onClick(View v) {
+	    	  toggleDamageFeatures(v);
 	      }
 	  }
 	  

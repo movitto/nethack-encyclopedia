@@ -11,6 +11,7 @@ import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.util.AndroidMenu;
 import org.morsi.android.nethack.redux.util.ArmorCalculator;
 import org.morsi.android.nethack.redux.util.DamageCalculator;
+import org.morsi.android.nethack.redux.util.SpellsCalculator;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -53,6 +54,7 @@ public class CalculatorActivity extends Activity {
     // actual calculators
     private ArmorCalculator  armor;
     private DamageCalculator damage;
+    private SpellsCalculator spells;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,12 +74,15 @@ public class CalculatorActivity extends Activity {
         
         armor  = new ArmorCalculator(this);
         damage = new DamageCalculator(this);
+        spells = new SpellsCalculator(this);
         
         armor.onCreate();
         damage.onCreate();
+        spells.onCreate();
         
         armor.updateView();
         damage.updateView();
+        spells.updateView();
     }
 
     // Handles calculator spinner changes,
@@ -107,19 +112,22 @@ public class CalculatorActivity extends Activity {
 	        if(selected.equals(view.getContext().getString(R.string.armor_calculator))){
 	          showView(R.id.armor_calculator);
 	          hideView(R.id.damage_calculator);
+	          hideView(R.id.spells_calculator);
 	        }else if(selected.equals(view.getContext().getString(R.string.damage_calculator))){
 	          showView(R.id.damage_calculator);
 	          hideView(R.id.armor_calculator);
+	          hideView(R.id.spells_calculator);
+	        }else if(selected.equals(view.getContext().getString(R.string.spells_calculator))){
+	          showView(R.id.spells_calculator);
+	          hideView(R.id.armor_calculator);
+	          hideView(R.id.damage_calculator);
 	        }else{
 	          hideView(R.id.armor_calculator);
 	          hideView(R.id.damage_calculator);
+	          hideView(R.id.spells_calculator);
 	        }
          }
 
         public void onNothingSelected(AdapterView<?> parent) {}
-    }
-    
-    public void onClickDamageFeatureToggleButton(View target) {
-    	damage.toggleDamageFeatures(target);
     }
 }

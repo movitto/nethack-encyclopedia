@@ -4,7 +4,7 @@
     <string name="app_name">Nethack Encyclopedia</string>
     <string name="project_url">http://github.com/movitto/nethack-encyclopedia</string>
     
-    <string name="project_license_text">Freely distributed under the MIT license</string>
+    <string name="project_license_text">Freely distributed under the\nMIT license</string>
     <string name="project_license">MIT license</string>
     <string name="project_license_url">http://www.opensource.org/licenses/mit-license.php</string>
     

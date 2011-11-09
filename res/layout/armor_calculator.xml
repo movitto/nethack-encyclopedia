@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal"
-                android:text="AC" android:textSize="12px"/>
+                android:text="AC" android:textSize="8px"/>
 
             <EditText
                 android:id="@+id/acInput"
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal"
-                android:text="Level" android:textSize="12px"/>
+                android:text="Level" android:textSize="8px"/>
 
             <EditText
                 android:id="@+id/mlevelInput"
@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal"
-                android:text="Damage" android:textSize="12px"/>
+                android:text="Damage" android:textSize="8px"/>
 
             <EditText
                 android:id="@+id/mdamageInput"
@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal"
-                android:text="# of Attacks" android:textSize="12px"/>
+                android:text="# of Attacks" android:textSize="8px"/>
 
             <EditText
                 android:id="@+id/mattacksInput"

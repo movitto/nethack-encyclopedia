@@ -2,35 +2,34 @@ TODO
 ------------------
 - quick stats:
   - more stats:
-    - Amulets, Armor, Artifacts, Comestibles, Dwarvish items, Elven items,
-    - Item attributes, Materials, Potions, Rings, Scrolls, Spellbooks, Wands,
-    - Weapons, Beastery, Traps, Quests, Gods, Spells, Spellbooks, Races, Classes
-  - when a row is clicked, popup w/ details
-  - performance improvments
-  - cache last drop down selection
+    - Amulets, Artifacts, Comestibles, Item attributes, Materials, Spellbooks
+      Weapons, Beastery, Traps, Quests, Gods, Spells, Races, Classes, sink info
+  - performance/ui improvments (preload stats in same manner as encyclopedia)
 
 - encyclopedia:
   - remove edit links
   - add anchor support
-  - different ways to sort encyclopedia topics
 
 - calculator:
-  - more tools:
-    - spell success rate
+  - more tools
   - flush out 'lookup monster' and 'lookup weapon' links
-  - interface improvements
-    - collapsable sections
-  - persistantly store last selection of spinner and input values
 
 - tutorial:
   - implement (interactive?)
+  - link each tutorial row to popup w/ more info & possibly some gfx
 
 - parser.rb
-  - pull in content from new wiki http://nethackwiki.com
   - pull in images from wiki
-  - remove pages which are simply redirects of others
+
+- fixes / refactoring:
+  - test against multiple sized devices (s/px/dpi), different orientations
+  - verify calculator values are persistantly stored
+  - tweak encyclopedia search support (search accross sections when on alphabetical list)
+  - rename methods and variables to java camelcased convention
+  - fix view quick stat details after sorting
 
 - other:
+  - add 'useful articles' section to encyclopedia (perhaps w/ 'random article' link)
   - tool to integrate / backup / restore nethack-android save files
   - tool to launch nethack encyclopedia right from within nethack
   - provide option to pull in player stats directly from game

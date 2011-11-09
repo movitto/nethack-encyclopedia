@@ -11,4 +11,5 @@
              android:id="@+id/calculator_spinner" />
     <include android:id="@+id/armor_calculator"  layout="@layout/armor_calculator" />
     <include android:id="@+id/damage_calculator" layout="@layout/damage_calculator" />
+    <include android:id="@+id/spells_calculator" layout="@layout/spells_calculator" />
 </LinearLayout>

@@ -44,9 +44,11 @@
         <item>Select Tool...</item>
         <item>Armor</item>
         <item>Damage</item>
+        <item>Spells</item>
     </string-array>
     <string name="armor_calculator">Armor</string>
     <string name="damage_calculator">Damage</string>
+    <string name="spells_calculator">Spells</string>
 	<string-array name="monster_size_array">
         <item>small</item>
         <item>large</item>
@@ -55,4 +57,7 @@
         <item>with</item>
         <item>without</item>
     </string-array>
+    <string name="classes_calc_int_wis_label">with intelligence/wisdom</string>
+    <string name="classes_calc_int_label">with intelligence</string>
+    <string name="classes_calc_wis_label">with wisdom</string>
 </resources>

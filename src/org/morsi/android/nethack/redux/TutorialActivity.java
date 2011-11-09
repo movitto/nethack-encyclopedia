@@ -79,8 +79,8 @@ public class TutorialActivity extends ExpandableListActivity
         		  element_name =  xpp.getName();
         		  if(element_name.equals("section")){
         			  current_section_content = new ArrayList<String>();
-        			  String att = xpp.getAttributeValue(0);
         			  current_section = xpp.getAttributeValue(null, "name");
+        			  // FIXME we miss the last row because of this
     				  tutorial_content.put(current_section, current_section_content);
         		  }
         	  }

@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sections>
-    <section name="Bare Basics">
-        <item><content>try out the game w/ a bunch of randomly generated characters first, best way to get a feel for how things work!</content></item>
-        <item><content>you move w/ hjkl  (left, down, up, right)</content></item>
-        <item><content>^ means the control key, so if '^' appears before a key hold down control and press that key</content></item>
+    <section name="Movement">
         <item>
-            <content>to open a door press o next to it and then the movement key for the direction the door lies in</content>
-            <item><content>to kick open a door press k (or ^D) and then the movement key in the direction it is in, you may need to try multiple times</content></item>
+            <content>You move w/ hjkl (left, down, up, right)</content>
+            <image>basic_movement</image>
         </item>
+        <item><content>You can also move diagonally via yubn, useful to get around boulders and such</content></item>
+        <item><content>Traverse stairs w/ '&lt;' and '&gt;'</content></item>
+    </section>
+    
+    <section name='Intertacting with the World'>
+        <item><content>To open a door press o next to it and then the movement key for the direction the door lies in</content></item>
         <item>
-            <content>s searches for secrets around you, it usually takes several tries to find something hidden</content>
-            <item><content>you can search multiple times in succession by typing in a number and then pressing s</content></item>
+            <content>To kick open a door press k (or ^D) and then the movement key in the direction it is in, you may need to try multiple times</content>
+            <image>kick_door</image>
         </item>
-        <item><content>to pick up an object stand ontop of it and press ','</content></item>
-        <item><content>traverse stairs w/ '&lt;' and '&gt;'</content></item>
-        <item><content>to attack a monster just move in its direction</content></item>
+        <item><content>s searches for secrets around you, it usually takes several tries to find something hidden</content></item>
+        <item><content>You can search multiple times in succession by typing in a number and then pressing s</content></item>        
+        <item><content>To pick up an object stand on top of it and press ','</content></item>
+        <item><content>Alot of items interact w/ each other and there are tons of ways to interact w/ objects in the world, experiment or look things up!</content></item>
+        <item><content>Press ';' and then move the cursor to a particular square to view the contents of that square</content></item>
+    </section>
+    
+    <section name='Inventory Items'>
+        <item><content>Open your inventory w/ i, you may view what you've picked up here</content></item>
+        <item><content>To eat an item press 'e' then its inventory number</content></item>
+        <item><content>To drop an item press 'd' then its inventory number (press 'D' to drop multiple amounts of that item)</content></item>
+        <item><content>To wield a weapon press 'w' then its inventory number</content></item>
+        <item><content>To wear armor press 'W' then its inventory number</content></item>
+        <item><content>To take off armor press 'T' then its inventory number</content></item>
+        <item><content>To quaff (drink) a potion, press 'q' then its inventory number</content></item>     
+    </section>
+    
+    <section name="Combat">
+        <item>
+            <content>To attack a monster just move in its direction</content>
+            <image>combat</image>
+        </item>
     </section>
     
     <section name='More Advanced'>
-        <item>
-            <content>open your inventory w/ i, you may view what you've picked up here</content>
-            <item>to eat an item press 'e' then its inventory number</item>
-            <item>to drop an item press 'd' then its inventory number (press 'D' to drop multiple amounts of that item)</item>
-            <item>to weild a weapon press 'w' then its inventory number</item>
-            <item>to wear armor press 'W' then its inventory number</item>
-            <item>to take off armore press 'T' then its inventory number</item>
-            <item>to quaff (drink) a potiuon, press 'q' then its inventory number</item>
-        </item>
-        <item><content>tons of items iteract w/ each other and there are tons of ways to interact w/ objects in the world, expirement or look things up!</content></item>
-        <item><content>you can also move diagnolly via yubn, useful to get around boulders and such</content></item>
-        <item><content>press ';' and then move the cursor to a particular square to view the contents of that square</content></item>        
+        <item><content>You may set game options by pressing the 'O' key</content></item>
+        <item><content>Set 'autopickup' to true to automatically pick up items when you walk over them</content></item>
     </section>
-    
-    <section name='Even More Advanced'></section>
 </sections>

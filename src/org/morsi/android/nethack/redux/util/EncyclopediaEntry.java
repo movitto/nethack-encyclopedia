@@ -45,6 +45,6 @@ public class EncyclopediaEntry {
     	content = catalog_page.substring(start_index, end_index);
     	return content.toString();
     }
-	return "Encyclopedia content not found"; // TODO should we raise an exception here?
+	return content.toString();
   }
 }

@@ -121,6 +121,7 @@ public class EncyclopediaActivity extends ListActivity {
 				EncyclopediaActivity.current_popup_topic = ((TextView) view).getText().toString();
 				Intent EncPage = new Intent(EncyclopediaActivity.this, EncyclopediaPage.class);
 				EncPage.putExtra("page", EncyclopediaActivity.current_popup_topic);
+				EncPage.putExtra("depth", "0");
 				startActivity(EncPage);
     	}
       }

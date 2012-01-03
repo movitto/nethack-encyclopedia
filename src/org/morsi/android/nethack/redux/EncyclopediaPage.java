@@ -59,7 +59,7 @@ public class EncyclopediaPage extends Activity
     }
 
     //create previous page
-    public void NextActivity() {
+    public void PreviousActivity() {
         int CurrentDepth = Integer.parseInt(getIntent().getExtras().getString("depth"));
 
         if(CurrentDepth > 0){
@@ -112,7 +112,7 @@ public class EncyclopediaPage extends Activity
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            NextActivity();
+            PreviousActivity();
             return true;
         }
         return super.onKeyDown(keyCode, event);

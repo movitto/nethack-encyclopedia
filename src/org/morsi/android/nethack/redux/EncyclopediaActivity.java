@@ -12,7 +12,6 @@ import java.util.List;
 import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -57,9 +56,6 @@ public class EncyclopediaActivity extends ListActivity {
     // divide encyclopedia into alphabetical sections
     public static boolean in_alphabetical_mode = true;
     public static String current_section;
-
-    // current popup window being displayed
-    public static String current_popup_topic = null;
 
     // alphabet sections
     public static final List<String> alphabet_sections =
@@ -117,11 +113,8 @@ public class EncyclopediaActivity extends ListActivity {
             setListAdapter(new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(EncyclopediaActivity.current_section)));
     	}else{
             //create encyclopedia page activity when topic is picked
-            EncyclopediaActivity.current_popup_topic = ((TextView) view).getText().toString();
-            Intent EncPage = new Intent(EncyclopediaActivity.this, EncyclopediaPage.class);
-            EncPage.putExtra("page", EncyclopediaActivity.current_popup_topic);
-            EncPage.putExtra("depth", "0");
-            startActivity(EncPage);
+            String popup_topic = ((TextView) view).getText().toString();
+            EncyclopediaPage.showPage(EncyclopediaActivity.this, popup_topic);
     	}
       }
     }

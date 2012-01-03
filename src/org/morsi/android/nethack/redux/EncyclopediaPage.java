@@ -1,7 +1,9 @@
 
 package org.morsi.android.nethack.redux;
 
+import java.util.Stack;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -16,6 +18,26 @@ import org.morsi.android.nethack.redux.util.EncyclopediaEntry;
 // Show encyclopedia page screen when encyclopedia topic is clicked
 public class EncyclopediaPage extends Activity
 {
+    // stack of pages which have been displayed (To restore in order via back button)
+    public static Stack<String> page_stack = new Stack<String>();
+
+    // show a new topic via the encyclopedia page
+    public static void showPage(Context context, String topic){
+        if(page_stack.isEmpty() || !page_stack.peek().equals(topic))
+            page_stack.push(topic);
+        Intent EncPage = new Intent(context, EncyclopediaPage.class);
+        EncPage.putExtra("page", topic);
+        context.startActivity(EncPage);
+    }
+
+    // close current page
+    public void closePage(){
+        setResult(RESULT_OK);
+        finish();
+        if(!page_stack.isEmpty())
+            EncyclopediaPage.showPage(this,	page_stack.peek());
+    }
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -45,7 +67,8 @@ public class EncyclopediaPage extends Activity
 	                    if(end == -1) end = url.length();
 
 	                    String next_page = url.substring(22, end);
-	                    NextActivity(next_page);
+	                    page_stack.push(next_page);
+	                    closePage();
 	                    return true;
 	                }
 	                return false;
@@ -60,67 +83,18 @@ public class EncyclopediaPage extends Activity
         // Handles clicks to the closed button on the encyclopedia page
         close_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                setResult(RESULT_OK);
-                finish();
+                page_stack.clear();
+                closePage();
             }
         });
-    }
-
-    //create previous page
-    public void PreviousActivity() {
-        int CurrentDepth = Integer.parseInt(getIntent().getExtras().getString("depth"));
-
-        if(CurrentDepth > 0){
-            Intent EncPage = new Intent(EncyclopediaPage.this, EncyclopediaPage.class);
-            String PrevPage = getIntent().getExtras().getString("0");
-            EncPage.putExtra("page", PrevPage );
-
-            for (int i=1; i<CurrentDepth; i++){
-                String aPage = getIntent().getExtras().getString(Integer.toString(i));
-                EncPage.putExtra(Integer.toString(i-1),aPage);
-            }
-
-            CurrentDepth--;
-            EncPage.putExtra("depth",Integer.toString(CurrentDepth));
-
-            startActivity(EncPage);
-            setResult(RESULT_OK);
-            finish();
-        }else{	//close the window if there aren't any more pages to go to
-            setResult(RESULT_OK);
-            finish();
-        }
-    }
-
-    //create clicked page
-    public void NextActivity(String NextPage) {
-        int CurrentDepth = Integer.parseInt(getIntent().getExtras().getString("depth"));
-        String current_page = getIntent().getExtras().getString("page");
-
-        Intent EncPage = new Intent(EncyclopediaPage.this, EncyclopediaPage.class);
-        EncPage.putExtra("page", NextPage);		//set the page for the next window
-
-        // import the page history from previous intent
-        for (int i=0; i<=CurrentDepth; i++){
-            String aPage = getIntent().getExtras().getString(Integer.toString(i));
-            EncPage.putExtra(Integer.toString(i+1), aPage);
-        }
-
-        // push current page onto the top of the history stack
-        EncPage.putExtra("0", current_page);
-        CurrentDepth++;
-        EncPage.putExtra("depth",Integer.toString(CurrentDepth));
-
-        startActivity(EncPage);
-        setResult(RESULT_OK);
-        finish();
     }
 
     // make back button return to previous encyclopedia page
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            PreviousActivity();
+            page_stack.pop();
+            closePage();
             return true;
         }
         return super.onKeyDown(keyCode, event);

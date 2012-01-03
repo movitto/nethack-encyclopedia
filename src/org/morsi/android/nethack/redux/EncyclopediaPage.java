@@ -37,7 +37,11 @@ public class EncyclopediaPage extends Activity
             public boolean shouldOverrideUrlLoading(WebView view, String url)
             {
                 if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
-                    String next_page = url.substring(22, url.length());
+                    // TODO right now we are just dropping anchors, handle these properly at some point
+                    int end = url.indexOf('#');
+                    if(end == -1) end = url.length();
+
+                    String next_page = url.substring(22, end);
                     NextActivity(next_page);
                     return true;
                 }

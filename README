@@ -1,8 +1,6 @@
 Nethack Encylopedia for Android
 Licensed under the MIT License
-Copyright (C) 2011 by 
- - Mo Morsi <mo@morsi.org>
- - <add your name here>
+Copyright (C) 2011 Mo Morsi <mo@morsi.org>
 
 I. Learn
 -------------------------------
@@ -54,8 +52,10 @@ at mo@morsi.com (preferibly generating it with 'git am' and sending
 it via 'git send-email').
 
 All patch contributes agree to license their changes under the MIT
-license. The author of every patch that gets added to the repo, no
-matter how small, will get their name added to the authors list here,
-and in the 'about' dialog in the app. I will periodically push
-updates to the Nethack Encyclopedia on the Android Marketplace with
-these updates.
+license.  I will periodically push updates to the Nethack Encyclopedia app
+on the Android Marketplace with these updates.
+
+V. Contributors
+-------------------------------
+Mo Morsi - mo@morsi.org - http://mo.morsi.org
+Us3rn4m3 - https://github.com/Us3rn4m3

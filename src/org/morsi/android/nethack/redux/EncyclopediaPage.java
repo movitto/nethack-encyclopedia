@@ -25,33 +25,37 @@ public class EncyclopediaPage extends Activity
         Button close_button = (Button) findViewById(R.id.encyclopedia_page_close);
         EncyclopediaEntry entry = EncyclopediaActivity.encyclopedia.get(current_page);
 
-        // TODO display error if entry is null
-        TextView text = (TextView) findViewById(R.id.encyclopedia_page_title);
-        text.setText(entry.topic);
-
+        TextView title = (TextView) findViewById(R.id.encyclopedia_page_title);
         WebView web_view = (WebView) findViewById(R.id.encyclopedia_page_content);
 
-        // intercept link clicks, redirect to our encyclopedia
-        web_view.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url)
-            {
-                if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
-                    // TODO right now we are just dropping anchors, handle these properly at some point
-                    int end = url.indexOf('#');
-                    if(end == -1) end = url.length();
+        // display error if entry is null
+        if(entry == null){
+            title.setText("Page " + current_page + " not found");
+        }else{
+	        title.setText(entry.topic);
 
-                    String next_page = url.substring(22, end);
-                    NextActivity(next_page);
-                    return true;
-                }
-                return false;
-           }
-        });
+	        // intercept link clicks, redirect to our encyclopedia
+	        web_view.setWebViewClient(new WebViewClient() {
+	            @Override
+	            public boolean shouldOverrideUrlLoading(WebView view, String url)
+	            {
+	                if(url.substring(0, 22).equals("fake://morsi.org/wiki/")){
+	                    // TODO right now we are just dropping anchors, handle these properly at some point
+	                    int end = url.indexOf('#');
+	                    if(end == -1) end = url.length();
 
-        // need to use loadDataWithBaseURL
-        // http://code.google.com/p/android-rss/issues/detail?id=15
-        web_view.loadDataWithBaseURL("fake://morsi.org", entry.get_content(web_view.getContext()).toString(),  "text/html", "utf-8", null);
+	                    String next_page = url.substring(22, end);
+	                    NextActivity(next_page);
+	                    return true;
+	                }
+	                return false;
+	           }
+	        });
+
+	        // need to use loadDataWithBaseURL
+	        // http://code.google.com/p/android-rss/issues/detail?id=15
+	        web_view.loadDataWithBaseURL("fake://morsi.org", entry.get_content(web_view.getContext()).toString(),  "text/html", "utf-8", null);
+        }
 
         // Handles clicks to the closed button on the encyclopedia page
         close_button.setOnClickListener(new View.OnClickListener() {

@@ -39,7 +39,13 @@
               <action android:name="android.intent.action.MAIN"/>
           </intent-filter>
         </activity>
-                <activity android:name="org.morsi.android.nethack.redux.EncyclopediaPage"
+        <activity android:name="org.morsi.android.nethack.redux.EncyclopediaPage"
+                  android:label="@string/app_name">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN"/>
+          </intent-filter>
+        </activity>
+        <activity android:name="org.morsi.android.nethack.redux.TutorialPopup"
                   android:label="@string/app_name">
           <intent-filter>
               <action android:name="android.intent.action.MAIN"/>

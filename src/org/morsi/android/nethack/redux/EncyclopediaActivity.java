@@ -46,7 +46,7 @@ public class EncyclopediaActivity extends ListActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && !EncyclopediaActivity.in_alphabetical_mode) {
-        	setListAdapter(new ArrayAdapter<String>(this, R.layout.encyclopedia, alphabet_sections));
+            setListAdapter(alphabet_adapter);
         	EncyclopediaActivity.in_alphabetical_mode = true;
         	return true;
         }
@@ -64,11 +64,17 @@ public class EncyclopediaActivity extends ListActivity {
     // Store a mapping of topic names to EncylopediaEntry objects
     public static Encyclopedia encyclopedia;
     
+    // store adapters used to bind data to list
+    // FIXME these adapters are not thread safe and may cause intermitent errors as
+    //   section_adapter is updated in asynctask, see this for more info:
+    //  http://stackoverflow.com/questions/6244330/is-arrayadapter-thread-safe-in-android-if-not-what-can-i-do-to-make-it-thread
+    private static ArrayAdapter<String> alphabet_adapter;
+    private static ArrayAdapter<String> section_adapter = null;
+
     // helper to load the encyclopedia in the background
     public static void load_encyclopedia(Context c){
         encyclopedia = new Encyclopedia();
         new LoadEncyclopediaTask().execute(c);
-
     }
     
     // Asynchronous task to load encyclopedia in the background
@@ -86,12 +92,9 @@ public class EncyclopediaActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      
-        // automatically wires the list of topic names to list items to display
-        if(EncyclopediaActivity.in_alphabetical_mode)
-            setListAdapter(new ArrayAdapter<String>(this, R.layout.encyclopedia, alphabet_sections));
-        else
-            setListAdapter(new ArrayAdapter<String>(this.getBaseContext(), R.layout.encyclopedia, encyclopedia.topicNames(EncyclopediaActivity.current_section)));
+
+        alphabet_adapter = new ArrayAdapter<String>(this, R.layout.encyclopedia, alphabet_sections);
+        setListAdapter(alphabet_adapter);
 
       // display the list, enable filtering when the user types
       //   characters and wire up item click listener
@@ -110,7 +113,8 @@ public class EncyclopediaActivity extends ListActivity {
     	if(EncyclopediaActivity.in_alphabetical_mode){
             EncyclopediaActivity.current_section = ((TextView) view).getText().toString();
             EncyclopediaActivity.in_alphabetical_mode = false;
-            setListAdapter(new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(EncyclopediaActivity.current_section)));
+            section_adapter = new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(EncyclopediaActivity.current_section));
+            setListAdapter(section_adapter);
     	}else{
             //create encyclopedia page activity when topic is picked
             String popup_topic = ((TextView) view).getText().toString();

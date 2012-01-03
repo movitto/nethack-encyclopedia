@@ -15,6 +15,7 @@ import java.util.Map;
 
 import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.util.AndroidMenu;
+import org.morsi.android.nethack.redux.util.Tutorial;
 import org.morsi.android.nethack.redux.util.TutorialItem;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -61,8 +62,7 @@ public class TutorialActivity extends ExpandableListActivity  implements OnChild
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        tutorial_content = new LinkedHashMap<String, ArrayList<TutorialItem>>();
-        getTutorialFromXml();
+        tutorial_content = Tutorial.getTutorialFromXml(this);
         setContentView(R.layout.tutorial);
         
 		SimpleExpandableListAdapter expListAdapter =
@@ -88,81 +88,10 @@ public class TutorialActivity extends ExpandableListActivity  implements OnChild
         TutorialItem item = tutorial_content.get(tutorial_section).get(childPosition);
         
         if(item.image != null){
-	    	LayoutInflater inflater = (LayoutInflater) TutorialActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	        View layout = inflater.inflate(R.layout.tutorial_popup, (ViewGroup) findViewById(R.id.tutorial_popup));
-	        PopupWindow pw = new PopupWindow(layout, 230, 400, true);
-	        
-	        ImageView img = (ImageView)layout.findViewById(R.id.tutorial_popup_image);
-	        Resources res = getResources();
-	        int resID = res.getIdentifier("tutorial_" + item.image , "drawable", getPackageName());
-	        Drawable drawable = res.getDrawable(resID);
-	        img.setImageDrawable(drawable );
-	        
-	        Button close = (Button)layout.findViewById(R.id.tutorial_close_button);
-	        close.setOnClickListener(new TutorialPopupClickListener(pw));
-
-	        pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
-	        
+            TutorialPopup.showPopup(this, item.image);
 	    	return true;
 	    }
         return false;
-    }
-    
-    // Handles clicks to the closed button on the encyclopedia page
-    private class TutorialPopupClickListener implements Button.OnClickListener {
-	      private PopupWindow popup_window;
-	
-	      public TutorialPopupClickListener(PopupWindow lpw){
-	        popup_window = lpw;
-	      }
-	      public void onClick(View v) {
-	        popup_window.dismiss();
-	      }
-    };
-    
-    // Retrieve the content stored in the specified android tutorial resource
-    private void getTutorialFromXml() {
-        String current_section       = null;
-        ArrayList<TutorialItem> current_section_content = null;
-        TutorialItem current_item = null;
-        
-        try{
-          XmlResourceParser xpp = getResources().getXml(R.xml.tutorial);
-          String element_name = ""; int group_id = -1;;
-          
-          int eventType =  xpp.next(); 
-          while (eventType != XmlPullParser.END_DOCUMENT){
-        	  if(eventType == XmlPullParser.START_TAG){
-        		  element_name =  xpp.getName();
-        		  if(element_name.equals("section")){
-        			  current_section_content = new ArrayList<TutorialItem>();
-        			  current_section = xpp.getAttributeValue(null, "name");
-            		  group_id = 0;
-        			  
-        		  }else if(element_name.equals("item")){
-        			  current_item = new TutorialItem(group_id++);
-        		  }
-        		  
-        	  }else if(eventType == XmlPullParser.TEXT) {
-        		  if(element_name.equals("content")){
-        			  String content = xpp.getText();
-        			  current_item.content = content;
-        			  
-        		  }else if(element_name.equals("image"))
-        			  current_item.image = xpp.getText();
-        		  
-        	  }else if(eventType == XmlPullParser.END_TAG){
-        		  element_name =  xpp.getName();
-        		  if(element_name.equals("section"))
-				  	tutorial_content.put(current_section, current_section_content);
-        		  else if(element_name.equals("item"))
-        			  current_section_content.add(current_item);
-        	  }
-        	  
-        	  eventType = xpp.next();
-          }
-        }catch(IOException e) {
-        }catch(XmlPullParserException e) {  }
     }
 
     // return a list of hashes of the static string 'tutorial_section' to section names

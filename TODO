@@ -7,19 +7,15 @@ TODO
   - performance/ui improvments (preload stats in same manner as encyclopedia)
 
 - encyclopedia:
-  - remove edit links
-  - add anchor support
 
 - calculator:
   - more tools
   - flush out 'lookup monster' and 'lookup weapon' links
 
 - tutorial:
-  - implement (interactive?)
-  - link each tutorial row to popup w/ more info & possibly some gfx
+  - improve + link each tutorial row to popup w/ more info & possibly some gfx
 
 - parser.rb
-  - pull in images from wiki
 
 - fixes / refactoring:
   - test against multiple sized devices (s/px/dpi), different orientations

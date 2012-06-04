@@ -259,7 +259,7 @@ public class QuickStatsActivity extends Activity {
     		
     		View select = (View)v.getParent().getParent().getParent().getParent().getParent();
     		QuickStatCategory category = selectedQuickStat(select);
-    		QuickStat stat = category.get_stats().get(index);
+            QuickStat stat = category.get_stats().get(index-2); // need to offset column names and border rows
     		displayStatDetails(stat, category.name, category.get_columns());
     	}
     }

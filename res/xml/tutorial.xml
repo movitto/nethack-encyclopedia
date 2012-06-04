@@ -43,4 +43,165 @@
         <item><content>You may set game options by pressing the 'O' key</content></item>
         <item><content>Set 'autopickup' to true to automatically pick up items when you walk over them</content></item>
     </section>
+    
+    <section name='Corpses Nutrition'>
+        <item>
+            <content>
+"Initial effects" are the effects that occur on the first bite of a corpse.
++ Acidic: Deal 1 to 15 damage to you if not acid-resistant. If turning to stone, you are cured. Tins of acidic monsters deal no acid damage, but still stop you turning to stone.
++ Poisonous: 80% chance to deal 1 to 15 damage to you and reduce your strength by 1 to 4, if not poison-resistant. Tins of monsters are not poisonous.
++ Cannibalism(Human, Dwarf, Elf, Gnome): If you eat a member of your own race, and are not a Caveman, you gain aggravate monster and lose 2 to 5 luck.
++ Aggravate: Eating this monster gives you aggravate monster. Orcs and Cavemen are exempt.
++ Slime:Eating a green slime makes you begin turning into slime, killing you in 10 turns, unless you have unchanging or you are a green slime, a fire elemental, flaming sphere, fire vortex or salamander.
++ Petrify: Eating a chickatrice, cockatrice or Medusa instantly petrifies you, unless stoning-resistant. If you are a golem, you become a stone golem, otherwise petrification kills you.
++ DIE: Eating Death, Famine or Pestilence instantly kills you.
++ Cure stoning: Eating lizard meat cures you if turning to stone.
+            </content>
+        </item>
+        <item>
+            <content>
+"Final effects" are the effects that occur after finishing a corpse.
++ Stun: You become stunned for the number of turns shown.
++ Polymorph: You change form, unless you have unchanging.
++ Hallucination: You hallucinate for 200 (more) turns.
++ Mimic: You mimic a pile of gold (or an orange if hallucinating) for the number of turns shown (falling off your steed, if applicable), unless you have unchanging.
++ Reduce stunning, confusion: Eating a lizard reduces stunning and confusion counts to 2 turns, if higher.
++ Strength: Eating a giant makes you gain strength, potentially as high as your racial maximum. (You can also gain an intrinsic at the same time, if appropriate.)
+  If you had less than 18 strength, then you have a 19/24 chance of gaining one point, or a 1/24 chance each of gaining 2 to 6 points.
+  If you had 18 strength or more, then you gain 1 to 10 points (equally likely).
+  If you had strength 18/85 or more, gain just one point, up to 18/**.
++ Intelligence: Gain 1 intelligence.
++ Gain level: Eating a wraith corpse makes you gain a level, unless the corpse rots away before you finish (which will happen, for instance, if you are interrupted while eating it).
++ Energy: Eating a newt may give you 1 to 3 energy (100% chance if current energy is two-thirds or less of maximum energy). If this puts you above your maximum energy, you have a one-third chance to gain 1 maximum energy.
++ Heal: Eating a nurse heals you to maximum hit points.
+            </content>
+        </item>
+        
+        <item>
+            <content>
+"Intrinsics" are the intrinsics that can be gained after finishing a corpse, with their probability of being conferred.
++ Fire, Cold, Shock, Poison, Sleep, Disintegration: Gain the corresponding resistance, with the probability shown.
++ Telepathy, Teleport Control, Teleportitis: Gain the corresponding intrinsic.
++ Invisibility: If not already invisible, you become temporarily invisible, else you gain permanent invisibility and see invisible.
++ Lycanthropy: You become a lycanthrope of the same kind as the corpse eaten.
++ Speed toggle: If you have intrinsic speed, you lose it. If you don't have it, you gain it.
+
+The chances of receiving an intrinsic (e.g., poison: 33%) imply that eating the corpse has that chance of conferring the intrinsic (i.e., corpses that can give multiple intrinsics have already had that accounted for). If you already have one of the possible intrinsics from a corpse, the others do not become more likely. You will never gain more than one intrinsic from a corpse.
+
+Tins of monsters confer intrinsics with the same probabilities as the corpses of the monster. Whether a corpse or tin is blessed or cursed has no effect on the chances.
+        	</content>
+        </item>
+        
+        <item><content>Tinned food is eaten in one turn, so both initial and final effects (including intrinsic gains) happen on the same turn, the initial effects happening first. </content></item>
+        
+        <item>
+            <content>
+Corpses that have been left too long may give you food poisoning.
+
+Lizard and lichen corpses never rot.
+Corpses left on ice age half as quickly, corpses in iceboxes do not age at all.
+Corpses left by mummies, zombies and vampires are 100 turns old when they die. The corpse will be of the monster's base race (vampires are human). 
+
+For corpses other than lizards and lichen, the possibility of getting food poisoning from a corpse is as follows:
+
+- The age of the corpse is divided by a random number between 10 and 29, and rounded down.
+- Add 2 if the corpse is cursed, subtract 2 if blessed.
+- If the result is more than 5, and not an acid blob, it is tainted. The corpse disappears, conveying no nutrition or intrinsics. If you are not sickness-resistant, it gives you food poisoning. This will kill you in 11 to 20 turns if it is not cured.
+- Otherwise, if the result is more than 3, and you are not sickness-resistant, there is an 80% chance of the corpse being too old. You take 1 to 8 points of damage. 
+
+Food poisoning may be cured by:
+
++ the spell "cure sickness"
++ a non-cursed potion of extra or full healing, or blessed potion of healing
++ using a non-cursed unicorn horn
++ eating a non-cursed eucalyptus leaf
++ praying for divine intervention
++ a potion of holy water (but not if chaotic or polymorphed into a demon or undead monster)
++ #invoking the Staff of Aesculapius
++ a nurse's healing "attack"
++ polymorphing into your own form, or a sickness-resistant monster (a ghoul or any F) 
+            </content>
+        </item>
+        
+        <item>
+            <content>
+                Monsters not leaving corpses 
+                air elemental
+                Aleax
+                Angel
+                arch-lich
+                Archon
+                Ashikaga Takauji
+                Asmodeus
+                Baalzebub
+                balrog
+                barbed devil
+                barrow wight
+                black light
+                bone devil
+                clay golem
+                couatl
+                Dark One
+                demilich
+                Demogorgon
+                Dispater
+                djinni 
+                dust vortex
+                earth elemental
+                energy vortex
+                erinys
+                fire elemental
+                fire vortex
+                flaming sphere
+                fog cloud
+                freezing sphere
+                gas spore
+                Geryon
+                ghost
+                ghoul
+                glass golem
+                gold golem
+                grid bug
+                hezrou
+                horned devil
+                ice devil
+                ice vortex
+                incubus
+                iron golem
+                Juiblex
+                ki-rin
+                leather golem
+                lemure
+                lich
+                mail daemon
+                manes
+                marilith
+                master lich
+                Minion of Huhetotl
+                nalfeshnee
+                Nalzok
+                Nazgul
+                Orcus
+                paper golem
+                pit fiend
+                rope golem
+                sandestin
+                shade
+                shocking sphere
+                skeleton
+                steam vortex
+                stone golem
+                straw golem
+                succubus
+                Thoth Amon
+                Vlad the Impaler
+                vrock
+                water demon
+                water elemental
+                wood golem
+                Yeenoghu
+                yellow light
+            </content>
+        </item>
+    </section>
 </sections>

@@ -93,8 +93,12 @@ public class EncyclopediaActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        alphabet_adapter = new ArrayAdapter<String>(this, R.layout.encyclopedia, alphabet_sections);
-        setListAdapter(alphabet_adapter);
+        if(EncyclopediaActivity.in_alphabetical_mode){
+            alphabet_adapter = new ArrayAdapter<String>(this, R.layout.encyclopedia, alphabet_sections);
+            setListAdapter(alphabet_adapter);
+        }else{
+            setListAdapter(section_adapter);
+        }
 
       // display the list, enable filtering when the user types
       //   characters and wire up item click listener

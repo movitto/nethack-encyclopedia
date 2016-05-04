@@ -1,0 +1,228 @@
+<quick_stat>
+ <columns>
+  <column weight="0.3">Ring</column>
+  <column weight="0.1">Cost</column>
+  <column weight="0.3">Intrinsic granted</column>
+  <column weight="0.3">Notes</column>
+ </columns>
+
+ <row>
+  <item>meat ring</item>
+  <item>5</item>
+  <item>None</item>
+  <item>symbolized by %; never randomly generated</item>
+ </row>
+
+ <row>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of adornment</item>
+  <item>100</item>
+  <item>+n charisma</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of hunger</item>
+  <item>100</item>
+  <item>hunger</item>
+  <item>90% generated cursed</item>
+ </row>
+
+ <row>
+  <item>ring of protection</item>
+  <item>100</item>
+  <item>+n protection</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of protection from shape changers</item>
+  <item>100</item>
+  <item>protection from shape changers</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of stealth</item>
+  <item>100</item>
+  <item>stealth</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of sustain ability</item>
+  <item>100</item>
+  <item>sustain ability</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of warning</item>
+  <item>100</item>
+  <item>warning</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of aggravate monster</item>
+  <item>150</item>
+  <item>aggravate monster</item>
+  <item>90% generated cursed</item>
+ </row>
+
+ <row>
+  <item>ring of cold resistance</item>
+  <item>150</item>
+  <item>cold resistance</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of gain constitution</item>
+  <item>150</item>
+  <item>+n constitution</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of gain strength</item>
+  <item>150</item>
+  <item>+n strength</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of increase accuracy</item>
+  <item>150</item>
+  <item>+n to-hit bonus</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of increase damage</item>
+  <item>150</item>
+  <item>+n damage bonus</item>
+  <item>chargeable</item>
+ </row>
+
+ <row>
+  <item>ring of invisibility</item>
+  <item>150</item>
+  <item>invisibility</item>
+  <item>cursed if from a Nazgul</item>
+ </row>
+
+ <row>
+  <item>ring of poison resistance</item>
+  <item>150</item>
+  <item>poison resistance</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of see invisible</item>
+  <item>150</item>
+  <item>see invisible</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of shock resistance</item>
+  <item>150</item>
+  <item>shock resistance</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of fire resistance</item>
+  <item>200</item>
+  <item>fire resistance</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of free action</item>
+  <item>200</item>
+  <item>free action</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of levitation</item>
+  <item>200</item>
+  <item>levitation</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of regeneration</item>
+  <item>200</item>
+  <item>regeneration</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of searching</item>
+  <item>200</item>
+  <item>searching</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of slow digestion</item>
+  <item>200</item>
+  <item>slow digestion</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of teleportation</item>
+  <item>200</item>
+  <item>teleportitis</item>
+  <item>90% generated cursed</item>
+ </row>
+
+ <row>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of conflict</item>
+  <item>300</item>
+  <item>conflict</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of polymorph</item>
+  <item>300</item>
+  <item>polymorphitis</item>
+  <item>90% generated cursed</item>
+ </row>
+
+ <row>
+  <item>ring of polymorph control</item>
+  <item>300</item>
+  <item>polymorph control</item>
+  <item>--</item>
+ </row>
+
+ <row>
+  <item>ring of teleport control</item>
+  <item>300</item>
+  <item>teleport control</item>
+  <item>--</item>
+ </row>
+
+</quick_stat>

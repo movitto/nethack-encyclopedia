@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/encyclopedia_page_popup"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#444444"
+              android:orientation="vertical"
+              android:padding="10px" >
+
+    <TextView android:id="@+id/encyclopedia_page_title"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content" >
+    </TextView>
+
+    <WebView android:id="@+id/encyclopedia_page_content"
+             android:layout_width="fill_parent"
+             android:layout_height="305px"
+             android:layout_marginTop="5px"
+             android:layout_weight="0.89" >
+    </WebView>
+
+    <Button android:id="@+id/encyclopedia_page_close"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5px"
+             android:text="Close" />
+
+</LinearLayout>

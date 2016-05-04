@@ -19,30 +19,19 @@ III. Build
 - For general Android SDK install instructions:
   http://developer.android.com/sdk/installing.html
 
-- For Fedora specific Android install instructions:
-  https://fedoraproject.org/wiki/HOWTO_Setup_Android_Development
-
-- This usually involves:
-    - Installing eclipse, either via yum, apt-get, or whatever
-    - Installing the android eclipse plugin via the eclipse
-      plugin interface
-    - Downloading and installing the android SDK
-    - Setting up and starting an android device emulator
+- This usually involves installing the Android Studio,
+  see the following for more info:
+  http://developer.android.com/sdk/index.html
 
 - Next clone the Nethack Encyclopedia project with git
   (you may have to install this beforehand)
 
     git clone git://github.com/movitto/nethack-encyclopedia.git
 
-- Next import the Nethack Encyclopedia into eclipse
-   - open eclipse
-   - File > Import
-   - General > Existing Projects into workspace > Select Project Checkout Directory
+- Import the Nethack Encyclopedia into Android Studio & run
 
 - To retrieve the encyclopedia content, simply pop open a terminal and run:
    $ ruby util/parser/parser.rb
-
-- Finally select the project, and click 'run' to start it in the emulator!
 
 IV. Contribute
 -------------------------------

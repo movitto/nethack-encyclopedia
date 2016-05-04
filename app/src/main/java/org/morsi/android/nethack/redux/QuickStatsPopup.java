@@ -48,7 +48,7 @@ public class QuickStatsPopup {
     }
 
     private PopupWindow popupWindow(){
-        return new PopupWindow(popupLayout(), 230, 400, true);
+        return new PopupWindow(popupLayout(), 330, 500, true);
     }
 
     public QuickStatsPopup(QuickStatsActivity activity, QuickStatCategory category, QuickStat stat){
@@ -56,10 +56,11 @@ public class QuickStatsPopup {
         this.category = category;
         this.stat     = stat;
 
+        PopupWindow window = popupWindow();
+
         setTitle();
         setContent();
 
-        PopupWindow window = popupWindow();
         window.showAtLocation(layout, Gravity.CENTER, 0, 0);
         closeButton().setOnClickListener(new QuickStatPopupCloseListener(window));
     }

@@ -116,6 +116,8 @@ public class QuickStatsActivity extends Activity {
 
     private void createStats(){
         stats = new ArrayList<QuickStatCategory>();
+
+        stats.add(QuickStatCategory.fromXML(this.getString(R.string.potions_quick_stat), getResources().getXml(R.xml.potions)));
         stats.add(QuickStatCategory.fromXML(this.getString(R.string.gems_quick_stat),    getResources().getXml(R.xml.gems)));
         stats.add(QuickStatCategory.fromXML(this.getString(R.string.scrolls_quick_stat), getResources().getXml(R.xml.scrolls)));
         stats.add(QuickStatCategory.fromXML(this.getString(R.string.armor_quick_stat),   getResources().getXml(R.xml.armor)));

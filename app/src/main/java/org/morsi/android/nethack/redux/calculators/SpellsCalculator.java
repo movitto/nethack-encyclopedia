@@ -158,7 +158,7 @@ public class SpellsCalculator {
     }
 
     private String spellCastInputValue(){
-        return spellCastInput().getSelectedItem().toString();
+        return spellCastInput().getSelectedItem() == null ? "" : spellCastInput().getSelectedItem().toString();
     }
 
     private EditText characterLevelInput() {
@@ -291,7 +291,7 @@ public class SpellsCalculator {
 
         // populate skills
         Spinner sci = spellCastInput();
-        cci.setAdapter(spellCastAdapter());
+        sci.setAdapter(spellCastAdapter());
         for(int i = 0; i<sci.getChildCount(); ++i){
             if (sci.getChildAt(i).toString().equals(spell_cast)) {
                 sci.setSelection(i);

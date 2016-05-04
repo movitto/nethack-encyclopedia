@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="?android:attr/listDivider"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickQuickStatsButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickQuickStatsButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/quick_stats" />
+
+        <TextView
+            android:id="@+id/quickstats_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickQuickStatsButton"
+            android:paddingLeft="15dp"
+            android:text="quick stats"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickEncyclopediaButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickEncyclopediaButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/encyclopedia" />
+
+        <TextView
+            android:id="@+id/encyclopedia_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickEncyclopediaButton"
+            android:paddingLeft="15dp"
+            android:text="encyclopedia"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickMessagesButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickMessagesButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/messages" />
+
+        <TextView
+            android:id="@+id/messages_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickMessagesButton"
+            android:paddingLeft="15dp"
+            android:text="messages"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickCalculatorButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickCalculatorButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/calculator" />
+
+        <TextView
+            android:id="@+id/calculator_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickCalculatorButton"
+            android:paddingLeft="15dp"
+            android:text="calculator"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickGameTrackerButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickGameTrackerButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/game_tracker" />
+
+        <TextView
+            android:id="@+id/game_tracker_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickGameTrackerButton"
+            android:paddingLeft="15dp"
+            android:text="game tracker"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickTutorialButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickTutorialButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/tutorial" />
+
+        <TextView
+            android:id="@+id/tutorial_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickTutorialButton"
+            android:paddingLeft="15dp"
+            android:text="tutorial"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+
+    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClickAboutButton">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:onClick="onClickAboutButton"
+            android:paddingLeft="15dp"
+            android:src="@drawable/about" />
+
+        <TextView
+            android:id="@+id/about_button"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:onClick="onClickAboutButton"
+            android:paddingLeft="15dp"
+            android:text="about"
+            android:textColor="@drawable/main_menu_text_color"
+            android:textSize="12pt" />
+    </LinearLayout>
+</LinearLayout>

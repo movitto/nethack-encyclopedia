@@ -1,0 +1,2290 @@
+<quick_stat>
+  <columns>
+    <column weight="0.25">Name</column>
+    <column weight="0.15">Nutrition</column>
+    <column weight="0.15">Initial effects</column>
+    <column weight="0.15">Final effects</column>
+    <column weight="0.30">Intrinsics</column>
+  </columns>
+    
+  <row>
+    <item>abbot</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>Hallucination</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>acid blob</item>
+    <item>10 V!</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>acolyte</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>aligned priest</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ape</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>apprentice</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Arch Priest</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>archeologist</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>attendant</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby black dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby blue dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby crocodile</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby gray dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby green dragon</item>
+    <item>500</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby long worm</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby orange dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby purple worm</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby red dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby silver dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby white dragon</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baby yellow dragon</item>
+    <item>500</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>baluchitherium</item>
+    <item>800</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>barbarian</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>bat</item>
+    <item>20</item>
+    <item>--</item>
+    <item>Stun (30)</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>black dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Disintegration: 100%</item>
+  </row>
+
+  <row>
+    <item>black naga</item>
+    <item>400</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Poison: 53%</item>
+  </row>
+
+  <row>
+    <item>black naga hatchling</item>
+    <item>100</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>black pudding</item>
+    <item>250</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Cold: 22%, Shock: 22%, Poison: 22%</item>
+  </row>
+
+  <row>
+    <item>black unicorn</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>blue dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Shock: 100%</item>
+  </row>
+
+  <row>
+    <item>blue jelly</item>
+    <item>20 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 13%, Poison: 13%</item>
+  </row>
+
+  <row>
+    <item>brown mold</item>
+    <item>30 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 3%, Poison: 3%</item>
+  </row>
+
+  <row>
+    <item>brown pudding</item>
+    <item>250 V</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Cold: 11%, Shock: 11%, Poison: 11%</item>
+  </row>
+
+  <row>
+    <item>bugbear</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>captain</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>carnivorous ape</item>
+    <item>550</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>cave spider</item>
+    <item>50</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 7%</item>
+  </row>
+
+  <row>
+    <item>caveman</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>cavewoman</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>centipede</item>
+    <item>50</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 13%</item>
+  </row>
+
+  <row>
+    <item>chameleon</item>
+    <item>100</item>
+    <item>--</item>
+    <item>Polymorph</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>chickatrice</item>
+    <item>10</item>
+    <item>Petrify</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>chieftain</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Chromatic Dragon</item>
+    <item>1700</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Fire: 17%, Cold: 17%, Sleep: 17%, Shock: 17%, Poison: 17%, Disintegration: 17%</item>
+  </row>
+
+  <row>
+    <item>cobra</item>
+    <item>100</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 40%</item>
+  </row>
+
+  <row>
+    <item>cockatrice</item>
+    <item>30</item>
+    <item>Petrify</item>
+    <item>--</item>
+    <item>Poison: 33%</item>
+  </row>
+
+  <row>
+    <item>coyote</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>crocodile</item>
+    <item>400</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Croesus</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Cyclops</item>
+    <item>700</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Death</item>
+    <item>1</item>
+    <item>DIE</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>dingo</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>disenchanter</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>dog</item>
+    <item>200</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>doppelganger</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>Polymorph</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>dwarf</item>
+    <item>300</item>
+    <item>Dwarf</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>dwarf king</item>
+    <item>300</item>
+    <item>Dwarf</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>dwarf lord</item>
+    <item>300</item>
+    <item>Dwarf</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>electric eel</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Shock: 47%</item>
+  </row>
+
+  <row>
+    <item>elf</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 67%</item>
+  </row>
+
+  <row>
+    <item>elf-lord</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 53%</item>
+  </row>
+
+  <row>
+    <item>Elvenking</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 60%</item>
+  </row>
+
+  <row>
+    <item><A name="ETTIN">ettin</A></item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Famine</item>
+    <item>1</item>
+    <item>DIE</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>fire ant</item>
+    <item>10</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 20%</item>
+  </row>
+
+  <row>
+    <item>fire giant</item>
+    <item>750</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>Fire: 30%</item>
+  </row>
+
+  <row>
+    <item>flesh golem</item>
+    <item>600</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 12%, Cold: 12%, Sleep: 12%, Shock: 12%, Poison: 12%</item>
+  </row>
+
+  <row>
+    <item>floating eye</item>
+    <item>10</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Telepathy: 100%</item>
+  </row>
+
+  <row>
+    <item>forest centaur</item>
+    <item>600</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>fox</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>frost giant</item>
+    <item>750</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>Cold: 33%</item>
+  </row>
+
+  <row>
+    <item>gargoyle</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>garter snake</item>
+    <item>60</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gecko</item>
+    <item>20</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gelatinous cube</item>
+    <item>150 V!</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Fire: 10%, Cold: 10%, Sleep: 10%, Shock: 10%</item>
+  </row>
+
+  <row>
+    <item>giant</item>
+    <item>750</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant ant</item>
+    <item>10</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant bat</item>
+    <item>30</item>
+    <item>--</item>
+    <item>Stun (60)</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant beetle</item>
+    <item>10</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 33%</item>
+  </row>
+
+  <row>
+    <item>giant eel</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant mimic</item>
+    <item>500</item>
+    <item>--</item>
+    <item>Mimic (50)</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant rat</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>giant spider</item>
+    <item>100</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 33%</item>
+  </row>
+
+  <row>
+    <item>glass piercer</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gnome</item>
+    <item>100</item>
+    <item>Gnome</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gnome king</item>
+    <item>150</item>
+    <item>Gnome</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gnome lord</item>
+    <item>120</item>
+    <item>Gnome</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gnomish wizard</item>
+    <item>120</item>
+    <item>Gnome</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>goblin</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>golden naga</item>
+    <item>400</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 67%</item>
+  </row>
+
+  <row>
+    <item>golden naga hatchling</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>Grand Master</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gray dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>gray ooze</item>
+    <item>250 V</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>Fire: 7%, Cold: 7%, Poison: 7%</item>
+  </row>
+
+  <row>
+    <item>gray unicorn</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>green dragon</item>
+    <item>1500</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 100%</item>
+  </row>
+
+  <row>
+    <item>green mold</item>
+    <item>30 V!</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>green slime</item>
+    <item>150 V</item>
+    <item>Slime, Poisonous, Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Green-elf</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 33%</item>
+  </row>
+
+  <row>
+    <item>gremlin</item>
+    <item>20</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 33%</item>
+  </row>
+
+  <row>
+    <item>Grey-elf</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 40%</item>
+  </row>
+
+  <row>
+    <item>guard</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>guardian naga</item>
+    <item>400</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 80%</item>
+  </row>
+
+  <row>
+    <item>guardian naga hatchling</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>guide</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>healer</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hell hound</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 80%</item>
+  </row>
+
+  <row>
+    <item>hell hound pup</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 47%</item>
+  </row>
+
+  <row>
+    <item>high priest</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hill giant</item>
+    <item>700</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hill orc</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Hippocrates</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hobbit</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hobgoblin</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>homunculus</item>
+    <item>100</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Sleep: 7%, Poison: 7%</item>
+  </row>
+
+  <row>
+    <item>horse</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>housecat</item>
+    <item>200</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>human</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>hunter</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ice troll</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 60%</item>
+  </row>
+
+  <row>
+    <item>iguana</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>imp</item>
+    <item>10</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>iron piercer</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Ixoth</item>
+    <item>1600</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 100%</item>
+  </row>
+
+  <row>
+    <item>jabberwock</item>
+    <item>600</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>jackal</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>jaguar</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>jellyfish</item>
+    <item>20</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>Keystone Kop</item>
+    <item>200</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>killer bee</item>
+    <item>5</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 30%</item>
+  </row>
+
+  <row>
+    <item>King Arthur</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>kitten</item>
+    <item>150</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>knight</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>kobold</item>
+    <item>100</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>kobold lord</item>
+    <item>200</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>kobold shaman</item>
+    <item>150</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Kop Kaptain</item>
+    <item>200</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Kop Lieutenant</item>
+    <item>200</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Kop Sergeant</item>
+    <item>200</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>kraken</item>
+    <item>1000</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>large cat</item>
+    <item>250</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>large dog</item>
+    <item>250</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>large kobold</item>
+    <item>150</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>large mimic</item>
+    <item>400</item>
+    <item>--</item>
+    <item>Mimic (40)</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>leocrotta</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>leprechaun</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Teleportitis: 50%</item>
+  </row>
+
+  <row>
+    <item>lichen</item>
+    <item>200 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>lieutenant</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>little dog</item>
+    <item>150</item>
+    <item>Aggravate</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>lizard</item>
+    <item>40</item>
+    <item>Cure stoning</item>
+    <item>Reduce stunning, confusion</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>long worm</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Lord Carnarvon</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Lord Sato</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Lord Surtur</item>
+    <item>850</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>Fire: 50%</item>
+  </row>
+
+  <row>
+    <item>lurker above</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>lynx</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Master Assassin</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Master Kaen</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>Poison: 100%</item>
+  </row>
+
+  <row>
+    <item>master mind flayer</item>
+    <item>400</item>
+    <item>--</item>
+    <item>Intelligence: 50%</item>
+    <item>Telepathy: (if no Intelligence gain)</item>
+  </row>
+
+  <row>
+    <item>Master of Thieves</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>mastodon</item>
+    <item>800</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Medusa</item>
+    <item>400</item>
+    <item>Petrify, Poisonous</item>
+    <item>--</item>
+    <item>Poison: 100%</item>
+  </row>
+
+  <row>
+    <item>mind flayer</item>
+    <item>400</item>
+    <item>--</item>
+    <item>Intelligence: 50%</item>
+    <item>Telepathy: (if no Intelligence gain)</item>
+  </row>
+
+  <row>
+    <item>minotaur</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>monk</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>monkey</item>
+    <item>50</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Mordor orc</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>mountain centaur</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>mountain nymph</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Teleportitis: 30%</item>
+  </row>
+
+  <row>
+    <item>mumak</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>neanderthal</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Neferet the Green</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>newt</item>
+    <item>20</item>
+    <item>--</item>
+    <item>Energy: 67%</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ninja</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Norn</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>nurse</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>Heal</item>
+    <item>Poison: 73%</item>
+  </row>
+
+  <row>
+    <item>ochre jelly</item>
+    <item>20 V!</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ogre</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ogre king</item>
+    <item>750</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ogre lord</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Olog-hai</item>
+    <item>400</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Oracle</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>orange dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Sleep: 100%</item>
+  </row>
+
+  <row>
+    <item><A name="ORC">orc</A></item>
+    <item>150</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>orc shaman</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>orc-captain</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Orion</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>owlbear</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>page</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>panther</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Pelias</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Pestilence</item>
+    <item>1</item>
+    <item>DIE</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>piranha</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>pit viper</item>
+    <item>60</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 40%</item>
+  </row>
+
+  <row>
+    <item>plains centaur</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>pony</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>priest</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>priestess</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>prisoner</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>purple worm</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>pyrolisk</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 20%, Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>python</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>quantum mechanic</item>
+    <item>20</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Speed Toggle</item>
+  </row>
+
+  <row>
+    <item>quasit</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>queen bee</item>
+    <item>5</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 60%</item>
+  </row>
+
+  <row>
+    <item>quivering blob</item>
+    <item>100 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 33%</item>
+  </row>
+
+  <row>
+    <item>rabid rat</item>
+    <item>5</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>ranger</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>raven</item>
+    <item>20</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>red dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 100%</item>
+  </row>
+
+  <row>
+    <item>red mold</item>
+    <item>30 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 3%, Poison: 3%</item>
+  </row>
+
+  <row>
+    <item>red naga</item>
+    <item>400</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 20%, Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>red naga hatchling</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Fire: 10%, Poison: 10%</item>
+  </row>
+
+  <row>
+    <item>rock mole</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>rock piercer</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>rock troll</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>rogue</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>roshi</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>rothe</item>
+    <item>100</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>rust monster</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>salamander</item>
+    <item>400</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Fire: 53%</item>
+  </row>
+
+  <row>
+    <item>samurai</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>sasquatch</item>
+    <item>750</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>scorpion</item>
+    <item>100</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 50%</item>
+  </row>
+
+  <row>
+    <item>Scorpius</item>
+    <item>350</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 100%</item>
+  </row>
+
+  <row>
+    <item>sergeant</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>sewer rat</item>
+    <item>12</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Shaman Karnov</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>shark</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>shopkeeper</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>shrieker</item>
+    <item>100 V!</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>silver dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>small mimic</item>
+    <item>200</item>
+    <item>--</item>
+    <item>Mimic (20)</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>snake</item>
+    <item>80</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>soldier</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>soldier ant</item>
+    <item>5</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>spotted jelly</item>
+    <item>20 V!</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>stalker</item>
+    <item>400</item>
+    <item>--</item>
+    <item>Stun (60)</item>
+    <item>Invisibility</item>
+  </row>
+
+  <row>
+    <item>stone giant</item>
+    <item>750</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>storm giant</item>
+    <item>750</item>
+    <item>--</item>
+    <item>Strength</item>
+    <item>Shock: 50%</item>
+  </row>
+
+  <row>
+    <item>student</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>tengu</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 13%, Teleportitis: 20%, Teleport control: 17%</item>
+  </row>
+
+  <row>
+    <item>thug</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>tiger</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>titan</item>
+    <item>900</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>titanothere</item>
+    <item>650</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>tourist</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>trapper</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>troll</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Twoflower</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>umber hulk</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Uruk-hai</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>valkyrie</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>vampire bat</item>
+    <item>20</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>violet fungus</item>
+    <item>100 V!</item>
+    <item>--</item>
+    <item>Hallucination</item>
+    <item>Poison: 20%</item>
+  </row>
+
+  <row>
+    <item>warg</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>warhorse</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>warrior</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>watch captain</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>watchman</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>water moccasin</item>
+    <item>80</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>water nymph</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Teleportitis: 30%</item>
+  </row>
+
+  <row>
+    <item>water troll</item>
+    <item>350</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>werejackal</item>
+    <item>400</item>
+    <item>Human, Poisonous</item>
+    <item>--</item>
+    <item>Lycanthropy: 100%</item>
+  </row>
+
+  <row>
+    <item>wererat</item>
+    <item>400</item>
+    <item>Human, Poisonous</item>
+    <item>--</item>
+    <item>Lycanthropy: 100%</item>
+  </row>
+
+  <row>
+    <item>werewolf</item>
+    <item>400</item>
+    <item>Human, Poisonous</item>
+    <item>--</item>
+    <item>Lycanthropy: 100%</item>
+  </row>
+
+  <row>
+    <item>white dragon</item>
+    <item>1500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 100%</item>
+  </row>
+
+  <row>
+    <item>white unicorn</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Poison: 27%</item>
+  </row>
+
+  <row>
+    <item>winged gargoyle</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>winter wolf</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 47%</item>
+  </row>
+
+  <row>
+    <item>winter wolf cub</item>
+    <item>200</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 33%</item>
+  </row>
+
+  <row>
+    <item>wizard</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Wizard of Yendor</item>
+    <item>400</item>
+    <item>Human</item>
+    <item>--</item>
+    <item>Fire: 25%, Poison: 25%, Teleportitis: 25%, Teleport control: 25%</item>
+  </row>
+
+  <row>
+    <item>wolf</item>
+    <item>250</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>wood nymph</item>
+    <item>300</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Teleportitis: 30%</item>
+  </row>
+
+  <row>
+    <item>woodchuck</item>
+    <item>30</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>Woodland-elf</item>
+    <item>350</item>
+    <item>Elf</item>
+    <item>--</item>
+    <item>Sleep: 27%</item>
+  </row>
+
+  <row>
+    <item>wraith</item>
+    <item>0</item>
+    <item>--</item>
+    <item>Gain level</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>wumpus</item>
+    <item>500</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>xan</item>
+    <item>300</item>
+    <item>Poisonous</item>
+    <item>--</item>
+    <item>Poison: 47%</item>
+  </row>
+
+  <row>
+    <item>xorn</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>yellow dragon</item>
+    <item>1500</item>
+    <item>Acidic</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+  <row>
+    <item>yellow mold</item> 
+    <item>30 V!</item>
+    <item>Poisonous</item>
+    <item>Hallucination</item>
+    <item>Poison: 7%</item>
+  </row>
+
+  <row>
+    <item>yeti</item>
+    <item>700</item>
+    <item>--</item>
+    <item>--</item>
+    <item>Cold: 33%</item>
+  </row>
+
+  <row>
+    <item>zruty</item>
+    <item>600</item>
+    <item>--</item>
+    <item>--</item>
+    <item>--</item>
+  </row>
+
+</quick_stat>

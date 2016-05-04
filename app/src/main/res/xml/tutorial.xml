@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sections>
+    <section name="Movement">
+        <item>
+            <content>You move w/ <b>hjkl</b> (left, down, up, right)</content>
+            <image>basic_movement</image>
+        </item>
+        <item><content>You can also move diagonally via <b>yubn</b>, useful to get around boulders and such</content></item>
+        <item><content>Traverse stairs w/ <b> &gt; </b> and <b> &lt; </b></content></item>
+        <item><content>use '_' to move to the specified square using the shortest-path algorithm</content></item>
+		<item><content>use '_' + a dungeon feature (eg '>' for stairs and it will cycle through all visible objects</content></item>
+    </section>
+    
+    <section name='Interacting with the World'>
+        <item><content>To open a door press <b>o</b> next to it and then the movement key for the direction the door lies in</content></item>
+        <item>
+            <content>To kick open a door press k (or <b>^D</b>) and then the movement key in the direction it is in, you may need to try multiple times</content>
+            <image>kick_door</image>
+        </item>
+        <item><content><b>s</b> searches for secrets around you, it often takes several tries to find something hidden</content></item>
+        <item><content>You can search multiple times in succession by typing in a number and then pressing s</content></item>        
+        <item><content>To pick up an object stand on top of it and press '<b>,</b>'</content></item>
+        <item><content>Turn off autopickup with the '<b>@</b>' key (highly recommended as certain objects are harmful to pickup)</content></item>
+        <item><content>Alot of items interact w/ each other and there are tons of ways to interact w/ objects in the world, experiment or look things up!</content></item>
+        <item><content>Press '<b>;</b>' and then move the cursor to a particular square to view the contents of that square</content></item>
+        <item><content>Press '<b>:</b>' to see the contents of the current square</content></item>
+    </section>
+    
+    <section name='Inventory Items'>
+        <item><content>Open your inventory w/ i, you may view what you've picked up here</content></item>
+        <item><content>To eat an item press 'e' then its inventory number</content></item>
+        <item><content>To drop an item press 'd' then its inventory number (press 'D' to drop multiple amounts of that item)</content></item>
+        <item><content>To wield a weapon press 'w' then its inventory number</content></item>
+        <item><content>To wear armor press 'W' then its inventory number</content></item>
+        <item><content>To take off armor press 'T' then its inventory number</content></item>
+        <item><content>To quaff (drink) a potion, press 'q' then its inventory number</content></item>     
+    </section>
+    
+    <section name="Combat">
+        <item>
+            <content>To attack a monster just move in its direction</content>
+            <image>combat</image>
+        </item>
+        <item><content>Alternative if weilding a ranged weapon w/ amunnition in your quiver, press 'F' to fire in the enemy's direction</content></item>
+        <item><content>You may throw projectiles, food, potions, and may other things w/ the 'T' button</content></item>
+    </section>
+    
+    <section name='More Advanced'>
+        <item><content>You may set game options by pressing the '<b>O</b>' key</content></item>
+        <item><content>Enable/disable autopickup with '<b>@</b>' (good to disable unless you need to pickup an item when falling)</content></item>
+        <item><content>Use '<b>+</b>' to see the spells you know, use '<b></b>' to zap spell, use '<b>z</b>' to zap wand</content></item>
+        <item><content>Use <b>\</b> to see all the items you have identified so far</content></item>
+    </section>
+
+    <section name='Spell Casting'>
+        <item><content>Use <b>Z</b> to cast known spells during gameplay</content></item>
+
+        <item><content>Read spellbooks (see below) to learn new spells</content></item>
+
+        <item><content>The chance of failure is affected by<br/>
+            - intelligence (or wisdom),<br/>
+            - experience level,<br/>
+            - skill level,<br/>
+            - innate magical ability of the role,<br/>
+            - armor (especially metal but also shields and robes),<br/>
+            - whether it is an emergency spell or your special spell.</content></item>
+
+        <item><content>Unless you cancel, the game will first check if you have enough power (magical energy) for the spell selected.<br/>
+            If you have enough power then the game will roll for success or failure.<br/>
+            If you succeed your spell will take effect .<br/>
+            If you fail you will receive the message "<b>You fail to cast the spell correctly.</b>" </content></item>
+
+        <item><content>Forgotten spells are marked with an <b>*</b> in the casting menu</content></item>
+
+        <item><content>Attempting to cast a forgotten spell will not check any of the usual casting prerequisites, and will consume neither nutrition nor power.<br/>
+            It will instead make you confused, stunned, or both.<br/>
+            The duration of confusion and stunning is dependent on the level of the forgotten spell, but the choice of effects is not. </content></item>
+
+        <item><content>Forgotten spells are a common way to deliberately become confused, to invoke the alternative effects of certain scrolls.
+            "Casting" them does not cost power or nutrition. </content></item>
+
+        <item><content>Casting a spell costs energy points, equal to 5 times the spell's level</content></item>
+
+        <item><content>If you do not have the required energy (“You don't have enough energy to cast that spell.”), nothing happens;
+            the turn count does not advance, either</content></item>
+
+        <item><content>If the attempt fails (“You fail to cast the spell correctly.”),
+            only half of that energy is used up, rounded down</content></item>
+
+        <item><content>Casting any spell other than detect food uses nutrition equal to
+            two times the energy cost (including the Amulet penalty),
+            which means that it is usually 10 times the spell's level.</content></item>
+
+        <item><content>A failed cast costs just as much nutrition as a successful one.
+            If you are fainting, you cannot cast any spells other than detect food, whether or not you have hungerless casting.</content></item>
+    </section>
+
+    <section name="Engraving">
+        <item><content>Use <b>E</b> to engrave into the ground</content></item>
+
+        <item><content>Engraving duration and speed depends on various factors</content></item>
+
+        <item><content>You have the following chances of messing up each letter if you are: blind (1/9), confused (1/12), stunned (1/4), or hallucinating (1/1)</content></item>
+
+        <item><content>Duration:<br/>
+            Text burned into the floor will not erode from being stood on or walked over.<br/>
+            Text engraved in the floor lasts a while, but will erode over time.<br/>
+            Text written in the dust doesn't last long at all.</content></item>
+
+        <item><content>Speed:
+            Fast methods of engraving are writing in the dust or using a wand or athame. You can write up to ten (10) letters in one turn with a fast method.<br/>
+            Slow methods of engraving are with edged weapons and hard gems; they take one turn per letter.</content></item>
+
+        <item><content> Speed is important because while you are engraving, anything can and will attack you.
+            What's more, the attack won't interrupt your engraving—once you start engraving, you can't protect yourself until
+            you are done. For this reason, if you are under attack, you should only engrave by a fast method.</content></item>
+
+        <item><content>Methods:<br/><br/>
+            <b>Burning into the ground</b>. Text written with a wand of fire or lightning (with at least one charge) will be burnt into the ground, and will not erode.
+            (It will vanish if you engrave over it with a wand of cold; you can also remove it by engraving in the ground; see below).
+            Because this is done with wands, it is a fast method.<br/><br/>
+
+            <b>Engraving in the ground</b>. This can be done with a wand of digging, a hard gemstone (diamond, ruby, jacinth, sapphire, black opal, emerald, aquamarine, topaz),
+            a ring with a hard gemstone (diamond ring, etc.), a steel ring, or an edged weapon. You can also melt into ice with a wand of fire, which erodes like an engraving.
+            Note that the speed depends on the method;<br/>
+
+            Wands and athames take one turn to write Elbereth, the other methods here take one turn per letter.<br/><br/>
+
+            <b>Engraving with any edged weapon</b> other than a non-cursed athame (including Magicbane) will dull the weapon, reducing its enchantment.
+            In addition, if you engrave with a +0 weapon and type "Elbereth" at the prompt, "What do you want to engrave in the floor here?,"
+            you will get the following message: "Your [weapon] gets dull. You only are able to write "Elberet" --More-- You cannot write any more."<br/>
+
+            Thus, if you need to write Elbereth with just one +0 non-athame, first engrave "Elb" and then add "ereth" to the engraving.
+            Odd, but true, because of how engraving is treated: engrave 1-3 letters and lose one enchantment from a weapon; 4-5, lose 2; and 6-7, lose 3.
+            A -3 weapon is too dull to engrave with. (Of course, you could also use two +0 weapons, or one weapon at +1 or greater, if practical.)<br/><br/>
+
+            <b>Writing in the dust</b>. This can be with your finger, a soft gem, a ring without a hard gem, any charged wand except digging, fire, or lightning,
+            and so forth. Note that you have a 1/25 chance of screwing up each letter if you're engraving in the dust. While this only takes one turn, any
+            movement—like fighting—on your part will smudge it out. Even staying put will erode it, since no-one stands perfectly still.
+            In other words, if you write in the dust, you can't expect it to last very long. However, the higher your dexterity is, the more slowly it will smudge.
+            You can also avoid smudging completely by levitation over the writing in the dust.<br/><br/>
+
+            <b>Scrawl on the floor in blood</b>, if you write with your fingers while polymorphed into any V or &amp; (same chance of screwing up letters as
+            if writing in the dust), or scribble on the floor with a magic marker. The first is unlikely to come up all that often, and the second is unwise because
+            usually you have much better uses for magic marker charges. However, they're there if you need them.</content></item>
+    </section>
+
+    <section name="Elbereth">
+        <item><content>"Engraving the word "Elbereth" will cause most monsters to not attack you hand-to-hand
+            (but if you attack, you will rub it out); this is often useful to give yourself a breather. </content></item>
+
+        <item><content>Something (an item, you) must be on the space where Elbereth is engraved for monsters to stay off the space. Elbereth on an empty space has no effect.</content></item>
+
+        <item><content>Also, the effect of Elbereth is case-insensitive, but you exercise wisdom if you engrave it thus: "Elbereth". </content></item>
+
+        <item><content>You don't get Elbereth's protection until you're finished engraving it</content></item>
+
+        <item><content>The following do not respect Elbereth:\n
+            Any monster represented by an @. Generally, these are humans and elves; however, it also includes shapechangers
+            (werecreatures, chameleons, doppelgangers, and sandestins) while in @ form.<br/>
+
+            Note that although K (Keystone Kops, Kop Sergeants, etc.) are considered human for purposes of cannibalism and sacrifice, they do respect Elbereth.<br/><br/>
+
+            Shopkeepers, guards, lawful high priests (only found on the Astral Plane), and the Wizard of Yendor.<br/>
+
+            These are listed separately in the code because they will not respect Elbereth even if polymorphed into something else.
+            (Note that you're very unlikely to be able to polymorph the Wizard, but just in case...)<br/><br/>
+
+            Any monster that is blind (caused by an external source: blindfold, lightning flash, potion of blindness,
+            cream pies, or the blinding effects of being attacked by exploding yellow lights, dust vortices, ravens, cobras, or Archons)<br/><br/>
+
+            Some specific quasi-human (and tough) monsters: all A, minotaurs, and the Riders on the Astral Plane.<br/>
+            A special case: teleporting monsters will still teleport to the up staircase, even if you have Elbereth engraved and an item on top.
+        </content></item>
+
+        <item><content>In addition, peaceful monsters will not respect Elbereth. They won't attack you,
+            but will walk over the space—not picking anything up, but possibly eroding the Elbereth protecting your stash.</content></item>
+    </section>
+
+    <section name="Altars">
+        <item><content>An altar, represented by an underscore (_),</content></item>
+
+        <item><content>Temples contain an altar and an aligned priest. </content></item>
+
+        <item><content>Altars are co-aligned if they are of the same alignment as you and cross-aligned if they are of a different alignment.
+            To determine if an altar is co-aligned, either use far look or stand on it and use close look.</content></item>
+
+        <item><content> Altars of Moloch are unaligned. Unaligned altars appear only in Gehennom, the variant of Minetown that has been overrun by orcs,
+            and some quests (except as mimics).</content></item>
+
+        <item><content>Altars can be used to detect the BUC status of items. This is done by dropping the item onto the altar.<br/>
+            A black flash marks a cursed item and an amber flash a blessed one.</content></item>
+
+        <item><content>You cannot detect the BUC status if you are blind. You cannot detect whether an item is blessed or cursed if you are hallucinating,
+            as you will not be able to distinguish between amber flashes and black flashes; you can, however, identify uncursed items,
+            as there will not be a flash at all.</content></item>
+
+        <item><content>If you #sit on, engrave, or kick an altar, it will lower your luck. This can be used to deliberately lower your luck to prevent crowning.
+            If the altar is of your alignment, it will reduce Wisdom by one point instead, indicated by the message "You feel foolish!". This does not break
+            atheist conduct. </content></item>
+
+        <item><content>Altars also may be used to sacrifice corpses (see below)</content></item>
+
+        <item><content>If you drop one or more potions of water onto an altar and #pray:<br/>
+            - the potions become blessed if the altar was aligned with you and<br/>
+            - become cursed if the altar was not aligned with you.<br/><br/>
+
+            This occurs regardless of whether the water was blessed or cursed before.</content></item>
+
+        <item><content>Be aware that water praying on a cross-aligned altar will anger your god, decrease your luck, and possibly cause you to be punished in some other way.<br/>
+            Normal prayer timeouts apply when praying on altars. </content></item>
+    </section>
+
+    <section name="BUC Status">
+        <item><content>BUC is an acronym meaning blessed/uncursed/cursed. It is usually used in phrases such as "BUC identified",
+            meaning an item whose "BUC status" is known</content></item>
+
+        <item><content>Noncursed is a shorthand way of saying not cursed, i.e. blessed or uncursed.</content></item>
+
+        <item><content>For many items, the blessed and uncursed usage are very similar, but very different from the cursed usage.</content></item>
+
+        <item><content>An altar can be used to detect the beatitude of an item by means of the coloured flashes when the item is dropped on it</content></item>
+
+        <item><content> Pets are reluctant to enter a square with a cursed item (a message will be displayed if they do).</content></item>
+
+        <item><content>A scroll of identify will also show you the B/U/C status of an item. </content></item>
+
+        <item><content>For some items, such as gold pieces or scrolls of mail, the beatitude has no meaning and is always omitted.</content></item>
+
+        <item><content>For some items, such as weapons or rings with charges, it is not shown if the object is uncursed, even if you have fully identified the item.</content></item>
+
+        <item><content>Priests never see the uncursed-status, and can automatically tell the beatitude of any item they see, even if it has yet to be identified.</content></item>
+    </section>
+
+    <section name="BUC Alteration">
+        <item><content>Curse removal or blessing...</content></item>
+
+        <item><content>Blessing removal or cursing<br/><br/>
+
+            - Dipping an object into a potion of unholy water will change the B/U/C status from blessed to uncursed, and then from uncursed to cursed.<br/>
+            - If you read a scroll of remove curse while confused, each affected uncursed object will have a 25% chance to become cursed and 25% chance to become blessed.
+            The same objects are affected as when not confused, such as wielded objects, worn items, leashes in use, and carried loadstones.<br/>
+            - Cursed scrolls of enchant weapon and armor will curse the item they target.<br/>
+            - High-level spellcasting monsters (notably liches and the Wizard of Yendor) can randomly curse items in your inventory during combat.
+            The message received is "You feel a malignant aura surround you."[3] Magic resistance and half spell damage reduce the amount of items
+            that are cursed (but will not nullify the attack), while Magicbane will "catch the curse" 95% of the time and totally nullify the attack
+            when wielded.<br/>
+            - Quaffing from fountains can have a cursing effect on every item in your inventory (see fountain for details).<br/>
+            - #dipping items in fountains can curse and uncurse items (4/30 chance of uncursing, 1/30 chance of cursing). It is never blessed.<br/>
+            - A loadstone will curse itself automatically, making it impossible to drop should you pick it up again,
+            and picking up a blessed scroll of scare monster will remove its blessing.<br/>
+            - The dunce cap and the helm of opposite alignment can be generated uncursed, but autocurse when worn, preventing you from removing them by normal means.<br/>
+            - A blessed eucalyptus leaf may be applied and used as a magic whistle; this act has a 1/50 chance of removing the blessing.</content></item>
+
+        <item><content>Removal of curse and blessing<br/><br/>
+
+            - Cancelling an item will remove any blessing or curse, but may also have other (probably detrimental)
+            effects such as removing enchantment or emptying a wand of charges.<br/>
+            - Alchemy results are always uncursed.</content></item>
+    </section>
+
+    <section name="Sacrificing">
+        <item><content>Sacrifice is a means whereby you can:<br/>
+            - reduce your prayer timeout,<br/>
+            - increase your luck,<br/>gain powerful artifact weapons<br/>
+            - change your alignment (sacrificing to another god when you have negative luck)</content></item>
+
+        <item><content>To sacrifice, you stand on an altar, use the #offer command, and select a fresh corpse from your inventory or one that is lying on the altar.</content></item>
+
+        <item><content>TBD</content></item>
+    </section>
+
+    <section name='Corpses Nutrition'>
+        <item>
+            <content>"Initial effects" are the effects that occur on the first bite of a corpse.<br/>
+                + Acidic: Deal 1 to 15 damage to you if not acid-resistant. If turning to stone, you are cured. Tins of acidic monsters deal no acid damage,
+                but still stop you turning to stone.<br/>
+                + Poisonous: 80% chance to deal 1 to 15 damage to you and reduce your strength by 1 to 4, if not poison-resistant. Tins of monsters are not poisonous.<br/>
+                + Cannibalism(Human, Dwarf, Elf, Gnome): If you eat a member of your own race, and are not a Caveman, you gain aggravate monster and lose 2 to 5 luck.<br/>
+                + Aggravate: Eating this monster gives you aggravate monster. Orcs and Cavemen are exempt.<br/>
+                + Slime:Eating a green slime makes you begin turning into slime, killing you in 10 turns,
+                unless you have unchanging or you are a green slime, a fire elemental, flaming sphere, fire vortex or salamander.<br/>
+                + Petrify: Eating a chickatrice, cockatrice or Medusa instantly petrifies you, unless stoning-resistant.
+                If you are a golem, you become a stone golem, otherwise petrification kills you.<br/>
+                + DIE: Eating Death, Famine or Pestilence instantly kills you.<br/>
+                + Cure stoning: Eating lizard meat cures you if turning to stone.
+            </content>
+        </item>
+
+        <item>
+            <content>"Final effects" are the effects that occur after finishing a corpse.<br/>
+                + Stun: You become stunned for the number of turns shown.<br/>
+                + Polymorph: You change form, unless you have unchanging.<br/>
+                + Hallucination: You hallucinate for 200 (more) turns.<br/>
+                + Mimic: You mimic a pile of gold (or an orange if hallucinating) for the number of turns shown (falling off your steed, if applicable), unless you have unchanging.<br/>
+                + Reduce stunning, confusion: Eating a lizard reduces stunning and confusion counts to 2 turns, if higher.<br/>
+                + Strength: Eating a giant makes you gain strength, potentially as high as your racial maximum. (You can also gain an intrinsic at the same time, if appropriate.)<br/>
+                If you had less than 18 strength, then you have a 19/24 chance of gaining one point, or a 1/24 chance each of gaining 2 to 6 points.<br/>
+                If you had 18 strength or more, then you gain 1 to 10 points (equally likely).<br/>
+                If you had strength 18/85 or more, gain just one point, up to 18/**.<br/>
+                + Intelligence: Gain 1 intelligence.<br/>
+                + Gain level: Eating a wraith corpse makes you gain a level, unless the corpse rots away before you finish
+                (which will happen, for instance, if you are interrupted while eating it).<br/>
+                + Energy: Eating a newt may give you 1 to 3 energy (100% chance if current energy is two-thirds or less of maximum energy).
+                If this puts you above your maximum energy, you have a one-third chance to gain 1 maximum energy.<br/>
+                + Heal: Eating a nurse heals you to maximum hit points.
+            </content>
+        </item>
+        
+        <item>
+            <content>"Intrinsics" are the intrinsics that can be gained after finishing a corpse, with their probability of being conferred.<br/>
+                + Fire, Cold, Shock, Poison, Sleep, Disintegration: Gain the corresponding resistance, with the probability shown.<br/>
+                + Telepathy, Teleport Control, Teleportitis: Gain the corresponding intrinsic.<br/>
+                + Invisibility: If not already invisible, you become temporarily invisible, else you gain permanent invisibility and see invisible.<br/>
+                + Lycanthropy: You become a lycanthrope of the same kind as the corpse eaten.<br/>
+                + Speed toggle: If you have intrinsic speed, you lose it. If you don't have it, you gain it.<br/>
+
+                The chances of receiving an intrinsic (e.g., poison: 33%) imply that eating the corpse has that chance of conferring the intrinsic
+                (i.e., corpses that can give multiple intrinsics have already had that accounted for). If you already have one of the possible intrinsics from a corpse,
+                the others do not become more likely. You will never gain more than one intrinsic from a corpse.<br/>
+
+                Tins of monsters confer intrinsics with the same probabilities as the corpses of the monster.
+                Whether a corpse or tin is blessed or cursed has no effect on the chances.
+        	</content>
+        </item>
+        
+        <item><content>Tinned food is eaten in one turn, so both initial and final effects (including intrinsic gains)
+            happen on the same turn, the initial effects happening first. </content></item>
+        
+        <item><content>Corpses that have been left too long may give you food poisoning.<br/>
+                Lizard and lichen corpses never rot.<br/>
+                Corpses left on ice age half as quickly, corpses in iceboxes do not age at all.<br/>
+                Corpses left by mummies, zombies and vampires are 100 turns old when they die.
+                The corpse will be of the monster's base race (vampires are human).</content></item>
+
+        <item><content>For corpses other than lizards and lichen, the possibility of getting food poisoning from a corpse is as follows:<br/>
+            - The age of the corpse is divided by a random number between 10 and 29, and rounded down.<br/>
+            - Add 2 if the corpse is cursed, subtract 2 if blessed.<br/>
+            - If the result is more than 5, and not an acid blob, it is tainted. The corpse disappears, conveying no nutrition or intrinsics.
+            If you are not sickness-resistant, it gives you food poisoning. This will kill you in 11 to 20 turns if it is not cured.<br/>
+            - Otherwise, if the result is more than 3, and you are not sickness-resistant,
+            there is an 80% chance of the corpse being too old. You take 1 to 8 points of damage. <br/></content></item>
+
+        <item><content>Food poisoning may be cured by:<br/>
+            + the spell "cure sickness"<br/>
+            + a non-cursed potion of extra or full healing, or blessed potion of healing<br/>
+            + using a non-cursed unicorn horn<br/>
+            + eating a non-cursed eucalyptus leaf<br/>
+            + praying for divine intervention<br/>
+            + a potion of holy water (but not if chaotic or polymorphed into a demon or undead monster)<br/>
+            + #invoking the Staff of Aesculapius<br/>
+            + a nurse's healing "attack"<br/>
+            + polymorphing into your own form, or a sickness-resistant monster (a ghoul or any F)</content></item>
+        
+        <item><content>Monsters not leaving corpses <br/>d
+                air elemental<br/>
+                Aleax<br/>
+                Angel<br/>
+                arch-lich<br/>
+                Archon<br/>
+                Ashikaga Takauji<br/>
+                Asmodeus<br/>
+                Baalzebub<br/>
+                balrog<br/>
+                barbed devil<br/>
+                barrow wight<br/>
+                black light<br/>
+                bone devil<br/>
+                clay golem<br/>
+                couatl<br/>
+                Dark One<br/>
+                demilich<br/>
+                Demogorgon<br/>
+                Dispater<br/>
+                djinni <br/>
+                dust vortex<br/>
+                earth elemental<br/>
+                energy vortex<br/>
+                erinys<br/>
+                fire elemental<br/>
+                fire vortex<br/>
+                flaming sphere<br/>
+                fog cloud<br/>
+                freezing sphere<br/>
+                gas spore<br/>
+                Geryon<br/>
+                ghost<br/>
+                ghoul<br/>
+                glass golem<br/>
+                gold golem<br/>
+                grid bug<br/>
+                hezrou<br/>
+                horned devil<br/>
+                ice devil<br/>
+                ice vortex<br/>
+                incubus<br/>
+                iron golem<br/>
+                Juiblex<br/>
+                ki-rin<br/>
+                leather golem<br/>
+                lemure<br/>
+                lich<br/>
+                mail daemon<br/>
+                manes<br/>
+                marilith<br/>
+                master lich<br/>
+                Minion of Huhetotl<br/>
+                nalfeshnee<br/>
+                Nalzok<br/>
+                Nazgul<br/>
+                Orcus<br/>
+                paper golem<br/>
+                pit fiend<br/>
+                rope golem<br/>
+                sandestin<br/>
+                shade<br/>
+                shocking sphere<br/>
+                skeleton<br/>
+                steam vortex<br/>
+                stone golem<br/>
+                straw golem<br/>
+                succubus<br/>
+                Thoth Amon<br/>
+                Vlad the Impaler<br/>
+                vrock<br/>
+                water demon<br/>
+                water elemental<br/>
+                wood golem<br/>
+                Yeenoghu<br/>
+                yellow light
+            </content>
+        </item>
+    </section>
+    
+    <section name='Attributes'>
+        <item><content>You can increase strength, dexterity, constitution and wisdom through exercise, </content></item>
+        <item><content>Strength corresponds to the ability to have more weight in your inventory.
+            Also, the stronger you are the more damage you do in melee combat and the farther you can throw objects.  </content></item>
+        <item><content>Dexterity has a multitude of effects, of which the most significant is probably that it affects
+            your chance of hitting monsters, whether in melee combat or with a missile or spell. </content></item>
+        <item><content>Having a high constitution increases your healing rate and the number of HP
+            you gain when levelling up and allows you to carry more weight in your inventory. </content></item>
+        <item><content>Intelligence is useful for reading spellbooks, for spellcasting (unless you are a Healer, Knight, Monk,
+            Priest or Valkyrie, in which case it is wisdom that affects your chances of successfully casting a spell) and for
+            encounters with foocubi. </content></item>
+        <item><content>A Healer, Knight, Monk, Priest or Valkyrie requires wisdom to cast spells. Wisdom is not particularly
+            important to other classes, though it affects how fast your power regenerates (hence is fairly important for wizards)
+            and how much power you gain when levelling up. </content></item>
+        <item><content>Charisma is mostly useful for obtaining better prices at shops. It also helps with foocubus encounters,
+            both by increasing the chance of a positive result and by giving more control over whether they remove your armor. </content></item>
+    </section>
+
+    <section name="Ailments">
+        <item>
+            <content></content>
+        </item>
+    </section>
+    
+    <section name='Wands'>
+        <item><content>To identify first write something in the dust with your fingers ("Elbereth"), then engrave something else with the wand.</content></item>
+        <item><content>Engraving Messages:<br/>
+            "The engraving on the [floor] vanishes!" 	cancellation, teleportation (the engraving is moved elsewhere in the level),
+            or make invisible no message if no existing engraving<br/>
+            "A few ice cubes drop from the wand." 	cold 	<br/>
+            "The bugs on the [floor] stop moving!" 	sleep or death 	<br/>
+            "This [wand] is a wand of digging!" or "Gravel flies up from the floor!" digging 	wand self-identifies<br/>
+            "This [wand] is a wand of fire!" 	fire 	wand self-identifies<br/>
+            "Lightning arcs from the wand. You are blinded by the flash!" or "This [wand] is a wand of lightning!" lightning 	wand self-identifies<br/>
+            "A lit field surrounds you!" 	light 	wand self-identifies<br/>
+            "The [floor] is riddled by bullet holes!" 	magic missile 	<br/>
+            "The engraving now reads: [random message]" 	polymorph 	no message if no existing engraving<br/>
+            "The bugs on the [floor] slow down!" 	slow monster 	<br/>
+            "The bugs on the [floor] speed up!" 	speed monster 	<br/>
+            "The wand unsuccessfully fights your attempt to write!" 	striking 	<br/>
+            No message or effect 	locking or opening or probing or undead turning or nothing or secret
+            door detection or wand is exhausted (x:0) or wand is cancelled (x:-1)</content></item>
+
+        <item><content>Base Prices:
+            100 - light, nothing.
+            150 - secret door detection, enlightenment, striking, make invisible, slow monster, speed monster,
+            undead turning, opening, locking, probing, digging, magic missile.
+            175 - fire, cold, sleep, lightning.
+            200 - create monster, polymorph, cancellation, teleportation.
+            500 - wishing, death.
+            </content>
+        </item>
+    </section>
+
+    <section name='Potions'>
+        <item><content>Oil and Acid both have a base price of 250, but only oil can be applied (<b>a</b> command)</content></item>
+
+        <item><content>Dipping a consumable missile weapon (arrow, crossbow bolt, dart, shuriken, but not daggers) into a potion of
+                sickness will poison it (it 'forms a coating' on the weapon).</content></item>
+
+        <item><content>Dipping almost anything into polymorph polymorphs it. It's a smart plan to test potions that might be polymorph with a missile weapon</content></item>
+
+        <item> <content>Dipping into polymorph is resisted ("Nothing happens.") by wands and spellbook of polymorph,
+            iron balls attached to you, and armour merged with your skin; by artifacts 95% of the time; and by all
+            objects 5% of the time. However, I do not believe that any other type of potions being dipped into can
+            produce "Nothing happens" under any circumstances. If an object polymorphs into the same object again,
+            you will be told "Nothing seems to happen".</content></item>
+
+        <item><content>Monsters may drink the following types of potions; healing, extra healing, full healing, gain level, invisibility, speed, polymorph.</content></item>
+        <item><content>Pestilence may drink potions of sickness, but that's kind of obscure.</content></item>
+        <item><content>Nearly all these cases identify the potion for you; the only exception is cursed gain level
+            ("[monster] rises up, through the ceiling!"), where you are called upon to supply a name.</content></item>
+
+         <item><content>Monsters also throw paralysis, blindness, confusion, sleeping and acid. Paralysis, sleeping and
+             blindness identify themselves; confusion ("You feel somewhat dizzy.") and acid ("This burns!") ask you to supply a name.</content></item>
+
+        <item><content>Delicatessens stocks and buys only potions of fruit juice, booze, and water </content></item>
+
+        <item><content>Price Groups:<br/>
+            5 - uncursed water.<br/>
+            50 - see invisible, booze, sickness, fruit juice<br/>
+            100 - restore ability, confusion, hallucination, healing, extra healing, sleeping, blessed/cursed water.<br/>
+            150 - blindness, invisibility, monster detection, object detection, gain energy.<br/>
+            200 - speed, levitation, enlightenment, full healing, polymorph.<br/>
+            250 - acid, oil.<br/>
+            300 - gain ability, paralysis, gain level.</content></item>
+    </section>
+
+    <section name='Scrolls'>
+        <item><content>A scroll by itself in a one-space corridor 'closet' in the wall is practically always teleportation<br/></content></item>
+        <item><content>(and, if there are multiple scrolls, one of them is practically always teleportation), as is a scroll in a corridor next to a room in general.</content></item>
+
+        <item><content>Like clear potions, an unlabelled scroll is always blank, but can be read (and not consumed) to identify it.</content></item>
+
+        <item><content>Monsters may use scrolls of teleportation, create monster, and earth, but earth is quite unlikely.</content></item>
+
+        <item><content>The fact that scrolls of scare monster will crumble to dust if picked up often enough makes them easy to spot -
+            but if you are in a shop and you are really broke, you may want to take care to get scroll prices via #chat.</content></item>
+
+        <item><content>There are always two scrolls of earth on adjacent squares in the lower left corner of the first level of Sokoban.</content></item>
+
+        <item><content>Base Prices:<br/>
+            0 - mail.<br/>
+            20 - identify.<br/>
+            50 - light.<br/>
+            60 - enchant weapon, blank.<br/>
+            80 - enchant armour, remove curse.<br/>
+            100 - destroy armour, confuse monster, scare monster, teleportation, gold detection, food detection, magic mapping, fire.<br/>
+            200 - create monster, taming, amnesia, earth.<br/>
+            300 - genocide, punishment, charging, stinking cloud.</content></item>
+    </section>
+
+    <section name='SpellBooks'>
+        <item>
+            <content>Prices:<br/>
+                100 - sleep, light, detect monsters, healing, knock, force bolt, protection, jumping.<br/>
+                200 - magic missile, confuse monster, cure blindness, drain life, slow monster, wizard lock, create monster, detect food.<br/>
+                300 - cause fear, clairvoyance, cure sickness, charm monster, haste self, detect unseen, extra healing, remove curse, identify, stone to flesh.<br/>
+                400 - fireball, cone of cold, levitation, restore ability, invisibility, detect treasure.<br/>
+                500 - dig, magic mapping.<br/>
+                600 - turn undead, polymorph, teleport away, create familiar.<br/>
+                700 - finger of death, cancellation.<br/>
+            </content>
+        </item>
+
+        <item><content>Spell knowledge only lasts for 20,000 turns after reading a spellbook. Once this time is up the spell is forgotten.</content></item>>
+
+        <item><content>Spellbooks may be re-read once the timeout is at or below 1,000 turns. This will reset the timeout to 20,000 turns.</content></item>
+
+        <item><content>Attempting to read a spellbook before the timeout is low enough will produce the message "<b>You know [spell] quite well already</b>".
+            This will not use up a reading of the spellbook, and if read while owned by a shopkeeper, will not result in a use fee.</content></item>
+    </section>
+
+    <section name="Rings">
+        <item><content>If you have two of a given ring, dropping one on a sink will give a message that can identify the ring to you
+                (you don't need two, but since you usually lose the dropped one there's not a hell of a lot of point otherwise);
+                this is very effective one you have a decent collection of rings. You will need to have a junk object on the sink,
+                in case the ring is hunger; and many of these effects do not work, if blind.</content></item>
+
+        <item><content>These messages are as follows;<br/>
+            searching:            "You thought your ring got lost in the sink, but there it is!"<br/>
+            slow digestion:       "The ring is regurgitated!"<br/>
+            [these are the two cases where you get the ring back]<br/><br/>
+
+            levitation:           "The sink quivers upwards for a moment."<br/>
+            poison resistance:    "You smell rotten [fruit]."<br/>
+            aggravate monster:    "Several flies buzz angrily around the sink."<br/>
+            shock resistance:     "Static electricity surrounds the sink."<br/>
+            conflict:             "You hear loud noises coming from the drain."<br/>
+            sustain ability:      "The water flow seems fixed."<br/>
+            gain strength:        "The water flow seems stronger/weaker now."<br/>
+            gain constitution:    "The water flow seems lesser/greater now."<br/>
+            increase accuracy:    "The water flow misses/hits the drain."<br/>
+            increase damage:      "The water's force seems smaller/greater now."<br/>
+            hunger:               "Suddenly, [junk object] vanishes from the sink!"<br/>
+            meat ring:            "Several flies buzz around the sink."<br/><br/>
+
+            [Effects from here demand that you are not blind.]<br/>
+            adornment:            "The faucets flash brightly for a moment."<br/>
+            regeneration:         "The sink looks as good as new."<br/>
+            invisibility:         "You don't see anything happen to the sink."<br/>
+            free action:          "You see the ring slide right down the drain!"<br/>
+            see invisible:        "You see some air in the sink."<br/>
+            stealth:              "The sink seems to blend into the floor for a moment."<br/>
+            fire resistance:      "The hot water faucet flashes brightly for a moment."<br/>
+            cold resistance:      "The cold water faucet flashes brightly for a moment."<br/>
+            prot. shape changers: "The sink looks nothing like a fountain."<br/>
+            protection:           "The sink glows black/silver for a moment."<br/>
+            warning:              "The sink glows white for a moment."<br/>
+            teleportation:        "The sink momentarily vanishes."<br/>
+            teleport control:     "The sink looks like it is being beamed aboard somewhere."<br/>
+            polymorph:            "The sink momentarily looks like a fountain."<br/>
+            polymorph control:    "The sink momentarily looks like a regularly erupting geyser."<br/>
+            </content>
+        </item>
+
+        <item><content>Prices:<br/>
+            100 - adornment, protection, stealth, sustain ability, hunger, warning, protection from shape changers.<br/>
+            150 - gain strength, gain constitution, increase accuracy, increase damage,
+            aggravate monster, poison resistance, cold resistance, shock resistance, invisibility, see invisible.<br/>
+            200 - regeneration, searching, levitation, fire resistance, free action, slow digestion, teleportation.<br/>
+            300 - conflict, teleport control, polymorph, polymorph control.<br/>
+            </content>
+        </item>
+    </section>
+
+    <section name="Amulets">
+        <item><content></content></item>
+    </section>
+
+    <section name="Gems">
+        <item><content></content></item>
+    </section>
+
+    <section name="Armour">
+        <item><content></content></item>
+    </section>
+
+    <section name="Tools">
+        <item><content></content></item>
+    </section>
+
+    <section name='Stores'>
+        <item><content></content></item>
+    </section>
+
+    <section name="Fountains">
+        <item><content>Use by dipping items into it, by quaffing its water, by digging down on it.</content></item>
+        <item><content>Fountains on non-special levels have a 1/7 (14%) chance of being magic,<br/>an attribute that cannot be determined prior to use.</content></item>
+        <item><content>Digging on a sink will create a non-magic fountain.</content></item>
+        <item>
+            <content>Quaffing from magic fountains w/ non-negative luck: (fountain will not dry up)<br/>
+                (3/10)<b>The cool draught refreshes you</b>": Your hunger is reduced slightly.<br/>
+                (7/10)"<b>Wow! This makes you feel great!</b>" or "<b>A wisp of vapor escapes the fountain...</b>":<br/>
+                ----------|-Your wisdom is exercised, and all your attributes are restored to their maximum<br/>
+                ----------|-same effect as a blessed potion of restore ability).<br/>
+                ----------|-One attribute is increased by 1 (uncursed potion of gain ability effect);<br/>
+                ----------|-if your Luck is 4 or higher, this last effect will increase all your attributes by 1 (blessed potion effect).<br/>
+                ----------|-After this effect, the fountain is no longer magical.
+            </content>
+        </item>
+        <item>
+            <content>Quaffing from non-magic fountains or when you have negative luck:<br/>
+                (1/3 chance of fountain drying up)<br/>
+                (9/30) "<b>The cool draught refreshes you.</b>": Your hunger is reduced slightly.<br/>
+                (9/30) "<b>This tepid water is tasteless.</b>": No effect<br/>
+                (1/30) "<b>You feel self-knowledgeable...</b>" or "<b>The feeling subsides...</b>":<br/>
+                ----------|-You see your attributes and exercise your wisdom<br/>
+                ----------|-(as with a wand or uncursed potion of enlightenment).<br/>
+                (1/30) "<b>The water is foul! You gag and vomit.</b>": 	You vomit and your hunger is increased. <br/>
+                (1/30) "<b>The water is contaminated!</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|"<b>Perhaps it is runoff from the nearby slime mold farm</b>" (if poison resistant):<br/>
+                ----------|-You lose d10 HP and d4+2 STR and your constitution is abused. (if you are not poison resistant)<br/>
+                (1/30) "<b>Perhaps it is runoff from the nearby [fruit] farm.</b>": You lose d4 HP (if you are poison resistant)<br/>
+                (1/30) "<b>An endless stream of snakes pour forth!</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|"<b>You hear something hissing!</b>" (if blind) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>The fountain bubbles furiously for a moment, then calms.</b>" (if moccasins genocided):<br/>
+                ----------|-d5+1 water moccasins are created.<br/>
+                (1/30) "<b>You unleash a water demon!</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You feel the presence of evil.</b>" (blind) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>Grateful for his/her release, he/she grants you a wish!</b>" (peaceful) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>The fountain bubbles furiously for a moment, then calms.</b>" (summoning failed):<br/>
+                ----------|-A water demon is summoned.
+                ----------|-It has an (80+DL)/100 chance of being hostile<br/>
+                ----------|-(100% if you have the Amulet);<br/>
+                ----------|-if not hostile, he/she'll grant one wish and then vanish.<br/>
+                (1/30) "<b>You attract a water nymph!</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You hear a seductive voice.</b>" (blind) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>A large bubble rises to the surface and pops.</b>" (unblind, water nymphs genocided or extinct) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You hear a loud pop.</b>" (blind, water nymphs genocided or extinct):<br/>
+                ----------|-A water nymph is summoned.<br/>
+                (1/30) "<b>This water's no good!</b>"<br/>
+                ----------|-Each item in your inventory has 1/5 chance of being cursed outright;<br/>
+                ----------|-your hunger is increased and your constitution is abused.<br/>
+                (1/30) "<b>You see an image of someone stalking you. But it disappears.</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You feel transparent.</b>" (blind, invisible) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You feel very self-conscious. Then it passes.</b>" (blind, not invisible):<br/>
+                ----------|-You gain see invisible and your wisdom is exercised.<br/>
+                (1/30 )"<b>You sense the presence of monsters.</b>" or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You have a strange feeling for a moment, then it passes.</b>"<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(no monsters, beginner, not hallucinating) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You have a normal feeling for a moment, then it passes.</b>"(no monsters, beginner, hallucinating) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You feel threatened.</b>" (no monsters, not hallucinating) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You get the heebie jeebies.</b>" (no monsters, hallucinating):<br/>
+                ----------|-You briefly see monsters on that level and exercise your wisdom.<br/>
+                ----------|-If no monsters on the level (other than you), no visible effect.<br/>
+                (1/30) "<b>You spot a gem in the sparkling waters!</b>" (unblind) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>You feel a gem here!</b>" (blind):<br/>
+                ----------|-You find a random valuable gem or piece of worthless glass and your wisdom is exercised.<br/>
+                ----------|-If you have already acquired gems or gold from this fountain,<br/>
+                ----------|-a nymph is summoned instead (as above). <br/>
+                (1/30) "<b>This water gives you bad breath!</b>": Monsters on the level flee you for a while.<br/>
+                (1/30) "<b>Water gushes forth from the overflowing fountain!</b>" (pool created) or<br/>
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"<b>Your thirst is quenched.</b>" (no pools created):<br/>
+                ----------|-A number of pools may be created in your vicinity.<br/>
+                ----------|-(Never two orthogonally adjacent, never on your square, the more likely the closer to you.) <br/>
+                ----------|-Be aware that any precious items laying near you may end up at the bottom of a pool!<br/>
+            </content>
+        </item>
+
+        <item>
+            <content>Dipping object gets wet and 1/3 chance of drying up<br/>
+                + scrolls and spellbooks blank<br/>
+                + potions dilute<br/>
+                + iron objects rust<br/>
+                + lit objects go out<br/>
+                + grease washes off<br/>
+            </content>
+        </item>
+        <item>
+            <content>
+                Dipping: Special effects can happen (only 50% chance if wetting object already caused an effect) and 1/6 chance of drying up:<br/>
+                (18/30) (1/18) "A strange tingling runs up your arm." or (1/18) "You feel a sudden chill." (16/18) No message: No special effect<br/>
+                (4/30) "The water glows for a moment." (uncursed, unblind) or "A feeling of loss comes over you." (item not cursed):The dipped item is uncursed if cursed.<br/>
+                (1/30 )No message. 	The dipped item is cursed outright.<br/>
+                (1/30) "An endless stream of snakes pour forth!" or<br/>
+                "You hear something hissing!" (if blind) or<br/>
+                "The fountain bubbles furiously for a moment, then calms." (if moccasins genocided):<br/>
+                d5+1 water moccasins are created. 	1/30
+                (1/30) "You unleash a water demon!" or<br/>
+                "You feel the presence of evil." (blind) or<br/>
+                "Grateful for his release, he grants you a wish!" (peaceful) or<br/>
+                "The fountain bubbles furiously for a moment, then calms." (summoning failed):<br/>A water demon is summoned.<br/>
+                It has an (80+DL)/100 chance of being hostile<br/>
+                (100% if you have the Amulet);<br/>
+                if not hostile, he'll grant one wish and then vanish.
+                (1/30) "You attract a water nymph!" or<br/>
+                You hear a seductive voice." (blind) or<br/>
+                "A large bubble rises to the surface and pops." (unblind, water nymphs genocided or extinct) or<br/>
+                "You hear a loud pop." (blind, water nymphs genocided or extinct):<br/>
+                A water nymph is summoned.
+                (1/30) "Water gushes forth from the overflowing fountain!" (pool created) or<br/>
+                "Water sprays all over you." (no pools created):<br/>
+                A number of pools may be created in your vicinity.<br/>
+                (Never two orthogonally adjacent, never on your square, the more likely the closer to you.)
+                (1/30) "You spot a gem in the sparkling waters!" (unblind) or<br/>
+                "You feel a gem here!" (blind):<br/>
+                You find a random valuable gem or piece of worthless glass and your wisdom is exercised.<br/>
+                If you have already acquired gems or gold from this fountain, pools may be created instead (as above).
+                (1/30) "An urge to take a bath overwhelms you."<br/>
+                "You lost some of your gold in the fountain!":<br/>
+                You lose some gold and your wisdom is abused.<br/>
+                Gems and gold can now be found in this fountain again.<br/>
+                Your inventory will not rust or be blanked.
+                (1/30) "Far below you, you see coins glistening in the water.":<br/>
+                You find (2 * d(height + 1)) + 5 zorkmids, where "height" is your height above the bottom level of the current dungeon branch;<br/>
+                your wisdom is exercised.<br/>
+                If you have already acquired a gem or gold from this fountain, there is no effect.
+            </content>
+        </item>
+
+        <item><content>If you dip until it dries up or gives the desired result, you have 31.6% chance of an
+            uncurse or 9.4% chance each of a curse / demon / nymph per fountain</content></item>
+
+        <item><content>Digging down in a fountain square will likely create a number of pools in your vicinity.<br/>
+            (Always if available space in line of sight. Never two orthogonally adjacent, never on your square, the more
+            likely the closer to you.) The fountain is destroyed. Kicking a fountain has a 2/3 chance to exercise dexterity
+            and 1/3 of the time wet your boots. You lose up to 5 hit points, abuse dexterity and strength, and possibly end
+            up with a wounded leg. </content></item>
+
+        <item><content>The following messages all indicate there is a fountain somewhere on the level:<br/>
+            "You hear bubbling water." <br/>
+            "You hear water falling on coins." <br/>
+            "You hear the splashing of a naiad." <br/>
+            "You hear a soda fountain!" (you are hallucinating) </content></item>
+
+        <item><content>Potions can into potions of water by dipping into a fountain twice, and then blessed on an altar as described in the holy water article.<br/>
+            Unfortunately, the fountain has a chance of drying up before you have converted all of your potions. The same applies to blanking scrolls and spellbooks.<br/>
+            The solution is to stand on a fountain and dig down. The fountain will be destroyed with a large chance of making several pools of water.<br/></content></item>
+
+        <item><content>Potions can then be dipped in them without using up your water supply.
+            Unburden yourself, carry only items you want blanked, rusted or converted to potions of water, and jump into the pool.<br/>
+            You will crawl out (and get a scary message). Alternatively, water walking boots or flying let you #dip without getting yourself wet.
+        </content></item>
+
+        <item><content>If you #dip a single ordinary long sword in a fountain, are at least experience level 5,
+            and Excalibur doesn't already exist in your game, then there is a 1/6 chance of something special happening to your long sword.
+            If you are lawful, the long sword is converted into the blessed, rustless, uncorroded, damageproof Excalibur and you exercise your wisdom.
+            If you are neutral or chaotic, your long sword is cursed, loses its rustproofing, may lose an enchantment,
+            and you abuse your wisdom</content></item>
+    </section>
+
+    <section name="Thrones">
+        <item>
+            <content></content>
+        </item>
+    </section>
+
+    <section name='Gnome Mines'>
+        <item><content></content></item>
+    </section>
+
+    <section name='Sokoban'>
+        <item><content></content></item>
+    </section>
+
+    <section name='Special Rooms'>
+        <item><content></content></item>
+    </section>
+
+    <section name="Unicorns (and their horns)">
+        <item><content></content></item>
+    </section>
+
+    <section name='Specific Monsters'>
+        <item><content></content></item>
+    </section>
+
+    <section name="Bad Ideas">
+        <item><content>From the NetHack wiki:</content></item>
+        <item><content>Using only the arrow keys.</content></item>
+        <item><content>Holding keys down.</content></item>
+        <item><content>Letting monsters hit you for no good reason.</content></item>
+        <item><content>Genociding @.</content></item>
+        <item><content>Blessed-genociding mind flayers as a dwarf.</content></item>
+        <item><content>Attempting to genocide while confused.</content></item>
+        <item><content>Casting force bolt in potion shops.</content></item>
+        <item><content>Casting fireball in bookstores.</content></item>
+        <item><content>Looting an exploding box in a tool shop.</content></item>
+        <item><content>Shopping while feeling jumpy.</content></item>
+        <item><content>Smashing open every locked door in your way.</content></item>
+        <item><content>Pasting into the NetHack terminal without checking the clipboard.</content></item>
+        <item><content>Quaffing from every fountain in the hope of a wish while at a low level.</content></item>
+        <item><content>Getting on your pony right at the start of the game.</content></item>
+        <item><content>Eating "just one more" giant or lump of royal jelly.</content></item>
+        <item><content>Eating rotten corpses.</content></item>
+        <item><content>Training strength by weight lifting.</content></item>
+        <item><content>Running around while brandishing a cockatrice corpse.</content></item>
+        <item><content>Levitating around while brandishing a cockatrice corpse.</content></item>
+        <item><content>Groping around while blind and bare-handed.</content></item>
+        <item><content>Leaving your wand of wishing in your main inventory, particularly before wishing for reflection.</content></item>
+        <item><content>Kicking the box in the Castle that contains the wand of wishing before removing the wand.</content></item>
+        <item><content>Putting all your wands or all your tools into your bag of holding.</content></item>
+        <item><content>Picking up nondescript gray stones.</content></item>
+        <item><content>Automatically picking up nondescript gray stones.</content></item>
+        <item><content>Retreating to a sanctuary to test your unidentified rings.</content></item>
+        <item><content>Letting an altar convert you.</content></item>
+        <item><content>Treating werecreatures very inhumanely.</content></item>
+        <item><content>Dipping for Excalibur before checking your experience level.</content></item>
+        <item><content>Engraving with the wrong object.</content></item>
+        <item><content>Teleporting the other Riders or their corpses.</content></item>
+        <item><content>Hanging out next to a drawbridge.</content></item>
+        <item><content>Looting bones files without pickup_burden.</content></item>
+        <item><content>Killing a nymph with a force bolt.</content></item>
+        <item><content>Throwing your metal daggers at a metallivore.</content></item>
+        <item><content>Throwing your enchanted daggers at a disenchanter.</content></item>
+        <item><content>Disconnecting from the server while you decide what to wish for.</content></item>
+        <item><content>Eating a tin while wielding your artifact weapon in a shop.</content></item>
+    </section>
+</sections>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+    <message>
+        <game>first test message</game>
+        <meaning>ftm</meaning>
+    </message>
+
+    <message>
+        <game>second test message</game>
+        <meaning>stm</meaning>
+    </message>
+
+    <message>
+        <game>first foo message</game>
+        <meaning>ffm</meaning>
+    </message>
+
+    <message>
+        <game>second foo message</game>
+        <meaning>sfm</meaning>
+    </message>
+</messages>

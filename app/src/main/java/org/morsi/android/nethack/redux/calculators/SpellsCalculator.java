@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.morsi.android.nethack.redux.CalculatorActivity;
 import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.Input;
 
 import android.content.SharedPreferences;
 import android.text.Editable;
@@ -135,11 +136,6 @@ public class SpellsCalculator {
     }
 
     ///
-
-    private boolean validInput(String test){
-        // TODO edit_text validation should be a numeric regex
-        return !test.equals("") && !test.equals("-");
-    }
 
     private Spinner characterClassInput() {
         return (Spinner) activity.findViewById(R.id.characterClassInput);
@@ -357,12 +353,12 @@ public class SpellsCalculator {
     ///
 
     private void updateFields(){
-        character_level   = validInput(characterLevelInputValueString())  ? characterLevelInputValue()  : 1;
-        character_int_wis = validInput(characterIntWisInputValueString()) ? characterIntWisInputValue() : 1;
-        spell_level       = validInput(spellLevelInputValueString())      ? spellLevelInputValue()      : 1;
-        skill_level       = validInput(skillLevelInputValueString())      ? skillLevelInputValue()      : 1;
-        character_class   = validInput(characterClassInputValue())        ? characterClassInputValue()  : "";
-        spell_cast        = validInput(spellCastInputValue())             ? spellCastInputValue()       : "";
+        character_level   = Input.validInt(characterLevelInputValueString())  ? characterLevelInputValue()  : 1;
+        character_int_wis = Input.validInt(characterIntWisInputValueString()) ? characterIntWisInputValue() : 1;
+        spell_level       = Input.validInt(spellLevelInputValueString())      ? spellLevelInputValue()      : 1;
+        skill_level       = Input.validInt(skillLevelInputValueString())      ? skillLevelInputValue()      : 1;
+        character_class   = Input.validInt(characterClassInputValue())        ? characterClassInputValue()  : "";
+        spell_cast        = Input.validInt(spellCastInputValue())             ? spellCastInputValue()       : "";
         small_shield      = smallShieldInputValue();
         other_shield      = otherShieldInputValue();
         robe              = robeInputValue();

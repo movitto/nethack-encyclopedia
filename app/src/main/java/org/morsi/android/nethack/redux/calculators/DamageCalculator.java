@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.calculators;
 
 import org.morsi.android.nethack.redux.CalculatorActivity;
 import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.Input;
 
 import android.content.SharedPreferences;
 import android.text.Editable;
@@ -108,11 +109,6 @@ public class DamageCalculator {
     }
 
     ///
-
-    private boolean validInput(String test){
-        // TODO edit_text validation should be a numeric regex
-        return !test.equals("") && !test.equals("-");
-    }
 
     private Button monsterSizeButton() {
         return (Button) activity.findViewById(R.id.monster_size_button);
@@ -286,11 +282,11 @@ public class DamageCalculator {
     }
 
     private void updateFields(){
-        strength                     = validInput(strengthInputValueString())            ? strengthInputValue()            : 1;
-        min_weapon_damage            = validInput(minDmgInputValueString())              ? minDmgInputValue()              : 1;
-        max_weapon_damage            = validInput(maxDmgInputValueString())              ? maxDmgInputValue()              : 1;
-        weapon_enhancement           = validInput(weaponEnhancementInputValueString())   ? weaponEnhancementInputValue()   : 0;
-        ring_increased_damage        = validInput(ringIncreasedDamageInputValueString()) ? ringIncreasedDamageInputValue() : 0;
+        strength                     = Input.validInt(strengthInputValueString())            ? strengthInputValue()            : 1;
+        min_weapon_damage            = Input.validInt(minDmgInputValueString())              ? minDmgInputValue()              : 1;
+        max_weapon_damage            = Input.validInt(maxDmgInputValueString())              ? maxDmgInputValue()              : 1;
+        weapon_enhancement           = Input.validInt(weaponEnhancementInputValueString())   ? weaponEnhancementInputValue()   : 0;
+        ring_increased_damage        = Input.validInt(ringIncreasedDamageInputValueString()) ? ringIncreasedDamageInputValue() : 0;
         fighting_undead_with_blessed = undeadBlessedWeaponToggle().isChecked();
         poisoned_weapon              = poisonWeaponToggle().isChecked();
         life_draining_weapon         = lifeDrainingToggle().isChecked();

@@ -27,7 +27,7 @@ public class NoteTracker {
 
     public NoteTracker(GameTrackerActivity activity){
         this.activity = activity;
-        notes = new HashMap<String, String>();
+        reset();
     }
 
     public void onCreate() {
@@ -100,13 +100,15 @@ public class NoteTracker {
 
         label_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
         value_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
-        label_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
 
         remove.setOnClickListener(new RemoveNoteListener(layout));
 
         layout.addView(label_tv);
         layout.addView(value_tv);
         layout.addView(remove);
+
+        notesList().addView(layout);
     }
 
     class RemoveNoteListener implements Button.OnClickListener {

@@ -16,6 +16,7 @@ public class PlayerTracker {
 
     public PlayerTracker(GameTrackerActivity activity){
         this.activity = activity;
+        reset();
     }
 
     public void onCreate() {

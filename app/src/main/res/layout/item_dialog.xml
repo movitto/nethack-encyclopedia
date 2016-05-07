@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/item_type" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:id="@+id/itemTypeInput"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/item_name" />
+
+        <EditText
+            android:id="@+id/itemNameOutput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:inputType="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/item_appearance" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:id="@+id/itemAppearanceInput"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/item_buy_price" />
+
+        <EditText
+            android:id="@+id/itemBuyInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10"
+            android:inputType="none" />
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/item_sell_price" />
+
+        <EditText
+            android:id="@+id/itemSellInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10"
+            android:inputType="none" />
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/itemTypeLabel"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <include android:id="@+id/potions_dialog"     layout="@layout/potions_dialog"     />
+    <include android:id="@+id/scrolls_dialog"     layout="@layout/scrolls_dialog"     />
+    <include android:id="@+id/wands_dialog"       layout="@layout/wands_dialog"       />
+    <include android:id="@+id/spellbooks_dialog"  layout="@layout/spellbooks_dialog"  />
+    <include android:id="@+id/rings_dialog"       layout="@layout/rings_dialog"       />
+    <include android:id="@+id/amulets_dialog"     layout="@layout/amulets_dialog"     />
+    <include android:id="@+id/gems_dialog"        layout="@layout/gems_dialog"        />
+
+    <Button
+        android:id="@+id/item_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:text="Close" />
+</LinearLayout>

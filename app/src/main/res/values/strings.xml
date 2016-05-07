@@ -73,6 +73,7 @@
         <item>Item Info</item>
         <item>Notes</item>
     </string-array>
+
     <string name="player_tracker">Player Stats</string>
     <string name="level_tracker">Level Info</string>
     <string name="item_tracker">Item Info</string>
@@ -88,4 +89,151 @@
 
     <string name="notes_label">Label</string>
     <string name="notes_value">Note:</string>
+
+    <string-array name="level_parents">
+        <item>Select...</item>
+        <item>Mazes of Menace</item>
+        <item>Dungeons of Doom</item>
+        <item>Gnome Mines</item>
+        <item>Gehennom</item>
+    </string-array>
+
+    <string name="level_level">Level</string>
+    <string name="level_parent"></string>
+    <string name="level_num">Level #</string>
+
+    <string name="level_stores">Stores</string>
+    <string name="level_store">General Store</string>
+    <string name="level_armor_store">Armor Store</string>
+    <string name="level_bookstore">Book Store</string>
+    <string name="level_liquor_shop">Liquor Shop</string>
+    <string name="level_weapon_shop">Weapon Shop</string>
+    <string name="level_delicatessan">Delicatessan</string>
+    <string name="level_jeweler">Jeweler</string>
+    <string name="level_apparel_shop">Apparel Shop</string>
+    <string name="level_hardware_store">Hardware Store</string>
+    <string name="level_rare_book_store">Rare Book Store</string>
+    <string name="level_lighting_store">Lighting Store</string>
+
+    <string name="level_features">Features</string>
+    <string name="level_fountains">Fountains</string>
+    <string name="level_aligned_altars">Aligned Altars</string>
+    <string name="level_x_aligned_altars">X-Aligned Altars</string>
+    <string name="level_neutral_altars">Neutral Altars</string>
+    <string name="level_sinks">Sinks</string>
+    <string name="level_thrones">Thrones</string>
+    <string name="level_temples">Temples</string>
+
+    <string name="level_stash">Stash</string>
+
+    <string name="level_special">Special Levels</string>
+    <string name="level_oracle">Oracle</string>
+    <string name="level_mines">Mines</string>
+    <string name="level_minetown">MineTown</string>
+    <string name="level_mines_end">Mines End</string>
+    <string name="level_sokoban">Sokoban</string>
+    <string name="level_ludios">Ludios</string>
+    <string name="level_rogue">Rogue</string>
+    <string name="level_quest">Quest</string>
+    <string name="level_medusa">Medusa</string>
+    <string name="level_castle">Castle</string>
+    <string name="level_gehennom">Gehennom</string>
+    <string name="level_valley">Valley</string>
+    <string name="level_azmodeus">Azmodeus</string>
+    <string name="level_juiblex">Juiblex</string>
+    <string name="level_baalzebub">Baalzebub</string>
+    <string name="level_orcus_town">Orcus Town</string>
+    <string name="level_wizards_tower">Wizards Tower</string>
+    <string name="level_fake_wizards_tower">Fake Wizards Tower</string>
+    <string name="level_vibrating_square">Vibraring Square</string>
+    <string name="level_moloch">Moloch</string>
+    <string name="level_vlad">Vlad</string>
+
+    <string-array name="item_types">
+        <item>Potion</item>
+        <item>Scroll</item>
+        <item>Wand</item>
+        <item>SpellBook</item>
+        <item>Ring</item>
+        <item>Amulet</item>
+        <item>Gem</item>
+    </string-array>
+
+    <string name="item_type">Item Type</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_appearance">Appearance</string>
+    <string name="item_buy_price">Buy</string>
+    <string name="item_sell_price">Sell</string>
+
+    <string-array name="potion_appearances">
+        <item></item>
+    </string-array>
+    <string name="potion_quaff_effect">Quaff Effect</string>
+    <string-array name="potion_quaff_effects">
+        <item></item>
+    </string-array>
+    <string-array name="potion_throw_effects">
+        <item></item>
+    </string-array>
+    <string name="potion_throw_effect">Throw Effect</string>
+
+    <string-array name="scroll_appearances">
+        <item></item>
+    </string-array>
+    <string name="scroll_read_effect">Read Effect</string>
+    <string-array name="scroll_read_effects">
+        <item></item>
+    </string-array>
+    <string name="scroll_drop_effect">Drop Effect</string>
+    <string-array name="scroll_drop_effects">
+        <item></item>
+    </string-array>
+
+    <string-array name="wand_appearances">
+        <item></item>
+    </string-array>
+    <string name="wand_engrave_effect">Engrave Effect</string>
+    <string-array name="wand_engrave_effects">
+        <item></item>
+    </string-array>
+    <string name="wand_zap_effect">Zap Effect</string>
+    <string-array name="wand_zap_effects">
+        <item></item>
+    </string-array>
+
+    <string-array name="spellbook_appearances">
+        <item></item>
+    </string-array>
+
+    <string-array name="ring_appearances">
+        <item></item>
+    </string-array>
+    <string name="ring_sink_effect">Sink Drop Effect</string>
+    <string-array name="ring_sink_effects">
+        <item></item>
+    </string-array>
+    <string name="ring_wear_effect">Worn Effect</string>
+    <string-array name="ring_wear_effects">
+        <item></item>
+    </string-array>
+
+    <string-array name="amulet_appearances">
+        <item></item>
+    </string-array>
+    <string name="amulet_wear_effect">Worn Effect</string>
+    <string-array name="amulet_wear_effects">
+        <item></item>
+    </string-array>
+
+    <string-array name="gem_appearances">
+        <item></item>
+    </string-array>
+    <string name="gem_engraving_type">Engraving Type</string>
+    <string-array name="gem_engraving_types">
+        <item></item>
+    </string-array>
+    <string name="gem_streak_color">Streak Color</string>
+    <string-array name="gem_streak_colors">
+        <item></item>
+    </string-array>
 </resources>

@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/level_level"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_parent" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:id="@+id/levelParentInput" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical"
+            android:text="@string/level_num" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:id="@+id/levelNumInput"/>
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/level_stores"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_store"
+            android:textOff="@string/level_store"
+            android:textOn="@string/level_store"/>
+
+        <ToggleButton
+            android:id="@+id/levelArmorStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_armor_store"
+            android:textOff="@string/level_armor_store"
+            android:textOn="@string/level_armor_store"/>
+
+        <ToggleButton
+            android:id="@+id/levelBookStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_bookstore"
+            android:textOff="@string/level_bookstore"
+            android:textOn="@string/level_bookstore"/>
+
+        <ToggleButton
+            android:id="@+id/levelLiquorStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_liquor_shop"
+            android:textOff="@string/level_liquor_shop"
+            android:textOn="@string/level_liquor_shop"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelWeaponShopInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_weapon_shop"
+            android:textOff="@string/level_weapon_shop"
+            android:textOn="@string/level_weapon_shop"/>
+
+        <ToggleButton
+            android:id="@+id/levelDelicatessanInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_delicatessan"
+            android:textOff="@string/level_delicatessan"
+            android:textOn="@string/level_delicatessan"/>
+
+        <ToggleButton
+            android:id="@+id/levelJewelerInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_jeweler"
+            android:textOff="@string/level_jeweler"
+            android:textOn="@string/level_jeweler"/>
+
+        <ToggleButton
+            android:id="@+id/levelApparelShopInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_apparel_shop"
+            android:textOff="@string/level_apparel_shop"
+            android:textOn="@string/level_apparel_shop"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelHardwareStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_hardware_store"
+            android:textOff="@string/level_hardware_store"
+            android:textOn="@string/level_hardware_store"/>
+
+        <ToggleButton
+            android:id="@+id/levelRareBookStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_rare_book_store"
+            android:textOff="@string/level_rare_book_store"
+            android:textOn="@string/level_rare_book_store"/>
+
+        <ToggleButton
+            android:id="@+id/levelLightingStoreInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_lighting_store"
+            android:textOff="@string/level_lighting_store"
+            android:textOn="@string/level_lighting_store"/>
+
+        <!--intentionally blank -->
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/level_features"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_fountains" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelFountainsInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_aligned_altars" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelAlignedAltarsInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_x_aligned_altars" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelXAlignedAltarsInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_neutral_altars" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelNeutralAltarsInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_sinks" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelSinksInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_thrones" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelThronesInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_temples" />
+
+        <EditText
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelTemplesInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:ems="10" />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="@string/level_stash" />
+
+        <ToggleButton
+            android:layout_marginRight="5dp"
+            android:id="@+id/levelStashInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.25"
+            android:layout_height="fill_parent"
+            android:text="@string/level_stash"
+            android:textOff="@string/level_stash"
+            android:textOn="@string/level_stash"/>
+    </LinearLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/level_special"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelOracleInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_oracle"
+            android:textOff="@string/level_oracle"
+            android:textOn="@string/level_oracle"/>
+
+        <ToggleButton
+            android:id="@+id/levelMinesInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_mines"
+            android:textOff="@string/level_mines"
+            android:textOn="@string/level_mines"/>
+
+        <ToggleButton
+            android:id="@+id/levelMineTownInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_minetown"
+            android:textOff="@string/level_minetown"
+            android:textOn="@string/level_minetown"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelMinesEndInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_mines_end"
+            android:textOff="@string/level_mines_end"
+            android:textOn="@string/level_mines_end"/>
+
+        <ToggleButton
+            android:id="@+id/levelSokobanInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_sokoban"
+            android:textOff="@string/level_sokoban"
+            android:textOn="@string/level_sokoban"/>
+
+        <ToggleButton
+            android:id="@+id/levelLudiosInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_ludios"
+            android:textOff="@string/level_ludios"
+            android:textOn="@string/level_ludios"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelRogueInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_rogue"
+            android:textOff="@string/level_rogue"
+            android:textOn="@string/level_rogue"/>
+
+        <ToggleButton
+            android:id="@+id/levelQuestInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_quest"
+            android:textOff="@string/level_quest"
+            android:textOn="@string/level_quest"/>
+
+        <ToggleButton
+            android:id="@+id/levelMedusaInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_medusa"
+            android:textOff="@string/level_medusa"
+            android:textOn="@string/level_medusa"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/levelCastleInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_castle"
+            android:textOff="@string/level_castle"
+            android:textOn="@string/level_castle"/>
+
+        <ToggleButton
+            android:id="@+id/levelGehennomInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_gehennom"
+            android:textOff="@string/level_gehennom"
+            android:textOn="@string/level_gehennom"/>
+
+        <ToggleButton
+            android:id="@+id/levelValleyInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_valley"
+            android:textOff="@string/level_valley"
+            android:textOn="@string/level_valley"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ToggleButton
+            android:id="@+id/levelAzmodeusInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_azmodeus"
+            android:textOff="@string/level_azmodeus"
+            android:textOn="@string/level_azmodeus"/>
+
+        <ToggleButton
+            android:id="@+id/levelJuiblexInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_juiblex"
+            android:textOff="@string/level_juiblex"
+            android:textOn="@string/level_juiblex"/>
+
+        <ToggleButton
+            android:id="@+id/levelBaazlebubInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_baalzebub"
+            android:textOff="@string/level_baalzebub"
+            android:textOn="@string/level_baalzebub"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ToggleButton
+            android:id="@+id/levelOrcusTownInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_orcus_town"
+            android:textOff="@string/level_orcus_town"
+            android:textOn="@string/level_orcus_town"/>
+
+        <ToggleButton
+            android:id="@+id/levelWizardsTowerInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_wizards_tower"
+            android:textOff="@string/level_wizards_tower"
+            android:textOn="@string/level_wizards_tower"/>
+
+        <ToggleButton
+            android:id="@+id/levelFakeWizardsTowerInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_fake_wizards_tower"
+            android:textOff="@string/level_fake_wizards_tower"
+            android:textOn="@string/level_fake_wizards_tower"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ToggleButton
+            android:id="@+id/levelVibratingSquareInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_vibrating_square"
+            android:textOff="@string/level_vibrating_square"
+            android:textOn="@string/level_vibrating_square"/>
+
+        <ToggleButton
+            android:id="@+id/levelMolochInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_moloch"
+            android:textOff="@string/level_moloch"
+            android:textOn="@string/level_moloch"/>
+
+        <ToggleButton
+            android:id="@+id/levelVladInput"
+            android:layout_width="0dip"
+            android:layout_weight="0.33"
+            android:layout_height="fill_parent"
+            android:text="@string/level_vlad"
+            android:textOff="@string/level_vlad"
+            android:textOn="@string/level_vlad"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/level_close"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:text="Close" />
+</LinearLayout>
+</ScrollView>

@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import org.morsi.android.nethack.redux.items.Items;
 import org.morsi.android.nethack.redux.trackers.ItemTracker;
 import org.morsi.android.nethack.redux.trackers.LevelTracker;
 import org.morsi.android.nethack.redux.trackers.NoteTracker;
@@ -55,7 +56,7 @@ public class GameTrackerActivity extends Activity {
 
     private ArrayAdapter<CharSequence> spinnerAdapter() {
         ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(this, R.array.quick_stats_array,
+                ArrayAdapter.createFromResource(this, R.array.game_tracker_array,
                         android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
@@ -78,6 +79,12 @@ public class GameTrackerActivity extends Activity {
         level_tracker.onCreate();
         item_tracker.onCreate();
         note_tracker.onCreate();
+
+        createItems();
+    }
+
+    private void createItems(){
+        // item_tracker.item_db = Items.fromXML(getResources().getXml(R.xml.potions)); // ...
     }
 
     public void onClickNewTrackerButton(View target) {
@@ -91,7 +98,7 @@ public class GameTrackerActivity extends Activity {
             note_tracker.newTrackerPopup();
     }
 
-    public void onResetNewTrackerButton(View target) {
+    public void onClickResetTrackerButton(View target) {
         confirmTrackerReset();
     }
 

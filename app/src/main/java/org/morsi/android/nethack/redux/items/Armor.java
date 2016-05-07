@@ -22,6 +22,8 @@ public class Armor extends Item{
 
     public static String type(){ return "Armor"; }
 
+    public String itemType() { return "Armor"; }
+
     public static String quickStatsCategoryName(){ return "Armor"; }
 
     public static ArrayList<String> columnNames(){

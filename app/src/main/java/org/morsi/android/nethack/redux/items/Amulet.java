@@ -13,6 +13,8 @@ public class Amulet extends Item  {
 
     public static String type(){ return "Amulet"; }
 
+    public String itemType() { return "Amulet"; }
+
     public static Amulet extract(String str) {
         String attrs[] = str.split("-");
         Amulet amulet = new Amulet();

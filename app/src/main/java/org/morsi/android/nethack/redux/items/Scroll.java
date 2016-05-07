@@ -18,6 +18,8 @@ public class Scroll extends Item {
 
     public static String type(){ return "Scroll"; }
 
+    public String itemType() { return "Scroll"; }
+
     public static String quickStatsCategoryName(){ return "Scrolls"; }
 
     public static ArrayList<String> columnNames(){
@@ -33,11 +35,12 @@ public class Scroll extends Item {
 
     public static ArrayList<Double> columnWeights(){
         ArrayList<Double> weights = new ArrayList<Double>();
-        weights.add(0.32);
-        weights.add(0.15);
-        weights.add(0.15);
-        weights.add(0.13);
-        weights.add(0.25);
+        weights.add(0.4);
+        weights.add(0.1);
+        weights.add(0.1);
+        weights.add(0.1);
+        weights.add(0.1);
+        weights.add(0.2);
         return weights;
     }
 

@@ -21,6 +21,8 @@ public class Wand extends Item {
 
     public static String type(){ return "Wand"; }
 
+    public String itemType() { return "Wand"; }
+
     public static String quickStatsCategoryName(){ return "Wands"; }
 
     public static ArrayList<String> columnNames(){

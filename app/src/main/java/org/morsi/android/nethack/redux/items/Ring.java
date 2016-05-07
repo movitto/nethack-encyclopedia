@@ -16,6 +16,8 @@ public class Ring extends Item {
 
     public static String type(){ return "Ring"; }
 
+    public String itemType() { return "Ring"; }
+
     public static String quickStatsCategoryName(){ return "Rings"; }
 
     public static ArrayList<String> columnNames(){

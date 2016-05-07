@@ -24,7 +24,6 @@ public class NotesDialog {
         return game_tracker().note_tracker;
     }
 
-
     private Button closeButton(){
         return (Button) dialog.findViewById(R.id.notes_close);
     }

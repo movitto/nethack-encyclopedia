@@ -2,14 +2,13 @@ package org.morsi.android.nethack.redux.calculators;
 
 import org.morsi.android.nethack.redux.CalculatorActivity;
 import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.Input;
 
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -71,11 +70,6 @@ public class ArmorCalculator {
     }
 
     ///
-
-    private boolean validInput(String test){
-        // TODO edit_text validation should be a numeric regex
-        return !test.equals("") && !test.equals("-");
-    }
 
     private int sanitizeInput(int input){
         return input < 0 ? -input : input;
@@ -253,10 +247,10 @@ public class ArmorCalculator {
     }
 
     private void updateFields(){
-        ac              =               validInput(acInputValueString())        ? acInputValue()              : 0;
-        monster_level   = sanitizeInput(validInput(monsterLevelInputString())   ? monsterLevelInputValue()    : 0);
-        monster_damage  = sanitizeInput(validInput(monsterDamageInputString())  ? monsterDamageInputValue()   : 0);
-        monster_attacks = sanitizeInput(validInput(monsterAttacksInputString()) ? monsterAttacksInputValue()  : 0);
+        ac              =               Input.validInt(acInputValueString())        ? acInputValue()              : 0;
+        monster_level   = sanitizeInput(Input.validInt(monsterLevelInputString())   ? monsterLevelInputValue()    : 0);
+        monster_damage  = sanitizeInput(Input.validInt(monsterDamageInputString())  ? monsterDamageInputValue()   : 0);
+        monster_attacks = sanitizeInput(Input.validInt(monsterAttacksInputString()) ? monsterAttacksInputValue()  : 0);
     }
 
     private void storeFields(){

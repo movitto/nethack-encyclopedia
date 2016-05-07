@@ -32,11 +32,15 @@ public class CalculatorActivity extends Activity {
     private DamageCalculator damage;
     private SpellsCalculator spells;
 
-    private Spinner spinner(){ return (Spinner) findViewById(R.id.calculator_spinner); }
+    private Spinner spinner(){
+        return (Spinner) findViewById(R.id.calculator_spinner);
+    }
 
     private ArrayAdapter<CharSequence> spinnerAdapter(){
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.calculator_array,
-                                                                             android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this,
+                        R.array.calculator_array,
+                        android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }

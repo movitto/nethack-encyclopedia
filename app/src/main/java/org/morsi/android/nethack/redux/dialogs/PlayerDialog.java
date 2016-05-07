@@ -10,6 +10,7 @@ import android.widget.EditText;
 import org.morsi.android.nethack.redux.GameTrackerActivity;
 import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.trackers.PlayerTracker;
+import org.morsi.android.nethack.redux.util.Input;
 
 public class PlayerDialog {
     Activity activity;
@@ -191,11 +192,11 @@ public class PlayerDialog {
 
 
     private void updateFields(){
-        strength(strengthInputValue());
-        constitution(constitutionInputValue());
-        intelligence(intelligenceInputValue());
-        wisdom(wisdomInputValue());
-        charisma(charismaInputValue());
+        strength(Input.validInt(strengthInputValueString())         ? strengthInputValue()     : 0);
+        constitution(Input.validInt(constitutionInputValueString()) ? constitutionInputValue() : 0);
+        intelligence(Input.validInt(intelligenceInputValueString()) ? intelligenceInputValue() : 0);
+        wisdom(Input.validInt(wisdonInputValueString())             ? wisdomInputValue()       : 0);
+        charisma(Input.validInt(charismaInputValueString())         ? charismaInputValue()     : 0);
     }
 
     InputChangedListener input_listener;

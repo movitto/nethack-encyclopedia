@@ -69,9 +69,8 @@ public class QuickStatCategory {
 		          if ((reverse && f1 > f2) || (!reverse && f1 < f2)) return 1;
 		          return -1;
 		        } catch( NumberFormatException e ){}
-		        if (!reverse)
-		          return item1.compareTo(item2);
-		        return item2.compareTo(item1);
+
+		        return reverse ? item2.compareTo(item1) :item1.compareTo(item2);
 		    }
 	      });
 	      reverse = !reverse;

@@ -18,6 +18,9 @@ public class Item {
     // should be overridden in subclasses (supporting quick stats or game tracker)
     public static String type(){ return ""; }
 
+    // should be overriden in subclasses (supporting quick stats or game tracker)
+    public String itemType() { return ""; }
+
     // should be override in subclasses (supporting quick stats)
     public static String quickStatsCategoryName(){ return ""; }
 
@@ -129,7 +132,7 @@ public class Item {
         public ItemTypeFilter(String type){ this.type = type; }
 
         public boolean matches(Item item){
-            return item.type().equals(type);
+            return item.itemType().equals(type);
         }
     }
 

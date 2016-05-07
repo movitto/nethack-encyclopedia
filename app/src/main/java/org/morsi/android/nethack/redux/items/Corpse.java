@@ -24,6 +24,8 @@ public class Corpse extends Item{
 
     public static String type(){ return "Corpse"; }
 
+    public String itemType() { return "Corpse"; }
+
     public static String quickStatsCategoryName(){ return "Corpses Nutrition"; }
 
     public static ArrayList<String> columnNames(){

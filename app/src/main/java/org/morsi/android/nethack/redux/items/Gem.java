@@ -16,6 +16,8 @@ public class Gem extends Item {
 
     public static String type(){ return "Gem"; }
 
+    public String itemType() { return "Gem"; }
+
     public static String quickStatsCategoryName(){ return "Gems"; }
 
     public static ArrayList<String> columnNames(){

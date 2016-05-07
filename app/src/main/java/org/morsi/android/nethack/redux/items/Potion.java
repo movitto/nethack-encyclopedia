@@ -18,6 +18,8 @@ public class Potion extends Item {
 
     public static String type(){ return "Potion"; }
 
+    public String itemType() { return "Potion"; }
+
     public static String quickStatsCategoryName(){ return "Potions"; }
 
     public static ArrayList<String> columnNames(){

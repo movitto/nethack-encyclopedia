@@ -14,6 +14,8 @@ public class Tool extends Item {
 
     public static String type(){ return "Tool"; }
 
+    public String itemType() { return "Tool"; }
+
     public static String quickStatsCategoryName(){ return "Tools"; }
 
     public static ArrayList<String> columnNames(){

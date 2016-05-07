@@ -63,6 +63,38 @@ public class Items extends ArrayList<Item> {
         return items;
     }
 
+    public Items potions(){
+        return filter(new Item.ItemTypeFilter(Potion.type()));
+    }
+
+    public Items gems(){
+        return filter(new Item.ItemTypeFilter(Gem.type()));
+    }
+
+    public Items scrolls(){
+        return filter(new Item.ItemTypeFilter(Scroll.type()));
+    }
+
+    public Items armor(){
+        return filter(new Item.ItemTypeFilter(Armor.type()));
+    }
+
+    public Items rings(){
+        return filter(new Item.ItemTypeFilter(Ring.type()));
+    }
+
+    public Items tools(){
+        return filter(new Item.ItemTypeFilter(Tool.type()));
+    }
+
+    public Items wands(){
+        return filter(new Item.ItemTypeFilter(Wand.type()));
+    }
+
+    public Items corpses(){
+        return filter(new Item.ItemTypeFilter(Corpse.type()));
+    }
+
     public ArrayList<QuickStatCategory> toStats(){
         QuickStatCategory potions_category = Potion.toQuickStatsCategory();
         QuickStatCategory gems_category    = Gem.toQuickStatsCategory();
@@ -73,21 +105,21 @@ public class Items extends ArrayList<Item> {
         QuickStatCategory wand_category    = Wand.toQuickStatsCategory();
         QuickStatCategory corpse_category  = Corpse.toQuickStatsCategory();
 
-        for(Item i : filter(new Item.ItemTypeFilter(Potion.type())))
+        for(Item i : potions())
             potions_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Gem.type())))
+        for(Item i : gems())
             gems_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Scroll.type())))
+        for(Item i : scrolls())
             scrolls_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Armor.type())))
+        for(Item i : armor())
             armor_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Ring.type())))
+        for(Item i : rings())
             ring_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Tool.type())))
+        for(Item i : tools())
             tools_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Wand.type())))
+        for(Item i : wands())
             wand_category.stats.add(i.toQuickStat());
-        for(Item i : filter(new Item.ItemTypeFilter(Corpse.type())))
+        for(Item i : corpses())
             corpse_category.stats.add(i.toQuickStat());
 
         ArrayList<QuickStatCategory> categories = new ArrayList<QuickStatCategory>();

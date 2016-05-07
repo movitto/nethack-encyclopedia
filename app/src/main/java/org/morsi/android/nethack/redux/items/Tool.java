@@ -48,7 +48,7 @@ public class Tool extends Item {
         columns.add(name);
         columns.add(Integer.toString(cost));
         columns.add(Integer.toString(weight));
-        columns.add(use);
+        columns.add(use == null ? "--" : use);
         return columns;
     }
 
@@ -81,7 +81,7 @@ public class Tool extends Item {
                         current_tool.buy_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("sell"))
                         current_tool.sell_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("ues"))
+                    else if(element_name.equals("use"))
                         current_tool.use = xpp.getText();
 
                 } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("tool")) {

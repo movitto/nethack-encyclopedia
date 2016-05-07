@@ -50,7 +50,7 @@
     </gem>
     <gem>
         <name>turquoise stone</name>
-        <appearance>green gem/blue gem</appearance>
+        <appearance>green gem / blue gem</appearance>
         <cost>2000</cost>
         <weight>1</weight>
         <engraving>soft gemstone</engraving>
@@ -64,7 +64,7 @@
     </gem>
     <gem>
         <name>aquamarine stone</name>
-        <appearance>green gem/blue gem</appearance>
+        <appearance>green gem / blue gem</appearance>
         <cost>1500</cost>
         <weight>1</weight>
         <engraving>hard gemstone</engraving>
@@ -127,7 +127,7 @@
     </gem>
     <gem>
         <name>fluorite stone</name>
-        <appearance>green/blue/white/violet gem</appearance>
+        <appearance>green / blue / white / violet gem</appearance>
         <cost>400</cost>
         <weight>1</weight>
         <engraving>soft gemstone</engraving>

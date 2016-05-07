@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.items;
 
 import android.content.res.XmlResourceParser;
 
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -16,6 +17,8 @@ public class Scroll extends Item {
     public int ink;
 
     public static String type(){ return "Scroll"; }
+
+    public static String quickStatsCategoryName(){ return "Scrolls"; }
 
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
@@ -37,6 +40,14 @@ public class Scroll extends Item {
         weights.add(0.25);
         return weights;
     }
+
+    public static QuickStatCategory toQuickStatsCategory(){
+        QuickStatCategory category = new QuickStatCategory(quickStatsCategoryName());
+        category.column_names      = columnNames();
+        category.column_weights    = columnWeights();
+        return category;
+    }
+
 
     public ArrayList<String> columns(){
         ArrayList<String> columns = new ArrayList<String>();

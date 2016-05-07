@@ -1,412 +1,338 @@
-<?xml version="1.0" encoding="utf-8"?>
-<quick_stat>
-  <row>
-    <item>blindfold</item>
-    <item>20</item>
-    <item>2</item>
-    <item>Blinds you</item>
-  </row>
-  
-  <row>
-    <item>lenses</item>
-    <item>80</item>
-    <item>3</item>
-    <item>Spellbook reading</item>
-   </row>   
-    
-  <row>
-    <item>Eyes of the Overworld</item>
-    <item>2500</item>
-    <item>3</item>
-    <item>Enlightenment</item>
-  </row>
-  
-  <row>
-    <item>towel</item>
-    <item>50</item>
-    <item>2</item>
-
-    <item>Blinds you, cleans face and hands</item>
-  </row>
-  
-  <!--<row><item>Pet accessories</item></row>-->
-    
-  <row>
-    <item>leash</item>
-    <item>20</item>
-    <item>12</item>
-    <item>Keeps pets nearby</item>
-  </row>
-     
-  <row>  
-    <item>saddle</item>
-    <item>150</item>
-    <item>200</item>
-    <item>Riding</item>
-  </row>
-  
-  <!--<row><item>Containers</item></row>-->
-    
-  <row>
-    <item>bag of holding</item>
-    <item>100</item>
-    <item>15</item>
-    <item>Makes items lighter</item>
-  </row>    
-
-  <row>    
-    <item>chest</item>
-    <item>16</item>
-    <item>600</item>
-    <item></item>
-  </row>    
-    
-  <row>    
-    <item>ice box</item>
-    <item>42</item>
-    <item>900</item>
-    <item>Keeps food fresh</item>
-  </row>    
-    
-  <row>    
-    <item>large box</item>
-    <item>8</item>
-    <item>350</item>
-    <item></item>
-  </row>
-    
-  <row>
-    <item>oilskin sack</item>
-    <item>100</item>
-    <item>15</item>
-    <item>Prevents blanking</item>
-  </row>
-
-  <row>    
-    <item>sack</item>
-    <item>2</item>
-    <item>15</item>
-    <item></item>
-  </row>
-
-  <!--<row><item>Tonal Instruments</item></row>-->
-
-  <row>    
-    <item>bugle</item>
-    <item>15</item>
-    <item>10</item>
-    <item>Aggravates nearby soldiers</item>
-  </row>    
-
-  <row>    
-    <item>fire horn</item>
-    <item>50</item>
-    <item>18</item>
-    <item>Ray of fire</item>
-  </row>    
-    
-  <row>    
-    <item>frost horn</item>
-    <item>50</item>
-    <item>18</item>
-    <item>Ray of Frost</item>
-  </row>    
-    
-  <row>
-    <item>magic flute</item>
-    <item>36</item>
-    <item>5</item>
-    <item>Lulls monsters to Sleep</item>
-  </row>    
-
-  <row>    
-    <item>magic harp</item>
-    <item>50</item>
-    <item>30</item>
-    <item>Tames monsters</item>
-  </row>    
-
-  <row>    
-    <item>tooled horn</item>
-    <item>15</item>
-    <item>18</item>
-    <item>Scares monsters</item>
-  </row>    
-
-  <row>    
-    <item>wooden flute</item>
-    <item>12</item>
-    <item>5</item>
-    <item>Pacifies Snakes</item>
-  </row>    
-
-  <row>    
-    <item>wooden harp</item>
-    <item>50</item>
-    <item>30</item>
-    <item>Pacifies Nymphs</item>
-  </row>
-
-  <!--<row><item>Atonal Instruments</item></row>-->
-
-  <row>    
-    <item>bell</item>
-    <item>50</item>
-    <item>30</item>
-    <item>Wakes monsters, Summons Nymphs</item>
-  </row>
-
-  <row>    
-    <item>Bell of Opening</item>
-    <item>5000</item>
-    <item>10</item>
-    <item>Invocation</item>
-  </row>  
-
-  <row>    
-    <item>drum of earthquake</item>
-    <item>25</item>
-    <item>25</item>
-    <item>Creates pits, scares monsters, angers peacefuls</item>
-  </row>
- 
-  <row>   
-    <item>leather drum</item>
-    <item>25</item>
-    <item>25</item>
-    <item>Wakes and scares monsters</item>
-  </row>    
-    
-  <row>
-    <item>magic whistle</item>
-    <item>10</item>
-    <item>3</item>
-    <item>Teleports Pets to you.</item>
-  </row>    
-
-  <row>    
-    <item>tin whistle</item>
-    <item>10</item>
-    <item>3</item>
-    <item>Calls Pets</item>
-  </row>
-
-  <!--<row><item>Light Sources</item></row>-->
-    
-  <row>
-    <item>brass lantern</item>
-    <item></item><item></item><item></item>
-  </row>
-  
-  <row>
-    <item>Candelabrum of Invocation</item>
-    <item>5000</item>
-    <item>10</item>
-    <item>Invocation</item>
-  </row>    
-
-  <row>    
-    <item>magic lamp</item>
-    <item>50</item>
-    <item>20</item>
-    <item>Possible Wish</item>
-  </row>    
-
-  <row>    
-    <item>oil lamp</item>
-    <item>10</item>
-    <item>0.5</item>
-    <item></item>
-  </row>    
-
-  <row>    
-    <item>tallow candle</item>
-    <item>10</item>
-    <item>2</item>
-    <item>Invocation</item>
-  </row>   
-    
-  <row>
-    <item>wax candle</item>
-    <item>20</item>
-    <item>2</item>
-    <item>Invocation</item>
-  </row>
-
-  <!--<row><item>Traps</item></row>-->
-
-  <row>    
-    <item>beartrap</item>
-    <item>60</item>
-    <item>200</item>
-    <item></item>
-  </row>   
-    
-  <row>
-    <item>land mine</item>
-    <item>180</item>
-    <item>300</item>
-    <item></item>
-  </row>
-
-  <!--<row><item>Unlocking tools</item></row>-->
-
-  <row>    
-    <item>credit card</item>
-    <item>10</item>
-    <item>1</item>
-    <item></item>
-  </row>    
-
-  <row>
-    <item>The Platinum Yendorian Express Card</item>
-    <item>7000</item>
-    <item>1</item>
-    <item>tourist quest artifact</item>
-  </row>    
- 
-  <row>   
-    <item>lock pick</item>
-    <item>20</item>
-    <item>4</item>
-    <item></item>
-  </row>
-    
-  <row>    
-    <item>skeleton key</item>
-    <item>10</item>
-    <item>3</item>
-    <item></item>
-  </row>    
-
-  <row>    
-    <item>The Master Key of Thievery</item>
-    <item>3500</item>
-    <item>3</item>
-    <item>Rogue quest artifact</item>
-  </row>
-
-  <!--<row><item>>Weapon-Tools</item></row>-->
-  
-  <row>  
-    <item>grappling hook</item>
-    <item>50</item>
-    <item>30</item>
-    <item>1.67</item>
-  </row>    
-
-  <row>    
-    <item>pick-axe</item>
-    <item>50</item>
-    <item>100</item>
-    <item></item>
-  </row>
-
-  <row>    
-    <item>unicorn horn</item>
-    <item>100</item>
-    <item>20</item>
-    <item>Many uses</item>
-  </row>
-
-  <!--<row><item>Miscellaneous</item></row>-->
-
-  <row>    
-    <item>bag of tricks</item>
-    <item>100</item>
-    <item>15</item>
-    <item>Summoning Monsters</item>
-  </row>    
-
-  <row>   
-    <item>can of grease</item>
-    <item>20</item>
-    <item>20</item>
-    <item>protecting against Mind Flayers drowning, and Water Damage</item>
-  </row>   
-
-  <row>    
-    <item>crystal ball</item>
-    <item>60</item>
-    <item>150</item>
-    <item></item>
-  </row>
-    
-  <row>    
-    <item>The Orb of Detection</item>
-    <item>2500</item>
-    <item>150</item>
-    <item>Invisibility</item>
-  </row>
-
-  <row>   
-    <item>The Orb of Fate</item>
-    <item>2500</item>
-    <item>150</item>
-    <item>Level Teleport</item>
-  </row>
-
-  <row>    
-    <item>expensive camera</item>
-    <item>200</item>
-    <item>12</item>
-    <item>Scare monsters</item>
-  </row>
-
-  <row>    
-    <item>figurine</item>
-    <item>80</item>
-    <item>50</item>
-    <item>Summoning a Monster</item>
-  </row>   
-
-  <row>    
-    <item>horn of plenty</item>
-    <item>50</item>
-    <item>18</item>
-    <item>Producing Food or Water</item>
-  </row>
-
-  <row>    
-    <item>magic marker</item>
-    <item>50</item>
-    <item>2</item>
-    <item>Scribing Scrolls and Spellbooks</item>
-  </row>
-
-  <row>    
-    <item>mirror</item>
-    <item>10</item>
-    <item>13</item>
-    <item>Nymph and Foocubus control, Luck Management Scare monsters</item>
-  </row>
-
-  <row>
-    <item>The Magic Mirror of Merlin</item>
-    <item>1500</item>
-    <item>13</item>
-    <item></item>
-  </row>
-
-  <row>
-    <item>stethoscope</item>
-    <item>75</item>
-    <item>4</item>
-    <item>Many uses.</item>
-  </row>
-
-  <row>    
-    <item>tin opener</item>
-    <item>30</item>
-    <item>4</item>
-    <item></item>
-  </row>
-
-  <row>      
-    <item>tinning kit</item>
-    <item>30</item>
-    <item>100</item>
-    <item>Preventing Monster Regeneration, Tinning corpses for Intrinsics</item>
-  </row>
-  
-</quick_stat>
+<tools>
+    <tool>
+        <name>blindfold</name>
+        <cost>20</cost>
+        <weight>2</weight>
+        <use>Blinds you</use>
+    </tool>
+    <tool>
+        <name>lenses</name>
+        <cost>80</cost>
+        <weight>3</weight>
+        <use>Spellbook reading</use>
+    </tool>
+    <tool>
+        <name>Eyes of the Overworld</name>
+        <cost>2500</cost>
+        <weight>3</weight>
+        <use>Enlightenment</use>
+    </tool>
+    <tool>
+        <name>towel</name>
+        <cost>50</cost>
+        <weight>2</weight>
+        <use>Blinds you, cleans face and hands</use>
+    </tool>
+    <tool>
+        <name>leash</name>
+        <cost>20</cost>
+        <weight>12</weight>
+        <use>Keeps pets nearby</use>
+    </tool>
+    <tool>
+        <name>saddle</name>
+        <cost>150</cost>
+        <weight>200</weight>
+        <use>Riding</use>
+    </tool>
+    <tool>
+        <name>bag of holding</name>
+        <cost>100</cost>
+        <weight>15</weight>
+        <use>Makes items lighter</use>
+    </tool>
+    <tool>
+        <name>chest</name>
+        <cost>16</cost>
+        <weight>600</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>ice box</name>
+        <cost>42</cost>
+        <weight>900</weight>
+        <use>Keeps food fresh</use>
+    </tool>
+    <tool>
+        <name>large box</name>
+        <cost>8</cost>
+        <weight>350</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>oilskin sack</name>
+        <cost>100</cost>
+        <weight>15</weight>
+        <use>Prevents blanking</use>
+    </tool>
+    <tool>
+        <name>sack</name>
+        <cost>2</cost>
+        <weight>15</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>bugle</name>
+        <cost>15</cost>
+        <weight>10</weight>
+        <use>Aggravates nearby soldiers</use>
+    </tool>
+    <tool>
+        <name>fire horn</name>
+        <cost>50</cost>
+        <weight>18</weight>
+        <use>Ray of fire</use>
+    </tool>
+    <tool>
+        <name>frost horn</name>
+        <cost>50</cost>
+        <weight>18</weight>
+        <use>Ray of Frost</use>
+    </tool>
+    <tool>
+        <name>magic flute</name>
+        <cost>36</cost>
+        <weight>5</weight>
+        <use>Lulls monsters to Sleep</use>
+    </tool>
+    <tool>
+        <name>magic harp</name>
+        <cost>50</cost>
+        <weight>30</weight>
+        <use>Tames monsters</use>
+    </tool>
+    <tool>
+        <name>tooled horn</name>
+        <cost>15</cost>
+        <weight>18</weight>
+        <use>Scares monsters</use>
+    </tool>
+    <tool>
+        <name>wooden flute</name>
+        <cost>12</cost>
+        <weight>5</weight>
+        <use>Pacifies Snakes</use>
+    </tool>
+    <tool>
+        <name>wooden harp</name>
+        <cost>50</cost>
+        <weight>30</weight>
+        <use>Pacifies Nymphs</use>
+    </tool>
+    <tool>
+        <name>bell</name>
+        <cost>50</cost>
+        <weight>30</weight>
+        <use>Wakes monsters, Summons Nymphs</use>
+    </tool>
+    <tool>
+        <name>Bell of Opening</name>
+        <cost>5000</cost>
+        <weight>10</weight>
+        <use>Invocation</use>
+    </tool>
+    <tool>
+        <name>drum of earthquake</name>
+        <cost>25</cost>
+        <weight>25</weight>
+        <use>Creates pits, scares monsters, angers peacefuls</use>
+    </tool>
+    <tool>
+        <name>leather drum</name>
+        <cost>25</cost>
+        <weight>25</weight>
+        <use>Wakes and scares monsters</use>
+    </tool>
+    <tool>
+        <name>magic whistle</name>
+        <cost>10</cost>
+        <weight>3</weight>
+        <use>Teleports Pets to you.</use>
+    </tool>
+    <tool>
+        <name>tin whistle</name>
+        <cost>10</cost>
+        <weight>3</weight>
+        <use>Calls Pets</use>
+    </tool>
+    <tool>
+        <name>brass lantern</name>
+        <cost></cost>
+        <weight></weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>Candelabrum of Invocation</name>
+        <cost>5000</cost>
+        <weight>10</weight>
+        <use>Invocation</use>
+    </tool>
+    <tool>
+        <name>magic lamp</name>
+        <cost>50</cost>
+        <weight>20</weight>
+        <use>Possible Wish</use>
+    </tool>
+    <tool>
+        <name>oil lamp</name>
+        <cost>10</cost>
+        <weight>20</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>tallow candle</name>
+        <cost>10</cost>
+        <weight>2</weight>
+        <use>Invocation</use>
+    </tool>
+    <tool>
+        <name>wax candle</name>
+        <cost>20</cost>
+        <weight>2</weight>
+        <use>Invocation</use>
+    </tool>
+    <tool>
+        <name>beartrap</name>
+        <cost>60</cost>
+        <weight>200</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>land mine</name>
+        <cost>180</cost>
+        <weight>300</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>credit card</name>
+        <cost>10</cost>
+        <weight>1</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>The Platinum Yendorian Express Card</name>
+        <cost>7000</cost>
+        <weight>1</weight>
+        <use>tourist quest artifact</use>
+    </tool>
+    <tool>
+        <name>lock pick</name>
+        <cost>20</cost>
+        <weight>4</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>skeleton key</name>
+        <cost>10</cost>
+        <weight>3</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>The Master Key of Thievery</name>
+        <cost>3500</cost>
+        <weight>3</weight>
+        <use>Rogue quest artifact</use>
+    </tool>
+    <tool>
+        <name>grappling hook</name>
+        <cost>50</cost>
+        <weight>30</weight>
+        <use>1.67</use>
+    </tool>
+    <tool>
+        <name>pick-axe</name>
+        <cost>50</cost>
+        <weight>100</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>unicorn horn</name>
+        <cost>100</cost>
+        <weight>20</weight>
+        <use>Many uses</use>
+    </tool>
+    <tool>
+        <name>bag of tricks</name>
+        <cost>100</cost>
+        <weight>15</weight>
+        <use>Summoning Monsters</use>
+    </tool>
+    <tool>
+        <name>can of grease</name>
+        <cost>20</cost>
+        <weight>20</weight>
+        <use>protecting against Mind Flayers drowning, and Water Damage</use>
+    </tool>
+    <tool>
+        <name>crystal ball</name>
+        <cost>60</cost>
+        <weight>150</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>The Orb of Detection</name>
+        <cost>2500</cost>
+        <weight>150</weight>
+        <use>Invisibility</use>
+    </tool>
+    <tool>
+        <name>The Orb of Fate</name>
+        <cost>2500</cost>
+        <weight>150</weight>
+        <use>Level Teleport</use>
+    </tool>
+    <tool>
+        <name>expensive camera</name>
+        <cost>200</cost>
+        <weight>12</weight>
+        <use>Scare monsters</use>
+    </tool>
+    <tool>
+        <name>figurine</name>
+        <cost>80</cost>
+        <weight>50</weight>
+        <use>Summoning a Monster</use>
+    </tool>
+    <tool>
+        <name>horn of plenty</name>
+        <cost>50</cost>
+        <weight>18</weight>
+        <use>Producing Food or Water</use>
+    </tool>
+    <tool>
+        <name>magic marker</name>
+        <cost>50</cost>
+        <weight>2</weight>
+        <use>Scribing Scrolls and Spellbooks</use>
+    </tool>
+    <tool>
+        <name>mirror</name>
+        <cost>10</cost>
+        <weight>13</weight>
+        <use>Nymph and Foocubus control, Luck Management Scare monsters</use>
+    </tool>
+    <tool>
+        <name>The Magic Mirror of Merlin</name>
+        <cost>1500</cost>
+        <weight>13</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>stethoscope</name>
+        <cost>75</cost>
+        <weight>4</weight>
+        <use>Many uses.</use>
+    </tool>
+    <tool>
+        <name>tin opener</name>
+        <cost>30</cost>
+        <weight>4</weight>
+        <use></use>
+    </tool>
+    <tool>
+        <name>tinning kit</name>
+        <cost>30</cost>
+        <weight>100</weight>
+        <use>Preventing Monster Regeneration, Tinning corpses for Intrinsics</use>
+    </tool>
+</tools>

@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.items;
 
 import android.content.res.XmlResourceParser;
 
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -12,6 +13,8 @@ public class Tool extends Item {
     String use;
 
     public static String type(){ return "Tool"; }
+
+    public static String quickStatsCategoryName(){ return "Tools"; }
 
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
@@ -29,6 +32,13 @@ public class Tool extends Item {
         weights.add(0.13);
         weights.add(0.42);
         return weights;
+    }
+
+    public static QuickStatCategory toQuickStatsCategory(){
+        QuickStatCategory category = new QuickStatCategory(quickStatsCategoryName());
+        category.column_names      = columnNames();
+        category.column_weights    = columnWeights();
+        return category;
     }
 
     public ArrayList<String> columns(){

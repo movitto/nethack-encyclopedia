@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.util;
 
 import android.content.res.XmlResourceParser;
 
+import org.morsi.android.nethack.redux.items.Item;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 

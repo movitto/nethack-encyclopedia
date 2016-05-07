@@ -26,7 +26,7 @@ public class SpellBook extends Item {
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 if (eventType == XmlPullParser.START_TAG) {
                     element_name = xpp.getName();
-                    if (element_name.equals("spellBook"))
+                    if (element_name.equals("spellbook"))
                         current_spellbook = new SpellBook();
 
                 } else if (eventType == XmlPullParser.TEXT) {
@@ -45,7 +45,7 @@ public class SpellBook extends Item {
                     else if (element_name.equals("sell"))
                         current_spellbook.sell_price = Integer.parseInt(xpp.getText());
                     
-                } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("spellBook")) {
+                } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("spellbook")) {
                     spellbooks.add(current_spellbook);
                 }
 

@@ -1,221 +1,176 @@
-<quick_stat>
- <row>
-  <item>meat ring</item>
-  <item>5</item>
-  <item>None</item>
-  <item>symbolized by %; never randomly generated</item>
- </row>
-
- <row>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of adornment</item>
-  <item>100</item>
-  <item>+n charisma</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of hunger</item>
-  <item>100</item>
-  <item>hunger</item>
-  <item>90% generated cursed</item>
- </row>
-
- <row>
-  <item>ring of protection</item>
-  <item>100</item>
-  <item>+n protection</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of protection from shape changers</item>
-  <item>100</item>
-  <item>protection from shape changers</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of stealth</item>
-  <item>100</item>
-  <item>stealth</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of sustain ability</item>
-  <item>100</item>
-  <item>sustain ability</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of warning</item>
-  <item>100</item>
-  <item>warning</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of aggravate monster</item>
-  <item>150</item>
-  <item>aggravate monster</item>
-  <item>90% generated cursed</item>
- </row>
-
- <row>
-  <item>ring of cold resistance</item>
-  <item>150</item>
-  <item>cold resistance</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of gain constitution</item>
-  <item>150</item>
-  <item>+n constitution</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of gain strength</item>
-  <item>150</item>
-  <item>+n strength</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of increase accuracy</item>
-  <item>150</item>
-  <item>+n to-hit bonus</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of increase damage</item>
-  <item>150</item>
-  <item>+n damage bonus</item>
-  <item>chargeable</item>
- </row>
-
- <row>
-  <item>ring of invisibility</item>
-  <item>150</item>
-  <item>invisibility</item>
-  <item>cursed if from a Nazgul</item>
- </row>
-
- <row>
-  <item>ring of poison resistance</item>
-  <item>150</item>
-  <item>poison resistance</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of see invisible</item>
-  <item>150</item>
-  <item>see invisible</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of shock resistance</item>
-  <item>150</item>
-  <item>shock resistance</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of fire resistance</item>
-  <item>200</item>
-  <item>fire resistance</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of free action</item>
-  <item>200</item>
-  <item>free action</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of levitation</item>
-  <item>200</item>
-  <item>levitation</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of regeneration</item>
-  <item>200</item>
-  <item>regeneration</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of searching</item>
-  <item>200</item>
-  <item>searching</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of slow digestion</item>
-  <item>200</item>
-  <item>slow digestion</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of teleportation</item>
-  <item>200</item>
-  <item>teleportitis</item>
-  <item>90% generated cursed</item>
- </row>
-
- <row>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of conflict</item>
-  <item>300</item>
-  <item>conflict</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of polymorph</item>
-  <item>300</item>
-  <item>polymorphitis</item>
-  <item>90% generated cursed</item>
- </row>
-
- <row>
-  <item>ring of polymorph control</item>
-  <item>300</item>
-  <item>polymorph control</item>
-  <item>--</item>
- </row>
-
- <row>
-  <item>ring of teleport control</item>
-  <item>300</item>
-  <item>teleport control</item>
-  <item>--</item>
- </row>
-
-</quick_stat>
+<rings>
+    <ring>
+        <name>meat ring</name>
+        <cost>5</cost>
+        <effect>None</effect>
+        <notes>symbolized by %; never randomly generated</notes>
+    </ring>
+    <ring>
+        <name>ring of adornment</name>
+        <cost>100</cost>
+        <effect>+n charisma</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of hunger</name>
+        <cost>100</cost>
+        <effect>hunger</effect>
+        <notes>90% generated cursed</notes>
+    </ring>
+    <ring>
+        <name>ring of protection</name>
+        <cost>100</cost>
+        <effect>+n protection</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of protection from shape changers</name>
+        <cost>100</cost>
+        <effect>protection from shape changers</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of stealth</name>
+        <cost>100</cost>
+        <effect>stealth</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of sustain ability</name>
+        <cost>100</cost>
+        <effect>sustain ability</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of warning</name>
+        <cost>100</cost>
+        <effect>warning</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of aggravate monster</name>
+        <cost>150</cost>
+        <effect>aggravate monster</effect>
+        <notes>90% generated cursed</notes>
+    </ring>
+    <ring>
+        <name>ring of cold resistance</name>
+        <cost>150</cost>
+        <effect>cold resistance</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of gain constitution</name>
+        <cost>150</cost>
+        <effect>+n constitution</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of gain strength</name>
+        <cost>150</cost>
+        <effect>+n strength</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of increase accuracy</name>
+        <cost>150</cost>
+        <effect>+n to-hit bonus</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of increase damage</name>
+        <cost>150</cost>
+        <effect>+n damage bonus</effect>
+        <notes>chargeable</notes>
+    </ring>
+    <ring>
+        <name>ring of invisibility</name>
+        <cost>150</cost>
+        <effect>invisibility</effect>
+        <notes>cursed if from a Nazgul</notes>
+    </ring>
+    <ring>
+        <name>ring of poison resistance</name>
+        <cost>150</cost>
+        <effect>poison resistance</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of see invisible</name>
+        <cost>150</cost>
+        <effect>see invisible</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of shock resistance</name>
+        <cost>150</cost>
+        <effect>shock resistance</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of fire resistance</name>
+        <cost>200</cost>
+        <effect>fire resistance</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of free action</name>
+        <cost>200</cost>
+        <effect>free action</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of levitation</name>
+        <cost>200</cost>
+        <effect>levitation</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of regeneration</name>
+        <cost>200</cost>
+        <effect>regeneration</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of searching</name>
+        <cost>200</cost>
+        <effect>searching</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of slow digestion</name>
+        <cost>200</cost>
+        <effect>slow digestion</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of teleportation</name>
+        <cost>200</cost>
+        <effect>teleportitis</effect>
+        <notes>90% generated cursed</notes>
+    </ring>
+    <ring>
+        <name>ring of conflict</name>
+        <cost>300</cost>
+        <effect>conflict</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of polymorph</name>
+        <cost>300</cost>
+        <effect>polymorphitis</effect>
+        <notes>90% generated cursed</notes>
+    </ring>
+    <ring>
+        <name>ring of polymorph control</name>
+        <cost>300</cost>
+        <effect>polymorph control</effect>
+        <notes>--</notes>
+    </ring>
+    <ring>
+        <name>ring of teleport control</name>
+        <cost>300</cost>
+        <effect>teleport control</effect>
+        <notes>--</notes>
+    </ring>
+</rings>

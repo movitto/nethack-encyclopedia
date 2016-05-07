@@ -1,291 +1,254 @@
-<?xml version="1.0" encoding="utf-8"?>
-<quick_stat>
-  <row>
-    <item>dilithium crystal</item>
-    <item>white gem</item>
-    <item>4500</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>diamond</item>
-    <item>white gem</item>
-    <item>4000</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>ruby</item>
-    <item>red gem</item>
-    <item>3500</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>jacinth stone</item>
-    <item>orange gem</item>
-    <item>3250</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>sapphire</item>
-    <item>blue gem</item>
-    <item>3000</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>black opal</item>
-    <item>black gem</item>
-    <item>2500</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>emerald</item>
-    <item>green gem</item>
-    <item>2500</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>turquoise stone</item>
-    <item>green gem/blue gem</item>
-    <item>2000</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>citrine stone</item>
-    <item>yellow gem</item>
-    <item>1500</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>aquamarine stone</item>
-    <item>green gem/blue gem</item>
-    <item>1500</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>amber stone</item>
-    <item>yellowish brown gem</item>
-    <item>1000</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>topaz stone</item>
-    <item>yellowish brown gem</item>
-    <item>900</item>
-    <item>1</item>
-    <item>hard gemstone</item>
-  </row>
-
-  <row>
-    <item>jet stone</item>
-    <item>black gem</item>
-    <item>850</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>opal</item>
-    <item>white gem</item>
-    <item>800</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>chrysoberyl stone</item>
-    <item>yellow gem</item>
-    <item>700</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>garnet stone</item>
-    <item>red gem</item>
-    <item>700</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>amethyst stone</item>
-    <item>violet gem</item>
-    <item>600</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>jasper stone</item>
-    <item>red gem</item>
-    <item>500</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>fluorite stone</item>
-    <item>green/blue/white/violet gem</item>
-    <item>400</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>jade stone</item>
-    <item>green gem</item>
-    <item>300</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>obsidian stone</item>
-    <item>black gem</item>
-    <item>200</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>agate stone</item>
-    <item>orange gem</item>
-    <item>200</item>
-    <item>1</item>
-    <item>soft gemstone</item>
-  </row>
-
-  <row>
-    <item>worthless piece of white glass</item>
-    <item>white gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of blue glass</item>
-    <item>blue gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of red glass</item>
-    <item>red gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of yellowish brown glass</item>
-    <item>yellowish brown gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of orange glass</item>
-    <item>orange gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of yellow glass</item>
-    <item>yellow gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of black glass</item>
-    <item>black gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of green glass</item>
-    <item>green gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>worthless piece of violet glass</item>
-    <item>violet gem</item>
-    <item>0</item>
-    <item>1</item>
-    <item>soft glass</item>
-  </row>
-
-  <row>
-    <item>luckstone</item>
-    <item>gray stone</item>
-    <item>60</item>
-    <item>10</item>
-    <item>soft mineral</item>
-  </row>
-
-  <row>
-    <item>loadstone</item>
-    <item>gray stone</item>
-    <item>1</item>
-    <item>500</item>
-    <item>soft mineral</item>
-  </row>
-
-  <row>
-    <item>touchstone</item>
-    <item>gray stone</item>
-    <item>45</item>
-    <item>10</item>
-    <item>soft mineral</item>
-  </row>
-
-  <row>
-    <item>flint stone</item>
-    <item>gray stone</item>
-    <item>1</item>
-    <item>10</item>
-    <item>soft mineral</item>
-  </row>
-
-  <row>
-    <item>rock</item>
-    <item>rock</item>
-    <item>0</item>
-    <item>10</item>
-    <item>soft mineral</item>
-  </row>
-
-</quick_stat>
+<gems>
+    <gem>
+        <name>dilithium crystal</name>
+        <appearance>white gem</appearance>
+        <cost>4500</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>diamond</name>
+        <appearance>white gem</appearance>
+        <cost>4000</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>ruby</name>
+        <appearance>red gem</appearance>
+        <cost>3500</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>jacinth stone</name>
+        <appearance>orange gem</appearance>
+        <cost>3250</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>sapphire</name>
+        <appearance>blue gem</appearance>
+        <cost>3000</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>black opal</name>
+        <appearance>black gem</appearance>
+        <cost>2500</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>emerald</name>
+        <appearance>green gem</appearance>
+        <cost>2500</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>turquoise stone</name>
+        <appearance>green gem/blue gem</appearance>
+        <cost>2000</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>citrine stone</name>
+        <appearance>yellow gem</appearance>
+        <cost>1500</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>aquamarine stone</name>
+        <appearance>green gem/blue gem</appearance>
+        <cost>1500</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>amber stone</name>
+        <appearance>yellowish brown gem</appearance>
+        <cost>1000</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>topaz stone</name>
+        <appearance>yellowish brown gem</appearance>
+        <cost>900</cost>
+        <weight>1</weight>
+        <engraving>hard gemstone</engraving>
+    </gem>
+    <gem>
+        <name>jet stone</name>
+        <appearance>black gem</appearance>
+        <cost>850</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>opal</name>
+        <appearance>white gem</appearance>
+        <cost>800</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>chrysoberyl stone</name>
+        <appearance>yellow gem</appearance>
+        <cost>700</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>garnet stone</name>
+        <appearance>red gem</appearance>
+        <cost>700</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>amethyst stone</name>
+        <appearance>violet gem</appearance>
+        <cost>600</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>jasper stone</name>
+        <appearance>red gem</appearance>
+        <cost>500</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>fluorite stone</name>
+        <appearance>green/blue/white/violet gem</appearance>
+        <cost>400</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>jade stone</name>
+        <appearance>green gem</appearance>
+        <cost>300</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>obsidian stone</name>
+        <appearance>black gem</appearance>
+        <cost>200</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>agate stone</name>
+        <appearance>orange gem</appearance>
+        <cost>200</cost>
+        <weight>1</weight>
+        <engraving>soft gemstone</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of white glass</name>
+        <appearance>white gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of blue glass</name>
+        <appearance>blue gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of red glass</name>
+        <appearance>red gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of yellowish brown glass</name>
+        <appearance>yellowish brown gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of orange glass</name>
+        <appearance>orange gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of yellow glass</name>
+        <appearance>yellow gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of black glass</name>
+        <appearance>black gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of green glass</name>
+        <appearance>green gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>worthless piece of violet glass</name>
+        <appearance>violet gem</appearance>
+        <cost>0</cost>
+        <weight>1</weight>
+        <engraving>soft glass</engraving>
+    </gem>
+    <gem>
+        <name>luckstone</name>
+        <appearance>gray stone</appearance>
+        <cost>60</cost>
+        <weight>10</weight>
+        <engraving>soft mineral</engraving>
+    </gem>
+    <gem>
+        <name>loadstone</name>
+        <appearance>gray stone</appearance>
+        <cost>1</cost>
+        <weight>500</weight>
+        <engraving>soft mineral</engraving>
+    </gem>
+    <gem>
+        <name>touchstone</name>
+        <appearance>gray stone</appearance>
+        <cost>45</cost>
+        <weight>10</weight>
+        <engraving>soft mineral</engraving>
+    </gem>
+    <gem>
+        <name>flint stone</name>
+        <appearance>gray stone</appearance>
+        <cost>1</cost>
+        <weight>10</weight>
+        <engraving>soft mineral</engraving>
+    </gem>
+    <gem>
+        <name>rock</name>
+        <appearance>rock</appearance>
+        <cost>0</cost>
+        <weight>10</weight>
+        <engraving>soft mineral</engraving>
+    </gem>
+</gems>

@@ -15,21 +15,17 @@ public class Item {
 
     public String id(){ return type() + name; }
 
-    // should be overridden in subclasses (supporting quick stats or game track)Er
+    // should be overridden in subclasses (supporting quick stats or game tracker)
     public static String type(){ return ""; }
+
+    // should be override in subclasses (supporting quick stats)
+    public static String quickStatsCategoryName(){ return ""; }
 
     // should be overriden in subclasses (supporting quick stats)
     public static ArrayList<String> columnNames(){ return new ArrayList<String>(); }
 
     // should be overriden in subclasses (supporting quick stats)
     public static ArrayList<Double> columnWeights(){ return new ArrayList<Double>(); }
-
-    public static QuickStatCategory toQuickStatsCategory(){
-        QuickStatCategory category = new QuickStatCategory(type());
-        category.column_names = columnNames();
-        category.column_weights = columnWeights();
-        return category;
-    }
 
     // should be overriden in subclasses (supporting quick stats)
     public ArrayList<String> columns(){

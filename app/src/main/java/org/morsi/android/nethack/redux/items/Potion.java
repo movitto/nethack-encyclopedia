@@ -18,6 +18,8 @@ public class Potion extends Item {
 
     public static String type(){ return "Potion"; }
 
+    public static String quickStatsCategoryName(){ return "Potions"; }
+
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
         columns.add("Potion");
@@ -36,6 +38,13 @@ public class Potion extends Item {
         weights.add(0.13);
         weights.add(0.25);
         return weights;
+    }
+
+    public static QuickStatCategory toQuickStatsCategory(){
+        QuickStatCategory category = new QuickStatCategory(quickStatsCategoryName());
+        category.column_names      = columnNames();
+        category.column_weights    = columnWeights();
+        return category;
     }
 
     public ArrayList<String> columns(){

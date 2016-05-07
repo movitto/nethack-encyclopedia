@@ -24,7 +24,7 @@ public class QuickStatsPopup {
     }
 
     private ArrayList<String> labels(){
-        return category.get_columns();
+        return category.column_names;
     }
 
     View layout;

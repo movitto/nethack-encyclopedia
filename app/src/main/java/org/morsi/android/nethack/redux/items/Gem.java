@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.items;
 
 import android.content.res.XmlResourceParser;
 
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -14,6 +15,8 @@ public class Gem extends Item {
     public String streak_color;
 
     public static String type(){ return "Gem"; }
+
+    public static String quickStatsCategoryName(){ return "Gems"; }
 
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
@@ -34,6 +37,13 @@ public class Gem extends Item {
         weights.add(0.13);
         weights.add(0.25);
         return weights;
+    }
+
+    public static QuickStatCategory toQuickStatsCategory(){
+        QuickStatCategory category = new QuickStatCategory(quickStatsCategoryName());
+        category.column_names      = columnNames();
+        category.column_weights    = columnWeights();
+        return category;
     }
 
     public ArrayList<String> columns() {
@@ -79,7 +89,7 @@ public class Gem extends Item {
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 if (eventType == XmlPullParser.START_TAG) {
                     element_name = xpp.getName();
-                    if(element_name.equals("potion"))
+                    if(element_name.equals("gem"))
                         current_gem = new Gem();
 
                 } else if (eventType == XmlPullParser.TEXT) {
@@ -100,7 +110,7 @@ public class Gem extends Item {
                     else if(element_name.equals("streak"))
                         current_gem.streak_color = xpp.getText();
 
-                } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("potion")) {
+                } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("gem")) {
                     gems.add(current_gem);
                 }
 

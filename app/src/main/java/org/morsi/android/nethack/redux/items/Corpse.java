@@ -40,10 +40,10 @@ public class Corpse extends Item{
 
     public static ArrayList<Double> columnWeights(){
         ArrayList<Double> weights = new ArrayList<Double>();
-        weights.add(0.25);
-        weights.add(0.15);
-        weights.add(0.15);
-        weights.add(0.15);
+        weights.add(0.22);
+        weights.add(0.10);
+        weights.add(0.20);
+        weights.add(0.20);
         weights.add(0.30);
         return weights;
     }
@@ -60,9 +60,9 @@ public class Corpse extends Item{
         ArrayList<String> columns = new ArrayList<String>();
         columns.add(name);
         columns.add(Integer.toString(nutrition));
-        columns.add(initial_effect);
-        columns.add(final_effect);
-        columns.add(intrinsic);
+        columns.add(initial_effect == null ? "--" : initial_effect);
+        columns.add(final_effect == null ? "--" : final_effect);
+        columns.add(intrinsic == null ? "--" : intrinsic);
         return columns;
     }
 

@@ -223,7 +223,7 @@ public class QuickStatsActivity extends Activity {
                 listener.activity = this;
                 col.setOnClickListener(listener);
 
-                col.setGravity(Gravity.CENTER);
+                col.setGravity(Gravity.CENTER|Gravity.CENTER_VERTICAL);
                 col.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i).floatValue()));
                 row.addView(col);
             }

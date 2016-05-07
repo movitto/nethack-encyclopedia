@@ -25,7 +25,7 @@ public class Gem extends Item {
         columns.add("Gem");
         columns.add("Desc");
         columns.add("Cost");
-        columns.add("Weight");
+        columns.add("Wgt");
         columns.add("Hardness");
 
         return columns;
@@ -34,10 +34,10 @@ public class Gem extends Item {
     public static ArrayList<Double> columnWeights(){
         ArrayList<Double> weights = new ArrayList<Double>();
         weights.add(0.32);
-        weights.add(0.15);
-        weights.add(0.15);
-        weights.add(0.13);
-        weights.add(0.25);
+        weights.add(0.21);
+        weights.add(0.10);
+        weights.add(0.10);
+        weights.add(0.27);
         return weights;
     }
 

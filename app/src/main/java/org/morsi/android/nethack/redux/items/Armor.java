@@ -42,15 +42,15 @@ public class Armor extends Item{
 
     public static ArrayList<Double> columnWeights(){
         ArrayList<Double> weights = new ArrayList<Double>();
-        weights.add(0.25);
-        weights.add(0.06);
-        weights.add(0.06);
+        weights.add(0.15);
+        weights.add(0.08);
+        weights.add(0.10);
         weights.add(0.05);
         weights.add(0.13);
-        weights.add(0.1);
-        weights.add(0.05);
+        weights.add(0.14);
         weights.add(0.06);
-        weights.add(0.24);
+        weights.add(0.08);
+        weights.add(0.21);
         return weights;
     }
 
@@ -67,11 +67,11 @@ public class Armor extends Item{
         columns.add(Integer.toString(cost));
         columns.add(Integer.toString(weight));
         columns.add(Integer.toString(ac));
-        columns.add(material);
-        columns.add(wear_effect);
+        columns.add(material == null ? "--" : material);
+        columns.add(wear_effect == null ? "--" : wear_effect);
         columns.add(Integer.toString(mc));
-        columns.add(Boolean.toString(magic));
-        columns.add(appearance);
+        columns.add(magic ? "Y" : "N");
+        columns.add(appearance == null ? "--" : appearance);
         return columns;
     }
 

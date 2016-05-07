@@ -101,34 +101,14 @@ public class ScrollsDialog {
 
     ///
 
-    class ReadFilter implements Items.filter {
-        String effect;
-
-        ReadFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Scroll)item).read_effect.equals(effect);
-        }
-    };
-
-    class DropFilter implements Items.filter {
-        String effect;
-
-        DropFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Scroll)item).drop_effect.equals(effect);
-        }
-    };
-
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(Scroll.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new ReadFilter(readEffect())).
-                filter(new DropFilter(dropEffect()));
+                filter(new Item.ItemTypeFilter(Scroll.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
+                filter(new Scroll.ReadFilter(readEffect())).
+                filter(new Scroll.DropFilter(dropEffect()));
 
         return TextUtils.join(", ", items.names());
     }

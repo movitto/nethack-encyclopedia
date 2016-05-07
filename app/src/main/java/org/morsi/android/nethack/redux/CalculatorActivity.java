@@ -32,7 +32,7 @@ public class CalculatorActivity extends Activity {
     private DamageCalculator damage;
     private SpellsCalculator spells;
 
-    private Spinner spinner(){
+    private Spinner calculatorSpinner(){
         return (Spinner) findViewById(R.id.calculator_spinner);
     }
 
@@ -43,6 +43,10 @@ public class CalculatorActivity extends Activity {
                         android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
+    }
+
+    private String selectedCalculator(){
+        return calculatorSpinner().getSelectedItem().toString();
     }
 
     // Override menu / about_dialog dialog handlers
@@ -74,8 +78,8 @@ public class CalculatorActivity extends Activity {
         // hide calculator tools until one is selected by user
         findViewById(R.id.armor_calculator).setVisibility(View.INVISIBLE);
 
-        // setup calculator spinner
-        spinner().setAdapter(spinnerAdapter());
+        // setup calculator calculatorSpinner
+        calculatorSpinner().setAdapter(spinnerAdapter());
         handleSpinnerSelection();
         
         armor  = new ArmorCalculator(this);
@@ -91,48 +95,40 @@ public class CalculatorActivity extends Activity {
         spells.updateView();
     }
 
-    private String selected(AdapterView<?> parent, int pos){
-        return parent.getItemAtPosition(pos).toString();
+    private boolean armorSelected(){
+        return selectedCalculator().equals("Armor");
     }
 
-    private boolean armorSelected(Context context, String selected){
-        return selected.equals(context.getString(R.string.armor_calculator));
+    private boolean damageSelected(){
+        return selectedCalculator().equals("Damage");
     }
 
-    private boolean damageSelected(Context context, String selected){
-        return selected.equals(context.getString(R.string.damage_calculator));
+    private boolean spellsSelected(){
+        return selectedCalculator().equals("Spells");
     }
 
-    private boolean spellsSelected(Context context, String selected){
-        return selected.equals(context.getString(R.string.spells_calculator));
+    private void hideAll(){
+        UI.hideView(this, R.id.armor_calculator);
+        UI.hideView(this, R.id.damage_calculator);
+        UI.hideView(this, R.id.spells_calculator);
     }
 
     private void handleSpinnerSelection(){
         final Activity activity = this;
-        spinner().setOnItemSelectedListener(new OnItemSelectedListener() {
-            // Handles calculator spinner changes
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                String selected = selected(parent, pos);
-                boolean armor_selected   = armorSelected(view.getContext(),  selected);
-                boolean damage_selected  = damageSelected(view.getContext(), selected);
-                boolean spells_selected  = spellsSelected(view.getContext(), selected);
 
-                if(armor_selected){
+        calculatorSpinner().setOnItemSelectedListener(new OnItemSelectedListener() {
+            // Handles calculator calculatorSpinner changes
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                hideAll();
+
+                if(armorSelected()){
                     UI.showView(activity, R.id.armor_calculator);
-                    UI.hideView(activity, R.id.damage_calculator);
-                    UI.hideView(activity, R.id.spells_calculator);
-                }else if(damage_selected){
+
+                }else if(damageSelected()){
                     UI.showView(activity, R.id.damage_calculator);
-                    UI.hideView(activity, R.id.armor_calculator);
-                    UI.hideView(activity, R.id.spells_calculator);
-                }else if(spells_selected){
+
+                }else if(spellsSelected()){
                     UI.showView(activity, R.id.spells_calculator);
-                    UI.hideView(activity, R.id.armor_calculator);
-                    UI.hideView(activity, R.id.damage_calculator);
-                }else{
-                    UI.hideView(activity, R.id.armor_calculator);
-                    UI.hideView(activity, R.id.damage_calculator);
-                    UI.hideView(activity, R.id.spells_calculator);
                 }
             }
 

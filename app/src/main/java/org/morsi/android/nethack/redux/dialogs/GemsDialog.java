@@ -103,34 +103,15 @@ public class GemsDialog {
 
     ///
 
-    class EngravingFilter implements Items.filter {
-        String effect;
-
-        EngravingFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Gem)item).engraving_type.equals(effect);
-        }
-    };
-
-    class StreakFilter implements Items.filter {
-        String effect;
-
-        StreakFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Gem)item).streak_color.equals(effect);
-        }
-    };
 
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(Gem.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new EngravingFilter(engravingType())).
-                filter(new StreakFilter(streakColor()));
+                filter(new Item.ItemTypeFilter(Gem.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
+                filter(new Gem.EngravingFilter(engravingType())).
+                filter(new Gem.StreakFilter(streakColor()));
 
         return TextUtils.join(", ", items.names());
     }

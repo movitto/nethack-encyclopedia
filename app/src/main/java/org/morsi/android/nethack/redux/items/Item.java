@@ -2,6 +2,8 @@ package org.morsi.android.nethack.redux.items;
 
 import android.text.TextUtils;
 
+import org.morsi.android.nethack.redux.util.QuickStat;
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -13,8 +15,30 @@ public class Item {
 
     public String id(){ return type() + name; }
 
-    // should be overridden in subclasses
+    // should be overridden in subclasses (supporting quick stats or game track)Er
     public static String type(){ return ""; }
+
+    // should be overriden in subclasses (supporting quick stats)
+    public static ArrayList<String> columnNames(){ return new ArrayList<String>(); }
+
+    // should be overriden in subclasses (supporting quick stats)
+    public static ArrayList<Double> columnWeights(){ return new ArrayList<Double>(); }
+
+    public static QuickStatCategory toQuickStatsCategory(){
+        QuickStatCategory category = new QuickStatCategory(type());
+        category.column_names = columnNames();
+        category.column_weights = columnWeights();
+        return category;
+    }
+
+    // should be overriden in subclasses (supporting quick stats)
+    public ArrayList<String> columns(){
+        return new ArrayList<String>();
+    }
+
+    public QuickStat toQuickStat(){
+        return new QuickStat(columns());
+    }
 
     public String name;
 
@@ -24,11 +48,21 @@ public class Item {
 
     public String appearance;
 
+    public int cost;
+
     public int buy_price;
 
     public int sell_price;
 
-    // should be overridden in subclasses
+    public int weight;
+
+    public double probability;
+
+    public String probability_str;
+
+    public String notes;
+
+    // should be overridden in subclasses (supporting game tracker)
     public static Item extract(String str){
         String attrs[] = str.split("-");
         String type = attrs[0];
@@ -63,7 +97,7 @@ public class Item {
         return item;
     }
 
-    // should be overridden in subclasses
+    // should be overridden in subclasses (supprting game tracker)
     protected ArrayList<String> compactStringList(){
         ArrayList<String> s = new ArrayList<String>();
         s.add(type());
@@ -78,7 +112,7 @@ public class Item {
         return TextUtils.join("-", compactStringList());
     }
 
-    // should be overridden in subclasses
+    // should be overridden in subclasses (supporting game tracker)
     protected ArrayList<String> stringList(){
         ArrayList<String> s = new ArrayList<String>();
         s.add(appearance);
@@ -89,5 +123,47 @@ public class Item {
 
     public String toString() {
         return TextUtils.join(" ", stringList());
+    }
+
+    ///
+
+    public static class ItemTypeFilter implements Items.filter {
+        String type;
+
+        public ItemTypeFilter(String type){ this.type = type; }
+
+        public boolean matches(Item item){
+            return item.type().equals(type);
+        }
+    }
+
+    public static class ItemAppearanceFilter implements Items.filter {
+        String appearance;
+
+        public ItemAppearanceFilter(String appearance){ this.appearance = appearance; }
+
+        public boolean matches(Item item){
+            return item.appearance.equals(appearance);
+        }
+    }
+
+    public static class ItemBuyPriceFilter implements Items.filter {
+        int buy;
+
+        public ItemBuyPriceFilter(int buy){ this.buy = buy; }
+
+        public boolean matches(Item item){
+            return item.buy_price == buy;
+        }
+    }
+
+    public static class ItemSellPriceFilter implements Items.filter {
+        int sell;
+
+        public ItemSellPriceFilter(int sell){ this.sell = sell; }
+
+        public boolean matches(Item item){
+            return item.sell_price == sell;
+        }
     }
 }

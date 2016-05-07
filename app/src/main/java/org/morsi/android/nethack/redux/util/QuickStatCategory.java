@@ -16,31 +16,27 @@ public class QuickStatCategory {
 	public String name;
 	
 	// list of column names
-    private ArrayList<String> column_names;
+    public ArrayList<String> column_names;
    
     // list of column weights, total should equal 1
-    private ArrayList<Float> column_weights;
+    public ArrayList<Double> column_weights;
    
     // list of actual quick stat rows
-    private ArrayList<QuickStat> stats;
+    public ArrayList<QuickStat> stats;
     
     public QuickStatCategory(String rname){
     	name = rname;
     	column_names   = new ArrayList<String>();
-    	column_weights = new ArrayList<Float>();
+    	column_weights = new ArrayList<Double>();
     	stats = new ArrayList<QuickStat>();
     }
     
-    public ArrayList<String> get_columns(){ return column_names;   }
-    public ArrayList<Float>  get_weights(){ return column_weights; }
-    public ArrayList<QuickStat> get_stats(){ return stats; }
-    
-    public void add_column(String name, Float weight){
+    private void add_column(String name, Double weight){
     	column_names.add(name);
     	column_weights.add(weight);
     }
     
-    public void add_stats(ArrayList<String> rstats){
+    private void add_stats(ArrayList<String> rstats){
     	QuickStat stat = new QuickStat(rstats);
     	stats.add(stat);
     }
@@ -75,43 +71,4 @@ public class QuickStatCategory {
 	      });
 	      reverse = !reverse;
     }
-
-	// Retrieve and return the stats stored in the specified android xml resource
-	public static QuickStatCategory fromXML(String stat_to_parse, XmlResourceParser xpp) {
-		QuickStatCategory category = new QuickStatCategory(stat_to_parse);
-
-		try {
-			int eventType = xpp.next();
-			ArrayList<String> current_row = null;
-			String element_name = "";
-			String weight = "";
-			while (eventType != XmlPullParser.END_DOCUMENT) {
-				if (eventType == XmlPullParser.START_TAG) {
-					element_name = xpp.getName();
-					if (element_name.equals("row"))
-						current_row = new ArrayList<String>();
-
-					else if (element_name.equals("column"))
-						weight = xpp.getAttributeValue(null, "weight");
-
-				} else if (eventType == XmlPullParser.TEXT) {
-					if (element_name.equals("item"))
-						current_row.add(xpp.getText());
-
-					else if (element_name.equals("column")) {
-						Float fweight = weight != null ? Float.parseFloat(weight) : -1;
-						category.add_column(xpp.getText(), fweight);
-					}
-
-				} else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("row"))
-					category.add_stats(current_row);
-
-				eventType = xpp.next();
-			}
-		} catch (IOException e) {
-		} catch (XmlPullParserException e) {
-		}
-
-		return category;
-	}
 }

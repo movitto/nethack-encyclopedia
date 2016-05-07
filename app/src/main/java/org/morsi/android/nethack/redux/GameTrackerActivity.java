@@ -84,7 +84,7 @@ public class GameTrackerActivity extends Activity {
     }
 
     private void createItems(){
-        // item_tracker.item_db = Items.fromXML(getResources().getXml(R.xml.potions)); // ...
+        item_tracker.item_db = Items.fromXML(this);
     }
 
     public void onClickNewTrackerButton(View target) {

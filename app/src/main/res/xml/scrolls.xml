@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quick_stat>
-  <columns>
-    <column weight="0.4">Scroll</column>
-    <column weight="0.1">Cost</column>
-    <column weight="0.1">Weight</column>
-    <column weight="0.1">Probability</column>
-    <column weight="0.1">Ink</column>
-    <column weight="0.2">Appearance</column>
-  </columns>
   <row>
     <item>mail</item>
     <item>0</item>

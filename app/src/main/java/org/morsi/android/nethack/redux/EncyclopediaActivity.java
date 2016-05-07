@@ -132,6 +132,7 @@ public class EncyclopediaActivity extends ListActivity {
                 EncyclopediaActivity.in_alphabetical_mode = false;
                 section_adapter = new ArrayAdapter<String>(view.getContext(), R.layout.encyclopedia, encyclopedia.topicNames(EncyclopediaActivity.current_section));
                 setListAdapter(section_adapter);
+
             } else {
                 //create encyclopedia page activity when topic is picked
                 String popup_topic = ((TextView) view).getText().toString();

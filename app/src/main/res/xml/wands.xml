@@ -1,12 +1,4 @@
 <quick_stat>
- <columns>
-  <column weight="0.3">Wand</column>
-  <column weight="0.1">Cost</column>
-  <column weight="0.125">Max Charges</column>
-  <column weight="0.125">Prob</column>
-  <column weight="0.35">Type</column>
- </columns>
-
  <row>
   <item>light</item>
   <item>100</item>

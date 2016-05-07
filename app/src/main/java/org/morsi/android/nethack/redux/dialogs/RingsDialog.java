@@ -104,34 +104,14 @@ public class RingsDialog {
 
     ///
 
-    class WearFilter implements Items.filter {
-        String effect;
-
-        WearFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Ring)item).wear_effect.equals(effect);
-        }
-    };
-
-    class SinkFilter implements Items.filter {
-        String effect;
-
-        SinkFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Ring)item).sink_effect.equals(effect);
-        }
-    };
-
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(Ring.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new WearFilter(wearEffect())).
-                filter(new SinkFilter(sinkEffect()));
+                filter(new Item.ItemTypeFilter(Ring.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
+                filter(new Ring.WearFilter(wearEffect())).
+                filter(new Ring.SinkFilter(sinkEffect()));
 
         return TextUtils.join(", ", items.names());
     }

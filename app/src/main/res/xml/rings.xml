@@ -1,11 +1,4 @@
 <quick_stat>
- <columns>
-  <column weight="0.3">Ring</column>
-  <column weight="0.1">Cost</column>
-  <column weight="0.3">Intrinsic granted</column>
-  <column weight="0.3">Notes</column>
- </columns>
-
  <row>
   <item>meat ring</item>
   <item>5</item>

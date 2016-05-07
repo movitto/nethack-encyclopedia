@@ -1,16 +1,13 @@
 package org.morsi.android.nethack.redux.items;
 
-import android.content.res.XmlResourceParser;
+import android.app.Activity;
+import org.morsi.android.nethack.redux.R;
+import org.morsi.android.nethack.redux.util.QuickStat;
+import org.morsi.android.nethack.redux.util.QuickStatCategory;
 
 import java.util.ArrayList;
 
 public class Items extends ArrayList<Item> {
-    public static Items fromXML(XmlResourceParser xpp){
-        Items items = new Items();
-        // ...
-        return items;
-    }
-
     public interface filter{
         boolean matches(Item item);
     }
@@ -28,5 +25,80 @@ public class Items extends ArrayList<Item> {
         for(Item i : this)
             names.add(i.name);
         return names;
+    }
+
+    public static Items fromXML(Activity activity){
+        Items items = new Items();
+
+        for(Item potion : Potion.fromXML(activity.getResources().getXml(R.xml.potions)))
+            items.add(potion);
+
+        for(Item gem : Gem.fromXML(activity.getResources().getXml(R.xml.gems)))
+            items.add(gem);
+
+        for(Item scroll : Scroll.fromXML(activity.getResources().getXml(R.xml.scrolls)))
+            items.add(scroll);
+
+        for(Item armor : Armor.fromXML(activity.getResources().getXml(R.xml.armor)))
+            items.add(armor);
+
+        for(Item ring : Ring.fromXML(activity.getResources().getXml(R.xml.rings)))
+            items.add(ring);
+
+        for(Item wand : Wand.fromXML(activity.getResources().getXml(R.xml.wands)))
+            items.add(wand);
+
+        for(Item corpse : Corpse.fromXML(activity.getResources().getXml(R.xml.corpses)))
+            items.add(corpse);
+
+        for(Item tool : Tool.fromXML(activity.getResources().getXml(R.xml.tools)))
+            items.add(tool);
+
+        for(Item amulet : Amulet.fromXML(activity.getResources().getXml(R.xml.amulets)))
+            items.add(amulet);
+
+        for(Item spellbook : SpellBook.fromXML(activity.getResources().getXml(R.xml.spellbooks)))
+            items.add(spellbook);
+
+        return items;
+    }
+
+    public ArrayList<QuickStatCategory> toStats(){
+        QuickStatCategory potions_category = Potion.toQuickStatsCategory();
+        QuickStatCategory gems_category    = Gem.toQuickStatsCategory();
+        QuickStatCategory scrolls_category = Scroll.toQuickStatsCategory();
+        QuickStatCategory armor_category   = Armor.toQuickStatsCategory();
+        QuickStatCategory ring_category    = Ring.toQuickStatsCategory();
+        QuickStatCategory tools_category   = Tool.toQuickStatsCategory();
+        QuickStatCategory wand_category    = Wand.toQuickStatsCategory();
+        QuickStatCategory corpse_category  = Corpse.toQuickStatsCategory();
+
+        for(Item i : filter(new Item.ItemTypeFilter(Potion.type())))
+            potions_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Gem.type())))
+            gems_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Scroll.type())))
+            scrolls_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Armor.type())))
+            armor_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Ring.type())))
+            ring_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Tool.type())))
+            tools_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Wand.type())))
+            wand_category.stats.add(i.toQuickStat());
+        for(Item i : filter(new Item.ItemTypeFilter(Corpse.type())))
+            corpse_category.stats.add(i.toQuickStat());
+
+        ArrayList<QuickStatCategory> categories = new ArrayList<QuickStatCategory>();
+        categories.add(potions_category);
+        categories.add(gems_category);
+        categories.add(scrolls_category);
+        categories.add(armor_category);
+        categories.add(ring_category);
+        categories.add(tools_category);
+        categories.add(wand_category);
+        categories.add(corpse_category);
+        return categories;
     }
 }

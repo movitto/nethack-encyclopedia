@@ -8,9 +8,9 @@
 package org.morsi.android.nethack.redux;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
+import org.morsi.android.nethack.redux.items.Items;
 import org.morsi.android.nethack.redux.util.AndroidMenu;
 import org.morsi.android.nethack.redux.util.QuickStat;
 import org.morsi.android.nethack.redux.util.QuickStatCategory;
@@ -40,25 +40,28 @@ public class QuickStatsActivity extends Activity {
         return (LinearLayout) findViewById(R.id.quick_stats_layout);
     }
 
-    private Spinner spinner() {
+    private Spinner statsSpinner() {
         return (Spinner) findViewById(R.id.quick_stats_spinner);
     }
 
-    private String selectedQuickStatName() {
-        return spinner().getSelectedItem().toString();
+    private String selectedQuickStat() {
+        return statsSpinner().getSelectedItem().toString();
     }
 
-    // Returns the current stat category selected in the spinner
-    private QuickStatCategory selectedQuickStatCategory() {
-        String selected = selectedQuickStatName();
-        for (QuickStatCategory category : stats)
+    // Returns the current stat category selected in the statsSpinner
+    private QuickStatCategory selectedCategory() {
+        String selected = selectedQuickStat();
+        for (QuickStatCategory category : item_db.toStats())
             if (category.name.equals(selected))
                 return category;
         return null;
     }
 
     private ArrayAdapter<CharSequence> spinnerAdapter(){
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.quick_stats_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this,
+                        R.array.quick_stats_array,
+                        android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }
@@ -75,7 +78,7 @@ public class QuickStatsActivity extends Activity {
     }
 
     private QuickStat selectedQuickStat(View row){
-        return selectedQuickStatCategory().get_stats().get(statsTableIndex(row) - 2); // need to offset header row and border row
+        return selectedCategory().stats.get(statsTableIndex(row) - 2); // need to offset header row and border row
     }
 
     // Override menu / about_dialog dialog handlers
@@ -99,44 +102,35 @@ public class QuickStatsActivity extends Activity {
         return AndroidMenu.onCreateDialog(this, id);
     }
 
-    // List of quick stat categories containing stats
-    ArrayList<QuickStatCategory> stats;
+    // Item Database
+    Items item_db;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quick_stats);
 
-        // retrieve stats from xml resources
-        createStats();
+        // retrieve items from xml resources
+        createItems();
 
-        // populate spinner and wire up changes
+        // populate statsSpinner and wire up changes
         initSpinner();
     }
 
-    private void createStats(){
-        stats = new ArrayList<QuickStatCategory>();
-
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.potions_quick_stat), getResources().getXml(R.xml.potions)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.gems_quick_stat),    getResources().getXml(R.xml.gems)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.scrolls_quick_stat), getResources().getXml(R.xml.scrolls)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.armor_quick_stat),   getResources().getXml(R.xml.armor)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.rings_quick_stat),   getResources().getXml(R.xml.rings)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.tools_quick_stat),   getResources().getXml(R.xml.tools)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.wands_quick_stat),   getResources().getXml(R.xml.wands)));
-        stats.add(QuickStatCategory.fromXML(this.getString(R.string.corpses_quick_stat), getResources().getXml(R.xml.corpses)));
+    private void createItems(){
+        item_db = Items.fromXML(this);
     }
 
     private void initSpinner(){
-        spinner().setAdapter(spinnerAdapter());
-        spinner().setOnItemSelectedListener(new QuickStatsSelectedListener());
+        statsSpinner().setAdapter(spinnerAdapter());
+        statsSpinner().setOnItemSelectedListener(new QuickStatsSelectedListener());
     }
 
-    // Handles quick stats spinner changes
+    // Handles quick stats statsSpinner changes
     class QuickStatsSelectedListener implements OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
             clearStats();
-            if (pos != 0) displayStats(selectedQuickStatCategory());
+            if (pos != 0) displayStats(selectedCategory());
         }
 
         public void onNothingSelected(AdapterView<?> parent) {
@@ -150,22 +144,20 @@ public class QuickStatsActivity extends Activity {
 
     // Display the specified stat on the table in the view
     private void displayStats(QuickStatCategory category) {
-        List<QuickStat> rstats = category.get_stats();
-
-        // add header row to table
+           // add header row to table
         statsTable().addView(tableHeader(category), tableHeaderLayout());
 
         // add border row beneath header
         statsTable().addView(headerBorder(), headerBorderLayout());
 
         // add each quick stat to table
-        for (QuickStat stat : rstats)
+        for (QuickStat stat : category.stats)
             statsTable().addView(statRow(category, stat), statRowLayout());
     }
 
     private TableRow tableHeader(QuickStatCategory category){
-        List<String> columns   = category.get_columns();
-        List<Float> weights    = category.get_weights();
+        List<String> columns   = category.column_names;
+        List<Double> weights    = category.column_weights;
 
         TableRow row = new TableRow(layout().getContext());
         for (int i = 0; i < columns.size(); ++i) {
@@ -178,11 +170,11 @@ public class QuickStatsActivity extends Activity {
             label.setTextColor(getResources().getColor(R.color.light_blue));
 
             // if no weight specified, weigh all columns equally
-            float weight = weights.get(i);
-            if (weight == -1) weights.set(i, new Double(1.0 / weights.size()).floatValue());
+            double weight = weights.get(i);
+            if (weight == -1) weights.set(i, new Double(1.0 / weights.size()));
 
             label.setGravity(Gravity.CENTER);
-            label.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+            label.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i).floatValue()));
             row.addView(label);
         }
 
@@ -209,8 +201,8 @@ public class QuickStatsActivity extends Activity {
     }
 
     private TableRow statRow(QuickStatCategory category, QuickStat stat){
-        List<String> columns   = category.get_columns();
-        List<Float> weights    = category.get_weights();
+        List<String> columns   = category.column_names;
+        List<Double> weights    = category.column_weights;
 
         TableRow row = new TableRow(layout().getContext());
         row.setLayoutParams(statRowLayout());
@@ -232,7 +224,7 @@ public class QuickStatsActivity extends Activity {
                 col.setOnClickListener(listener);
 
                 col.setGravity(Gravity.CENTER);
-                col.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+                col.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i).floatValue()));
                 row.addView(col);
             }
         }
@@ -240,7 +232,7 @@ public class QuickStatsActivity extends Activity {
         // fill in empty columns
         for (int i = stat.num_values(); i < columns.size(); ++i) {
             TextView blank = new TextView(layout().getContext());
-            blank.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i)));
+            blank.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i).floatValue()));
             blank.setBackgroundResource((alternate_col = !alternate_col) ? R.color.gray : R.color.light_gray);
             row.addView(blank);
         }
@@ -255,7 +247,7 @@ public class QuickStatsActivity extends Activity {
     // Handles clicks to the column headers by sorting the table
     class ColumnClickedListener implements OnClickListener {
         public void onClick(View v) {
-            QuickStatCategory selected = selectedQuickStatCategory();
+            QuickStatCategory selected = selectedCategory();
             String sort_column = ((TextView) v).getText().toString();
             selected.sort_stats(sort_column);
             clearStats();
@@ -269,7 +261,7 @@ public class QuickStatsActivity extends Activity {
 
         public void onClick(View v) {
             // get the quick stat corresponding to the row
-            new QuickStatsPopup(activity, selectedQuickStatCategory(), selectedQuickStat((View) v.getParent()));
+            new QuickStatsPopup(activity, selectedCategory(), selectedQuickStat((View) v.getParent()));
         }
     }
 }

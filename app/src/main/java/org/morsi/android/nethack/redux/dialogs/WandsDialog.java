@@ -103,34 +103,14 @@ public class WandsDialog {
 
     ///
 
-    class EngravingFilter implements Items.filter {
-        String effect;
-
-        EngravingFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Wand)item).engrave_effect.equals(effect);
-        }
-    };
-
-    class ZapFilter implements Items.filter {
-        String effect;
-
-        ZapFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Wand)item).zap_effect.equals(effect);
-        }
-    };
-
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(Wand.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new EngravingFilter(engraveEffect())).
-                filter(new ZapFilter(zapEffect()));
+                filter(new Item.ItemTypeFilter(Wand.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
+                filter(new Wand.EngravingFilter(engraveEffect())).
+                filter(new Wand.ZapFilter(zapEffect()));
 
         return TextUtils.join(", ", items.names());
     }

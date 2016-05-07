@@ -1,20 +1,4 @@
 <quick_stat>
- <columns>
-  <column weight="0.25">Name</column>
-  <column weight="0.06">$</column>
-  <column weight="0.06">Wgt</column>
-  <column weight="0.05">AC</column>
-  <column weight="0.13">Mat</column>
-  <column weight="0.1">Effect</column>
-  <column weight="0.05">MC</column>
-  <column weight="0.06">Mag</column>
-  <column weight="0.24">Appearance</column>
- </columns>
-
- <row>
-  <item>Shirts</item>
- </row>
-
  <row>
   <item>Hawaiian shirt</item>
   <item>3</item>
@@ -37,10 +21,6 @@
   <item>--</item>
   <item>--</item>
   <item>--</item>
- </row>
-
- <row>
-  <item>Suits</item>
  </row>
 
  <row>
@@ -223,10 +203,6 @@
  </row>
 
  <row>
-  <item>Dragon Suits</item>
- </row>
-
- <row>
   <item>dragon scales</item>
   <item>500</item>
   <item>40</item>
@@ -248,10 +224,6 @@
   <item>--</item>
   <item>Yes</item>
   <item>--</item>
- </row>
-
- <row>
-  <item>Cloaks</item>
  </row>
 
  <row>
@@ -399,10 +371,6 @@
  </row>
 
  <row>
-  <item>Helms</item>
- </row>
-
- <row>
   <item>fedora</item>
   <item>1</item>
   <item>3</item>
@@ -535,10 +503,6 @@
  </row>
 
  <row>
-  <item>Gloves</item>
- </row>
-
- <row>
   <item>leather gloves (yugake)</item>
   <item>8</item>
   <item>10</item>
@@ -584,10 +548,6 @@
   <item>--</item>
   <item>Yes</item>
   <item>*fencing gloves</item>
- </row>
-
- <row>
-  <item>Shields</item>
  </row>
 
  <row>
@@ -672,10 +632,6 @@
   <item>--</item>
   <item>Yes</item>
   <item>polished silver</item>
- </row>
-
- <row>
-  <item>Boots</item>
  </row>
 
  <row>

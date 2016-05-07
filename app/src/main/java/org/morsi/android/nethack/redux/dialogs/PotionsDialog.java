@@ -103,34 +103,14 @@ public class PotionsDialog {
 
     ///
 
-    class QuaffFilter implements Items.filter {
-        String effect;
-
-        QuaffFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Potion)item).quaff_effect.equals(effect);
-        }
-    };
-
-    class ThrowFilter implements Items.filter {
-        String effect;
-
-        ThrowFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Potion)item).throw_effect.equals(effect);
-        }
-    };
-
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(Potion.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new QuaffFilter(quaffEffect())).
-                filter(new ThrowFilter(throwEffect()));
+                filter(new Item.ItemTypeFilter(Potion.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
+                filter(new Potion.QuaffFilter(quaffEffect())).
+                filter(new Potion.ThrowFilter(throwEffect()));
 
         return TextUtils.join(", ", items.names());
     }

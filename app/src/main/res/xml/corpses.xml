@@ -1,12 +1,4 @@
 <quick_stat>
-  <columns>
-    <column weight="0.25">Name</column>
-    <column weight="0.15">Nutrition</column>
-    <column weight="0.15">Initial effects</column>
-    <column weight="0.15">Final effects</column>
-    <column weight="0.30">Intrinsics</column>
-  </columns>
-    
   <row>
     <item>abbot</item>
     <item>400</item>

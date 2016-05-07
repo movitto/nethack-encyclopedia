@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quick_stat>
-  <columns>
-    <column weight="0.32">Name</column>
-    <column weight="0.13">Cost</column>
-    <column weight="0.13">Weight</column>
-    <column weight="0.42">Use</column>
-  </columns>
-
-  <!--<row><item>Character accessories</item></row>-->
-  
   <row>
     <item>blindfold</item>
     <item>20</item>

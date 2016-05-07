@@ -43,10 +43,10 @@ public class SpellBooksDialog {
     ///
     public String reidentify(){
         Items items = item_dialog.item_tracker().item_db.
-                filter(new ItemDialog.ItemTypeFilter(SpellBook.type())).
-                filter(new ItemDialog.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new ItemDialog.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new ItemDialog.ItemSellPriceFilter(item_dialog.sellPrice()));
+                filter(new Item.ItemTypeFilter(SpellBook.type())).
+                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
+                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
+                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
 
         return TextUtils.join(", ", items.names());
     }

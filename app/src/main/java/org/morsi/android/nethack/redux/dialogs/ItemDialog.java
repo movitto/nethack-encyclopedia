@@ -431,46 +431,4 @@ public class ItemDialog {
     private void updateView(){
         itemNameOutput().setText(name);
     }
-
-    ///
-
-    public static class ItemTypeFilter implements Items.filter {
-        String type;
-
-        ItemTypeFilter(String type){ this.type = type; }
-
-        public boolean matches(Item item){
-            return item.type().equals(type);
-        }
-    }
-
-    public static class ItemAppearanceFilter implements Items.filter {
-        String appearance;
-
-        ItemAppearanceFilter(String appearance){ this.appearance = appearance; }
-
-        public boolean matches(Item item){
-            return item.appearance.equals(appearance);
-        }
-    }
-
-    public static class ItemBuyPriceFilter implements Items.filter {
-        int buy;
-
-        ItemBuyPriceFilter(int buy){ this.buy = buy; }
-
-        public boolean matches(Item item){
-            return item.buy_price == buy;
-        }
-    }
-
-    public static class ItemSellPriceFilter implements Items.filter {
-        int sell;
-
-        ItemSellPriceFilter(int sell){ this.sell = sell; }
-
-        public boolean matches(Item item){
-            return item.sell_price == sell;
-        }
-    }
 }

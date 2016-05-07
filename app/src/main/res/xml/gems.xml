@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <quick_stat>
-  <columns>
-    <column weight="0.3">Name</column>
-    <column weight="0.2">Description</column>
-    <column weight="0.1">Cost</column>
-    <column weight="0.08">Wght</column>
-    <column weight="0.32">Hardness/Material</column>
-  </columns>
-
   <row>
     <item>dilithium crystal</item>
     <item>white gem</item>

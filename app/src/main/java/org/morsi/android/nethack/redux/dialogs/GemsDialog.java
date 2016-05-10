@@ -50,6 +50,10 @@ public class GemsDialog {
         engravingTypeInput().setSelection(engravingTypeIndex(effect));
     }
 
+    private boolean engravingSpecified(){
+        return engravingTypeInput().isSelected();
+    }
+
     private Spinner streakColorInput(){
         return (Spinner) item_dialog.findViewById(R.id.gemStreakColorInput);
     }
@@ -75,11 +79,18 @@ public class GemsDialog {
         streakColorInput().setSelection(streakColorIndex(effect));
     }
 
+    private boolean streakSpecified(){
+        return streakColorInput().isSelected();
+    }
+
     public void resetDialog(){
         engravingTypeInput().setSelected(false);
         streakColorInput().setSelected(false);
     }
 
+    public boolean filterSpecified(){
+        return item_dialog.filterSpecified() || engravingSpecified() || streakSpecified();
+    }
     ///
 
     public void initializeSpinners() {
@@ -110,13 +121,25 @@ public class GemsDialog {
 
 
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(Gem.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new Gem.EngravingFilter(engravingType())).
-                filter(new Gem.StreakFilter(streakColor()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Gem.type()));
+
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+
+        if(engravingSpecified())
+            items = items.filter(new Gem.EngravingFilter(engravingType()));
+
+        if(streakSpecified())
+            items = items.filter(new Gem.StreakFilter(streakColor()));
 
         return TextUtils.join(", ", items.names());
     }

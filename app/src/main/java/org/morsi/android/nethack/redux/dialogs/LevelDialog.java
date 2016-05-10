@@ -2,10 +2,12 @@ package org.morsi.android.nethack.redux.dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.ToggleButton;
 
@@ -31,6 +33,8 @@ public class LevelDialog extends Dialog{
     }
 
     ///
+
+    private ScrollView levelScroll(){ return (ScrollView) findViewById(R.id.levelDialogScroll); }
 
     private Spinner parentInput(){
         return (Spinner) findViewById(R.id.levelParentInput);
@@ -81,6 +85,10 @@ public class LevelDialog extends Dialog{
 
     private int numValue(){
         return Integer.parseInt(numValueString());
+    }
+
+    private boolean selectedLevel(){
+        return parentInput().getSelectedItemPosition() != 0;
     }
 
     ///
@@ -438,6 +446,9 @@ public class LevelDialog extends Dialog{
     }
 
     private void resetDialog(){
+        parentInput().setSelection(0);
+        parentInput().setSelected(false);
+        numInput().setSelection(0);
         numInput().setSelected(false);
         storeInput().setChecked(false);
         bookStoreInput().setChecked(false);
@@ -479,8 +490,6 @@ public class LevelDialog extends Dialog{
         vibratingSquareInput().setChecked(false);
         molochInput().setChecked(false);
         vladInput().setChecked(false);
-
-        numInput().requestFocus();
     }
 
     ///
@@ -491,15 +500,15 @@ public class LevelDialog extends Dialog{
         setContentView(R.layout.level_dialog);
         setTitle("Level Properties");
 
-        dialog_listener = new LevelDialogListener(this);
+        close_listener = new LevelDialogCloseListener(this);
 
         // wire up close button
-        closeButton().setOnClickListener(dialog_listener);
+        closeButton().setOnClickListener(close_listener);
+
+        show_listener = new LevelDialogShowListener();
+        setOnShowListener(show_listener);
 
         initializeSpinners();
-
-        if(level_tracker().editing_level != null)
-            inputFromLevel(level_tracker().editing_level);
     }
 
     private void initializeSpinners(){
@@ -600,19 +609,32 @@ public class LevelDialog extends Dialog{
         vladInput().setChecked(level.vlad);
     }
 
-    LevelDialogListener dialog_listener;
+    LevelDialogCloseListener close_listener;
 
-    class LevelDialogListener extends DialogListener{
-        LevelDialogListener(Dialog dialog){
+    class LevelDialogCloseListener extends DialogListener{
+        LevelDialogCloseListener(Dialog dialog){
             super(dialog);
         }
 
         public void onClick (View v){
-            level_tracker().addLevel(levelFromInput());
-            level_tracker().storeFields();
-            level_tracker().updateOutput();
+            if(selectedLevel()) {
+                level_tracker().addLevel(levelFromInput());
+                level_tracker().storeFields();
+                level_tracker().updateOutput();
+            }
+
             resetDialog();
             super.onClick(v);
+        }
+    }
+
+    LevelDialogShowListener show_listener;
+
+    class LevelDialogShowListener implements DialogInterface.OnShowListener {
+        public void onShow(DialogInterface i){
+            levelScroll().fullScroll(ScrollView.FOCUS_UP);
+            if(level_tracker().editing_level != null)
+                inputFromLevel(level_tracker().editing_level);
         }
     }
 }

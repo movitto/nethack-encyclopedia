@@ -50,6 +50,10 @@ public class PotionsDialog {
         quaffEffectInput().setSelection(quaffEffectIndex(effect));
     }
 
+    private boolean quaffSpecified(){
+        return quaffEffectInput().isSelected();
+    }
+
     private Spinner throwEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.potionThrowEffectInput);
     }
@@ -75,9 +79,17 @@ public class PotionsDialog {
         throwEffectInput().setSelection(throwEffectIndex(effect));
     }
 
+    private boolean throwSpecified(){
+        return throwEffectInput().isSelected();
+    }
+
     public void resetDialog(){
         quaffEffectInput().setSelected(false);
         throwEffectInput().setSelected(false);
+    }
+
+    public boolean filterSpecified(){
+        return item_dialog.filterSpecified() || quaffSpecified() || throwSpecified();
     }
 
     ///
@@ -109,13 +121,24 @@ public class PotionsDialog {
     ///
 
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(Potion.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new Potion.QuaffFilter(quaffEffect())).
-                filter(new Potion.ThrowFilter(throwEffect()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Potion.type()));
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+
+        if(quaffSpecified())
+            items = items.filter(new Potion.QuaffFilter(quaffEffect()));
+
+        if(throwSpecified())
+            items = items.filter(new Potion.ThrowFilter(throwEffect()));
 
         return TextUtils.join(", ", items.names());
     }

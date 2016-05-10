@@ -50,6 +50,10 @@ public class ScrollsDialog {
         return adapter;
     }
 
+    private boolean readSpecified(){
+        return readEffectInput().isSelected();
+    }
+
     private Spinner dropEffectInput() {
         return (Spinner) item_dialog.findViewById(R.id.scrollDropEffectInput);
     }
@@ -75,6 +79,10 @@ public class ScrollsDialog {
         return adapter;
     }
 
+    private boolean dropSpecified(){
+        return dropEffectInput().isSelected();
+    }
+
     public void initializeSpinners() {
         readEffectInput().setAdapter(readEffectAdapter());
         dropEffectInput().setAdapter(dropEffectAdapter());
@@ -97,6 +105,10 @@ public class ScrollsDialog {
         dropEffectInput().setSelected(false);
     }
 
+    public boolean filterSpecified(){
+        return item_dialog.filterSpecified() || readSpecified() || dropSpecified();
+    }
+
     ///
 
     public void setListeners(ItemDialog.InputChangedListener listener){
@@ -107,13 +119,24 @@ public class ScrollsDialog {
     ///
 
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(Scroll.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new Scroll.ReadFilter(readEffect())).
-                filter(new Scroll.DropFilter(dropEffect()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Scroll.type()));
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+
+        if(readSpecified())
+            items = items.filter(new Scroll.ReadFilter(readEffect()));
+
+        if(dropSpecified())
+            items = items.filter(new Scroll.DropFilter(dropEffect()));
 
         return TextUtils.join(", ", items.names());
     }

@@ -41,7 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.75"
             android:ems="10"
-            android:inputType="none" />
+            android:inputType="none"
+            android:editable="false"/>
     </LinearLayout>
 
     <LinearLayout

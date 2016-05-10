@@ -17,7 +17,7 @@ public class Level {
     public int num;
 
     public String id(){
-        return parent + Integer.toString(num);
+        return parent + " " + Integer.toString(num);
     }
 
     // shops present
@@ -107,15 +107,15 @@ public class Level {
         if(rare_book_store)      s.add("rare book store");
         if(lighting_store)       s.add("lighting store");
 
-        if(fountains > 0)        s.add(Integer.toString(fountains)        + " fountains");
-        if(aligned_altars > 0)   s.add(Integer.toString(aligned_altars)   + " aligned altars");
-        if(x_aligned_altars > 0) s.add(Integer.toString(x_aligned_altars) + " x aligned altars");
-        if(neutal_altars > 0)    s.add(Integer.toString(neutal_altars)    + " neutral altars");
-        if(sinks > 0)            s.add(Integer.toString(sinks)            + " sinks");
-        if(thrones > 0)          s.add(Integer.toString(thrones)          + " thrones");
-        if(temples > 0)          s.add(Integer.toString(temples)          + " temples");
+        if(fountains > 0)        s.add(Integer.toString(fountains)        + " fountain"        + (fountains        > 1 ? "s" : ""));
+        if(aligned_altars > 0)   s.add(Integer.toString(aligned_altars)   + " aligned altar"   + (aligned_altars   > 1 ? "s" : ""));
+        if(x_aligned_altars > 0) s.add(Integer.toString(x_aligned_altars) + " x aligned altar" + (x_aligned_altars > 1 ? "s" : ""));
+        if(neutal_altars > 0)    s.add(Integer.toString(neutal_altars)    + " neutral altar"   + (neutal_altars    > 1 ? "s" : ""));
+        if(sinks > 0)            s.add(Integer.toString(sinks)            + " sink"            + (sinks            > 1 ? "s" : ""));
+        if(thrones > 0)          s.add(Integer.toString(thrones)          + " throne"          + (thrones          > 1 ? "s" : ""));
+        if(temples > 0)          s.add(Integer.toString(temples)          + " temple"          + (temples          > 1 ? "s" : ""));
 
-        return TextUtils.join(" ", s);
+        return TextUtils.join("; ", s);
     }
 
     public String compact(){

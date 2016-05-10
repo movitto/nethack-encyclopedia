@@ -16,7 +16,7 @@ public class QuickStat {
     
     public int num_values(){ return values.size(); }
     public String get_value(int index){
-    	if(index > values.size() - 1) return null;
-    	return values.get(index); 
+        if(index > values.size() - 1) return "";
+        return values.get(index);
     }
 }

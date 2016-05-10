@@ -74,19 +74,19 @@ public class AndroidMenu {
 
         switch (id) {
             case DIALOG_ABOUT_ID:
-                dialog = AboutDialog.create(activity);
+                dialog = new AboutDialog(activity);
                 break;
             case DIALOG_PLAYER_ID:
-                dialog = PlayerDialog.create(activity);
+                dialog = new PlayerDialog(activity);
                 break;
             case DIALOG_LEVEL_ID:
-                dialog = LevelDialog.create(activity);
+                dialog = new LevelDialog(activity);
                 break;
             case DIALOG_NOTES_ID:
-                dialog = NotesDialog.create(activity);
+                dialog = new NotesDialog(activity);
                 break;
             case DIALOG_ITEM_ID:
-                dialog = ItemDialog.create(activity);
+                dialog = new ItemDialog(activity);
                 break;
         }
 

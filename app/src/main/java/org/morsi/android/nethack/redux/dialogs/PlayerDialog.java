@@ -12,7 +12,7 @@ import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.trackers.PlayerTracker;
 import org.morsi.android.nethack.redux.util.Input;
 
-public class PlayerDialog {
+public class PlayerDialog extends Dialog{
     Activity activity;
 
     GameTrackerActivity game_tracker(){
@@ -71,14 +71,12 @@ public class PlayerDialog {
         player_tracker().charisma = c;
     }
 
-    Dialog dialog;
-
     private Button closeButton(){
-        return (Button) dialog.findViewById(R.id.player_close);
+        return (Button) findViewById(R.id.player_close);
     }
 
     private EditText strengthInput(){
-        return (EditText) dialog.findViewById(R.id.strengthInput);
+        return (EditText) findViewById(R.id.strengthInput);
     }
 
     private String strengthInputValueString(){
@@ -90,7 +88,7 @@ public class PlayerDialog {
     }
 
     private EditText dexterityInput(){
-        return (EditText) dialog.findViewById(R.id.dexterityInput);
+        return (EditText) findViewById(R.id.dexterityInput);
     }
 
     private String dexterityInputValueString(){
@@ -102,7 +100,7 @@ public class PlayerDialog {
     }
 
     private EditText constitutionInput(){
-        return (EditText) dialog.findViewById(R.id.constitutionInput);
+        return (EditText) findViewById(R.id.constitutionInput);
     }
 
     private String constitutionInputValueString(){
@@ -114,7 +112,7 @@ public class PlayerDialog {
     }
 
     private EditText intelligenceInput(){
-        return (EditText) dialog.findViewById(R.id.intelligenceInput);
+        return (EditText) findViewById(R.id.intelligenceInput);
     }
 
     private String intelligenceInputValueString(){
@@ -126,7 +124,7 @@ public class PlayerDialog {
     }
 
     private EditText wisdomInput(){
-        return (EditText) dialog.findViewById(R.id.wisdomInput);
+        return (EditText) findViewById(R.id.wisdomInput);
     }
 
     private String wisdonInputValueString(){
@@ -138,7 +136,7 @@ public class PlayerDialog {
     }
 
     private EditText charismaInput(){
-        return (EditText) dialog.findViewById(R.id.charismaInput);
+        return (EditText) findViewById(R.id.charismaInput);
     }
 
     private String charismaInputValueString(){
@@ -151,16 +149,16 @@ public class PlayerDialog {
 
     ///
 
-    private PlayerDialog(Activity activity){
+    public PlayerDialog(Activity activity){
+        super(activity);
         this.activity = activity;
-        dialog = new Dialog(activity);
-        dialog.setContentView(R.layout.player_dialog);
-        dialog.setTitle("Player Attributes");
+        setContentView(R.layout.player_dialog);
+        setTitle("Player Attributes");
 
         input_listener = new InputChangedListener();
 
         // wire up inputs
-        closeButton().setOnClickListener(new DialogListener(dialog));
+        closeButton().setOnClickListener(new DialogListener(this));
         strengthInput().addTextChangedListener(input_listener);
         dexterityInput().addTextChangedListener(input_listener);
         constitutionInput().addTextChangedListener(input_listener);
@@ -170,11 +168,6 @@ public class PlayerDialog {
 
         // restore prefs
         restoreUIPrefs();
-    }
-
-
-    public static Dialog create(Activity activity) {
-        return new PlayerDialog(activity).dialog;
     }
 
     ///

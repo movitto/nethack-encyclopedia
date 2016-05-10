@@ -25,11 +25,12 @@ public class ItemTracker {
 
     public ItemTracker(GameTrackerActivity activity){
         this.activity = activity;
-        reset();
+        items = new Items();
     }
 
     public void onCreate() {
         restorePrefs();
+        updateOutput();
     }
 
 
@@ -39,7 +40,9 @@ public class ItemTracker {
     }
 
     public void reset(){
-        items = new Items();
+        items.clear();
+        storeFields();
+        removeAllViews();
     }
 
     ///
@@ -76,16 +79,13 @@ public class ItemTracker {
     // store values persistently
     public static final String PREFS_NAME = "ItemTrackerValues";
 
-    SharedPreferences settings;
-
     private SharedPreferences sharedPrefs(){
         return activity.getSharedPreferences(PREFS_NAME, 0);
     }
 
-    private String itemsPref(){ return settings.getString("items", ""); }
+    private String itemsPref(){ return sharedPrefs().getString("items", ""); }
 
     public void restorePrefs() {
-        settings = sharedPrefs();
         for(String item : itemsPref().split(","))
             if(!item.equals(""))
                 items.add(Item.extract(item));
@@ -99,13 +99,18 @@ public class ItemTracker {
     }
 
     public void storeFields(){
-        SharedPreferences.Editor editor = settings.edit();
+        SharedPreferences.Editor editor = sharedPrefs().edit();
         editor.putString("items", levelsStr());
         editor.commit();
     }
 
-    public void updateOutput(){
+
+    private void removeAllViews(){
         itemsList().removeAllViews();
+    }
+
+    public void updateOutput(){
+        removeAllViews();
         for(Item i : items)
             displayItem(i);
     }
@@ -124,8 +129,11 @@ public class ItemTracker {
 
         type_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
         name_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
-        properties_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.55f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
+        properties_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.65f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
+
+        type_tv.setPadding(10, 0, 0, 0);
+        remove.setPadding(0, 0, 10, 0);
 
         type_tv.setOnClickListener(new EditItemListener(item));
         name_tv.setOnClickListener(new EditItemListener(item));
@@ -167,6 +175,7 @@ public class ItemTracker {
         public void onClick(View v) {
             items.remove(item_to_remove);
             itemsList().removeView(item_view_to_remove);
+            storeFields();
         }
     }
 }

@@ -26,7 +26,7 @@ public class PotionsDialog {
     }
 
     private Spinner quaffEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.potionQuaffEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.potionQuaffEffectInput);
     }
 
     private String quaffEffect(){
@@ -51,7 +51,7 @@ public class PotionsDialog {
     }
 
     private Spinner throwEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.potionThrowEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.potionThrowEffectInput);
     }
 
     private String throwEffect(){
@@ -73,6 +73,11 @@ public class PotionsDialog {
 
     private void setThrowEffect(String effect){
         throwEffectInput().setSelection(throwEffectIndex(effect));
+    }
+
+    public void resetDialog(){
+        quaffEffectInput().setSelected(false);
+        throwEffectInput().setSelected(false);
     }
 
     ///

@@ -15,10 +15,8 @@ import org.morsi.android.nethack.redux.trackers.LevelTracker;
 import org.morsi.android.nethack.redux.util.Input;
 import org.morsi.android.nethack.redux.util.Level;
 
-public class LevelDialog {
+public class LevelDialog extends Dialog{
     Activity activity;
-
-    Dialog dialog;
 
     GameTrackerActivity game_tracker(){
         return (GameTrackerActivity) activity;
@@ -29,13 +27,13 @@ public class LevelDialog {
     }
 
     private Button closeButton(){
-        return (Button) dialog.findViewById(R.id.level_close);
+        return (Button) findViewById(R.id.level_close);
     }
 
     ///
 
     private Spinner parentInput(){
-        return (Spinner) dialog.findViewById(R.id.levelParentInput);
+        return (Spinner) findViewById(R.id.levelParentInput);
     }
 
     private String parentValue(){
@@ -43,7 +41,7 @@ public class LevelDialog {
     }
 
     private String[] parents(){
-        return dialog.getContext().getResources().getStringArray(R.array.level_parents);
+        return getContext().getResources().getStringArray(R.array.level_parents);
     }
 
     private int parentIndex(String parent){
@@ -61,7 +59,7 @@ public class LevelDialog {
     }
 
     private Spinner numInput(){
-        return (Spinner) dialog.findViewById(R.id.levelNumInput);
+        return (Spinner) findViewById(R.id.levelNumInput);
     }
 
     private String numValueString(){
@@ -88,7 +86,7 @@ public class LevelDialog {
     ///
 
     private ToggleButton storeInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelStoreInput);
+        return (ToggleButton) findViewById(R.id.levelStoreInput);
     }
 
     private boolean store(){
@@ -96,7 +94,7 @@ public class LevelDialog {
     }
 
     private ToggleButton bookStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelBookStoreInput);
+        return (ToggleButton) findViewById(R.id.levelBookStoreInput);
     }
 
     private boolean bookStore(){
@@ -104,7 +102,7 @@ public class LevelDialog {
     }
 
     private ToggleButton armorStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelArmorStoreInput);
+        return (ToggleButton) findViewById(R.id.levelArmorStoreInput);
     }
 
     private boolean armorStore(){
@@ -112,7 +110,7 @@ public class LevelDialog {
     }
 
     private ToggleButton liquorStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelLiquorStoreInput);
+        return (ToggleButton) findViewById(R.id.levelLiquorStoreInput);
     }
 
     private boolean liquorStore(){
@@ -120,7 +118,7 @@ public class LevelDialog {
     }
 
     private ToggleButton weaponShopInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelWeaponShopInput);
+        return (ToggleButton) findViewById(R.id.levelWeaponShopInput);
     }
 
     private boolean weaponShop(){
@@ -128,7 +126,7 @@ public class LevelDialog {
     }
 
     private ToggleButton delicatessanInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelDelicatessanInput);
+        return (ToggleButton) findViewById(R.id.levelDelicatessanInput);
     }
 
     private boolean delicatessan(){
@@ -136,7 +134,7 @@ public class LevelDialog {
     }
 
     private ToggleButton jewelerInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelJewelerInput);
+        return (ToggleButton) findViewById(R.id.levelJewelerInput);
     }
 
     private boolean jeweler(){
@@ -144,7 +142,7 @@ public class LevelDialog {
     }
 
     private ToggleButton apparelShopInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelApparelShopInput);
+        return (ToggleButton) findViewById(R.id.levelApparelShopInput);
     }
 
     private boolean apparelShop(){
@@ -152,7 +150,7 @@ public class LevelDialog {
     }
 
     private ToggleButton hardwareStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelHardwareStoreInput);
+        return (ToggleButton) findViewById(R.id.levelHardwareStoreInput);
     }
 
     private boolean hardwareStore(){
@@ -160,7 +158,7 @@ public class LevelDialog {
     }
 
     private ToggleButton rareBookStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelRareBookStoreInput);
+        return (ToggleButton) findViewById(R.id.levelRareBookStoreInput);
     }
 
     private boolean rareBookStore(){
@@ -168,7 +166,7 @@ public class LevelDialog {
     }
 
     private ToggleButton lightingStoreInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelLightingStoreInput);
+        return (ToggleButton) findViewById(R.id.levelLightingStoreInput);
     }
 
     private boolean lightingStore(){
@@ -178,7 +176,7 @@ public class LevelDialog {
     ///
 
     private EditText fountainsInput(){
-        return (EditText) dialog.findViewById(R.id.levelFountainsInput);
+        return (EditText) findViewById(R.id.levelFountainsInput);
     }
 
     private String fountainsInputString(){
@@ -190,7 +188,7 @@ public class LevelDialog {
     }
 
     private EditText alignedAltarsInput(){
-        return (EditText) dialog.findViewById(R.id.levelAlignedAltarsInput);
+        return (EditText) findViewById(R.id.levelAlignedAltarsInput);
     }
 
     private String alignedAltarsInputString(){
@@ -202,7 +200,7 @@ public class LevelDialog {
     }
 
     private EditText xAlignedAltarsInput(){
-        return (EditText) dialog.findViewById(R.id.levelXAlignedAltarsInput);
+        return (EditText) findViewById(R.id.levelXAlignedAltarsInput);
     }
 
     private String xAlignedAltarsInputString(){
@@ -214,7 +212,7 @@ public class LevelDialog {
     }
 
     private EditText neutralAltarsInput(){
-        return (EditText) dialog.findViewById(R.id.levelNeutralAltarsInput);
+        return (EditText) findViewById(R.id.levelNeutralAltarsInput);
     }
 
     private String neutralAltarsInputString(){
@@ -226,7 +224,7 @@ public class LevelDialog {
     }
 
     private EditText sinksInput(){
-        return (EditText) dialog.findViewById(R.id.levelSinksInput);
+        return (EditText) findViewById(R.id.levelSinksInput);
     }
 
     private String sinksInputString(){
@@ -238,7 +236,7 @@ public class LevelDialog {
     }
 
     private EditText thronesInput(){
-        return (EditText) dialog.findViewById(R.id.levelThronesInput);
+        return (EditText) findViewById(R.id.levelThronesInput);
     }
 
     private String thronesInputString(){
@@ -250,7 +248,7 @@ public class LevelDialog {
     }
 
     private EditText templesInput(){
-        return (EditText) dialog.findViewById(R.id.levelTemplesInput);
+        return (EditText) findViewById(R.id.levelTemplesInput);
     }
 
     private String templesInputString(){
@@ -262,7 +260,7 @@ public class LevelDialog {
     }
 
     private ToggleButton stashInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelStashInput);
+        return (ToggleButton) findViewById(R.id.levelStashInput);
     }
 
     private boolean stash(){
@@ -272,7 +270,7 @@ public class LevelDialog {
     ///
 
     private ToggleButton oracleInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelOracleInput);
+        return (ToggleButton) findViewById(R.id.levelOracleInput);
     }
 
     private boolean oracle(){
@@ -280,7 +278,7 @@ public class LevelDialog {
     }
 
     private ToggleButton minesInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelMinesInput);
+        return (ToggleButton) findViewById(R.id.levelMinesInput);
     }
 
     private boolean mines(){
@@ -288,7 +286,7 @@ public class LevelDialog {
     }
 
     private ToggleButton mineTownInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelMineTownInput);
+        return (ToggleButton) findViewById(R.id.levelMineTownInput);
     }
 
     private boolean mineTown(){
@@ -296,7 +294,7 @@ public class LevelDialog {
     }
 
     private ToggleButton minesEndInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelMinesEndInput);
+        return (ToggleButton) findViewById(R.id.levelMinesEndInput);
     }
 
     private boolean minesEnd(){
@@ -304,7 +302,7 @@ public class LevelDialog {
     }
 
     private ToggleButton sokobanInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelSokobanInput);
+        return (ToggleButton) findViewById(R.id.levelSokobanInput);
     }
 
     private boolean sokoban(){
@@ -312,7 +310,7 @@ public class LevelDialog {
     }
 
     private ToggleButton ludiosInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelLudiosInput);
+        return (ToggleButton) findViewById(R.id.levelLudiosInput);
     }
 
     private boolean ludios(){
@@ -320,7 +318,7 @@ public class LevelDialog {
     }
 
     private ToggleButton rogueInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelRogueInput);
+        return (ToggleButton) findViewById(R.id.levelRogueInput);
     }
 
     private boolean rogue(){
@@ -328,7 +326,7 @@ public class LevelDialog {
     }
 
     private ToggleButton questInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelQuestInput);
+        return (ToggleButton) findViewById(R.id.levelQuestInput);
     }
 
     private boolean quest(){
@@ -336,7 +334,7 @@ public class LevelDialog {
     }
 
     private ToggleButton medusaInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelMedusaInput);
+        return (ToggleButton) findViewById(R.id.levelMedusaInput);
     }
 
     private boolean medusa(){
@@ -344,7 +342,7 @@ public class LevelDialog {
     }
 
     private ToggleButton castleInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelCastleInput);
+        return (ToggleButton) findViewById(R.id.levelCastleInput);
     }
 
     private boolean castle(){
@@ -352,7 +350,7 @@ public class LevelDialog {
     }
 
     private ToggleButton gehennomInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelGehennomInput);
+        return (ToggleButton) findViewById(R.id.levelGehennomInput);
     }
 
     private boolean gehennom(){
@@ -360,7 +358,7 @@ public class LevelDialog {
     }
 
     private ToggleButton valleyInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelValleyInput);
+        return (ToggleButton) findViewById(R.id.levelValleyInput);
     }
 
     private boolean valley(){
@@ -368,7 +366,7 @@ public class LevelDialog {
     }
 
     private ToggleButton azmodeusInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelAzmodeusInput);
+        return (ToggleButton) findViewById(R.id.levelAzmodeusInput);
     }
 
     private boolean azmodeus(){
@@ -376,7 +374,7 @@ public class LevelDialog {
     }
 
     private ToggleButton juiblexInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelJuiblexInput);
+        return (ToggleButton) findViewById(R.id.levelJuiblexInput);
     }
 
     private boolean juiblex(){
@@ -384,7 +382,7 @@ public class LevelDialog {
     }
 
     private ToggleButton baazlebubInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelBaazlebubInput);
+        return (ToggleButton) findViewById(R.id.levelBaazlebubInput);
     }
 
     private boolean baazlebub(){
@@ -392,7 +390,7 @@ public class LevelDialog {
     }
 
     private ToggleButton orcusTownInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelOrcusTownInput);
+        return (ToggleButton) findViewById(R.id.levelOrcusTownInput);
     }
 
     private boolean orcusTown(){
@@ -400,7 +398,7 @@ public class LevelDialog {
     }
 
     private ToggleButton wizardsTowerInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelWizardsTowerInput);
+        return (ToggleButton) findViewById(R.id.levelWizardsTowerInput);
     }
 
     private boolean wizardsTower(){
@@ -408,7 +406,7 @@ public class LevelDialog {
     }
 
     private ToggleButton fakeWizardsTowerInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelFakeWizardsTowerInput);
+        return (ToggleButton) findViewById(R.id.levelFakeWizardsTowerInput);
     }
 
     private boolean fakeWizardsTower(){
@@ -416,7 +414,7 @@ public class LevelDialog {
     }
 
     private ToggleButton vibratingSquareInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelVibratingSquareInput);
+        return (ToggleButton) findViewById(R.id.levelVibratingSquareInput);
     }
 
     private boolean vibratingSquare(){
@@ -424,7 +422,7 @@ public class LevelDialog {
     }
 
     private ToggleButton molochInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelMolochInput);
+        return (ToggleButton) findViewById(R.id.levelMolochInput);
     }
 
     private boolean moloch(){
@@ -432,20 +430,68 @@ public class LevelDialog {
     }
 
     private ToggleButton vladInput(){
-        return (ToggleButton) dialog.findViewById(R.id.levelVladInput);
+        return (ToggleButton) findViewById(R.id.levelVladInput);
     }
 
     private boolean vlad(){
         return vladInput().isChecked();
     }
 
-    private LevelDialog(Activity activity){
-        this.activity = activity;
-        dialog = new Dialog(activity);
-        dialog.setContentView(R.layout.level_dialog);
-        dialog.setTitle("Level Properties");
+    private void resetDialog(){
+        numInput().setSelected(false);
+        storeInput().setChecked(false);
+        bookStoreInput().setChecked(false);
+        armorStoreInput().setChecked(false);
+        liquorStoreInput().setChecked(false);
+        weaponShopInput().setChecked(false);
+        delicatessanInput().setChecked(false);
+        jewelerInput().setChecked(false);
+        apparelShopInput().setChecked(false);
+        hardwareStoreInput().setChecked(false);
+        rareBookStoreInput().setChecked(false);
+        lightingStoreInput().setChecked(false);
+        fountainsInput().setText("");
+        alignedAltarsInput().setText("");
+        xAlignedAltarsInput().setText("");
+        neutralAltarsInput().setText("");
+        sinksInput().setText("");
+        thronesInput().setText("");
+        templesInput().setText("");
+        stashInput().setChecked(false);
+        oracleInput().setChecked(false);
+        minesInput().setChecked(false);
+        mineTownInput().setChecked(false);
+        minesEndInput().setChecked(false);
+        sokobanInput().setChecked(false);
+        ludiosInput().setChecked(false);
+        rogueInput().setChecked(false);
+        questInput().setChecked(false);
+        medusaInput().setChecked(false);
+        castleInput().setChecked(false);
+        gehennomInput().setChecked(false);
+        valleyInput().setChecked(false);
+        azmodeusInput().setChecked(false);
+        juiblexInput().setChecked(false);
+        baazlebubInput().setChecked(false);
+        orcusTownInput().setChecked(false);
+        wizardsTowerInput().setChecked(false);
+        fakeWizardsTowerInput().setChecked(false);
+        vibratingSquareInput().setChecked(false);
+        molochInput().setChecked(false);
+        vladInput().setChecked(false);
 
-        dialog_listener = new LevelDialogListener(dialog);
+        numInput().requestFocus();
+    }
+
+    ///
+
+    public LevelDialog(Activity activity){
+        super(activity);
+        this.activity = activity;
+        setContentView(R.layout.level_dialog);
+        setTitle("Level Properties");
+
+        dialog_listener = new LevelDialogListener(this);
 
         // wire up close button
         closeButton().setOnClickListener(dialog_listener);
@@ -454,10 +500,6 @@ public class LevelDialog {
 
         if(level_tracker().editing_level != null)
             inputFromLevel(level_tracker().editing_level);
-    }
-
-    public static Dialog create(Activity activity) {
-        return new LevelDialog(activity).dialog;
     }
 
     private void initializeSpinners(){
@@ -567,6 +609,9 @@ public class LevelDialog {
 
         public void onClick (View v){
             level_tracker().addLevel(levelFromInput());
+            level_tracker().storeFields();
+            level_tracker().updateOutput();
+            resetDialog();
             super.onClick(v);
         }
     }

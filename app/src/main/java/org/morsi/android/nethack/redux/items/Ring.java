@@ -51,7 +51,7 @@ public class Ring extends Item {
         columns.add(name);
         columns.add(Integer.toString(cost));
         columns.add(wear_effect);
-        columns.add(notes);
+        columns.add(notes == null ? "--" : notes);
         return columns;
     }
     

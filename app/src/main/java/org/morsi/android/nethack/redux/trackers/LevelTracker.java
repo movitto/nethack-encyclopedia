@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.trackers;
 
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -23,11 +24,12 @@ public class LevelTracker {
 
     public LevelTracker(GameTrackerActivity activity){
         this.activity = activity;
-        reset();
+        levels = new ArrayList<Level>();
     }
 
     public void onCreate() {
         restorePrefs();
+        updateOutput();
     }
 
     public void newTrackerPopup(){
@@ -36,7 +38,9 @@ public class LevelTracker {
     }
 
     public void reset(){
-        levels = new ArrayList<Level>();
+        levels.clear();
+        storeFields();
+        removeAllViews();
     }
 
     private boolean hasLevel(String id){
@@ -72,16 +76,13 @@ public class LevelTracker {
     // store values persistently
     public static final String PREFS_NAME = "LevelTrackerValues";
 
-    SharedPreferences settings;
-
     private SharedPreferences sharedPrefs(){
         return activity.getSharedPreferences(PREFS_NAME, 0);
     }
 
-    private String levelsPref(){ return settings.getString("levels", ""); }
+    private String levelsPref(){ return sharedPrefs().getString("levels", ""); }
 
     public void restorePrefs() {
-        settings = sharedPrefs();
         for(String level : levelsPref().split(",")) {
             if(!level.equals(""))
                 levels.add(Level.extract(level));
@@ -92,17 +93,21 @@ public class LevelTracker {
         ArrayList<String> lvls = new ArrayList<String>();
         for(Level l : levels)
             lvls.add(l.compact());
-        return TextUtils.join(",", levels);
+        return TextUtils.join(",", lvls);
     }
 
     public void storeFields(){
-        SharedPreferences.Editor editor = settings.edit();
+        SharedPreferences.Editor editor = sharedPrefs().edit();
         editor.putString("levels", levelsStr());
         editor.commit();
     }
 
-    public void updateOutput(){
+    private void removeAllViews(){
         levelsList().removeAllViews();
+    }
+
+    public void updateOutput(){
+        removeAllViews();
         for(Level l : levels)
             displayLevel(l);
     }
@@ -117,9 +122,12 @@ public class LevelTracker {
         attrs_tv.setText(level.toString());
         remove.setBackgroundResource(R.drawable.minus);
 
-        level_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
-        attrs_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
+        level_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
+        attrs_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.8f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
+
+        level_tv.setPadding(10, 0, 0, 0);
+        remove.setPadding(0, 0, 10, 0);
 
         level_tv.setOnClickListener(new EditLevelListener(level));
         attrs_tv.setOnClickListener(new EditLevelListener(level));
@@ -159,6 +167,7 @@ public class LevelTracker {
         public void onClick(View v) {
             levels.remove(level_to_remove);
             levelsList().removeView(level_view_to_remove);
+            storeFields();
         }
     }
 }

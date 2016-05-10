@@ -26,7 +26,7 @@ public class GemsDialog {
     }
 
     private Spinner engravingTypeInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.gemEngravingTypeInput);
+        return (Spinner) item_dialog.findViewById(R.id.gemEngravingTypeInput);
     }
 
     private String engravingType(){
@@ -51,7 +51,7 @@ public class GemsDialog {
     }
 
     private Spinner streakColorInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.gemStreakColorInput);
+        return (Spinner) item_dialog.findViewById(R.id.gemStreakColorInput);
     }
 
     private String streakColor(){
@@ -73,6 +73,11 @@ public class GemsDialog {
 
     private void setStreakColor(String effect){
         streakColorInput().setSelection(streakColorIndex(effect));
+    }
+
+    public void resetDialog(){
+        engravingTypeInput().setSelected(false);
+        streakColorInput().setSelected(false);
     }
 
     ///

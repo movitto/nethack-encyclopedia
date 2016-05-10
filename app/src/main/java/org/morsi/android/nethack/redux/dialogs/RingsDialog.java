@@ -26,7 +26,7 @@ public class RingsDialog {
     }
 
     private Spinner sinkEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.ringSinkEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.ringSinkEffectInput);
     }
 
     private String sinkEffect(){
@@ -51,7 +51,7 @@ public class RingsDialog {
     }
 
     private Spinner wearEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.ringWearEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.ringWearEffectInput);
     }
 
     private String wearEffect(){
@@ -92,6 +92,11 @@ public class RingsDialog {
     public void inputFromItem(Ring ring){
         setSinkEffect(ring.sink_effect);
         setWearEffect(ring.wear_effect);
+    }
+
+    public void resetDialog(){
+        sinkEffectInput().setSelected(false);
+        wearEffectInput().setSelected(false);
     }
 
     ///

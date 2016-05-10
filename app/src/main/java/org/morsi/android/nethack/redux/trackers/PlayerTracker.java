@@ -21,19 +21,26 @@ public class PlayerTracker {
 
     public void onCreate() {
         restorePrefs();
+        updateOutput();
     }
 
     public void newTrackerPopup(){
         activity.showDialog(AndroidMenu.DIALOG_PLAYER_ID);
     }
 
-    public void reset(){
+    private void resetFields(){
         strength     = 0;
         dexterity    = 0;
         constitution = 0;
         intelligence = 0;
         wisdom       = 0;
         charisma     = 0;
+    }
+
+    public void reset(){
+        resetFields();
+        storeFields();
+        updateOutput();
     }
 
     ///
@@ -67,26 +74,23 @@ public class PlayerTracker {
     // store values persistently
     public static final String PREFS_NAME = "PlayerTrackerValues";
 
-    SharedPreferences settings;
-
     private SharedPreferences sharedPrefs(){
         return activity.getSharedPreferences(PREFS_NAME, 0);
     }
 
-    private int strengthPref(){ return settings.getInt("strength", 0); }
+    private int strengthPref(){ return sharedPrefs().getInt("strength", 0); }
 
-    private int dexterityPref(){ return settings.getInt("dexterity", 0); }
+    private int dexterityPref(){ return sharedPrefs().getInt("dexterity", 0); }
 
-    private int constitutionPref(){ return settings.getInt("constitution", 0); }
+    private int constitutionPref(){ return sharedPrefs().getInt("constitution", 0); }
 
-    private int intelligencePref(){ return settings.getInt("intelligence", 0); }
+    private int intelligencePref(){ return sharedPrefs().getInt("intelligence", 0); }
 
-    private int wisdomPref(){ return settings.getInt("wisdom", 0); }
+    private int wisdomPref(){ return sharedPrefs().getInt("wisdom", 0); }
 
-    private int charismaPref(){ return settings.getInt("charisma", 0); }
+    private int charismaPref(){ return sharedPrefs().getInt("charisma", 0); }
 
     public void restorePrefs(){
-        settings     = sharedPrefs();
         strength     = strengthPref();
         dexterity    = dexterityPref();
         constitution = constitutionPref();
@@ -96,7 +100,7 @@ public class PlayerTracker {
     }
 
     public void storeFields(){
-        SharedPreferences.Editor editor = settings.edit();
+        SharedPreferences.Editor editor = sharedPrefs().edit();
         editor.putInt("strength",      strength);
         editor.putInt("dexterity",     dexterity);
         editor.putInt("constitution ", constitution);

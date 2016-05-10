@@ -26,7 +26,7 @@ public class WandsDialog {
     }
 
     private Spinner engraveEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.wandEngraveEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.wandEngraveEffectInput);
     }
 
     private String engraveEffect(){
@@ -51,7 +51,7 @@ public class WandsDialog {
     }
 
     private Spinner zapEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.wandZapEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.wandZapEffectInput);
     }
 
     private String zapEffect(){
@@ -73,6 +73,11 @@ public class WandsDialog {
 
     private void setZapEffect(String effect){
         zapEffectInput().setSelection(zapEffectIndex(effect));
+    }
+
+    public void resetDialog(){
+        engraveEffectInput().setSelected(false);
+        zapEffectInput().setSelected(false);
     }
 
     ///

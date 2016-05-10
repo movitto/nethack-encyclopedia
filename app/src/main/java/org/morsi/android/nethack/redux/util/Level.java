@@ -95,7 +95,7 @@ public class Level {
 
         if(stash)                s.add("stash");
 
-        if(general_shop)         s.add("store");
+        if(general_shop)         s.add("general store");
         if(armor_shop)           s.add("armor store");
         if(bookstore)            s.add("bookstore");
         if(liquor_shop)          s.add("liquor store");

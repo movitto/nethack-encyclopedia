@@ -27,7 +27,7 @@ public class Potion extends Item {
         columns.add("Potion");
         columns.add("Cost");
         columns.add("Weight");
-        columns.add("Probability");
+        columns.add("Prob");
         columns.add("Appearance");
         return columns;
     }

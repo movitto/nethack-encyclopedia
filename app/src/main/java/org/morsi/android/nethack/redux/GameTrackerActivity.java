@@ -50,8 +50,12 @@ public class GameTrackerActivity extends Activity {
         return AndroidMenu.onCreateDialog(this, id);
     }
 
-    private Spinner spinner() {
+    private Spinner gameTrackerSpinner() {
         return (Spinner) findViewById(R.id.game_tracker_spinner);
+    }
+
+    private String selectedTracker(){
+        return gameTrackerSpinner().getSelectedItem().toString();
     }
 
     private ArrayAdapter<CharSequence> spinnerAdapter() {
@@ -67,7 +71,7 @@ public class GameTrackerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_tracker);
 
-        spinner().setAdapter(spinnerAdapter());
+        gameTrackerSpinner().setAdapter(spinnerAdapter());
         handleSpinnerSelection();
 
         player_tracker = new PlayerTracker(this);
@@ -88,13 +92,13 @@ public class GameTrackerActivity extends Activity {
     }
 
     public void onClickNewTrackerButton(View target) {
-        if (playerSelected(this))
+        if (playerSelected())
             player_tracker.newTrackerPopup();
-        else if (levelSelected(this))
+        else if (levelSelected())
             level_tracker.newTrackerPopup();
-        else if (itemSelected(this))
+        else if (itemSelected())
             item_tracker.newTrackerPopup();
-        else if (notesSelected(this))
+        else if (notesSelected())
             note_tracker.newTrackerPopup();
     }
 
@@ -104,64 +108,47 @@ public class GameTrackerActivity extends Activity {
 
     ///
 
-    String selected;
-
-    private void setSelected(AdapterView<?> parent, int pos) {
-        selected = parent.getItemAtPosition(pos).toString();
+    private boolean playerSelected() {
+        return selectedTracker().equals(getString(R.string.player_tracker));
     }
 
-    private boolean playerSelected(Context context) {
-        return selected.equals(context.getString(R.string.player_tracker));
+    private boolean levelSelected() {
+        return selectedTracker().equals(getString(R.string.level_tracker));
     }
 
-    private boolean levelSelected(Context context) {
-        return selected.equals(context.getString(R.string.level_tracker));
+    private boolean itemSelected() {
+        return selectedTracker().equals(getString(R.string.item_tracker));
     }
 
-    private boolean itemSelected(Context context) {
-        return selected.equals(context.getString(R.string.item_tracker));
+    private boolean notesSelected() {
+        return selectedTracker().equals(getString(R.string.notes_tracker));
     }
 
-    private boolean notesSelected(Context context) {
-        return selected.equals(context.getString(R.string.notes_tracker));
+    private void hideAll(){
+        UI.hideView(this, R.id.notes_tracker);
+        UI.hideView(this, R.id.player_tracker);
+        UI.hideView(this, R.id.level_tracker);
+        UI.hideView(this, R.id.item_tracker);
     }
 
     private void handleSpinnerSelection() {
         final Activity activity = this;
-        spinner().setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                setSelected(parent, pos);
-                boolean player_selected = playerSelected(view.getContext());
-                boolean level_selected = playerSelected(view.getContext());
-                boolean item_selected = playerSelected(view.getContext());
-                boolean notes_selected = playerSelected(view.getContext());
 
-                if (player_selected) {
+        gameTrackerSpinner().setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                hideAll();
+
+                if (playerSelected())
                     UI.showView(activity, R.id.player_tracker);
-                    UI.hideView(activity, R.id.level_tracker);
-                    UI.hideView(activity, R.id.item_tracker);
-                    UI.hideView(activity, R.id.notes_tracker);
-                } else if (level_selected) {
+
+                else if (levelSelected())
                     UI.showView(activity, R.id.level_tracker);
-                    UI.hideView(activity, R.id.player_tracker);
-                    UI.hideView(activity, R.id.item_tracker);
-                    UI.hideView(activity, R.id.notes_tracker);
-                } else if (item_selected) {
+
+                else if (itemSelected())
                     UI.showView(activity, R.id.item_tracker);
-                    UI.hideView(activity, R.id.player_tracker);
-                    UI.hideView(activity, R.id.level_tracker);
-                    UI.hideView(activity, R.id.notes_tracker);
-                } else if (notes_selected) {
+
+                else if (notesSelected())
                     UI.showView(activity, R.id.notes_tracker);
-                    UI.hideView(activity, R.id.player_tracker);
-                    UI.hideView(activity, R.id.level_tracker);
-                    UI.hideView(activity, R.id.item_tracker);
-                } else {
-                    UI.hideView(activity, R.id.notes_tracker);
-                    UI.hideView(activity, R.id.player_tracker);
-                    UI.hideView(activity, R.id.level_tracker);
-                    UI.hideView(activity, R.id.item_tracker);
-                }
             }
 
             public void onNothingSelected(AdapterView<?> parent) {

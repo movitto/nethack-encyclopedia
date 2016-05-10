@@ -2,7 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/levels_list">
+    android:orientation="vertical">
+
+    <!-- XXX handle to layout returns null when id is
+     applied to top level here, use nested layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/levels_list"
+        android:orientation="vertical" />
 
 </LinearLayout>

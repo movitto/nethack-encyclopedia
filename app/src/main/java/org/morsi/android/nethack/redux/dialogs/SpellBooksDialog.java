@@ -27,6 +27,10 @@ public class SpellBooksDialog {
         return adapter;
     }
 
+    public void resetDialog(){
+
+    }
+
     ///
 
     public void setListeners(ItemDialog.InputChangedListener listener){

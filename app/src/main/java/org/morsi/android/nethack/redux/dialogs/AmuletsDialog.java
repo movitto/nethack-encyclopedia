@@ -26,7 +26,7 @@ public class AmuletsDialog {
     }
 
     private Spinner wearEffectInput(){
-        return (Spinner) item_dialog.dialog.findViewById(R.id.amuletWearEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.amuletWearEffectInput);
     }
 
     private String wearEffect(){
@@ -48,6 +48,10 @@ public class AmuletsDialog {
 
     private void setWearEffect(String effect){
         wearEffectInput().setSelection(wearEffectIndex(effect));
+    }
+
+    public void resetDialog(){
+        wearEffectInput().setSelected(false);
     }
 
     ///

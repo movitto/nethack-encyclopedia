@@ -51,7 +51,7 @@ public class QuickStatsActivity extends Activity {
     // Returns the current stat category selected in the statsSpinner
     private QuickStatCategory selectedCategory() {
         String selected = selectedQuickStat();
-        for (QuickStatCategory category : item_db.toStats())
+        for (QuickStatCategory category : categories)
             if (category.name.equals(selected))
                 return category;
         return null;
@@ -103,7 +103,7 @@ public class QuickStatsActivity extends Activity {
     }
 
     // Item Database
-    Items item_db;
+    ArrayList<QuickStatCategory> categories;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -118,7 +118,7 @@ public class QuickStatsActivity extends Activity {
     }
 
     private void createItems(){
-        item_db = Items.fromXML(this);
+        categories = Items.fromXML(this).toStats();
     }
 
     private void initSpinner(){
@@ -156,8 +156,8 @@ public class QuickStatsActivity extends Activity {
     }
 
     private TableRow tableHeader(QuickStatCategory category){
-        List<String> columns   = category.column_names;
-        List<Double> weights    = category.column_weights;
+        List<String> columns = category.column_names;
+        List<Double> weights = category.column_weights;
 
         TableRow row = new TableRow(layout().getContext());
         for (int i = 0; i < columns.size(); ++i) {

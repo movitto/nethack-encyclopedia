@@ -26,7 +26,7 @@ public class ScrollsDialog {
     }
 
     private Spinner readEffectInput() {
-        return (Spinner) item_dialog.dialog.findViewById(R.id.scrollReadEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.scrollReadEffectInput);
     }
 
     private String readEffect() {
@@ -51,7 +51,7 @@ public class ScrollsDialog {
     }
 
     private Spinner dropEffectInput() {
-        return (Spinner) item_dialog.dialog.findViewById(R.id.scrollDropEffectInput);
+        return (Spinner) item_dialog.findViewById(R.id.scrollDropEffectInput);
     }
 
     private String dropEffect() {
@@ -90,6 +90,11 @@ public class ScrollsDialog {
     public void inputFromItem(Scroll scroll){
         setReadEffect(scroll.read_effect);
         setDropEffect(scroll.drop_effect);
+    }
+
+    public void resetDialog(){
+        readEffectInput().setSelected(false);
+        dropEffectInput().setSelected(false);
     }
 
     ///

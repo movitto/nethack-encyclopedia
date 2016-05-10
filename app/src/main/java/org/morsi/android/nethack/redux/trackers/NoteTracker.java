@@ -1,6 +1,5 @@
 package org.morsi.android.nethack.redux.trackers;
 
-import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
@@ -12,14 +11,10 @@ import org.morsi.android.nethack.redux.GameTrackerActivity;
 import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.util.AndroidMenu;
 import org.morsi.android.nethack.redux.util.ObjectSerializer;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by mmorsi on 4/30/16.
- */
 public class NoteTracker {
     HashMap<String, String> notes;
 
@@ -27,11 +22,12 @@ public class NoteTracker {
 
     public NoteTracker(GameTrackerActivity activity){
         this.activity = activity;
-        reset();
+        notes = new HashMap<String, String>();
     }
 
     public void onCreate() {
         restorePrefs();
+        updateOutput();
     }
 
     public void newTrackerPopup(){
@@ -39,7 +35,9 @@ public class NoteTracker {
     }
 
     public void reset(){
-        notes = new HashMap<String, String>();
+        notes.clear();
+        storeFields();
+        removeAllViews();
     }
 
     public void addNote(String label, String note){
@@ -57,18 +55,19 @@ public class NoteTracker {
     // store values persistently
     public static final String PREFS_NAME = "NotesTrackerValues";
 
-    SharedPreferences settings;
-
     private SharedPreferences sharedPrefs(){
         return activity.getSharedPreferences(PREFS_NAME, 0);
     }
 
-    private ArrayList<String> labelsPref(){ return (ArrayList<String>)ObjectSerializer.deserialize(settings.getString("labels", ObjectSerializer.serialize(new ArrayList<String>()))); }
+    private ArrayList<String> labelsPref(){
+        return (ArrayList<String>)ObjectSerializer.deserialize(sharedPrefs().getString("labels", ObjectSerializer.serialize(new ArrayList<String>())));
+    }
 
-    private ArrayList<String> valuesPref(){ return (ArrayList<String>)ObjectSerializer.deserialize(settings.getString("values", ObjectSerializer.serialize(new ArrayList<String>()))); }
+    private ArrayList<String> valuesPref(){
+        return (ArrayList<String>)ObjectSerializer.deserialize(sharedPrefs().getString("values", ObjectSerializer.serialize(new ArrayList<String>())));
+    }
 
     public void restorePrefs() {
-        settings = sharedPrefs();
         ArrayList<String> labels = labelsPref();
         ArrayList<String> values = valuesPref();
         for(int i = 0; i < labels.size(); ++i)
@@ -76,14 +75,18 @@ public class NoteTracker {
     }
 
     public void storeFields() {
-        SharedPreferences.Editor editor = settings.edit();
+        SharedPreferences.Editor editor = sharedPrefs().edit();
         editor.putString("labels", ObjectSerializer.serialize(new ArrayList<String>(notes.keySet())));
         editor.putString("values", ObjectSerializer.serialize(new ArrayList<String>(notes.values())));
         editor.commit();
     }
 
-    public void updateOutput() {
+    private void removeAllViews(){
         notesList().removeAllViews();
+    }
+
+    public void updateOutput() {
+        removeAllViews();
         for(String label : notes.keySet())
             displayNote(label, notes.get(label));
     }
@@ -99,10 +102,13 @@ public class NoteTracker {
         remove.setBackgroundResource(R.drawable.minus);
 
         label_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
-        value_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.5f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
+        value_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.7f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
 
-        remove.setOnClickListener(new RemoveNoteListener(layout));
+        label_tv.setPadding(10, 0, 0, 0);
+        remove.setPadding(0, 0, 10, 0);
+
+        remove.setOnClickListener(new RemoveNoteListener(label, layout));
 
         layout.addView(label_tv);
         layout.addView(value_tv);
@@ -112,14 +118,18 @@ public class NoteTracker {
     }
 
     class RemoveNoteListener implements Button.OnClickListener {
-        LinearLayout note_to_remove;
+        String note_to_remove;
+        LinearLayout note_view_to_remove;
 
-        RemoveNoteListener(LinearLayout note) {
+        RemoveNoteListener(String note, LinearLayout view) {
             note_to_remove = note;
+            note_view_to_remove = view;
         }
 
         public void onClick(View v) {
-            notesList().removeView(note_to_remove);
+            notes.remove(note_to_remove);
+            notesList().removeView(note_view_to_remove);
+            storeFields();
         }
     }
 }

@@ -27,10 +27,8 @@ import org.morsi.android.nethack.redux.trackers.ItemTracker;
 import org.morsi.android.nethack.redux.util.Input;
 import org.morsi.android.nethack.redux.util.UI;
 
-public class ItemDialog {
+public class ItemDialog extends Dialog{
     Activity activity;
-
-    Dialog dialog;
 
     PotionsDialog    potions_dialog;
     ScrollsDialog    scrolls_dialog;
@@ -49,11 +47,11 @@ public class ItemDialog {
     }
 
     private Button closeButton() {
-        return (Button) dialog.findViewById(R.id.item_close);
+        return (Button) findViewById(R.id.item_close);
     }
 
     private Spinner itemTypeInput() {
-        return (Spinner) dialog.findViewById(R.id.itemTypeInput);
+        return (Spinner) findViewById(R.id.itemTypeInput);
     }
 
     private ArrayAdapter<CharSequence> itemTypeAdapter() {
@@ -108,7 +106,7 @@ public class ItemDialog {
     }
 
     private EditText itemNameOutput() {
-        return (EditText) dialog.findViewById(R.id.itemNameOutput);
+        return (EditText) findViewById(R.id.itemNameOutput);
     }
 
     private void setItemName(String name) {
@@ -116,7 +114,7 @@ public class ItemDialog {
     }
 
     private Spinner appearanceInput() {
-        return (Spinner) dialog.findViewById(R.id.itemAppearanceInput);
+        return (Spinner) findViewById(R.id.itemAppearanceInput);
     }
 
     public String itemAppearance() {
@@ -153,7 +151,7 @@ public class ItemDialog {
     }
 
     private EditText buyPriceInput() {
-        return (EditText) dialog.findViewById(R.id.itemBuyInput);
+        return (EditText) findViewById(R.id.itemBuyInput);
     }
 
     private String buyPriceString() {
@@ -167,7 +165,7 @@ public class ItemDialog {
     }
 
     private EditText sellPriceInput() {
-        return (EditText) dialog.findViewById(R.id.itemSellInput);
+        return (EditText) findViewById(R.id.itemSellInput);
     }
 
     private String sellPriceString() {
@@ -181,20 +179,48 @@ public class ItemDialog {
     }
 
     private TextView itemTypeLabel() {
-        return (TextView) dialog.findViewById(R.id.itemTypeLabel);
+        return (TextView) findViewById(R.id.itemTypeLabel);
     }
 
     private void setItemTypeLabel(String label) {
         itemTypeLabel().setText(label);
     }
 
-    // output: specified attrs, possible identifications
+    private void resetDialog(){
+        itemTypeInput().setSelected(false);
+        buyPriceInput().setText("");
+        sellPriceInput().setText("");
+        itemTypeLabel().setText("");
+        itemNameOutput().setText("");
 
-    private ItemDialog(Activity activity) {
+        potions_dialog.resetDialog();
+        scrolls_dialog.resetDialog();
+        wands_dialog.resetDialog();
+        spellbooks_dialog.resetDialog();
+        rings_dialog.resetDialog();
+        amulets_dialog.resetDialog();
+        gems_dialog.resetDialog();
+
+        itemTypeInput().requestFocus();
+    }
+
+    private void hide_all(){
+        UI.hideView(activity, R.id.potions_dialog);
+        UI.hideView(activity, R.id.scrolls_dialog);
+        UI.hideView(activity, R.id.wands_dialog);
+        UI.hideView(activity, R.id.spellbooks_dialog);
+        UI.hideView(activity, R.id.rings_dialog);
+        UI.hideView(activity, R.id.amulets_dialog);
+        UI.hideView(activity, R.id.gems_dialog);
+    }
+
+    ///
+
+    public ItemDialog(Activity activity) {
+        super(activity);
         this.activity = activity;
-        dialog = new Dialog(activity);
-        dialog.setContentView(R.layout.item_dialog);
-        dialog.setTitle("Item Tracker");
+        setContentView(R.layout.item_dialog);
+        setTitle("Item Tracker");
 
         potions_dialog = new PotionsDialog(this);
         scrolls_dialog = new ScrollsDialog(this);
@@ -204,7 +230,7 @@ public class ItemDialog {
         amulets_dialog = new AmuletsDialog(this);
         gems_dialog = new GemsDialog(this);
 
-        dialog_listener = new ItemDialogListener(dialog);
+        dialog_listener = new ItemDialogListener(this);
         type_listener = new ItemTypeListener();
 
         // wire up close button
@@ -217,10 +243,6 @@ public class ItemDialog {
         if (item_tracker().editing_item != null)
             inputFromItem(item_tracker().editing_item);
 
-    }
-
-    public static Dialog create(Activity activity) {
-        return new ItemDialog(activity).dialog;
     }
 
     ///
@@ -293,20 +315,10 @@ public class ItemDialog {
 
         public void onClick(View v) {
             Item item = itemFromInput();
-            if(item != null)
-                item_tracker().addItem(itemFromInput());
+            if(item != null) item_tracker().addItem(itemFromInput());
+            resetDialog();
             super.onClick(v);
         }
-    }
-
-    private void hide_all(){
-        UI.hideView(activity, R.id.potions_dialog);
-        UI.hideView(activity, R.id.scrolls_dialog);
-        UI.hideView(activity, R.id.wands_dialog);
-        UI.hideView(activity, R.id.spellbooks_dialog);
-        UI.hideView(activity, R.id.rings_dialog);
-        UI.hideView(activity, R.id.amulets_dialog);
-        UI.hideView(activity, R.id.gems_dialog);
     }
 
     ItemTypeListener type_listener;

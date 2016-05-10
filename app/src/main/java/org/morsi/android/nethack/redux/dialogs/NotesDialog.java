@@ -3,18 +3,18 @@ package org.morsi.android.nethack.redux.dialogs;
 import android.app.Activity;
 import android.app.Dialog;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import org.morsi.android.nethack.redux.GameTrackerActivity;
 import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.trackers.NoteTracker;
 import org.morsi.android.nethack.redux.trackers.PlayerTracker;
 
-public class NotesDialog {
+public class NotesDialog extends Dialog{
     Activity activity;
-
-    Dialog dialog;
 
     GameTrackerActivity game_tracker(){
         return (GameTrackerActivity) activity;
@@ -25,31 +25,42 @@ public class NotesDialog {
     }
 
     private Button closeButton(){
-        return (Button) dialog.findViewById(R.id.notes_close);
+        return (Button) findViewById(R.id.notes_close);
     }
 
-    private EditText labelInput(){ return (EditText) dialog.findViewById(R.id.notesLabelInput); }
+    private EditText labelInput(){ return (EditText) findViewById(R.id.notesLabelInput); }
 
     private String labelValue(){ return labelInput().getText().toString(); }
 
-    private EditText valueInput(){ return (EditText) dialog.findViewById(R.id.notesValueInput); }
+    private EditText valueInput(){ return (EditText) findViewById(R.id.notesValueInput); }
 
     private String valueValue(){ return valueInput().getText().toString(); }
 
-    private NotesDialog(Activity activity){
-        this.activity = activity;
-        dialog = new Dialog(activity);
-        dialog.setContentView(R.layout.notes_dialog);
-        dialog.setTitle("Notes");
-
-        dialog_listener = new NotesDialogListener(dialog);
-
-        // wire up close button
-        closeButton().setOnClickListener(new DialogListener(dialog));
+    private void resetDialog(){
+        labelInput().setText("");
+        valueInput().setText("");
+        labelInput().requestFocus();
     }
 
-    public static Dialog create(Activity activity) {
-        return new NotesDialog(activity).dialog;
+    ///
+
+    public NotesDialog(Activity activity){
+        super(activity);
+        this.activity = activity;
+
+        // create new dialog
+        setContentView(R.layout.notes_dialog);
+        setTitle("Notes");
+
+        // wire up close button
+        dialog_listener = new NotesDialogListener(this);
+        closeButton().setOnClickListener(dialog_listener);
+
+        // expand dialog
+        // XXX fill_parent param in layout isn't being applied coorectly
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.width = LinearLayout.LayoutParams.FILL_PARENT;
+        getWindow().setAttributes(params);
     }
 
     NotesDialogListener dialog_listener;
@@ -60,7 +71,15 @@ public class NotesDialog {
         }
 
         public void onClick (View v){
-            note_tracker().addNote(labelValue(), valueValue());
+            if(!labelValue().equals("") && !valueValue().equals("")) {
+                note_tracker().addNote(labelValue(), valueValue());
+                note_tracker().storeFields();
+                note_tracker().updateOutput();
+
+            }
+
+            resetDialog();
+
             super.onClick(v);
         }
     }

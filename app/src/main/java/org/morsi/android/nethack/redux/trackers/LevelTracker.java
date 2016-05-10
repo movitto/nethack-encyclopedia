@@ -1,7 +1,9 @@
 package org.morsi.android.nethack.redux.trackers;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.text.TextUtils;
+import android.text.style.TypefaceSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -121,6 +123,8 @@ public class LevelTracker {
         level_tv.setText(level.id());
         attrs_tv.setText(level.toString());
         remove.setBackgroundResource(R.drawable.minus);
+
+        level_tv.setTypeface(null, Typeface.BOLD);
 
         level_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
         attrs_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.8f));

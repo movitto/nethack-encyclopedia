@@ -108,9 +108,9 @@ public class CalculatorActivity extends Activity {
     }
 
     private void hideAll(){
-        UI.hideView(this, R.id.armor_calculator);
-        UI.hideView(this, R.id.damage_calculator);
-        UI.hideView(this, R.id.spells_calculator);
+        UI.hideView(findViewById(R.id.armor_calculator));
+        UI.hideView(findViewById(R.id.damage_calculator));
+        UI.hideView(findViewById(R.id.spells_calculator));
     }
 
     private void handleSpinnerSelection(){
@@ -122,13 +122,13 @@ public class CalculatorActivity extends Activity {
                 hideAll();
 
                 if(armorSelected()){
-                    UI.showView(activity, R.id.armor_calculator);
+                    UI.showView(findViewById(R.id.armor_calculator));
 
                 }else if(damageSelected()){
-                    UI.showView(activity, R.id.damage_calculator);
+                    UI.showView(findViewById(R.id.damage_calculator));
 
                 }else if(spellsSelected()){
-                    UI.showView(activity, R.id.spells_calculator);
+                    UI.showView(findViewById(R.id.spells_calculator));
                 }
             }
 

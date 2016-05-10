@@ -125,10 +125,10 @@ public class GameTrackerActivity extends Activity {
     }
 
     private void hideAll(){
-        UI.hideView(this, R.id.notes_tracker);
-        UI.hideView(this, R.id.player_tracker);
-        UI.hideView(this, R.id.level_tracker);
-        UI.hideView(this, R.id.item_tracker);
+        UI.hideView(findViewById(R.id.notes_tracker));
+        UI.hideView(findViewById(R.id.player_tracker));
+        UI.hideView(findViewById(R.id.level_tracker));
+        UI.hideView(findViewById(R.id.item_tracker));
     }
 
     private void handleSpinnerSelection() {
@@ -139,16 +139,16 @@ public class GameTrackerActivity extends Activity {
                 hideAll();
 
                 if (playerSelected())
-                    UI.showView(activity, R.id.player_tracker);
+                    UI.showView(findViewById(R.id.player_tracker));
 
                 else if (levelSelected())
-                    UI.showView(activity, R.id.level_tracker);
+                    UI.showView(findViewById(R.id.level_tracker));
 
                 else if (itemSelected())
-                    UI.showView(activity, R.id.item_tracker);
+                    UI.showView(findViewById(R.id.item_tracker));
 
                 else if (notesSelected())
-                    UI.showView(activity, R.id.notes_tracker);
+                    UI.showView(findViewById(R.id.notes_tracker));
             }
 
             public void onNothingSelected(AdapterView<?> parent) {

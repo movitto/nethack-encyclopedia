@@ -31,6 +31,10 @@ public class SpellBooksDialog {
 
     }
 
+    public boolean filterSpecified() {
+        return item_dialog.filterSpecified();
+    }
+
     ///
 
     public void setListeners(ItemDialog.InputChangedListener listener){
@@ -46,11 +50,18 @@ public class SpellBooksDialog {
 
     ///
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(SpellBook.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(SpellBook.type()));
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
 
         return TextUtils.join(", ", items.names());
     }

@@ -50,6 +50,10 @@ public class WandsDialog {
         engraveEffectInput().setSelection(engraveEffectIndex(effect));
     }
 
+    private boolean engraveSpecified(){
+        return engraveEffectInput().isSelected();
+    }
+
     private Spinner zapEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.wandZapEffectInput);
     }
@@ -75,9 +79,17 @@ public class WandsDialog {
         zapEffectInput().setSelection(zapEffectIndex(effect));
     }
 
+    private boolean zapSpecified(){
+        return zapEffectInput().isSelected();
+    }
+
     public void resetDialog(){
         engraveEffectInput().setSelected(false);
         zapEffectInput().setSelected(false);
+    }
+
+    public boolean filterSpecified(){
+        return item_dialog.filterSpecified() || engraveSpecified() || zapSpecified();
     }
 
     ///
@@ -109,13 +121,24 @@ public class WandsDialog {
     ///
 
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(Wand.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new Wand.EngravingFilter(engraveEffect())).
-                filter(new Wand.ZapFilter(zapEffect()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Wand.type()));
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+
+        if(engraveSpecified())
+            items = items.filter(new Wand.EngravingFilter(engraveEffect()));
+
+        if(zapSpecified())
+            items = items.filter(new Wand.ZapFilter(zapEffect()));
 
         return TextUtils.join(", ", items.names());
     }

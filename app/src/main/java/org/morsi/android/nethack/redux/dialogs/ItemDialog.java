@@ -105,6 +105,8 @@ public class ItemDialog extends Dialog{
         return itemType().equals("Gem");
     }
 
+    private boolean itemTypeSpecified(){ return itemTypeInput().isSelected(); }
+
     private EditText itemNameOutput() {
         return (EditText) findViewById(R.id.itemNameOutput);
     }
@@ -150,6 +152,10 @@ public class ItemDialog extends Dialog{
         appearanceInput().setSelection(itemAppearanceIndex(appearance));
     }
 
+    public boolean appearanceSpecified(){
+        return appearanceInput().isSelected();
+    }
+
     private EditText buyPriceInput() {
         return (EditText) findViewById(R.id.itemBuyInput);
     }
@@ -162,6 +168,10 @@ public class ItemDialog extends Dialog{
 
     private void setBuyPrice(int buyPrice){
         buyPriceInput().setText(Integer.toString(buyPrice));
+    }
+
+    public boolean buyPriceSpecified(){
+        return buyPriceString() != "";
     }
 
     private EditText sellPriceInput() {
@@ -178,12 +188,20 @@ public class ItemDialog extends Dialog{
         sellPriceInput().setText(Integer.toString(sellPrice));
     }
 
+    public boolean sellPriceSpecified(){
+        return sellPriceString() != "";
+    }
+
     private TextView itemTypeLabel() {
         return (TextView) findViewById(R.id.itemTypeLabel);
     }
 
     private void setItemTypeLabel(String label) {
         itemTypeLabel().setText(label);
+    }
+
+    public boolean filterSpecified(){
+        return itemTypeSpecified() && (appearanceSpecified() || sellPriceSpecified() || buyPriceSpecified());
     }
 
     private void resetDialog(){
@@ -205,13 +223,13 @@ public class ItemDialog extends Dialog{
     }
 
     private void hide_all(){
-        UI.hideView(activity, R.id.potions_dialog);
-        UI.hideView(activity, R.id.scrolls_dialog);
-        UI.hideView(activity, R.id.wands_dialog);
-        UI.hideView(activity, R.id.spellbooks_dialog);
-        UI.hideView(activity, R.id.rings_dialog);
-        UI.hideView(activity, R.id.amulets_dialog);
-        UI.hideView(activity, R.id.gems_dialog);
+        UI.hideView(findViewById(R.id.potions_dialog));
+        UI.hideView(findViewById(R.id.scrolls_dialog));
+        UI.hideView(findViewById(R.id.wands_dialog));
+        UI.hideView(findViewById(R.id.spellbooks_dialog));
+        UI.hideView(findViewById(R.id.rings_dialog));
+        UI.hideView(findViewById( R.id.amulets_dialog));
+        UI.hideView(findViewById(R.id.gems_dialog));
     }
 
     ///
@@ -329,35 +347,35 @@ public class ItemDialog extends Dialog{
 
             if (potionsSelected()) {
                 appearanceInput().setAdapter(potions_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.potions_dialog);
+                UI.showView(findViewById(R.id.potions_dialog));
 
             } else if (scrollsSelected()) {
                 appearanceInput().setAdapter(scrolls_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.scrolls_dialog);
+                UI.showView(findViewById(R.id.scrolls_dialog));
 
 
             } else if (wandSelected()) {
                 appearanceInput().setAdapter(wands_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.wands_dialog);
+                UI.showView(findViewById(R.id.wands_dialog));
 
 
             } else if (spellbookSelected()) {
                 appearanceInput().setAdapter(spellbooks_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.spellbooks_dialog);
+                UI.showView(findViewById(R.id.spellbooks_dialog));
 
 
             } else if (ringsSelected()) {
                 appearanceInput().setAdapter(rings_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.rings_dialog);
+                UI.showView(findViewById(R.id.rings_dialog));
 
 
             } else if (amuletsSelected()) {
                 appearanceInput().setAdapter(amulets_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.amulets_dialog);
+                UI.showView(findViewById(R.id.amulets_dialog));
 
             } else if (gemSelected()) {
                 appearanceInput().setAdapter(gems_dialog.itemAppearanceAdapter());
-                UI.showView(activity, R.id.gems_dialog);
+                UI.showView(findViewById(R.id.gems_dialog));
             }
         }
 
@@ -371,7 +389,7 @@ public class ItemDialog extends Dialog{
 
     private void setListeners() {
         event_listener = new InputChangedListener();
-        itemTypeInput().setOnItemSelectedListener(event_listener);
+        //itemTypeInput().setOnItemSelectedListener(event_listener);
         appearanceInput().setOnItemSelectedListener(event_listener);
         buyPriceInput().addTextChangedListener(event_listener);
         sellPriceInput().addTextChangedListener(event_listener);

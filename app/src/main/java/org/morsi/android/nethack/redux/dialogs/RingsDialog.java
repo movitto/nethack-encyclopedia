@@ -50,6 +50,10 @@ public class RingsDialog {
         sinkEffectInput().setSelection(sinkEffectIndex(effect));
     }
 
+    private boolean sinkSpecified(){
+        return sinkEffectInput().isSelected();
+    }
+
     private Spinner wearEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.ringWearEffectInput);
     }
@@ -73,6 +77,10 @@ public class RingsDialog {
 
     private void setWearEffect(String effect){
         wearEffectInput().setSelection(wearEffectIndex(effect));
+    }
+
+    private boolean wearSpecified(){
+        return wearEffectInput().isSelected();
     }
 
     ///
@@ -99,6 +107,10 @@ public class RingsDialog {
         wearEffectInput().setSelected(false);
     }
 
+    public boolean filterSpecified(){
+        return item_dialog.filterSpecified() || sinkSpecified() || wearSpecified();
+    }
+
     ///
 
 
@@ -110,13 +122,25 @@ public class RingsDialog {
     ///
 
     public String reidentify(){
-        Items items = item_dialog.item_tracker().item_db.
-                filter(new Item.ItemTypeFilter(Ring.type())).
-                filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance())).
-                filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice())).
-                filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice())).
-                filter(new Ring.WearFilter(wearEffect())).
-                filter(new Ring.SinkFilter(sinkEffect()));
+        if(!filterSpecified()) return "";
+
+        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Ring.type()));
+
+
+        if(item_dialog.appearanceSpecified())
+            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+
+        if(item_dialog.buyPriceSpecified())
+            items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
+
+        if(item_dialog.sellPriceSpecified())
+            items = items.filter(new Item.ItemSellPriceFilter(item_dialog.sellPrice()));
+
+        if(wearSpecified())
+            items = items.filter(new Ring.WearFilter(wearEffect()));
+
+        if(sinkSpecified())
+            items = items.filter(new Ring.SinkFilter(sinkEffect()));
 
         return TextUtils.join(", ", items.names());
     }

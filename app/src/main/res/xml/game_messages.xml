@@ -1,22 +1,1517 @@
 <?xml version="1.0" encoding="utf-8"?>
 <messages>
+    <!--
+      *** potions
+      -->
+
     <message>
-        <game>first test message</game>
-        <meaning>ftm</meaning>
+        <game>This tastes sour</game>
+        <meaning>Potion of Acid</meaning>
     </message>
 
     <message>
-        <game>second test message</game>
-        <meaning>stm</meaning>
+        <game>This tastes tangy</game>
+        <meaning>Potion of Acid</meaning>
     </message>
 
     <message>
-        <game>first foo message</game>
-        <meaning>ffm</meaning>
+        <game>This burns a little!</game>
+        <meaning>Blessed Potion of Acid</meaning>
     </message>
 
     <message>
-        <game>second foo message</game>
-        <meaning>sfm</meaning>
+        <game>This burns like acid!</game>
+        <meaning>Uncursed Potion of Acid</meaning>
+    </message>
+
+    <message>
+        <game>This burns a lot!</game>
+        <meaning>Cursed Potion of Acid</meaning>
+    </message>
+
+    <message>
+        <game>[monster] shrieks in pain!</game>
+        <meaning>Potion of Acid</meaning>
+    </message>
+
+    <message>
+        <game>[monster] writhes in pain!</game>
+        <meaning>Potion of Acid</meaning>
+    </message>
+
+    <message>
+        <game>Ooph! This tastes like liquid fire</game>
+        <meaning>Potion of Booze</meaning>
+    </message>
+
+    <message>
+        <game>Ooph! This tastes like dandelion wine!</game>
+        <meaning>Potion of Booze</meaning>
+    </message>
+
+    <message>
+        <game>Ooph! This tastes like watered down liquid fire!</game>
+        <meaning>Potion of Booze (diluted)</meaning>
+    </message>
+
+    <message>
+        <game>Ooph! This tastes like watered down dandelion wine!</game>
+        <meaning>Potion of Booze (diluted)</meaning>
+    </message>
+
+    <message>
+        <game>You feel somewhat dizzy</game>
+        <meaning>Potion of Booze</meaning>
+    </message>
+
+    <message>
+        <game>You feel somewhat dizzy</game>
+        <meaning>Potion of Confusion</meaning>
+    </message>
+
+    <message>
+        <game>Huh, What? Where am I?</game>
+        <meaning>Potion of Confusion</meaning>
+    </message>
+
+    <message>
+        <game>What a trippy feeling!</game>
+        <meaning>Potion of Confusion</meaning>
+    </message>
+
+    <message>
+        <game>You feel self-knowledgeable...</game>
+        <meaning>Blessed or Uncursed Potion of Enlightenment</meaning>
+    </message>
+
+    <message>
+        <game>The feeling subsides.</game>
+        <meaning>Blessed or Uncursed Potion of Enlightenment</meaning>
+    </message>
+
+    <message>
+        <game>You have an uneasy feeling...</game>
+        <meaning>Cursed Potion of Enlightenment</meaning>
+    </message>
+
+    <message>
+        <game>You feel much better</game>
+        <meaning>Potion of Extra Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks much better</game>
+        <meaning>Potion of Extra Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks sound and hale again</game>
+        <meaning>Potion of Extra Healing</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like [fruit] juice</game>
+        <meaning>Potion of Fruit Juice</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like 10% real [fruit] juice all-natural beverage</game>
+        <meaning>Potion of Fruit Juice</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like reconstituted [fruit] juice</game>
+        <meaning>Potion of Fruit Juice (diluted)</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like 10% real reconstituted [fruit] juice all-natural beverage.</game>
+        <meaning>Potion of Fruit Juice (diluted)</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This tastes rotten</game>
+        <meaning>Cursed Potion of Fruit Juice</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This tastes overripe.</game>
+        <meaning>Cursed Potion of Fruit Juice</meaning>
+    </message>
+
+    <message>
+        <game>You feel completely healed</game>
+        <meaning>Potion of Full Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks completely healed.</game>
+        <meaning>Potion of Full Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks sound and hale again.</game>
+        <meaning>Potion of Full Healing</meaning>
+    </message>
+
+    <message>
+        <game>You feel strong!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You feel smart!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You feel wise!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You feel agile!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You feel tough!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You feel charismatic!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>Your cap constricts briefly, then relaxes again.</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>You're already as [statistic] as you can get</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>Ulch! That potion tasted foul!</game>
+        <meaning>Cursed Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks sound and hale again</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>Ulch! That potion smells terrible!</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>Your eyes sting</game>
+        <meaning>Potion of Gain Ability</meaning>
+    </message>
+
+    <message>
+        <game>Magical energies course through your body.</game>
+        <meaning>Potion of Gain Energ</meaning>
+    </message>
+
+    <message>
+        <game>You feel lackluster</game>
+        <meaning>Cursed Potion of Gain Energy</meaning>
+    </message>
+
+    <message>
+        <game>You feel more experienced</game>
+        <meaning>Potion of Gain Level</meaning>
+    </message>
+
+    <message>
+        <game>Welcome to experience level [number]</game>
+        <meaning>Potion of Gain Level</meaning>
+    </message>
+
+    <message>
+        <game>You rise up, through the [ceiling]</game>
+        <meaning>Cursed Potion of Gain Level</meaning>
+    </message>
+
+    <message>
+        <game>You have an uneasy feeling</game>
+        <meaning>Cursed Potion of Gain Level</meaning>
+    </message>
+
+    <message>
+        <game>Oh wow! Everything looks so cosmic!</game>
+        <meaning>Potion of Hallucination</meaning>
+    </message>
+
+    <message>
+        <game>Oh wow! Everything feels so cosmic!</game>
+        <meaning>Potion of Hallucination</meaning>
+    </message>
+
+    <message>
+        <game>You have a momentary vision.</game>
+        <meaning>Potion of Hallucination</meaning>
+    </message>
+
+    <message>
+        <game>You feel better.</game>
+        <meaning>Potion of Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks better.</game>
+        <meaning>Potion of Healing</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks sound and hale again</game>
+        <meaning>Potion of Healing</meaning>
+    </message>
+
+    <message>
+        <game>Gee! All of a sudden, you can't see yourself</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>Gee! All of a sudden, you can see right through yourself</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>Far out, man! You can't see yourself</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>Far out, man! You can see right through yourself</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>For some reason, you feel your presence is known.</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>[monster]'s body takes on a strange transparency</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>[monster]'s  body takes on a normal transparency</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>For some reason, [monster]'s  presence is known to you.</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>You feel aggravated at [monster]</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>Aggravated, you are jolted into full consciousness.</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>For an instant you couldn't see yourself!</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>For an instant you could see right through yourself!</game>
+        <meaning>Potion of Invisibility</meaning>
+    </message>
+
+    <message>
+        <game>You start to float in the air!</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>Up, up, and awaaaay!</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>You float up, out of the pit!</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>You float up, only your [leg] is still stuck</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>It feels as though you'd lost some weight</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>You gain control over your movements</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>You hit your [head] on the [ceiling]</game>
+        <meaning>Potion of Levitation</meaning>
+    </message>
+
+    <message>
+        <game>You feel lonely</game>
+        <meaning>Potion of Monster Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense the presence of monsters</game>
+        <meaning>Potion of Monster Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel threatened</game>
+        <meaning>Potion of Monster Detection</meaning>
+    </message>
+
+    <message>
+        <game>Monsters sense the presence of you</game>
+        <meaning>Potion of Monster Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel a lack of something</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense objects nearby</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense something nearby</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense the presence of objects</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense the presence of something</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense the absence of objects</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense the absence of something</game>
+        <meaning>Potion of Object Detection</meaning>
+    </message>
+
+    <message>
+        <game>Ahh, a refreshing drink</game>
+        <meaning>Potion of Oil</meaning>
+    </message>
+
+    <message>
+        <game>You burn your [face]</game>
+        <meaning>Potion of Oil</meaning>
+    </message>
+
+    <message>
+        <game>That was smooth</game>
+        <meaning>Potion of Oil</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like castor oil</game>
+        <meaning>Potion of Oil</meaning>
+    </message>
+
+    <message>
+        <game>You stiffen momentarily</game>
+        <meaning>Potion of Paralysis</meaning>
+    </message>
+
+    <message>
+        <game>You are motionlessly suspended</game>
+        <meaning>Potion of Paralysis</meaning>
+    </message>
+
+    <message>
+        <game>You are frozen in place</game>
+        <meaning>Potion of Paralysis</meaning>
+    </message>
+
+    <message>
+        <game>Your [feet] are frozen to the [floor]</game>
+        <meaning>Potion of Paralysis</meaning>
+    </message>
+
+    <message>
+        <game>Something seems to be holding you</game>
+        <meaning>Potion of Paralysis</meaning>
+    </message>
+
+    <message>
+        <game>You feel a little strange</game>
+        <meaning>Potion of Polymorph</meaning>
+    </message>
+
+    <message>
+        <game>You feel a little normal.</game>
+        <meaning>Potion of Polymorph</meaning>
+    </message>
+
+    <message>
+        <game>[monster] suddenly mutates</game>
+        <meaning>Potion of Polymorph</meaning>
+    </message>
+
+    <message>
+        <game>Wow! This makes you feel great!</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
+    <message>
+        <game>Wow! This makes you feel better!</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
+    <message>
+        <game>Wow! This makes you feel good!</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
+    <message>
+        <game>Ulch! This makes you feel mediocre!</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks sound and hale again</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
+    <message>
+        <game>Ulch! That potion smells terrible</game>
+        <meaning>Your eyes sting.</meaning>
+    </message>
+    <message>
+        <game>This tastes like [fruit] juice</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like 10% real [fruit] juice all-natural beverage.</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like reconstituted [fruit] juice.</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like 10% real reconstituted [fruit] juice all-natural beverage</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>You can see through yourself, but you are visible!</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This tastes rotten</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This tastes overripe.</game>
+        <meaning>Potion of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This stuff tastes like poison.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>You are shocked back to your senses!</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>Fortunately, you have been immunized.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>But in fact it was biologically contaminated [fruit] juice.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>You are shocked back to your senses!</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>Yecch! This stuff tastes like poison.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks unharmed.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>[monster] looks rather ill.</game>
+        <meaning>Potion of Sickness</meaning>
+    </message>
+
+    <message>
+        <game>You yawn</game>
+        <meaning>Potion of Sleeping</meaning>
+    </message>
+
+    <message>
+        <game>You suddenly fall asleep!</game>
+        <meaning>Potion of Sleeping</meaning>
+    </message>
+
+    <message>
+        <game>[monster] falls asleep</game>
+        <meaning>Potion of Sleeping</meaning>
+    </message>
+
+    <message>
+        <game>You feel rather tired</game>
+        <meaning>Potion of Sleeping</meaning>
+    </message>
+
+    <message>
+        <game>You are suddenly moving much faster</game>
+        <meaning>Potion of Speed</meaning>
+    </message>
+
+    <message>
+        <game>You are suddenly moving faster</game>
+        <meaning>Potion of Speed</meaning>
+    </message>
+
+    <message>
+        <game>Your [legs] get new energy</game>
+        <meaning>Potion of Speed</meaning>
+    </message>
+
+    <message>
+        <game>[monster] is suddenly moving faster.</game>
+        <meaning>Potion of Speed</meaning>
+    </message>
+
+    <message>
+        <game>Your knees seem more flexible now.</game>
+        <meaning>Potion of Speed</meaning>
+    </message>
+
+    <message>
+        <game>This burns like acid</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>You feel full of awe</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>Your affinity to [werecreatures] disappears</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>This tastes like water</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>You feel quite proud of yourself</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>You feel full of dread</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>[monster] shrieks in pain</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>[monster] writhes in pain</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+    <message>
+        <game>[monster] looks healthier</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>[monster] rusts</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <message>
+        <game>You multiply</game>
+        <meaning>Potion of Water</meaning>
+    </message>
+
+    <!--
+      *** scrolls
+      -->
+
+    <message>
+        <game>Your mind releases itself from mundane concerns</game>
+        <meaning>Scroll of Amnesia</meaning>
+    </message>
+
+    <message>
+        <game>As your mind turns inward on itself, you forget everything else</game>
+        <meaning>Scroll of Amnesia</meaning>
+    </message>
+
+    <message>
+        <game>Who was that Maud person anyway?</game>
+        <meaning>Scroll of Amnesia</meaning>
+    </message>
+
+    <message>
+        <game>Thinking of Maud you forget everything else.</game>
+        <meaning>Scroll of Amnesia</meaning>
+    </message>
+
+    <message>
+        <game>This scroll seems to be blank.</game>
+        <meaning>Scroll of Blank Paper</meaning>
+    </message>
+
+    <message>
+        <game>You don't remember there being any magic words on this scroll."</game>
+        <meaning>Scroll of Blank Paper</meaning>
+    </message>
+
+    <message>
+        <game>This is a charging scroll.</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>You have a feeling of loss.</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [ring] spins clockwise for a moment.</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [item] glows blue for a moment</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [item] vibrates for a moment</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [tool] glows white for a moment.</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [wand of wishing] glows blue for a moment</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>You feel charged up</game>
+        <meaning>Scroll of Charging</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] glow a brilliant red</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] glow an even more brilliant red.</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] tingle very sharply</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] tingle even more sharply.</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to glow red</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to glow red even more</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to tingle</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to tingle even more</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>You feel confused</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>A faint glow surrounds your [head]</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>A faint buzz surrounds your [head]</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to glow purple</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] begin to tingle</game>
+        <meaning>Scroll of Confuse Monster</meaning>
+    </message>
+
+    <message>
+        <game>Your bones itch</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your skin itches</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your cloak crumbles and turns to dust</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>our armor turns to dust and falls to the [floor]</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your shirt crumbles into tiny threads and falls apart</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your helmet turns to dust and is blown away</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your gloves vanish</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your boots disintegrate</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your shield crumbles away</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] vibrates</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] glows purple for a moment.</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] vibrates for a moment</game>
+        <meaning>Scroll of Destroy Armor</meaning>
+    </message>
+
+    <message>
+        <game>The ceiling rumbles around you</game>
+        <meaning>Scroll of Earth</meaning>
+    </message>
+
+    <message>
+        <game>The ceiling rumbles above you!</game>
+        <meaning>Scroll of Earth</meaning>
+    </message>
+
+    <message>
+        <game>Your skin glows then fades</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your skin feels warm for a moment</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] violently glows silver for a while, then evaporates</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [scales] merges and hardens!</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] glows silver for a moment</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] glows silver for a while</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] violently glows silver for a moment</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] suddenly vibrates unexpectedly</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] suddenly vibrates again.</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] violently glows silver for a while, then evaporates</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] violently glows black for a while, then evaporates</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+    <message>
+        <game>Your [armor] glows black for a moment.</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] is covered by a shimmering golden shield/layer!</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] feels warm for a moment.</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] looks as good as new!</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] feels as good as new!</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [armor] is covered by a mottled black glow!</game>
+        <meaning>Scroll of Enchant Armor</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] twitch</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [hands] itch.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+    <message>
+
+        <game>Your [weapon] seems sharper now</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] violently glows blue for a while and then evaporates</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] evaporates.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+
+    <message>
+        <game>Your [weapon] glows blue for a moment</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] glows blue for a while</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] violently glows blue for a while</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your right [hand] flinches!</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] suddenly vibrates unexpectedly.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] suddenly vibrates unexpectedly.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+    <message>
+        <game>Your [weapon] seems duller now.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] faintly glows black</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] evaporates.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] glows black for a moment</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] is covered by a shimmering golden shield!</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] feels warm for a moment.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] looks as good as new</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] feels as good as new</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] is covered by a mottled purple glow</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>Your [weapon] feels warm for a moment.</game>
+        <meaning>Scroll of Enchant Weapon</meaning>
+    </message>
+
+    <message>
+        <game>The water around you vaporizes violently</game>
+        <meaning>Scroll of Fire</meaning>
+    </message>
+
+    <message>
+        <game>The scroll erupts in a tower of flame!</game>
+        <meaning>Scroll of Fire</meaning>
+    </message>
+
+    <message>
+        <game>Oh, look, what a pretty fire in your [hands]</game>
+        <meaning>Scroll of Fire</meaning>
+    </message>
+
+    <message>
+        <game>You feel a pleasant warmth in your [hands]</game>
+        <meaning>Scroll of Fire</meaning>
+    </message>
+
+    <message>
+        <game>The scroll catches fire and you burn your [hands]</game>
+        <meaning>Scroll of Fire</meaning>
+    </message>
+
+    <message>
+        <game>You sense a lack of food nearby</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>You sense a lack of food nearby. Your [nose] starts to tingle</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [nose] twitches then starts to tingle</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [nose] twitches</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>You smell food nearby. Your [nose] starts to tingle</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>You smell food nearby.</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [nose] starts to tingle and you smell food</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your[nose] continues to tingle and you smell food</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [nose] tingles and you smell food.</game>
+        <meaning>Scroll of Food Detection</meaning>
+    </message>
+
+    <message>
+        <game>You have found a scroll of genocide!</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>What class of monsters do you wish to genocide?</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>Wiped out all [monster]</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>What monster do you want to genocide? </game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>Wiped out all [monster]</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>Sent in some [monster]</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>Wiped out all [role]</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>You feel dead inside.</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>Sent in some [role]</game>
+        <meaning>Scroll of Genocide</meaning>
+    </message>
+
+    <message>
+        <game>You feel like a million zorkmids!</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel worried about your future financial situation</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel materially poor</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You notice some gold between your [feet]</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel very greedy, and sense gold!</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [toes] stop itching</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>Your [toes] itch.</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel very greedy</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>You feel entrapped.</game>
+        <meaning>Scroll of Gold Detection</meaning>
+    </message>
+
+    <message>
+        <game>This is an identify scrol</game>
+        <meaning>Scroll of Identify</meaning>
+    </message>
+
+    <message>
+        <game>You identify this as an identify scroll.</game>
+        <meaning>Scroll of Identify</meaning>
+    </message>
+
+    <message>
+        <game>It seems even darker in here than before</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>[monster]'s [stomach] is lit</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>[monster] shines briefly</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>[monster] shines briefly</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>A lit field surrounds you!</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>Suddenly, the only light left comes from Sunsword!</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>You are surrounded by darkness!</game>
+        <meaning>Scroll of Light</meaning>
+    </message>
+
+    <message>
+        <game>Your mind is filled with crazy lines</game>
+        <meaning>Scroll of Magic Mapping</meaning>
+    </message>
+
+    <message>
+        <game>Wow! Modern art</game>
+        <meaning>Scroll of Magic Mapping</meaning>
+    </message>
+
+    <message>
+        <game>Your [head] spins in bewilderment.</game>
+        <meaning>Scroll of Magic Mapping</meaning>
+    </message>
+
+    <message>
+        <game>A map coalesces in your mind!</game>
+        <meaning>Scroll of Magic Mapping</meaning>
+    </message>
+
+    <message>
+        <game>Unfortunately, you can't grasp the details.</game>
+        <meaning>Scroll of Magic Mapping</meaning>
+    </message>
+
+    <message>
+        <game>You feel guilty</game>
+        <meaning>Scroll of Punishment</meaning>
+    </message>
+
+    <message>
+        <game>You are being punished for your misbehavior!</game>
+        <meaning>Scroll of Punishment</meaning>
+    </message>
+
+    <message>
+        <game>You are being punished for your misbehavior!</game>
+        <meaning>Scroll of Punishment</meaning>
+    </message>
+
+    <message>
+        <game>A ball and chain appears, then falls away</game>
+        <meaning>Scroll of Punishment</meaning>
+    </message>
+
+    <message>
+        <game>You feel like someone is helping you</game>
+        <meaning>Scroll of Remove Curse</meaning>
+    </message>
+
+    <message>
+        <game>You feel in touch with the Universal Oneness</game>
+        <meaning>Scroll of Remove Curse</meaning>
+    </message>
+
+    <message>
+        <game>The scroll disintegrates</game>
+        <meaning>Scroll of Remove Curse</meaning>
+    </message>
+
+    <message>
+        <game>You feel like you need some help</game>
+        <meaning>Scroll of Remove Curse</meaning>
+    </message>
+
+    <message>
+        <game>You feel the power of the Force against you</game>
+        <meaning>Scroll of Remove Curse</meaning>
+    </message>
+
+
+    <message>
+        <game>The scroll turns to dust as you pick it up.</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>The scrolls turn to dust as you pick them up</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>You hear maniacal laughter close by</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>You hear maniacal laughter in the distance</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>You hear sad wailing close by</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>You hear sad wailing in the distance</game>
+        <meaning>Scroll of Scare Monster</meaning>
+    </message>
+
+    <message>
+        <game>You have found a scroll of stinking cloud</game>
+        <meaning>Scroll of Stinking Cloud</meaning>
+    </message>
+
+    <message>
+        <game>You smell rotten eggs</game>
+        <meaning>Scroll of Stinking Cloud</meaning>
+    </message>
+
+    <message>
+        <game>[Monster] gets angry!</game>
+        <meaning>Scroll of Tame Monster</meaning>
+    </message>
+
+    <message>
+        <game>Do you wish to teleport?</game>
+        <meaning>Scroll of Teleport</meaning>
+    </message>
+
+    <message>
+        <game>A mysterious force prevents you from teleporting!</game>
+        <meaning>Scroll of Teleport</meaning>
+    </message>
+
+    <message>
+        <game>You feel disoriented for a moment.</game>
+        <meaning>Scroll of Teleport</meaning>
+    </message>
+
+    <!--
+      ***
+      -->
+
+    <message>
+        <game>You engrave in the [floor] with the [gem]</game>
+        <meaning>Hard Gem</meaning>
+    </message>
+
+    <message>
+        <game>You write in the dust with the [gem]</game>
+        <meaning>Soft Gem</meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
+    </message>
+
+    <message>
+        <game></game>
+        <meaning></meaning>
     </message>
 </messages>

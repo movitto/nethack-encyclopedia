@@ -25,6 +25,10 @@ public class RingsDialog {
         return adapter;
     }
 
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
+    }
+
     private Spinner sinkEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.ringSinkEffectInput);
     }

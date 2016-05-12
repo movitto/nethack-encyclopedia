@@ -1,67 +1,124 @@
 <potions>
     <potion>
-        <name>water (uncursed)</name>
+        <name>water</name>
         <cost>0</cost>
         <weight>20</weight>
         <probability>6.9%</probability>
         <appearance>clear</appearance>
+        <quaff>This burns like acid</quaff>
+        <quaff>You feel full of awe</quaff>
+        <quaff>Your affinity to [werecreatures] disappears</quaff>
+        <quaff>This tastes like water</quaff>
+        <quaff>You feel quite proud of yourself</quaff>
+        <quaff>You feel full of dread</quaff>
+        <quaff>You multiply</quaff>
+        <throw>[monster] shrieks in pain</throw>
+        <throw>[monster] writhes in pain</throw>
+        <throw>[monster] looks healthier</throw>
+        <throw>[monster] rusts</throw>
     </potion>
+
     <potion>
         <name>booze</name>
         <cost>50</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>Ooph! This tastes like liquid fire</quaff>
+        <quaff>Ooph! This tastes like dandelion wine</quaff>
+        <quaff>Ooph! This tastes like watered down liquid fire</quaff>
+        <quaff>Ooph! This tastes like watered down dandelion wine</quaff>
+        <quaff>You feel somewhat dizzy</quaff>
+        <quaff>You feel somewhat dizzy</quaff>
     </potion>
+
     <potion>
         <name>fruit juice</name>
         <cost>50</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>This tastes like [fruit] juice</quaff>
+        <quaff>This tastes like 10% real [fruit] juice all-natural beverage</quaff>
+        <quaff>This tastes like reconstituted [fruit] juice</quaff>
+        <quaff>This tastes like 10% real reconstituted [fruit] juice all-natural beverage</quaff>
+        <quaff>Yecch! This tastes rotten</quaff>
+        <quaff>Yecch! This tastes overripe</quaff>
     </potion>
+
     <potion>
         <name>see invisible</name>
         <cost>50</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>This tastes like [fruit] juice</quaff>
+        <quaff>This tastes like 10% real [fruit] juice all-natural beverage</quaff>
+        <quaff>This tastes like reconstituted [fruit] juice</quaff>
+        <quaff>This tastes like 10% real reconstituted [fruit] juice all-natural beverage</quaff>
+        <quaff>You can see through yourself, but you are visible</quaff>
+        <quaff>Yecch! This tastes rotten</quaff>
+        <quaff>Yecch! This tastes overripe</quaff>
     </potion>
+
     <potion>
         <name>sickness</name>
         <cost>50</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>Yecch! This stuff tastes like poison</quaff>
+        <quaff>You are shocked back to your senses</quaff>
+        <quaff>Fortunately, you have been immunized</quaff>
+        <quaff>But in fact it was biologically contaminated [fruit] juice</quaff>
+        <throw>[monster] looks unharmed</throw>
+        <throw>[monster] looks rather ill</throw>
     </potion>
+
     <potion>
         <name>confusion</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You feel somewhat dizzy</quaff>
+        <quaff>Huh, What? Where am I?</quaff>
+        <quaff>What a trippy feeling</quaff>
     </potion>
+
     <potion>
         <name>extra healing</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>4.7%</probability>
         <appearance>random</appearance>
+        <quaff>You feel much better</quaff>
+        <throw>[monster] looks much better</throw>
+        <throw>[monster] looks sound and hale again</throw>
     </potion>
+
     <potion>
         <name>hallucination</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>4%</probability>
         <appearance>random</appearance>
+        <quaff>Oh wow! Everything looks so cosmic</quaff>
+        <quaff>Oh wow! Everything feels so cosmic</quaff>
+        <quaff>You have a momentary vision</quaff>
     </potion>
+
     <potion>
         <name>healing</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>5.7%</probability>
         <appearance>random</appearance>
+        <quaff>You feel better</quaff>
+        <throw>[monster] looks better</throw>
+        <throw>[monster] looks sound and hale again</throw>
     </potion>
+
     <potion>
         <name>holy water</name>
         <cost>100</cost>
@@ -69,6 +126,7 @@
         <probability>1.15%</probability>
         <appearance>clear</appearance>
     </potion>
+
     <potion>
         <name>unholy water</name>
         <cost>100</cost>
@@ -76,20 +134,34 @@
         <probability>1.15%</probability>
         <appearance>clear</appearance>
     </potion>
+
     <potion>
         <name>restore ability</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>4%</probability>
         <appearance>random</appearance>
+        <quaff>Wow! This makes you feel great</quaff>
+        <quaff>Wow! This makes you feel better</quaff>
+        <quaff>Wow! This makes you feel good</quaff>
+        <quaff>Ulch! This makes you feel mediocre</quaff>
+        <throw>[monster] looks sound and hale again</throw>
+        <throw>Ulch! That potion smells terrible</throw>
+        <throw>Your eyes sting.</throw>
     </potion>
+
     <potion>
         <name>sleeping</name>
         <cost>100</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You yawn</quaff>
+        <quaff>You suddenly fall asleep</quaff>
+        <quaff>You feel rather tired</quaff>
+        <throw>[monster] falls asleep</throw>
     </potion>
+
     <potion>
         <name>blindness</name>
         <cost>150</cost>
@@ -97,102 +169,194 @@
         <probability>4%</probability>
         <appearance>random</appearance>
     </potion>
+
     <potion>
         <name>gain energy</name>
         <cost>150</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>Magical energies course through your body</quaff>
+        <quaff>You feel lackluster</quaff>
     </potion>
+
     <potion>
         <name>invisibility</name>
         <cost>150</cost>
         <weight>20</weight>
         <probability>4%</probability>
         <appearance>random</appearance>
+        <quaff>Gee! All of a sudden, you can't see yourself</quaff>
+        <quaff>Gee! All of a sudden, you can see right through yourself</quaff>
+        <quaff>Far out, man! You can't see yourself</quaff>
+        <quaff>Far out, man! You can see right through yourself</quaff>
+        <quaff>For some reason, you feel your presence is known</quaff>
+        <quaff>Aggravated, you are jolted into full consciousness</quaff>
+        <quaff>For an instant you couldn't see yourself</quaff>
+        <quaff>For an instant you could see right through yourself</quaff>
+        <throw>[monster]'s body takes on a strange transparency</throw>
+        <throw>[monster]'s  body takes on a normal transparency</throw>
+        <throw>For some reason, [monster]'s  presence is known to you</throw>
+        <throw>You feel aggravated at [monster]</throw>
     </potion>
+
     <potion>
         <name>monster detection</name>
         <cost>150</cost>
         <weight>20</weight>
         <probability>4%</probability>
         <appearance>random</appearance>
+        <quaff>You feel lonely</quaff>
+        <quaff>You sense the presence of monsters</quaff>
+        <quaff>You feel threatened</quaff>
+        <quaff>Monsters sense the presence of you</quaff>
     </potion>
+
     <potion>
         <name>object detection</name>
         <cost>150</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You feel a lack of something</quaff>
+        <quaff>You sense objects nearby</quaff>
+        <quaff>You sense something nearby</quaff>
+        <quaff>You sense the presence of objects</quaff>
+        <quaff>You sense the presence of something</quaff>
+        <quaff>You sense the absence of objects</quaff>
+        <quaff>You sense the absence of something</quaff>
     </potion>
+
     <potion>
         <name>enlightenment</name>
         <cost>200</cost>
         <weight>20</weight>
         <probability>2%</probability>
         <appearance>random</appearance>
+        <quaff>You feel self-knowledgeable...</quaff>
+        <quaff>The feeling subsides.</quaff>
+        <quaff>You have an uneasy feeling...</quaff>
     </potion>
+
     <potion>
         <name>full healing</name>
         <cost>200</cost>
         <weight>20</weight>
         <probability>1%</probability>
         <appearance>random</appearance>
+        <quaff>You feel completely healed</quaff>
+        <throw>[monster] looks completely healed</throw>
+        <throw>[monster] looks sound and hale again</throw>
     </potion>
+
     <potion>
         <name>levitation</name>
         <cost>200</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You start to float in the air</quaff>
+        <quaff>Up, up, and awaaaay</quaff>
+        <quaff>You float up, out of the pit</quaff>
+        <quaff>You float up, only your [leg] is still stuck</quaff>
+        <quaff>It feels as though you'd lost some weight</quaff>
+        <quaff>You gain control over your movements</quaff>
+        <qauff>You hit your [head] on the [ceiling]</qauff>
     </potion>
+
     <potion>
         <name>polymorph</name>
         <cost>200</cost>
         <weight>20</weight>
         <probability>1%</probability>
         <appearance>random</appearance>
+        <quaff>You feel a little strange</quaff>
+        <quaff>You feel a little normal</quaff>
+        <throw>[monster] suddenly mutates</throw>
     </potion>
+
     <potion>
         <name>speed</name>
         <cost>200</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You are suddenly moving much faster</quaff>
+        <quaff>You are suddenly moving faster</quaff>
+        <quaff>Your [legs] get new energy</quaff>
+        <quaff>Your knees seem more flexible now.</quaff>
+        <throw>[monster] is suddenly moving faster</throw>
     </potion>
+
     <potion>
         <name>acid</name>
         <cost>250</cost>
         <weight>20</weight>
         <probability>1%</probability>
         <appearance>random</appearance>
+        <quaff>This tastes sour</quaff>
+        <quaff>This tastes tangy</quaff>
+        <quaff>This burns a little</quaff>
+        <quaff>This burns like acid</quaff>
+        <quaff>This burns a lot</quaff>
+        <throw>[monster] shrieks in pain</throw>
+        <throw>[monster] writhes in pain</throw>
     </potion>
+
     <potion>
         <name>oil</name>
         <cost>250</cost>
         <weight>20</weight>
         <probability>3%</probability>
         <appearance>random</appearance>
+        <quaff>Ahh, a refreshing drink</quaff>
+        <quaff>You burn your [face]</quaff>
+        <quaff>That was smooth</quaff>
+        <quaff>This tastes like castor oil</quaff>
     </potion>
+
     <potion>
         <name>gain ability</name>
         <cost>300</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You feel strong</quaff>
+        <quaff>You feel smart</quaff>
+        <quaff>You feel wise</quaff>
+        <quaff>You feel agile</quaff>
+        <quaff>You feel tough</quaff>
+        <quaff>You feel charismatic</quaff>
+        <quaff>Your cap constricts briefly, then relaxes again</quaff>
+        <quaff>You're already as [statistic] as you can get</quaff>
+        <quaff>Ulch! That potion tasted foul</quaff>
+        <throw>[monster] looks sound and hale again</throw>
+        <throw>Ulch! That potion smells terrible</throw>
+        <throw>Your eyes sting</throw>
     </potion>
+
     <potion>
         <name>gain level</name>
         <cost>300</cost>
         <weight>20</weight>
         <probability>2%</probability>
         <appearance>random</appearance>
+        <quaff>You feel more experienced</quaff>
+        <quaff>Welcome to experience level [number]</quaff>
+        <quaff>You rise up, through the [ceiling]</quaff>
+        <quaff>You have an uneasy feeling</quaff>
     </potion>
+
     <potion>
         <name>paralysis</name>
         <cost>300</cost>
         <weight>20</weight>
         <probability>4.2%</probability>
         <appearance>random</appearance>
+        <quaff>You stiffen momentarily</quaff>
+        <quaff>You are motionlessly suspended</quaff>
+        <quaff>You are frozen in place</quaff>
+        <quaff>Your [feet] are frozen to the [floor]</quaff>
+        <quaff>Something seems to be holding you</quaff>
     </potion>
 </potions>

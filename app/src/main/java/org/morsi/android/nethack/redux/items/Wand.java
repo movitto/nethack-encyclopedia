@@ -13,7 +13,19 @@ import java.util.ArrayList;
 public class Wand extends Item {
     public String engrave_effect;
 
+    public boolean hasEngraveEffect(){
+        return !engrave_effect.equals("");
+    }
+
+    public ArrayList<String> engrave_effects;
+
     public String zap_effect;
+
+    public boolean hasZapEffect(){
+        return !zap_effect.equals("");
+    }
+
+    public ArrayList<String> zap_effects;
 
     public int max_charges;
 
@@ -24,6 +36,11 @@ public class Wand extends Item {
     public String itemType() { return "Wand"; }
 
     public static String quickStatsCategoryName(){ return "Wands"; }
+
+    public Wand(){
+        engrave_effects = new ArrayList<String>();
+        zap_effects = new ArrayList<String>();
+    }
 
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
@@ -77,13 +94,6 @@ public class Wand extends Item {
         return s;
     }
 
-    protected ArrayList<String> stringList(){
-        ArrayList<String> s = super.stringList();
-        s.add(engrave_effect);
-        s.add(zap_effect);
-        return s;
-    }
-
     public static ArrayList<Wand> fromXML(XmlResourceParser xpp){
         ArrayList<Wand> wands = new ArrayList<Wand>();
 
@@ -109,14 +119,10 @@ public class Wand extends Item {
                         current_wand.probability_str = xpp.getText();
                     else if(element_name.equals("appearance"))
                         current_wand.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_wand.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_wand.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("engrave"))
-                        current_wand.engrave_effect = xpp.getText();
+                        current_wand.engrave_effects.add(xpp.getText());
                     else if(element_name.equals("zap"))
-                        current_wand.zap_effect = xpp.getText();
+                        current_wand.zap_effects.add(xpp.getText());
                     else if(element_name.equals("max_charges"))
                         current_wand.max_charges = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("direction"))
@@ -144,7 +150,7 @@ public class Wand extends Item {
         public EngravingFilter(String effect) { this.effect = effect; }
 
         public boolean matches(Item item){
-            return ((Wand)item).engrave_effect.equals(effect);
+            return ((Wand)item).engrave_effects.contains(effect);
         }
     };
 
@@ -154,7 +160,7 @@ public class Wand extends Item {
         public ZapFilter(String effect) { this.effect = effect; }
 
         public boolean matches(Item item){
-            return ((Wand)item).zap_effect.equals(effect);
+            return ((Wand)item).zap_effects.contains(effect);
         }
     };
 

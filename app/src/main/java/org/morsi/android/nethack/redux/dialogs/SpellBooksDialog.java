@@ -27,6 +27,10 @@ public class SpellBooksDialog {
         return adapter;
     }
 
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
+    }
+
     public void resetDialog(){
 
     }

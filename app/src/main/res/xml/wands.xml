@@ -5,7 +5,10 @@
         <max_charges>15</max_charges>
         <probability>9.5%</probability>
         <direction>non-directional</direction>
+        <engrave>A lit field surrounds you</engrave>
+        <zap>A lit field surrounds you</zap>
     </wand>
+
     <wand>
         <name>nothing</name>
         <cost>100</cost>
@@ -13,55 +16,129 @@
         <probability>2.5%</probability>
         <direction>beam</direction>
     </wand>
+
     <wand>
         <name>digging</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>5.5%</probability>
         <direction>ray</direction>
+        <engrave>This [wand] is a wand of digging</engrave>
+        <zap>You pierce [monster's] stomach wall</zap>
+        <zap>The beam bounces off the [stairs] and hits the [ceiling]</zap>
+        <zap>You loosen a rock from the [ceiling]. It falls on your [head]</zap>
+        <zap>The [floor] here is too hard to dig in</zap>
+        <zap>The [hrone/altar] is too hard to break apart</zap>
+        <zap>The pipes break! Water spurts out</zap>
+        <zap>Water gushes forth from the overflowing fountain</zap>
+        <zap>Water sprays all over you</zap>
+        <zap>The [water] sloshes furiously for a moment, then subside</zap>
+        <zap>The drawbridge collapses into the [moat]</zap>
+        <zap>The drawbridge disintegrates</zap>
+        <zap>You are blown apart by flying debris</zap>
+        <zap>You are hit by a huge chunk of metal</zap>
+        <zap>The boulder settles into the pit</zap>
+        <zap>The boulder settles into the pit</zap>
+        <zap>You dig a pit in the grav</zap>
+        <zap>You dig a [pit/hole] in the [floor]</zap>
+        <zap>The door is razed</zap>
+        <zap>The wall glows then fades</zap>
+        <zap>The rock glows then fades</zap>
+        <zap>The digging ray is ineffective</zap>
+        <zap>You hear something crash through the [floor]</zap>
+        <zap>[Monster] has made a hole in the [floor]</zap>
+        <zap>[Monster] [falls] through...</zap>
     </wand>
+
     <wand>
         <name>enlightenment</name>
         <cost>150</cost>
         <max_charges>15</max_charges>
         <probability>1.5%</probability>
         <direction>non-directional</direction>
+        <engrave>You feel self-knowledgeable...</engrave>
+        <zap>You feel self-knowledgeable...</zap>
     </wand>
+
     <wand>
         <name>locking</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>2.5%</probability>
         <direction>beam</direction>
+        <zap>You see a drawbridge [coming/going] up</zap>
+        <zap>A trap door beneath you closes up then vanishes</zap>
+        <zap>ou see a swirl of [dust] beneath you</zap>
+        <zap>You hear a twang followed by a thud</zap>
+        <zap>A cloud of dust springs up in the older, more primitive doorway</zap>
+        <zap>A cloud of dust springs up and assembles itself into a door</zap>
+        <zap>The broken door reassembles and locks</zap>
+        <zap>The door swings shut and locks</zap>
+        <zap>The door locks</zap>
     </wand>
+
     <wand>
         <name>magic missile</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>5%</probability>
         <direction>ray</direction>
+        <engrave>The [floor] is riddled by bullet holes</engrave>
+        <zap>The magic missile rips into the [monster]</zap>
+        <zap>The magic missile hits the [monster]</zap>
+        <zap>The door absorbs your bolt</zap>
+        <zap>The door absorbs your bolt</zap>
+        <zap>Idiot! You've shot yourself</zap>
+        <zap>The missiles bounce off</zap>
+        <zap>The magic missile hits you</zap>
     </wand>
+
     <wand>
         <name>make invisible</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>4.5%</probability>
         <direction>beam</direction>
+        <engrave>The engraving on the [floor] vanishes</engrave>
+        <zap>[Monster] turns transparent</zap>
+        <zap>You feel rather itchy under your [mummy wrapping]</zap>
+        <zap>Gee! All of a sudden, you can't see yourself</zap>
+        <zap>Gee! All of a sudden, you can see right through yourself</zap>
+        <zap>Far out, man! You can't see yourself</zap>
+        <zap>Far out, man! You can see right through yourself</zap>
+        <zap>Suddenly you cannot see [monster]</zap>
+        <zap>[Monster]'s body takes on a strange transparency</zap>
+        <zap>[Monster]'s body takes on a normal transparency</zap>
     </wand>
+
     <wand>
         <name>opening</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>2.5%</probability>
         <direction>beam</direction>
+        <zap>[Monster] opens its mouth</zap>
+        <zap>You feel a sudden rush of air</zap>
+        <zap>The stairs seem to ripple momentarily</zap>
+        <zap>You see a drawbridge going down</zap>
+        <zap>You see a drawbridge [coming/going] down</zap>
+        <zap>You are crushed underneath the drawbridge</zap>
+        <zap>A door appears in the wall</zap>
+        <zap>The door unlocks</zap>
+        <zap>Klick</zap>
+        <zap>Your chain quivers for a moment</zap>
     </wand>
+
     <wand>
         <name>probing</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>3%</probability>
         <direction>beam</direction>
+        <zap>You probe towards the [ceiling]. Your probe reveals nothing</zap>
+        <zap>You probe beneath the [floor]</zap>
     </wand>
+
     <wand>
         <name>secret door detection</name>
         <cost>150</cost>
@@ -69,69 +146,165 @@
         <probability>5%</probability>
         <direction>non-directional</direction>
     </wand>
+
     <wand>
         <name>slow monster</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>5%</probability>
         <direction>beam</direction>
+        <engrave>The bugs on the [floor] slow down</engrave>
+        <zap>You disrupt [monster]! A huge hole opens up...</zap>
+        <zap>[Monster] seems to be moving slower</zap>
+        <zap>You slow down</zap>
+        <zap>Your quickness feels less natural</zap>
     </wand>
+
     <wand>
         <name>speed monster</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>5%</probability>
         <direction>beam</direction>
+        <engrave>The bugs on the [floor] speed up</engrave>
+        <zap>[Monster] is suddenly moving faster</zap>
+        <zap>You speed up</zap>
+        <zap>Your quickness feels more natural</zap>
+        <zap>[Monster] is suddenly moving faster</zap>
     </wand>
+
     <wand>
         <name>striking</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>7.5%</probability>
         <direction>beam</direction>
+        <engrave>The wand unsuccessfully fights your attempt to write</engrave>
+        <zap>Boing</zap>
+        <zap>The wand misses [monster]</zap>
+        <zap>The wand hits [monster]</zap>
+        <zap>The drawbridge collapses into the [moat]</zap>
+        <zap>The drawbridge disintegrates</zap>
+        <zap>A rock is dislodged from the ceiling and falls on your [head]</zap>
+        <zap>A door appears in the wall</zap>
+        <zap>The door crashes open</zap>
+        <zap>You hear a crashing sound</zap>
+        <zap>KABOOM!! You see a door explode</zap>
+        <zap>You hear a distant explosion</zap>
+        <zap>Instead of shattering, the statue suddenly comes alive</zap>
+        <zap>Instead of shattering, the statue suddenly disappears</zap>
+        <zap>[object] shatters</zap>
+        <zap>[object] shatters into a thousand pieces</zap>
+        <zap>You hear something shatter</zap>
+        <zap>Splat</zap>
+        <zap>What a mess</zap>
+        <zap>You bash yourself</zap>
+        <zap>The wand hits you</zap>
     </wand>
+
     <wand>
         <name>undead turning</name>
         <cost>150</cost>
         <max_charges>8</max_charges>
         <probability>5%</probability>
         <direction>beam</direction>
+        <zap>[Ghost] is suddenly drawn into its former body</zap>
+        <zap>You feel frightened and stunned</zap>
+        <zap>You feel frightened and even more stunned</zap>
+        <zap>You shudder in dread</zap>
     </wand>
+
     <wand>
         <name>cold</name>
         <cost>175</cost>
         <max_charges>8</max_charges>
         <probability>4%</probability>
-        <direction>ray</direction>
+        <direction>ray</direction>'
+        <engrave>A few ice cubes drop from the wand</engrave>
+        <zap>The bolt of cold rips into the [monster]</zap>
+        <zap>The bolt of cold hits the [monster]</zap>
+        <zap>You imitate a popsicle</zap>
+        <zap>You feel a little chill</zap>
+        <zap>The water freezes</zap>
+        <zap>The moat is bridged with ice</zap>
+        <zap>You hear a crackling [sound]</zap>
+        <zap>The water freezes for a moment</zap>
+        <zap>You hear a soft crackling</zap>
+        <zap>The lava cools and solidifies</zap>
+        <zap>The door freezes and shatters</zap>
+        <zap>You feel cold</zap>
+        <zap>You don't feel cold</zap>
     </wand>
+
     <wand>
         <name>fire</name>
         <cost>175</cost>
         <max_charges>8</max_charges>
         <probability>4%</probability>
         <direction>ray</direction>
+        <engrave>This [wand] is a wand of fire</engrave>
+        <zap>The ice crackles and melts</zap>
+        <zap>The water evaporates</zap>
+        <zap>You hear hissing gas</zap>
+        <zap>Some water evaporates</zap>
+        <zap>You hear hissing gas</zap>
+        <zap>Steam billows from the fountain</zap>
+        <zap>The door is consumed in flames</zap>
+        <zap>You smell smoke</zap>
+        <zap>A web bursts into flames</zap>
+        <zap>You see a puff of smoke</zap>
+        <zap>You smell a whiff of smoke</zap>
+        <zap>You've set yourself afire</zap>
+        <zap>You feel rather warm</zap>
+        <zap>Strangely, you feel better than before</zap>
+        <zap>You don't feel hot</zap>
     </wand>
+
     <wand>
         <name>lightning</name>
         <cost>175</cost>
         <max_charges>8</max_charges>
         <probability>4%</probability>
         <direction>ray</direction>
+        <engrave>This [wand] is a wand of lightning</engrave>
+        <zap>The bolt of lightning rips into the [monster]</zap>
+        <zap>The bolt of lightning hits the [monster]</zap>
+        <zap>The door splinters</zap>
+        <zap>You hear crackling</zap>
+        <zap>You shock yourself</zap>
+        <zap>You zap yourself, but seem unharmed</zap>
+        <zap>Strangely, you feel better than before</zap>
+        <zap>You are blinded by the flash</zap>
+        <zap>You aren't affected</zap>
+        <zap>Strangely, you feel better than before</zap>
+        <zap>You are blinded by the flash</zap>
     </wand>
+
     <wand>
         <name>sleep</name>
         <cost>175</cost>
         <max_charges>8</max_charges>
         <probability>5%</probability>
         <direction>ray</direction>
+        <engrave>The bugs on the [floor] stop moving</engrave>
+        <zap>The sleep ray rips into the [monster]</zap>
+        <zap>The door absorbs your bolt</zap>
+        <zap>You don't feel sleepy</zap>
+        <zap>The sleep ray hits you</zap>
     </wand>
+
     <wand>
         <name>cancellation</name>
         <cost>200</cost>
         <max_charges>8</max_charges>
         <probability>4.5%</probability>
         <direction>beam</direction>
+        <engrave>The engraving on the [floor] vanishes</engrave>
+        <zap>Some writing vanishes from [monster's] head</zap>
+        <zap>Some writing vanishes from your head</zap>
+        <zap>Your amulet grows hot for a moment, then cools</zap>
     </wand>
+
     <wand>
         <name>create monster</name>
         <cost>200</cost>
@@ -139,27 +312,47 @@
         <probability>4.5%</probability>
         <direction>non-directional</direction>
     </wand>
+
     <wand>
         <name>polymorph</name>
         <cost>200</cost>
         <max_charges>8</max_charges>
         <probability>4.5%</probability>
         <direction>beam</direction>
+        <engrave>Random Engraving</engrave>
+        <zap>[Monster] shudders</zap>
     </wand>
+
     <wand>
         <name>teleportation</name>
         <cost>200</cost>
         <max_charges>8</max_charges>
         <probability>4.5%</probability>
         <direction>beam</direction>
+        <engrave>The engraving on the [floor] vanishes</engrave>
+        <zap>[Monster] resists your magic</zap>
+        <zap>You are no longer inside the [monster]</zap>
+        <zap>A mysterious force prevents you from teleporting</zap>
+        <zap>You feel disoriented for a moment</zap>
+        <zap>A mysterious force prevents [monster] from teleporting</zap>
     </wand>
+
     <wand>
         <name>death</name>
         <cost>500</cost>
         <max_charges>8</max_charges>
         <probability>.5%</probability>
         <direction>ray</direction>
+        <engrave>The bugs on the [floor] stop moving</engrave>
+        <zap>The death ray rips into the [monster]</zap>
+        <zap>The death ray hits the [monster]</zap>
+        <zap>The door absorbs your bolt</zap>
+        <zap>The wand shoots an apparently harmless beam at you</zap>
+        <zap>You irradiate yourself with pure energy! You die</zap>
+        <zap>You aren't affected</zap>
+        <zap>You seem unaffected</zap>
     </wand>
+
     <wand>
         <name>wishing</name>
         <cost>500</cost>

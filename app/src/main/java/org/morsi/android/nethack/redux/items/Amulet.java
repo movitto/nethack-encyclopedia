@@ -11,9 +11,19 @@ import java.util.ArrayList;
 public class Amulet extends Item  {
     public String wear_effect;
 
+    public boolean hasWearEffect(){
+        return !wear_effect.equals("");
+    }
+
+    public ArrayList<String> wear_effects;
+
     public static String type(){ return "Amulet"; }
 
     public String itemType() { return "Amulet"; }
+
+    public Amulet(){
+        wear_effects = new ArrayList<String>();
+    }
 
     public static Amulet extract(String str) {
         String attrs[] = str.split("-");
@@ -24,12 +34,6 @@ public class Amulet extends Item  {
 
     protected ArrayList<String> compactStringList(){
         ArrayList<String> s = super.compactStringList();
-        s.add(wear_effect);
-        return s;
-    }
-
-    protected ArrayList<String> stringList(){
-        ArrayList<String> s = super.stringList();
         s.add(wear_effect);
         return s;
     }
@@ -59,12 +63,8 @@ public class Amulet extends Item  {
                         current_amulet.probability_str = xpp.getText();
                     else if (element_name.equals("appearance"))
                         current_amulet.appearance = xpp.getText();
-                    else if (element_name.equals("buy"))
-                        current_amulet.buy_price = Integer.parseInt(xpp.getText());
-                    else if (element_name.equals("sell"))
-                        current_amulet.sell_price = Integer.parseInt(xpp.getText());
                     else if (element_name.equals("wear"))
-                        current_amulet.wear_effect = xpp.getText();
+                        current_amulet.wear_effects.add(xpp.getText());
 
                 } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("amulet")) {
                     amulets.add(current_amulet);

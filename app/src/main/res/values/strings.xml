@@ -150,13 +150,15 @@
     <string name="level_vlad">Vlad</string>
 
     <string-array name="item_types">
+        <item>Select...</item>
         <item>Potion</item>
         <item>Scroll</item>
         <item>Wand</item>
+        <!--Item DB's need to be flushed out (w/ required attributes):
         <item>SpellBook</item>
         <item>Ring</item>
         <item>Amulet</item>
-        <item>Gem</item>
+        <item>Gem</item>-->
     </string-array>
 
     <string name="item_type">Item Type</string>
@@ -166,40 +168,103 @@
     <string name="item_sell_price">Sell</string>
 
     <string-array name="potion_appearances">
-        <item></item>
+        <item>select...</item>
+        <item>clear</item>
+        <item>cursed clear</item>
+        <item>uncursed clear</item>
+        <item>ruby</item>
+        <item>pink</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>emerald</item>
+        <item>dark green</item>
+        <item>cyan</item>
+        <item>sky blue</item>
+        <item>brilliant blue</item>
+        <item>magenta</item>
+        <item>purple-red</item>
+        <item>puce</item>
+        <item>milky</item>
+        <item>swirly</item>
+        <item>bubbly</item>
+        <item>smoky</item>
+        <item>cloudy</item>
+        <item>effervescent</item>
+        <item>black</item>
+        <item>golden</item>
+        <item>brown</item>
+        <item>fizzy</item>
+        <item>dark   </item>
+        <item>white</item>
+        <item>murky</item>
     </string-array>
     <string name="potion_quaff_effect">Quaff Effect</string>
-    <string-array name="potion_quaff_effects">
-        <item></item>
-    </string-array>
-    <string-array name="potion_throw_effects">
-        <item></item>
-    </string-array>
     <string name="potion_throw_effect">Throw Effect</string>
 
     <string-array name="scroll_appearances">
-        <item></item>
+        <item>select...</item>
+        <item>stamped</item>
+        <item>unlabeled</item>
+        <item>ZELGO MER</item>
+        <item>JUYED AWK YACC</item>
+        <item>NR 9</item>
+        <item>XIXAXA XOXAXA XUXAXA</item>
+        <item>PRATYAVAYAH</item>
+        <item>DAIYEN FOOELS</item>
+        <item>LEP GEX VEN ZEA</item>
+        <item>PRIRUTSENIE</item>
+        <item>ELBIB YLOH</item>
+        <item>VERR YED HORRE</item>
+        <item>VENZAR BORGAVVE</item>
+        <item>THARR</item>
+        <item>YUM YUM</item>
+        <item>KERNOD WEL</item>
+        <item>ELAM EBOW</item>
+        <item>DUAM XNAHT</item>
+        <item>ANDOVA BEGARIN</item>
+        <item>KIRJE</item>
+        <item>VE FORBRYDERNE</item>
+        <item>HACKEM MUCHE</item>
+        <item>VELOX NEB</item>
+        <item>FOOBIE BLETCH</item>
+        <item>TEMOV</item>
+        <item>GARVEN DEH</item>
+        <item>READ ME</item>
     </string-array>
     <string name="scroll_read_effect">Read Effect</string>
-    <string-array name="scroll_read_effects">
-        <item></item>
-    </string-array>
-    <string name="scroll_drop_effect">Drop Effect</string>
-    <string-array name="scroll_drop_effects">
-        <item></item>
-    </string-array>
 
     <string-array name="wand_appearances">
-        <item></item>
+        <item>select...</item>
+        <item>glass</item>
+        <item>balsa</item>
+        <item>crystal</item>
+        <item>maple</item>
+        <item>pine</item>
+        <item>oak</item>
+        <item>ebony</item>
+        <item>marble</item>
+        <item>tin</item>
+        <item>brass</item>
+        <item>copper</item>
+        <item>silver</item>
+        <item>platinum</item>
+        <item>iridium</item>
+        <item>zinc</item>
+        <item>aluminum</item>
+        <item>uranium</item>
+        <item>iron</item>
+        <item>steel</item>
+        <item>hexagonal</item>
+        <item>short</item>
+        <item>runed</item>
+        <item>long</item>
+        <item>curved</item>
+        <item>forked</item>
+        <item>spiked</item>
+        <item>jeweled</item>
     </string-array>
     <string name="wand_engrave_effect">Engrave Effect</string>
-    <string-array name="wand_engrave_effects">
-        <item></item>
-    </string-array>
     <string name="wand_zap_effect">Zap Effect</string>
-    <string-array name="wand_zap_effects">
-        <item></item>
-    </string-array>
 
     <string-array name="spellbook_appearances">
         <item></item>
@@ -208,10 +273,12 @@
     <string-array name="ring_appearances">
         <item></item>
     </string-array>
+
     <string name="ring_sink_effect">Sink Drop Effect</string>
     <string-array name="ring_sink_effects">
         <item></item>
     </string-array>
+
     <string name="ring_wear_effect">Worn Effect</string>
     <string-array name="ring_wear_effects">
         <item></item>
@@ -220,6 +287,7 @@
     <string-array name="amulet_appearances">
         <item></item>
     </string-array>
+
     <string name="amulet_wear_effect">Worn Effect</string>
     <string-array name="amulet_wear_effects">
         <item></item>
@@ -228,10 +296,12 @@
     <string-array name="gem_appearances">
         <item></item>
     </string-array>
+
     <string name="gem_engraving_type">Engraving Type</string>
     <string-array name="gem_engraving_types">
         <item></item>
     </string-array>
+
     <string name="gem_streak_color">Streak Color</string>
     <string-array name="gem_streak_colors">
         <item></item>

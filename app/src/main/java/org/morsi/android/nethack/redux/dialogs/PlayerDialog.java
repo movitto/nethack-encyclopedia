@@ -183,13 +183,15 @@ public class PlayerDialog extends Dialog{
 
     ///
 
-
     private void updateFields(){
         strength(Input.validInt(strengthInputValueString())         ? strengthInputValue()     : 0);
         constitution(Input.validInt(constitutionInputValueString()) ? constitutionInputValue() : 0);
         intelligence(Input.validInt(intelligenceInputValueString()) ? intelligenceInputValue() : 0);
         wisdom(Input.validInt(wisdonInputValueString())             ? wisdomInputValue()       : 0);
         charisma(Input.validInt(charismaInputValueString())         ? charismaInputValue()     : 0);
+
+        // FIXME need to set charisma in player_tracker().game_tracker.item_tracker.item_db items (for use in price analysis)
+        //       both when activity is restored and charisma is updated
     }
 
     InputChangedListener input_listener;

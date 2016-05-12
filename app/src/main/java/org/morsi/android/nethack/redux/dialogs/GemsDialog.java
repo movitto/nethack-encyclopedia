@@ -25,6 +25,10 @@ public class GemsDialog {
         return adapter;
     }
 
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
+    }
+
     private Spinner engravingTypeInput(){
         return (Spinner) item_dialog.findViewById(R.id.gemEngravingTypeInput);
     }

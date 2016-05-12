@@ -25,6 +25,10 @@ public class AmuletsDialog {
         return adapter;
     }
 
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
+    }
+
     private Spinner wearEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.amuletWearEffectInput);
     }
@@ -66,6 +70,7 @@ public class AmuletsDialog {
 
     public void initializeSpinners() {
         wearEffectInput().setAdapter(wearEffectAdapter());
+        wearEffectInput().setSelection(0);
     }
 
     public Item itemFromInput() {
@@ -75,7 +80,9 @@ public class AmuletsDialog {
     }
 
     public void inputFromItem(Amulet amulet){
-        setWearEffect(amulet.wear_effect);
+        setAppearanceSelection();
+
+        if(amulet.hasWearEffect()) setWearEffect(amulet.wear_effect);
     }
 
     ///

@@ -12,7 +12,15 @@ import java.util.ArrayList;
 public class Gem extends Item {
     public String engraving_type;
 
+    public boolean hasEngravingType(){
+        return !engraving_type.equals("");
+    }
+
     public String streak_color;
+
+    public boolean hasStreakColor(){
+        return !streak_color.equals("");
+    }
 
     public static String type(){ return "Gem"; }
 
@@ -73,13 +81,6 @@ public class Gem extends Item {
         return s;
     }
 
-    protected ArrayList<String> stringList(){
-        ArrayList<String> s = super.stringList();
-        s.add(engraving_type);
-        s.add(streak_color);
-        return s;
-    }
-
     public static ArrayList<Gem> fromXML(XmlResourceParser xpp) {
         ArrayList<Gem> gems = new ArrayList<Gem>();
 
@@ -103,10 +104,6 @@ public class Gem extends Item {
                         current_gem.weight = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("appearance"))
                         current_gem.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_gem.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_gem.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("engraving"))
                         current_gem.engraving_type = xpp.getText();
                     else if(element_name.equals("streak"))

@@ -9,11 +9,18 @@ import org.morsi.android.nethack.redux.items.Item;
 import org.morsi.android.nethack.redux.items.Items;
 import org.morsi.android.nethack.redux.items.Scroll;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class ScrollsDialog {
     ItemDialog item_dialog;
 
     public ScrollsDialog(ItemDialog item_dialog) {
         this.item_dialog = item_dialog;
+    }
+
+    private Items all_scrolls(){
+        return item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Scroll.type()));
     }
 
     public ArrayAdapter<CharSequence> itemAppearanceAdapter() {
@@ -23,6 +30,10 @@ public class ScrollsDialog {
                         android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
+    }
+
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
     }
 
     private Spinner readEffectInput() {
@@ -41,79 +52,59 @@ public class ScrollsDialog {
         readEffectInput().setSelection(readEffectIndex(effect));
     }
 
+    private String[] allReadEffects(){
+        Set<String> effects = new LinkedHashSet<String>();
+        effects.add("Select Effect...");
+
+        for(Item item : all_scrolls())
+            for(String effect : ((Scroll)item).read_effects)
+                effects.add(effect);
+
+        return effects.toArray(new String[effects.size()]);
+    }
+
     private ArrayAdapter<CharSequence> readEffectAdapter() {
         ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(item_dialog.activity,
-                        R.array.scroll_read_effects,
-                        android.R.layout.simple_spinner_item);
+                new ArrayAdapter<CharSequence>(item_dialog.activity,
+                        android.R.layout.simple_spinner_item,
+                        allReadEffects());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }
 
     private boolean readSpecified(){
-        return readEffectInput().isSelected();
-    }
-
-    private Spinner dropEffectInput() {
-        return (Spinner) item_dialog.findViewById(R.id.scrollDropEffectInput);
-    }
-
-    private String dropEffect() {
-        return dropEffectInput().getSelectedItem().toString();
-    }
-
-    private int dropEffectIndex(String effect){
-        return dropEffectAdapter().getPosition(effect);
-    }
-
-    private void setDropEffect(String effect){
-        dropEffectInput().setSelection(dropEffectIndex(effect));
-    }
-
-    private ArrayAdapter<CharSequence> dropEffectAdapter() {
-        ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(item_dialog.activity,
-                        R.array.scroll_drop_effects,
-                        android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        return adapter;
-    }
-
-    private boolean dropSpecified(){
-        return dropEffectInput().isSelected();
+        return readEffectInput().getSelectedItemPosition() != 0;
     }
 
     public void initializeSpinners() {
         readEffectInput().setAdapter(readEffectAdapter());
-        dropEffectInput().setAdapter(dropEffectAdapter());
     }
 
     public Item itemFromInput() {
         Scroll scroll = new Scroll();
         scroll.read_effect = readEffect();
-        scroll.drop_effect = dropEffect();
         return scroll;
     }
 
     public void inputFromItem(Scroll scroll){
-        setReadEffect(scroll.read_effect);
-        setDropEffect(scroll.drop_effect);
+        setAppearanceSelection();
+
+        if(scroll.hasReadEffect()) setReadEffect(scroll.read_effect);
     }
 
     public void resetDialog(){
         readEffectInput().setSelected(false);
-        dropEffectInput().setSelected(false);
     }
 
     public boolean filterSpecified(){
-        return item_dialog.filterSpecified() || readSpecified() || dropSpecified();
+        return item_dialog.filterSpecified() || readSpecified();
     }
 
     ///
 
     public void setListeners(ItemDialog.InputChangedListener listener){
         readEffectInput().setOnItemSelectedListener(listener);
-        dropEffectInput().setOnItemSelectedListener(listener);
+        readEffectInput().setSelection(0);
     }
 
     ///
@@ -121,10 +112,10 @@ public class ScrollsDialog {
     public String reidentify(){
         if(!filterSpecified()) return "";
 
-        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Scroll.type()));
+        Items items = all_scrolls();
 
         if(item_dialog.appearanceSpecified())
-            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+            items = items.filter(new Scroll.AppearanceFilter(item_dialog.itemAppearance()));
 
         if(item_dialog.buyPriceSpecified())
             items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));
@@ -134,9 +125,6 @@ public class ScrollsDialog {
 
         if(readSpecified())
             items = items.filter(new Scroll.ReadFilter(readEffect()));
-
-        if(dropSpecified())
-            items = items.filter(new Scroll.DropFilter(dropEffect()));
 
         return TextUtils.join(", ", items.names());
     }

@@ -267,7 +267,7 @@
 
         <item><content>To sacrifice, you stand on an altar, use the #offer command, and select a fresh corpse from your inventory or one that is lying on the altar.</content></item>
 
-        <item><content>TBD</content></item>
+        <!--<item><content>TBD</content></item>-->
     </section>
 
     <section name='Corpses Nutrition'>
@@ -450,11 +450,11 @@
             both by increasing the chance of a positive result and by giving more control over whether they remove your armor. </content></item>
     </section>
 
-    <section name="Ailments">
+    <!--<section name="Ailments">
         <item>
             <content>TBD</content>
         </item>
-    </section>
+    </section>-->
     
     <section name='Wands'>
         <item><content>To identify first write something in the dust with your fingers ("Elbereth"), then engrave something else with the wand.</content></item>
@@ -1075,7 +1075,7 @@
              and black puddings are slow enough that they won't kill you if you move carefully. In fact, both the pudding and the foocubus can be used to your benefit.</content></item>
     </section>
 
-    <section name="Thrones">
+    <!--<section name="Thrones">
         <item><content>TBD</content></item>
     </section>
 
@@ -1097,7 +1097,7 @@
 
     <section name='Specific Monsters'>
         <item><content>TBD</content></item>
-    </section>
+    </section>-->
 
     <section name="Bad Ideas">
         <item><content>From the NetHack wiki:</content></item>

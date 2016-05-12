@@ -216,7 +216,7 @@
 
     <message>
         <game>Magical energies course through your body.</game>
-        <meaning>Potion of Gain Energ</meaning>
+        <meaning>Potion of Gain Energy</meaning>
     </message>
 
     <message>
@@ -511,8 +511,14 @@
 
     <message>
         <game>Ulch! That potion smells terrible</game>
-        <meaning>Your eyes sting.</meaning>
+        <meaning>Potion of Restore Ability</meaning>
     </message>
+
+    <message>
+        <game>Your eyes sting.</game>
+        <meaning>Potion of Restore Ability</meaning>
+    </message>
+
     <message>
         <game>This tastes like [fruit] juice</game>
         <meaning>Potion of See Invisible</meaning>
@@ -565,16 +571,6 @@
 
     <message>
         <game>But in fact it was biologically contaminated [fruit] juice.</game>
-        <meaning>Potion of Sickness</meaning>
-    </message>
-
-    <message>
-        <game>You are shocked back to your senses!</game>
-        <meaning>Potion of Sickness</meaning>
-    </message>
-
-    <message>
-        <game>Yecch! This stuff tastes like poison.</game>
         <meaning>Potion of Sickness</meaning>
     </message>
 
@@ -1422,7 +1418,7 @@
     </message>
 
     <!--
-      ***
+      *** gems
       -->
 
     <message>
@@ -1435,83 +1431,895 @@
         <meaning>Soft Gem</meaning>
     </message>
 
+    <!--
+      *** wands
+      -->
+
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The wand unsuccessfully fights your attempt to write!</game>
+        <meaning>Wand of Striking</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The bugs on the floor slow down!</game>
+        <meaning>Wand of Slow Monster</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The bugs on the floor speed up!</game>
+        <meaning>Wand of Speed Monster</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The floor is riddled by bullet holes!</game>
+        <meaning>Wand of Magic Missile</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>A few ice cubes drop from the wand.</game>
+        <meaning>Wand of Cold</meaning>
+    </message>
+
+    <!--
+     *** rings
+     -->
+
+    <message>
+        <game>You thought your ring got lost in the sink, but there it is!</game>
+        <meaning>Ring of Searching</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The ring is regurgitated!</game>
+        <meaning>Ring of Slow Digestion</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The sink quivers upwards for a moment.</game>
+        <meaning>Ring of Levitation</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>You smell rotten [fruit]</game>
+        <meaning>Ring of Poison Resistance</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>Several flies buzz angrily around the sink</game>
+        <meaning>Ring of Aggravate Monster</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>Static electricity surrounds the sink</game>
+        <meaning>Ring of Shock Resistance</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>You hear loud noises coming from the drain</game>
+        <meaning>Ring of Conflict</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The water flow seems fixed.</game>
+        <meaning>Ring of Sustain Ability</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The water flow seems stronger/weaker now.</game>
+        <meaning>Ring of Gain Strength</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The water flow seems lesser/greater now.</game>
+        <meaning>Ring fo Constitution</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The water flow misses/hits the drain.</game>
+        <meaning>Ring of Increased Accuracy</meaning>
     </message>
 
     <message>
-        <game></game>
-        <meaning></meaning>
+        <game>The water's force seems smaller/greater now.</game>
+        <meaning>Ring of Increased Damage</meaning>
+    </message>
+
+    <message>
+        <game>Suddenly, [junk object] vanishes from the sink!</game>
+        <meaning>Ring of Hunger</meaning>
+    </message>
+
+    <message>
+        <game>Several flies buzz around the sink.</game>
+        <meaning>Ring of Meat</meaning>
+    </message>
+
+    <message>
+        <game>The faucets flash brightly for a moment.</game>
+        <meaning>Ring of Adornment</meaning>
+    </message>
+
+    <message>
+        <game>The sink looks as good as new.</game>
+        <meaning>Ring of Regeneration</meaning>
+    </message>
+
+    <message>
+        <game>You don't see anything happen to the sink.</game>
+        <meaning>Ring of Invisability</meaning>
+    </message>
+
+    <message>
+        <game>You see the ring slide right down the drain!</game>
+        <meaning>Ring of Free Action</meaning>
+    </message>
+
+    <message>
+        <game>You see some air in the sink.</game>
+        <meaning>Ring of See Invisible</meaning>
+    </message>
+
+    <message>
+        <game>The sink seems to blend into the floor for a moment.</game>
+        <meaning>Ring of Stealth</meaning>
+    </message>
+
+    <message>
+        <game>The hot water faucet flashes brightly for a moment.</game>
+        <meaning>Ring of Fire Resistance</meaning>
+    </message>
+
+    <message>
+        <game>The cold water faucet flashes brightly for a moment.</game>
+        <meaning>Ring of Cold Resistance</meaning>
+    </message>
+
+    <message>
+        <game>The sink looks nothing like a fountain.</game>
+        <meaning>Ring of Protection from Shape Changers</meaning>
+    </message>
+
+    <message>
+        <game>The sink glows black/silver for a moment</game>
+        <meaning>Ring of Protection</meaning>
+    </message>
+
+    <message>
+        <game>The sink glows white for a moment.</game>
+        <meaning>Ring of Warning</meaning>
+    </message>
+
+    <message>
+        <game>The sink momentarily vanishes.</game>
+        <meaning>Ring of Teleportation</meaning>
+    </message>
+
+    <message>
+        <game>The sink looks like it is being beamed aboard somewhere</game>
+        <meaning>Ring of Teleport Control</meaning>
+    </message>
+
+    <message>
+        <game>The sink momentarily looks like a fountain</game>
+        <meaning>Ring of Polymorph</meaning>
+    </message>
+
+    <message>
+        <game>The sink momentarily looks like a regularly erupting geyser</game>
+        <meaning>Ring of Polymorph Control</meaning>
+    </message>
+
+    <!--
+      *** sinks
+      -->
+
+    <message>
+        <game>You take a sip of (very) [hot, warm, cold]> water. </game>
+        <meaning>Sink: quaffed water, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You hear clanking from the pipes...</game>
+        <meaning>Sink: quaffed water, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You hear snatches of song from among the sewers... </game>
+        <meaning>Sink: quaffed water, no effect</meaning>
+    </message>
+
+    <message>
+        <game>From the murky drain, a hand reaches up... --oops-- </game>
+        <meaning>Sink: quaffed water, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You take a sip of scalding hot water. </game>
+        <meaning>Sink: quaffed scaling water, lose hp</meaning>
+    </message>
+
+    <message>
+        <game>You take a sip of scalding hot water. It seems quite tasty. </game>
+        <meaning>Sink: quaffed scaling water, no effect</meaning>
+    </message>
+
+    <message>
+        <game>Eek! There's a sewer rat in the sink! </game>
+        <meaning>Sink: quaffed, sewer rat came out</meaning>
+    </message>
+
+    <message>
+        <game>Eek! There's a sewer rat in the sink! </game>
+        <meaning>Sink: quaffed, sewer rat came out</meaning>
+    </message>
+
+    <message>
+        <game>The sink seems quite dirty. </game>
+        <meaning>Sink: quaffed, sewer rates genocided/extinct, no effect</meaning>
+    </message>
+
+    <message>
+        <game>Some [potion appearance] liquid flows from the faucet. </game>
+        <meaning>Sink: quaffed, same effects as drinking uncursed [potion]</meaning>
+    </message>
+
+    <message>
+        <game>Some odd liquid flows from the faucet. </game>
+        <meaning>Sink: quaffed, same effect as drinking random uncursed potion</meaning>
+    </message>
+
+    <message>
+        <game>You find a ring in the sink! </game>
+        <meaning>Sink: quaffed, ring found</meaning>
+    </message>
+
+    <message>
+        <game>Some dirty water backs up in the drain. </game>
+        <meaning>Sink: quaffed, already found ring, no effect</meaning>
+    </message>
+
+    <message>
+        <game>The pipes break! Water spurts out! </game>
+        <meaning>Sink: quaffed, sink becomes fountain</meaning>
+    </message>
+
+    <message>
+        <game>The water moves as though of its own will! </game>
+        <meaning>Sink: quaffed, Water Elemental is created</meaning>
+    </message>
+
+    <message>
+        <game>The water moves as though of its own will! But it quiets down. </game>
+        <meaning>Sink: quaffed, Water Elementals are extinct, no effect</meaning>
+    </message>
+
+    <message>
+        <game>Yuk, this water tastes awful. </game>
+        <meaning>Sink: quaffed hard water, gain 1XP</meaning>
+    </message>
+
+    <message>
+        <game>Gagg... this tastes like sewage! You vomit. </game>
+        <meaning>Sink: quaffed sewer water, hunger increases</meaning>
+    </message>
+
+    <message>
+        <game>This water contains toxic wastes! You undergo a freakish metamorphosis! </game>
+        <meaning>Sink: quaffed toxic waste, polymorph</meaning>
+    </message>
+
+    <message>
+        <game>This water contains toxic wastes! </game>
+        <meaning>Sink: quaffic toxic watse, your are unchanging, no effect</meaning>
+    </message>
+
+    <message>
+        <game>Your rump gets wet</game>
+        <meaning>You sat in a sink</meaning>
+    </message>
+
+    <message>
+        <game>You hear a gurgling noise</game>
+        <meaning>There's a sink on the current level</meaning>
+    </message>
+
+    <message>
+        <game>You hear a slow drip.</game>
+        <meaning>There's a sink on the current level</meaning>
+    </message>
+
+    <message>
+        <game>Klunk! The pipes vibrate noisily.</game>
+        <meaning>Sink: kicked, nearby monsters woken, dexterity excercised</meaning>
+    </message>
+
+    <message>
+        <game>A black ooze gushes up from the drain!</game>
+        <meaning>Sink: kicked, black pudding summoned, dexterity excercised</meaning>
+    </message>
+
+    <message>
+        <game>The dishwasher returns!</game>
+        <meaning>Sink: kicked, opposite sex foocubus summoned, dexterity is excercised</meaning>
+    </message>
+
+    <message>
+        <game>Flupp! Muddy waste pops up from the drain.</game>
+        <meaning>Sink: kicked, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You see a ring shining in its midst</game>
+        <meaning>Sink: kicked, dexterity and wisdom excercised</meaning>
+    </message>
+
+    <message>
+        <game>Ouch!  That hurts!</game>
+        <meaning>Sink: kicked, lose up to 5HP, abuse dexterity and strength, possible wounded leg</meaning>
+    </message>
+
+    <!--
+     *** fountains
+     -->
+
+    <message>
+        <game>The cool draught refreshes you</game>
+        <meaning>Fountain: quaffed, hunger reduced</meaning>
+    </message>
+
+    <message>
+        <game>Wow! This makes you feel great!</game>
+        <meaning>Magic Fountain: quaffed, wisdom excercised, all attributes maxed out, one or more attributes increased, fountain no longer magical</meaning>
+    </message>
+
+    <message>
+        <game>A wisp of vapor escapes the fountain...</game>
+        <meaning>Magic Fountain: quaffed, wisdom excercised, all attributes maxed out, one or more attributes increased, fountain no longer magical</meaning>
+    </message>
+
+    <message>
+        <game>This tepid water is tasteless.</game>
+        <meaning>Fountain: quaffed, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You feel self-knowledgeable...</game>
+        <meaning>Fountain: see attributes, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>The feeling subsides...</game>
+        <meaning>Fountain: see attributes, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>The water is foul! You gag and vomit.</game>
+        <meaning>Fountain: quaffed, hunger increased</meaning>
+    </message>
+
+    <message>
+        <game>The water is contaminated!</game>
+        <meaning>Fountain: quaffed, lose d10FP and d4+2 STR, abuse constitution</meaning>
+    </message>
+
+    <message>
+        <game>Perhaps it is runoff from the nearby slime mold farm</game>
+        <meaning>Fountain: quaffed, with poison resistance, no effect</meaning>
+    </message>
+
+    <message>
+        <game>Perhaps it is runoff from the nearby [fruit] farm."</game>
+        <meaning>Fountain: quaffed, load d4 hp</meaning>
+    </message>
+
+    <message>
+        <game>An endless stream of snakes pour forth!</game>
+        <meaning>Fountain: quaffed d5+1 water moccasins created</meaning>
+    </message>
+
+    <message>
+        <game>You hear something hissing!</game>
+        <meaning>Fountain: quaffed d5+1 water moccasins created</meaning>
+    </message>
+
+    <message>
+        <game>The fountain bubbles furiously for a moment, then calms.</game>
+        <meaning>Fountain: quaffed d5+1 water moccasins created</meaning>
+    </message>
+
+    <message>
+        <game>You unleash a water demon!</game>
+        <meaning>Fountain: quaffed, water demon summed</meaning>
+    </message>
+
+    <message>
+        <game>You feel the presence of evil.</game>
+        <meaning>Fountain: quaffed, water demon summed</meaning>
+    </message>
+
+    <message>
+        <game>Grateful for his/her release, he/she grants you a wish!</game>
+        <meaning>Fountain: quaffed, water demon summed</meaning>
+    </message>
+
+    <message>
+        <game>The fountain bubbles furiously for a moment, then calms.</game>
+        <meaning>Fountain: quaffed, water demon summoning failed</meaning>
+    </message>
+
+    <message>
+        <game>You attract a water nymph!</game>
+        <meaning>Fountain: quaffed, water nymph summoned</meaning>
+    </message>
+
+    <message>
+        <game>You hear a seductive voice.</game>
+        <meaning>Fountain: quaffed, water nymph summoned</meaning>
+    </message>
+
+    <message>
+        <game>A large bubble rises to the surface and pops.</game>
+        <meaning>Fountain: quaffed, water nymph genocided/extinct, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You hear a loud pop.</game>
+        <meaning>Fountain: quaffed, water nymph genocided/extinct, no effect</meaning>
+    </message>
+
+    <message>
+        <game>This water's no good!</game>
+        <meaning>Fountain: quaffed, hunger increased, constitution abused, 20% curse chance on each inventory item</meaning>
+    </message>
+
+    <message>
+        <game>You see an image of someone stalking you. But it disappears</game>
+        <meaning>Fountain: quaffed, gain see invisible, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You feel transparent.</game>
+        <meaning>Fountain: quaffed, gain see invisible, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You feel very self-conscious. Then it passes.</game>
+        <meaning>Fountain: quaffed, gain see invisible, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You sense the presence of monsters.</game>
+        <meaning>Fountain: quaffed, briefly see monsters, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You have a strange feeling for a moment, then it passes.</game>
+        <meaning>Fountain: quaffed, no monsters on level, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You have a normal feeling for a moment, then it passes.</game>
+        <meaning>Fountain: quaffed, no monsters on level, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You feel threatened.</game>
+        <meaning>Fountain: quaffed, no monsters on level, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You get the heebie jeebies.</game>
+        <meaning>Fountain: quaffed, no monsters on level, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You spot a gem in the sparkling waters!</game>
+        <meaning>Fountain: quaffed, find gem, or if already found summon water nymph, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You feel a gem here!</game>
+        <meaning>Fountain: quaffed, find gem, or if already found summon water nymph, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>This water gives you bad breath!</game>
+        <meaning>Fountain: quaffed, monsters flee you for a while</meaning>
+    </message>
+
+    <message>
+        <game>Water gushes forth from the overflowing fountain!</game>
+        <meaning>Fountain: quaffed, nearby pools created</meaning>
+    </message>
+
+    <message>
+        <game>Water gushes forth from the overflowing fountain!</game>
+        <meaning>Fountain: dug, nearby pools created, fountain destroyed</meaning>
+    </message>
+
+    <message>
+        <game>Water sprays all over you.</game>
+        <meaning>Fountain: dug, no pools created, fountain destroyed</meaning>
+    </message>
+
+    <message>
+        <game>The [watchman] yells: "Hey, stop using that fountain!</game>
+        <meaning>Minetown Fountain: about to dry up</meaning>
+    </message>
+
+    <message>
+        <game>The flow reduces to a trickle.</game>
+        <meaning>Minetown Fountain: about to dry up</meaning>
+    </message>
+
+    <message>
+        <game>You hear bubbling water.</game>
+        <meaning>There is a fountain somewhere on the level.</meaning>
+    </message>
+
+    <message>
+        <game>You hear water falling on coins.</game>
+        <meaning>There is a fountain somewhere on the level.</meaning>
+    </message>
+
+    <message>
+        <game>You hear the splashing of a naiad.</game>
+        <meaning>There is a fountain somewhere on the level.</meaning>
+    </message>
+
+    <message>
+        <game>You hear a soda fountain!</game>
+        <meaning>There is a fountain somewhere on the level.</meaning>
+    </message>
+
+    <message>
+        <game>A strange tingling runs up your arm.</game>
+        <meaning>Fountain: dipped, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You feel a sudden chill.</game>
+        <meaning>Fountain: dipped, no effect</meaning>
+    </message>
+
+    <message>
+        <game>The water glows for a moment</game>
+        <meaning>Fountain: dipped, dipped item is uncursed</meaning>
+    </message>
+
+    <message>
+        <game>A feeling of loss comes over you.</game>
+        <meaning>Fountain: dipped, no effect</meaning>
+    </message>
+
+    <message>
+        <game>An endless stream of snakes pour forth!</game>
+        <meaning>Fountain: dipped, d5+1 water moccasins created</meaning>
+    </message>
+
+    <message>
+        <game>You hear something hissing!</game>
+        <meaning>Fountain: dipped, d5+1 water moccasins created</meaning>
+    </message>
+
+    <message>
+        <game>The fountain bubbles furiously for a moment, then calms.</game>
+        <meaning>Fountain: dipped, moccasins genocided, no effect</meaning>
+    </message>
+
+    <message>
+        <game>You unleash a water demon!</game>
+        <meaning>Fountain: dipped, water demon summoned</meaning>
+    </message>
+
+    <message>
+        <game>You feel the presence of evil.</game>
+        <meaning>Fountain: dipped, water demon summoned</meaning>
+    </message>
+
+    <message>
+        <game>Grateful for his release, he grants you a wish!</game>
+        <meaning>Fountain: dipped, water demon summoned</meaning>
+    </message>
+
+    <message>
+        <game>The fountain bubbles furiously for a moment, then calms.</game>
+        <meaning>Fountain: dipped, water demon summon failed</meaning>
+    </message>
+
+    <message>
+        <game>You attract a water nymph!</game>
+        <meaning>Fountain: dipped, water nymph summoned</meaning>
+    </message>
+
+    <message>
+        <game>You hear a seductive voice</game>
+        <meaning>Fountain: dipped, water nymph summoned</meaning>
+    </message>
+
+    <message>
+        <game>A large bubble rises to the surface and pops</game>
+        <meaning>Fountain: dipped, water nymphs genocided/extinct</meaning>
+    </message>
+
+    <message>
+        <game>You hear a loud pop.</game>
+        <meaning>Fountain: dipped, water nymphs genocided/extinct</meaning>
+    </message>
+
+    <message>
+        <game>Water gushes forth from the overflowing fountain!</game>
+        <meaning>Fountain: dipped, pools created</meaning>
+    </message>
+
+    <message>
+        <game>Water sprays all over you.</game>
+        <meaning>Fountain: dipped, no pools</meaning>
+    </message>
+
+    <message>
+        <game>You spot a gem in the sparkling waters</game>
+        <meaning>Fountain: dipped, find gem, or if already found summon water nymph, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You feel a gem here!</game>
+        <meaning>Fountain: dipped, find gem, or if already found summon water nymph, excercise wisdom</meaning>
+    </message>
+
+    <message>
+        <game>An urge to take a bath overwhelms you</game>
+        <meaning>Fountain: dipped, lose $, abuse wisdom</meaning>
+    </message>
+
+    <message>
+        <game>You lost some of your gold in the fountain!</game>
+        <meaning>Fountain: dipped, lose $, abuse wisdom</meaning>
+    </message>
+
+    <message>
+        <game>Far below you, you see coins glistening in the water.</game>
+        <meaning>Fountain: dipped, you find $, wisdom excercised</meaning>
+    </message>
+
+    <!--
+      *** altars
+      -->
+
+    <message>
+        <game>You have a hopeful feeling.</game>
+        <meaning>Altar: sacrifice accepted, prayer timeout reduced but not 0</meaning>
+    </message>
+
+    <message>
+        <game>You realize the gods are not like you and I</game>
+        <meaning>Altar: sacrifice accepted, prayer timeout reduced but not 0</meaning>
+    </message>
+
+    <message>
+        <game>You have a feeling of reconciliation.</game>
+        <meaning>Altar: sacrifice accepted, you can now pray</meaning>
+    </message>
+
+    <message>
+        <game>Overall, there is a smell of fried onions</game>
+        <meaning>Altar: sacrifice accepted, you can now pray</meaning>
+    </message>
+
+    <message>
+        <game>An object appears at your feet!</game>
+        <meaning>Altar: sacrific accepted, received gift, prayer timeout increased</meaning>
+    </message>
+
+    <message>
+        <game>You have a feeling of inadequacy.</game>
+        <meaning>Altar: sacrifice accepted, but prayer timeout unaffected</meaning>
+    </message>
+
+    <message>
+        <game>The gods seem tall</game>
+        <meaning>Altar: sacrifice accepted, but prayer timeout unaffected</meaning>
+    </message>
+
+    <message>
+        <game>[Deity] seems slightly mollified.</game>
+        <meaning>Altar: sacrifice accepted, prayer timeout reduced but not 0</meaning>
+    </message>
+
+    <message>
+        <game>[Deity] seems mollified.</game>
+        <meaning>Altar: sacrifice accepted, sacrifice again to see if it's safe to pray</meaning>
+    </message>
+
+    <message>
+        <game>[Deity] seems groovy</game>
+        <meaning>Altar: sacrifice accepted, prayer timeout reduced but not 0</meaning>
+    </message>
+
+    <message>
+        <game>[Deity] seems cosmic (not a new fact)</game>
+        <meaning>Altar: sacrifice accepted, sacrifice again to see if it's safe to pray</meaning>
+    </message>
+
+    <message>
+        <game>You feel partially absolved.</game>
+        <meaning>Altar: sacrifice accepted, but with negative alignment, alignment increase to max of 0, sacrifice again to see if it's safe to pray</meaning>
+    </message>
+
+    <message>
+        <game>You glimpse a four-leaf clover at your feet.</game>
+        <meaning>Altar: sacrifice accepted, base luck is increase and is at least 0, you may pray</meaning>
+    </message>
+
+    <message>
+        <game>You think something brushed your foot.</game>
+        <meaning>Altar: sacrifice accepted, base luck is increase and is at least 0, you may pray</meaning>
+    </message>
+
+    <message>
+        <game>You see crabgrass at your feet. A funny thing in a dungeon.</game>
+        <meaning>Altar: sacrifice accepted, base luck is increase and is at least 0, you may pray</meaning>
+    </message>
+
+    <message>
+        <game>Your sacrifice is consumed... (no other message)</game>
+        <meaning>Altar: sacrifice accepted, you may pray</meaning>
+    </message>
+
+    <message>
+        <game>You have a sudden sense of a new direction.</game>
+        <meaning>Altar: sacrifice accepted, permenantly converted to new alignment</meaning>
+    </message>
+
+    <message>
+        <game>Your sacrifice collapses into a cloud of dancing particles and fades away</game>
+        <meaning>Altar: sacrifice accepted</meaning>
+    </message>
+
+    <message>
+        <game>Your sacrifice puffs up, swelling bigger and bigger, and pops!</game>
+        <meaning>Altar: sacrifice accepted</meaning>
+    </message>
+
+    <message>
+        <game>Your sacrifice sprouts wings and a propeller and roars away</game>
+        <meaning>Altar: sacrifice accepted</meaning>
+    </message>
+
+    <!--
+      *** pets
+      -->
+
+    <message>
+        <game>You hear the rumble of distant thunder...</game>
+        <meaning>You Killed your pet, -15 alignment, -1 luck</meaning>
+    </message>
+
+    <message>
+        <game>You hear the studio audience applaud! </game>
+        <meaning>You Killed your pet, -15 alignment, -1 luck</meaning>
+    </message>
+
+    <message>
+        <game>You feel guilty about losing your pet like this.</game>
+        <meaning>You displaced your pet, causing it to die, -15 alignment, angry god</meaning>
+    </message>
+
+    <message>
+        <game>You feel sad for a moment.</game>
+        <meaning>Pet starved to death</meaning>
+    </message>
+
+    <message>
+        <game>You have a sad feeling for a moment, then it passes.</game>
+        <meaning>Pet died in combat or due to trap</meaning>
+    </message>
+
+    <message>
+        <game>You have a melancholy feeling for a moment, then it passes.</game>
+        <meaning>Pet exploded</meaning>
+    </message>
+
+    <message>
+        <game>You have a peculiarly sad feeling for a moment, then it passes. </game>
+        <meaning>Pet turned to stone</meaning>
+    </message>
+
+    <message>
+        <game>You have a queasy feeling for a moment, then it passes.</game>
+        <meaning>Pet swalled one of the riders</meaning>
+    </message>
+
+    <message>
+        <game>You have a strangely sad feeling for a moment, then it passes. </game>
+        <meaning>Pet was cancelled</meaning>
+    </message>
+
+    <message>
+        <game>May [pet] rust in peace.</game>
+        <meaning>Pet was hit by rusting attack</meaning>
+    </message>
+
+    <message>
+        <game>May [pet] rot in peace.</game>
+        <meaning>Pet was hit by rotting attack</meaning>
+    </message>
+
+    <message>
+        <game>You feel worried about your [pet].</game>
+        <meaning>Pet is starving</meaning>
+    </message>
+
+    <message>
+        <game>[Pet] is confused from hunger.</game>
+        <meaning>Pet is starving</meaning>
+    </message>
+
+    <message>
+        <game>[Pet] moves over [item] reluctantly</game>
+        <meaning>Item is cursed</meaning>
+    </message>
+
+    <message>
+        <game>[Pet] moves reluctantly</game>
+        <meaning>Item is cursed</meaning>
+    </message>
+
+    <message>
+        <game>[Pet] moves only reluctantly</game>
+        <meaning>Item is cursed</meaning>
+    </message>
+
+    <!--
+     *** shops
+     -->
+
+    <message>
+        <game>You hear someone cursing shoplifters.</game>
+        <meaning>Shop on current level</meaning>
+    </message>
+
+    <message>
+        <game>You hear someone cursing shoplifters.</game>
+        <meaning>Shop on current level</meaning>
+    </message>
+
+    <message>
+        <game>You hear Neiman and Marcus arguing!</game>
+        <meaning>Shop on current level</meaning>
+    </message>
+
+    <message>
+        <game>This shop appears to be deserted.</game>
+        <meaning>Shop on current level</meaning>
+    </message>
+
+    <!--
+     *** oracle
+     -->
+
+    <message>
+        <game>You hear a strange wind.</game>
+        <meaning>Oracle Level</meaning>
+    </message>
+
+    <message>
+        <game>You hear convulsive ravings.</game>
+        <meaning>Oracle Level</meaning>
+    </message>
+
+    <message>
+        <game>You hear snoring snakes.</game>
+        <meaning>Oracle Level</meaning>
+    </message>
+
+    <message>
+        <game>You hear someone say "No more woodchucks!</game>
+        <meaning>Oracle Level</meaning>
+    </message>
+
+    <message>
+        <game>You hear a loud ZOT!</game>
+        <meaning>Oracle Level</meaning>
     </message>
 </messages>

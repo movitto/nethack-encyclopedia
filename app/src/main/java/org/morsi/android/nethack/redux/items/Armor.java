@@ -100,10 +100,6 @@ public class Armor extends Item{
                         current_armor.probability_str = xpp.getText();
                     else if(element_name.equals("appearance"))
                         current_armor.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_armor.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_armor.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("ac"))
                         current_armor.ac = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("material"))

@@ -42,10 +42,6 @@ public class SpellBook extends Item {
                         current_spellbook.probability_str = xpp.getText();
                     else if (element_name.equals("appearance"))
                         current_spellbook.appearance = xpp.getText();
-                    else if (element_name.equals("buy"))
-                        current_spellbook.buy_price = Integer.parseInt(xpp.getText());
-                    else if (element_name.equals("sell"))
-                        current_spellbook.sell_price = Integer.parseInt(xpp.getText());
                     
                 } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equals("spellbook")) {
                     spellbooks.add(current_spellbook);

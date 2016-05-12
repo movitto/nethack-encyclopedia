@@ -6,7 +6,9 @@
         <probability>0</probability>
         <ink>2</ink>
         <appearance>stamped</appearance>
+        <read>System Mail</read>
     </scroll>
+
     <scroll>
         <name>identify</name>
         <cost>20</cost>
@@ -14,7 +16,10 @@
         <probability>18%</probability>
         <ink>14</ink>
         <appearance>random</appearance>
+        <read>This is an identify scroll.</read>
+        <read>You identify this as an identify scroll</read>
     </scroll>
+
     <scroll>
         <name>light</name>
         <cost>50</cost>
@@ -22,7 +27,12 @@
         <probability>9%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read>A lit field surrounds you</read>
+        <read>You are surrounded by darkness</read>
+        <read>Your [light source] goes out</read>
+        <read>Your [candle]'s flame is extinguished</read>
     </scroll>
+
     <scroll>
         <name>blank paper</name>
         <cost>60</cost>
@@ -31,6 +41,7 @@
         <ink>0</ink>
         <appearance>unlabeled</appearance>
     </scroll>
+
     <scroll>
         <name>enchant weapon</name>
         <cost>60</cost>
@@ -38,7 +49,29 @@
         <probability>8%</probability>
         <ink>16</ink>
         <appearance>random</appearance>
+        <read>You have a strange feeling for a moment, then it passes</read>
+        <read>You have a normal feeling for a moment, then it passes</read>
+        <read>Your [hands] twitch</read>
+        <read>Your [hands] itch</read>
+        <read>Your weapon seems sharper now</read>
+        <read>Your [weapon] violently glows blue for a while and then evaporates</read>
+        <read>Your [weapon] evaporates</read>
+        <read>Your [weapon] glows blue for a moment</read>
+        <read>Your [weapon] glows blue for a while</read>
+        <read>Your [weapon] violently glows blue for a while</read>
+        <read>Your right [hand] flinches</read>
+        <read>Your right [hand] itches</read>
+        <read>Your [weapon] suddenly vibrates unexpectedly</read>
+        <read>Your weapon seems duller now</read>
+        <read>Your [weapon] faintly glows black</read>
+        <read>Your [weapon] glows black for a moment</read>
+        <read>Your weapon feels warm for a moment</read>
+        <read>Your [weapon] looks as good as new</read>
+        <read>Your [weapon] feels as good as new</read>
+        <read>Your [weapon] is covered by a mottled purple glow</read>
+        <read>Your weapon feels warm for a moment</read>
     </scroll>
+
     <scroll>
         <name>enchant armor</name>
         <cost>80</cost>
@@ -46,7 +79,25 @@
         <probability>6.3%</probability>
         <ink>16</ink>
         <appearance>random</appearance>
+        <read>You have a strange feeling for a moment, then it passes.</read>
+        <read>You have a normal feeling for a moment, then it passes</read>
+        <read>Your skin glows then fades</read>
+        <read>Your skin feels warm for a moment</read>
+        <read>Your [armor] violently glows silver for a while, then evaporates</read>
+        <read>Your [scales] merges and hardens</read>
+        <read>Your [armor] glows silver for a moment</read>
+        <read>Your [armor] glows silver for a while</read>
+        <read>Your [armor] violently glows silver for a moment</read>
+        <read>Your [armor] suddenly vibrates unexpectedly</read>
+        <read>Your [armor] suddenly vibrates again</read>
+        <read>Your [armor] is covered by a shimmering golden shield/layer</read>
+        <read>Your [armor] feels warm for a moment</read>
+        <read>Your [armor] looks as good as new</read>
+        <read>Your [armor] feels as good as new</read>
+        <read>Your [armor] is covered by a mottled black glow</read>
+        <read>Your [armor] feels warm for a moment.</read>
     </scroll>
+
     <scroll>
         <name>remove curse</name>
         <cost>80</cost>
@@ -55,6 +106,7 @@
         <ink>16</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>confuse monster</name>
         <cost>100</cost>
@@ -62,7 +114,25 @@
         <probability>5.3%</probability>
         <ink>12</ink>
         <appearance>random</appearance>
+        <read>Your hands begin to glow red</read>
+        <read>Your hands begin to tingle</read>
+        <read>Your hands glow a brilliant red</read>
+        <read>Your hands tingle very sharply</read>
+        <read>Your hands begin to glow red even more</read>
+        <read>Your hands tingle even more</read>
+        <read>Your hands glow an even more brilliant red</read>
+        <read>Your hands tingle even more sharply</read>
+        <read>Your hands no longer glow so brightly red</read>
+        <read>The tingling in your hands lessens</read>
+        <read>Your hands stop glowing red</read>
+        <read>Your hands stop tingling</read>
+        <read>[target] appears confused</read>
+        <read>You feel confused</read>
+        <read>Your hands begin to glow purple</read>
+        <read>A red glow surrounds your head</read>
+        <read>A faint buzz surrounds your head</read>
     </scroll>
+
     <scroll>
         <name>destroy armor</name>
         <cost>100</cost>
@@ -70,7 +140,24 @@
         <probability>4.5%</probability>
         <ink>10</ink>
         <appearance>random</appearance>
+        <read>You have a strange feeling for a moment, then it passes</read>
+        <read>You have a normal feeling for a moment, then it passes</read>
+        <read>Your bones itch</read>
+        <read>Your skin itches</read>
+        <read>Your cloak crumbles and turns to dust!</read>
+        <read>Your armor turns to dust and falls to the [floor]</read>
+        <read>Your shirt crumbles into tiny threads and falls apart</read>
+        <read>Your helmet turns to dust and is blown away</read>
+        <read>Your gloves vanish</read>
+        <read>Your boots disintegrate</read>
+        <read>Your shield crumbles away</read>
+        <read>Your [armor] vibrates</read>
+        <read>Your [armor] glows purple for a moment</read>
+        <read>Your [armor] vibrates for a moment</read>
+        <read>Your [armor] glows purple for a moment</read>
+        <read>Your [armor] vibrates for a moment</read>
     </scroll>
+
     <scroll>
         <name>fire</name>
         <cost>100</cost>
@@ -78,7 +165,15 @@
         <probability>3%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read></read>
+        <read></read>
+        <read></read>
+        <read></read>
+        <read></read>
+        <read></read>
+        <read></read>
     </scroll>
+
     <scroll>
         <name>food detection</name>
         <cost>100</cost>
@@ -86,7 +181,14 @@
         <probability>2.5%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read>The scroll erupts in a tower of flame</read>
+        <read>The water around you vaporizes violently</read>
+        <read>Oh, look, what a pretty fire in your [hands]</read>
+        <read>You feel a pleasant warmth in your [hands]</read>
+        <read>The scroll catches fire and you burn your [hands]</read>
+        <read>The slime that covers you is burned away</read>
     </scroll>
+
     <scroll>
         <name>gold detection</name>
         <cost>100</cost>
@@ -94,7 +196,21 @@
         <probability>3.3%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read>Your [nose] starts to tingle and you smell food. </read>
+        <read>Your [nose] continues to tingle and you smell food.</read>
+        <read>Your [nose] twitches then starts to tingle</read>
+        <read>Your [nose] twitches</read>
+        <read>You smell food nearby. Your [nose] starts to tingle</read>
+        <read>You smell food nearby</read>
+        <read>You sense a lack of food nearby. Your [nose] starts to tingle</read>
+        <read>You sense a lack of food nearby</read>
+        <read>You sense a lack of something nearby</read>
+        <read>Your [nose] tingles and you smell something</read>
+        <read>You smell something nearby</read>
+        <read>You have a strange feeling for a moment, then it passes</read>
+        <read>You have a normal feeling for a moment, then it passes</read>
     </scroll>
+
     <scroll>
         <name>magic mapping</name>
         <cost>100</cost>
@@ -102,7 +218,13 @@
         <probability>4.5%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read>Your mind is filled with crazy lines</read>
+        <read>Your [head] spins in bewilderment</read>
+        <read>Wow! Modern art</read>
+        <read>A map coalesces in your mind</read>
+        <read>A map coalesces in your mind! Unfortunately, you can't grasp the details</read>
     </scroll>
+
     <scroll>
         <name>scare monster</name>
         <cost>100</cost>
@@ -110,7 +232,10 @@
         <probability>3.5%</probability>
         <ink>20</ink>
         <appearance>random</appearance>
+        <read>You hear maniacal laughter close by</read>
+        <read>You hear maniacal laughter in the distance</read>
     </scroll>
+
     <scroll>
         <name>teleportation</name>
         <cost>100</cost>
@@ -119,6 +244,7 @@
         <ink>0</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>amnesia</name>
         <cost>200</cost>
@@ -126,7 +252,12 @@
         <probability>3.5%</probability>
         <ink>8</ink>
         <appearance>random</appearance>
+        <read>Who was that Maud person anyway?</read>
+        <read>Thinking of Maud you forget everything else</read>
+        <read>As your mind turns inward on itself, you forget everything else</read>
+        <read>Your mind releases itself from mundane concerns</read>
     </scroll>
+
     <scroll>
         <name>create monster</name>
         <cost>200</cost>
@@ -135,6 +266,7 @@
         <ink>10</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>earth</name>
         <cost>200</cost>
@@ -143,6 +275,7 @@
         <ink>8</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>taming</name>
         <cost>200</cost>
@@ -151,6 +284,7 @@
         <ink>20</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>charging</name>
         <cost>300</cost>
@@ -159,6 +293,7 @@
         <ink>16</ink>
         <appearance>random</appearance>
     </scroll>
+
     <scroll>
         <name>genocide</name>
         <cost>300</cost>
@@ -166,7 +301,14 @@
         <probability>1.5%</probability>
         <ink>30</ink>
         <appearance>random</appearance>
+        <read>You have found a scroll of genocide</read>
+        <read>What class of monsters do you wish to genocide?</read>
+        <read>"Wiped out all [monster] </read>
+        <read>You feel dead inside</read>
+        <read>Wiped out all [role]</read>
+        <read>Sent in some [monster]</read>
     </scroll>
+
     <scroll>
         <name>punishment</name>
         <cost>300</cost>
@@ -174,7 +316,11 @@
         <probability>1.5%</probability>
         <ink>20</ink>
         <appearance>random</appearance>
+        <read>You feel guilty</read>
+        <read>You are being punished for your misbehavior</read>
+        <read>A ball and chain appears, then falls away</read>
     </scroll>
+
     <scroll>
         <name>stinking cloud</name>
         <cost>300</cost>
@@ -182,5 +328,9 @@
         <probability>1.5%</probability>
         <ink>20</ink>
         <appearance>random</appearance>
+        <read>You smell rotten eggs</read>
+        <read>Something is burning your [lungs]! You cough and spit blood</read>
+        <read>You cough</read>
+        <read>[monster] coughs</read>
     </scroll>
 </scrolls>

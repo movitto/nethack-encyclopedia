@@ -12,7 +12,11 @@ import java.util.ArrayList;
 public class Scroll extends Item {
     public String read_effect;
 
-    public String drop_effect;
+    public boolean hasReadEffect(){
+        return !read_effect.equals("");
+    }
+
+    public ArrayList<String> read_effects;
 
     public int ink;
 
@@ -21,6 +25,10 @@ public class Scroll extends Item {
     public String itemType() { return "Scroll"; }
 
     public static String quickStatsCategoryName(){ return "Scrolls"; }
+
+    public Scroll(){
+        read_effects = new ArrayList<String>();
+    }
 
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
@@ -67,21 +75,12 @@ public class Scroll extends Item {
         String attrs[] = str.split("-");
         Scroll scroll = new Scroll();
         scroll.read_effect = attrs[0];
-        scroll.drop_effect = attrs[1];
         return scroll;
     }
 
     protected ArrayList<String> compactStringList(){
         ArrayList<String> s = super.compactStringList();
         s.add(read_effect);
-        s.add(drop_effect);
-        return s;
-    }
-
-    protected ArrayList<String> stringList(){
-        ArrayList<String> s = super.stringList();
-        s.add(read_effect);
-        s.add(drop_effect);
         return s;
     }
 
@@ -110,14 +109,8 @@ public class Scroll extends Item {
                         current_scroll.probability_str = xpp.getText();
                     else if(element_name.equals("appearance"))
                         current_scroll.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_scroll.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_scroll.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("read"))
-                        current_scroll.read_effect = xpp.getText();
-                    else if(element_name.equals("drop"))
-                        current_scroll.drop_effect = xpp.getText();
+                        current_scroll.read_effects.add(xpp.getText());
                     else if(element_name.equals("ink"))
                         current_scroll.ink = Integer.parseInt(xpp.getText());
 
@@ -137,23 +130,49 @@ public class Scroll extends Item {
 
     ///
 
+    public static class AppearanceFilter implements  Items.filter {
+        String appearance;
+
+        public AppearanceFilter(String appearance) {
+            this.appearance = appearance;
+        }
+
+        private boolean stamped_appearance(){
+            return appearance.equals("stamped");
+        }
+
+        private boolean unlabeled_appearance(){
+            return appearance.equals("unlabeled");
+        }
+
+        private boolean is_mail(Item item){
+            return item.name.equals("mail");
+        }
+
+        private boolean is_blank(Item item){
+            return item.name.equals("blank paper");
+        }
+
+        private boolean item_with_random_appearance(Item item){
+            return !is_mail(item) && !is_blank(item);
+        }
+
+        public boolean matches(Item item) {
+            return  (stamped_appearance()   && is_mail(item))    ||
+                    (unlabeled_appearance() && is_blank(item))   ||
+                    (!stamped_appearance()  && !unlabeled_appearance() &&
+                            !is_mail(item)  && !is_blank(item));
+
+        }
+    }
+
     public static class ReadFilter implements Items.filter {
         String effect;
 
         public ReadFilter(String effect) { this.effect = effect; }
 
         public boolean matches(Item item){
-            return ((Scroll)item).read_effect.equals(effect);
-        }
-    };
-
-    public static class DropFilter implements Items.filter {
-        String effect;
-
-        public DropFilter(String effect) { this.effect = effect; }
-
-        public boolean matches(Item item){
-            return ((Scroll)item).drop_effect.equals(effect);
+            return ((Scroll)item).read_effects.contains(effect);
         }
     };
 }

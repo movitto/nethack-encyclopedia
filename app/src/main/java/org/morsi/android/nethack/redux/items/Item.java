@@ -42,16 +42,75 @@ public class Item {
     public String name;
 
     public boolean identified(){
-        return name != UNIDENTIFIED;
+        return !name.equals(UNIDENTIFIED);
     }
 
-    public String appearance;
+    public String appearance = "";
+
+    public boolean hasAppearance(){
+        return !appearance.equals("");
+    }
 
     public int cost;
 
+    // stored buy and sell prices
     public int buy_price;
-
     public int sell_price;
+
+    public boolean hasBuyPrice(){
+        return buy_price != 0;
+    }
+
+    public boolean hasSellPrice(){
+        return sell_price != 0;
+    }
+
+    // these are assuming you're not a 'sucker':
+    // - wearing an uncovered tshirt
+    // - wearing dunce cap
+    // - tourist under lvl 14
+    // https://nethackwiki.com/wiki/Price_identification
+
+    public int buyPrice(){
+        return buyPrice(false);
+    }
+
+    // 25% of the time unidentified items receive a 33% surcharge)
+    public int buyPrice(boolean identified_modifier){
+        long id_surcharge = Math.round(identified_modifier ? (cost * 0.33) : 0);
+        long ch_surcharge = Math.round(cost * charismaModifier());
+        return (int)(cost + id_surcharge + ch_surcharge);
+    };
+
+    /// charisma of buyer affects buy price
+    public int buyer_charisma = 0;
+
+    private double charismaModifier(){
+        if(buyer_charisma > 18)
+            return -0.5;
+        else if(buyer_charisma > 17)
+            return -0.33;
+        else if(buyer_charisma > 15)
+            return -0.25;
+        else if(buyer_charisma > 10)
+            return 0;
+        else if(buyer_charisma > 7)
+            return 0.33;
+        else if(buyer_charisma > 5)
+            return 0.50;
+        else
+            return 1;
+    }
+
+    public int sellPrice(){
+        return sellPrice(false);
+    }
+
+    // 25% of the time in game, you'll only be offered 3/4 of this value, or 3/8 of the overall base cost)
+    public int sellPrice(boolean sell_modifier){
+        double sell = cost / 2;
+        return (int)(sell_modifier ? (sell * 0.75) : sell);
+    };
 
     public int weight;
 
@@ -67,7 +126,7 @@ public class Item {
         String type = attrs[0];
 
         // XXX
-        int num_remaining = type.length() - 5;
+        int num_remaining = attrs.length - 5;
         String remaining_attrs[] = new String[num_remaining];
         System.arraycopy(attrs, 5, remaining_attrs, 0, num_remaining);
         String remaining = TextUtils.join("-", remaining_attrs);
@@ -111,12 +170,15 @@ public class Item {
         return TextUtils.join("-", compactStringList());
     }
 
-    // should be overridden in subclasses (supporting game tracker)
+    // can be overridden to add more attributes to toString output
     protected ArrayList<String> stringList(){
         ArrayList<String> s = new ArrayList<String>();
-        s.add(appearance);
-        s.add(Integer.toString(buy_price));
-        s.add(Integer.toString(sell_price));
+        if(!appearance.equals(""))
+            s.add(appearance);
+        if(buy_price  != 0)
+            s.add(Integer.toString(buy_price));
+        if(sell_price != 0)
+            s.add(Integer.toString(sell_price));
         return s;
     }
 
@@ -152,7 +214,7 @@ public class Item {
         public ItemBuyPriceFilter(int buy){ this.buy = buy; }
 
         public boolean matches(Item item){
-            return item.buy_price == buy;
+            return item.buyPrice() == buy || item.buyPrice(true) == buy;
         }
     }
 
@@ -162,7 +224,7 @@ public class Item {
         public ItemSellPriceFilter(int sell){ this.sell = sell; }
 
         public boolean matches(Item item){
-            return item.sell_price == sell;
+            return item.sellPrice() == sell || item.sellPrice(true) == sell;
         }
     }
 }

@@ -77,10 +77,6 @@ public class Tool extends Item {
                         current_tool.probability_str = xpp.getText();
                     else if(element_name.equals("appearance"))
                         current_tool.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_tool.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_tool.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("use"))
                         current_tool.use = xpp.getText();
 

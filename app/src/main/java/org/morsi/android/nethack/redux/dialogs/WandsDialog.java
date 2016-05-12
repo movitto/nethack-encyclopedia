@@ -9,11 +9,18 @@ import org.morsi.android.nethack.redux.items.Item;
 import org.morsi.android.nethack.redux.items.Items;
 import org.morsi.android.nethack.redux.items.Wand;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class WandsDialog {
     ItemDialog item_dialog;
 
     public WandsDialog(ItemDialog item_dialog){
         this.item_dialog = item_dialog;
+    }
+
+    private Items all_wands(){
+        return item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Wand.type()));
     }
 
     public ArrayAdapter<CharSequence> itemAppearanceAdapter(){
@@ -25,6 +32,10 @@ public class WandsDialog {
         return adapter;
     }
 
+    public void setAppearanceSelection(){
+        item_dialog.appearanceInput().setAdapter(itemAppearanceAdapter());
+    }
+
     private Spinner engraveEffectInput(){
         return (Spinner) item_dialog.findViewById(R.id.wandEngraveEffectInput);
     }
@@ -33,11 +44,22 @@ public class WandsDialog {
         return engraveEffectInput().getSelectedItem().toString();
     }
 
+    private String[] allEngraveEffects(){
+        Set<String> effects = new LinkedHashSet<String>();
+        effects.add("Select Effect...");
+
+        for(Item item : all_wands())
+            for(String effect : ((Wand)item).engrave_effects)
+            effects.add(effect);
+
+        return effects.toArray(new String[effects.size()]);
+    }
+
     private ArrayAdapter<CharSequence> engraveEffectAdapter(){
         ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(item_dialog.activity,
-                        R.array.wand_engrave_effects,
-                        android.R.layout.simple_spinner_item);
+                new ArrayAdapter<CharSequence>(item_dialog.activity,
+                        android.R.layout.simple_spinner_item,
+                        allEngraveEffects());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }
@@ -51,7 +73,7 @@ public class WandsDialog {
     }
 
     private boolean engraveSpecified(){
-        return engraveEffectInput().isSelected();
+        return engraveEffectInput().getSelectedItemPosition() != 0;
     }
 
     private Spinner zapEffectInput(){
@@ -62,11 +84,22 @@ public class WandsDialog {
         return zapEffectInput().getSelectedItem().toString();
     }
 
+    private String[] allZapEffects(){
+        Set<String> effects = new LinkedHashSet<String>();
+        effects.add("Select Effect...");
+
+        for(Item item : all_wands())
+            for(String effect : ((Wand)item).zap_effects)
+                effects.add(effect);
+
+        return effects.toArray(new String[effects.size()]);
+    }
+
     private ArrayAdapter<CharSequence> zapEffectAdapter(){
         ArrayAdapter<CharSequence> adapter =
-                ArrayAdapter.createFromResource(item_dialog.activity,
-                        R.array.wand_zap_effects,
-                        android.R.layout.simple_spinner_item);
+                new ArrayAdapter<CharSequence>(item_dialog.activity,
+                        android.R.layout.simple_spinner_item,
+                        allZapEffects());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }
@@ -80,7 +113,7 @@ public class WandsDialog {
     }
 
     private boolean zapSpecified(){
-        return zapEffectInput().isSelected();
+        return zapEffectInput().getSelectedItemPosition() != 0;
     }
 
     public void resetDialog(){
@@ -97,6 +130,8 @@ public class WandsDialog {
     public void initializeSpinners() {
         engraveEffectInput().setAdapter(engraveEffectAdapter());
         zapEffectInput().setAdapter(zapEffectAdapter());
+        engraveEffectInput().setSelection(0);
+        zapEffectInput().setSelection(0);
     }
 
     public Item itemFromInput() {
@@ -107,8 +142,10 @@ public class WandsDialog {
     }
 
     public void inputFromItem(Wand wand){
-        setEngraveEffect(wand.engrave_effect);
-        setZapEffect(wand.zap_effect);
+        setAppearanceSelection();
+
+        if(wand.hasEngraveEffect()) setEngraveEffect(wand.engrave_effect);
+        if(wand.hasZapEffect()) setZapEffect(wand.zap_effect);
     }
 
     ///
@@ -123,10 +160,11 @@ public class WandsDialog {
     public String reidentify(){
         if(!filterSpecified()) return "";
 
-        Items items = item_dialog.item_tracker().item_db.filter(new Item.ItemTypeFilter(Wand.type()));
+        Items items = all_wands();
 
-        if(item_dialog.appearanceSpecified())
-            items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
+        // all wand appearances are randomized
+        //if(item_dialog.appearanceSpecified())
+        //    items = items.filter(new Item.ItemAppearanceFilter(item_dialog.itemAppearance()));
 
         if(item_dialog.buyPriceSpecified())
             items = items.filter(new Item.ItemBuyPriceFilter(item_dialog.buyPrice()));

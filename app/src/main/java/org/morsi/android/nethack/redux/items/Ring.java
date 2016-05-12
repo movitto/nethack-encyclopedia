@@ -12,7 +12,15 @@ import java.util.ArrayList;
 public class Ring extends Item {
     public String sink_effect;
 
+    public boolean hasSinkEffect(){
+        return !sink_effect.equals("");
+    }
+
     public String wear_effect;
+
+    public boolean hasWearEffect(){
+        return !wear_effect.equals("");
+    }
 
     public static String type(){ return "Ring"; }
 
@@ -70,13 +78,6 @@ public class Ring extends Item {
         return s;
     }
 
-    protected ArrayList<String> stringList(){
-        ArrayList<String> s = super.stringList();
-        s.add(sink_effect);
-        s.add(wear_effect);
-        return s;
-    }
-
     public static ArrayList<Ring> fromXML(XmlResourceParser xpp){
         ArrayList<Ring> rings = new ArrayList<Ring>();
 
@@ -102,10 +103,6 @@ public class Ring extends Item {
                         current_ring.probability_str = xpp.getText();
                     else if(element_name.equals("appearance"))
                         current_ring.appearance = xpp.getText();
-                    else if(element_name.equals("buy"))
-                        current_ring.buy_price = Integer.parseInt(xpp.getText());
-                    else if(element_name.equals("sell"))
-                        current_ring.sell_price = Integer.parseInt(xpp.getText());
                     else if(element_name.equals("sink"))
                         current_ring.sink_effect = xpp.getText();
                     else if(element_name.equals("effect"))

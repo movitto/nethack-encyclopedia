@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -17,7 +18,6 @@ import org.morsi.android.nethack.redux.R;
 import org.morsi.android.nethack.redux.items.Amulet;
 import org.morsi.android.nethack.redux.items.Gem;
 import org.morsi.android.nethack.redux.items.Item;
-import org.morsi.android.nethack.redux.items.Items;
 import org.morsi.android.nethack.redux.items.Potion;
 import org.morsi.android.nethack.redux.items.Ring;
 import org.morsi.android.nethack.redux.items.Scroll;
@@ -64,7 +64,7 @@ public class ItemDialog extends Dialog{
     }
 
     private String itemType() {
-        return itemTypeInput().getSelectedItem().toString();
+        return itemTypeSpecified() ? itemTypeInput().getSelectedItem().toString() : "";
     }
 
     private int itemTypeIndex(String type){
@@ -105,7 +105,7 @@ public class ItemDialog extends Dialog{
         return itemType().equals("Gem");
     }
 
-    private boolean itemTypeSpecified(){ return itemTypeInput().isSelected(); }
+    private boolean itemTypeSpecified(){ return itemTypeInput().getSelectedItemPosition() != 0; }
 
     private EditText itemNameOutput() {
         return (EditText) findViewById(R.id.itemNameOutput);
@@ -115,15 +115,15 @@ public class ItemDialog extends Dialog{
         itemNameOutput().setText(name);
     }
 
-    private Spinner appearanceInput() {
+    public Spinner appearanceInput() {
         return (Spinner) findViewById(R.id.itemAppearanceInput);
     }
 
     public String itemAppearance() {
-        return appearanceInput().getSelectedItem().toString();
+        return appearanceSpecified() ? appearanceInput().getSelectedItem().toString() : "";
     }
 
-    private int itemAppearanceIndex(String appearance){
+    public int itemAppearanceIndex(String appearance){
         if (potionsSelected())
             return potions_dialog.itemAppearanceAdapter().getPosition(appearance);
 
@@ -148,12 +148,12 @@ public class ItemDialog extends Dialog{
         return -1;
     }
 
-    private void setItemAppearance(String appearance){
+    public void setItemAppearance(String appearance){
         appearanceInput().setSelection(itemAppearanceIndex(appearance));
     }
 
     public boolean appearanceSpecified(){
-        return appearanceInput().isSelected();
+        return appearanceInput().getSelectedItemPosition() != 0;
     }
 
     private EditText buyPriceInput() {
@@ -171,7 +171,7 @@ public class ItemDialog extends Dialog{
     }
 
     public boolean buyPriceSpecified(){
-        return buyPriceString() != "";
+        return !buyPriceString().equals("");
     }
 
     private EditText sellPriceInput() {
@@ -189,7 +189,7 @@ public class ItemDialog extends Dialog{
     }
 
     public boolean sellPriceSpecified(){
-        return sellPriceString() != "";
+        return !sellPriceString().equals("");
     }
 
     private TextView itemTypeLabel() {
@@ -201,11 +201,11 @@ public class ItemDialog extends Dialog{
     }
 
     public boolean filterSpecified(){
-        return itemTypeSpecified() && (appearanceSpecified() || sellPriceSpecified() || buyPriceSpecified());
+        return appearanceSpecified() || sellPriceSpecified() || buyPriceSpecified();
     }
 
     private void resetDialog(){
-        itemTypeInput().setSelected(false);
+        itemTypeInput().setSelection(0);
         buyPriceInput().setText("");
         sellPriceInput().setText("");
         itemTypeLabel().setText("");
@@ -248,19 +248,19 @@ public class ItemDialog extends Dialog{
         amulets_dialog = new AmuletsDialog(this);
         gems_dialog = new GemsDialog(this);
 
-        dialog_listener = new ItemDialogListener(this);
+        close_listener = new ItemDialogCloseListener(this);
         type_listener = new ItemTypeListener();
+        show_listener = new ItemDialogShowListener();
 
         // wire up close button
-        closeButton().setOnClickListener(dialog_listener);
+        closeButton().setOnClickListener(close_listener);
+
         itemTypeInput().setOnItemSelectedListener(type_listener);
+
+        setOnShowListener(show_listener);
 
         initializeSpinners();
         setListeners();
-
-        if (item_tracker().editing_item != null)
-            inputFromItem(item_tracker().editing_item);
-
     }
 
     ///
@@ -304,10 +304,6 @@ public class ItemDialog extends Dialog{
     }
 
     private void inputFromItem(Item item) {
-        setItemAppearance(item.appearance);
-        setItemName(item.name);
-        setBuyPrice(item.buy_price);
-        setSellPrice(item.sell_price);
         if(item instanceof Potion)
             potions_dialog.inputFromItem((Potion)item);
         else if(item instanceof Scroll)
@@ -322,20 +318,54 @@ public class ItemDialog extends Dialog{
             amulets_dialog.inputFromItem((Amulet) item);
         else if(item instanceof Gem)
             gems_dialog.inputFromItem((Gem)item);
+
+        setItemType(item.itemType());
+        if(item.hasAppearance())
+            setItemAppearance(item.appearance);
+
+        if(item.identified())
+            setItemName(item.name);
+
+        if(item.hasBuyPrice())
+            setBuyPrice(item.buy_price);
+
+        if(item.hasSellPrice())
+            setSellPrice(item.sell_price);
     }
 
-    ItemDialogListener dialog_listener;
+    ItemDialogCloseListener close_listener;
 
-    class ItemDialogListener extends DialogListener {
-        ItemDialogListener(Dialog dialog) {
+    class ItemDialogCloseListener extends DialogListener {
+        ItemDialogCloseListener(Dialog dialog) {
             super(dialog);
         }
 
         public void onClick(View v) {
             Item item = itemFromInput();
-            if(item != null) item_tracker().addItem(itemFromInput());
+            if(item != null){
+                item_tracker().addItem(itemFromInput());
+                item_tracker().storeFields();
+                item_tracker().updateOutput();
+            }
             resetDialog();
             super.onClick(v);
+        }
+    }
+
+    ItemDialogShowListener show_listener;
+
+    class ItemDialogShowListener implements DialogInterface.OnShowListener {
+        public void onShow(DialogInterface i){
+            if(item_tracker().editing_item != null) {
+                inputFromItem(item_tracker().editing_item);
+
+            }else {
+                // reset item dialog
+                name = Item.UNIDENTIFIED;
+                setItemName(name);
+                initializeSpinners();
+                appearanceInput().setAdapter(null);
+            }
         }
     }
 
@@ -346,37 +376,43 @@ public class ItemDialog extends Dialog{
             hide_all();
 
             if (potionsSelected()) {
-                appearanceInput().setAdapter(potions_dialog.itemAppearanceAdapter());
+                potions_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.potions_dialog));
 
             } else if (scrollsSelected()) {
-                appearanceInput().setAdapter(scrolls_dialog.itemAppearanceAdapter());
+                scrolls_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.scrolls_dialog));
 
 
             } else if (wandSelected()) {
-                appearanceInput().setAdapter(wands_dialog.itemAppearanceAdapter());
+                wands_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.wands_dialog));
 
 
             } else if (spellbookSelected()) {
-                appearanceInput().setAdapter(spellbooks_dialog.itemAppearanceAdapter());
+                spellbooks_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.spellbooks_dialog));
 
 
             } else if (ringsSelected()) {
-                appearanceInput().setAdapter(rings_dialog.itemAppearanceAdapter());
+                rings_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.rings_dialog));
 
 
             } else if (amuletsSelected()) {
-                appearanceInput().setAdapter(amulets_dialog.itemAppearanceAdapter());
+                amulets_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.amulets_dialog));
 
             } else if (gemSelected()) {
-                appearanceInput().setAdapter(gems_dialog.itemAppearanceAdapter());
+                gems_dialog.setAppearanceSelection();
                 UI.showView(findViewById(R.id.gems_dialog));
-            }
+            } else
+                return;
+
+            // XXX will be triggered twice when editing item (inputFromItem sets type spinner triggering again)
+            //     need to ensure, item appearance is preserved
+            if(item_tracker().editing_item != null)
+                setItemAppearance(item_tracker().editing_item.appearance);
         }
 
         public void onNothingSelected(AdapterView<?> parent) {

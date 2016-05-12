@@ -452,7 +452,7 @@
 
     <section name="Ailments">
         <item>
-            <content></content>
+            <content>TBD</content>
         </item>
     </section>
     
@@ -563,6 +563,22 @@
 
         <item><content>Attempting to read a spellbook before the timeout is low enough will produce the message "<b>You know [spell] quite well already</b>".
             This will not use up a reading of the spellbook, and if read while owned by a shopkeeper, will not result in a use fee.</content></item>
+
+        <item><content>The 'plain' spellbook is blank paper, and the 'papyrus' spellbook is the Book of the Dead. Vlad's always contains a spellbook of invisibility,
+            and the Wizard will bring a spellbook of dig to the Plane of Earth.</content></item>
+
+        <item><content>Any blessed spellbook can be read successfully, and any spellbook granted you by your god will be blessed.</content></item>
+
+        <item><content>The base price of a spellbook is always 100 times the spell's level, making for easy identification of those one can safely read;
+            obviously, however, the surcharge can confuse a level 3 spell with a level 4 spell.</content></item>
+
+        <item><content>The effect of reading a cursed spellbook is the same as that of failing to comprehend an uncursed spellbook, so normally you need to
+            check cursedness before doing anything with a spellbook.</content></item>
+
+        <item><content>That said, a low-level spellbook cannot paralyse you for very long (but more than long enough for a cockatrice to stone you),
+            but although the worse spellbook aftereffects are generally seen at higher spell levels, the </content></item>
+
+        <item><content>Unless you have monstrous Int and XP level, or are a wizard, reading unblessed books of unknown spell level is asking to be killed.</content></item>
     </section>
 
     <section name="Rings">
@@ -619,19 +635,254 @@
     </section>
 
     <section name="Amulets">
-        <item><content></content></item>
+        <item><content>All amulets cost the same</content></item>
+
+        <item><content>Provided you are not polymorphed, trying on non-cursed amulets is pretty harmless</content></item>
+
+        <item><content>You might change gender, fall asleep (do it in a controlled environment), or be strangled (just remove the amulet; uncursed strangulation is not dangerous)</content></item>
+
+        <item><content>Harmful types are nearly always generated cursed</content></item>
+
+        <item><content>ESP becomes known pretty well right away. Reflection is bound to become obvious after a while.</content></item>
+
+        <item><content>Magical breathing can be tested for by stripping and jumping in a pool - you'll crawl out, if it's not.
+            (Beware; if you can teleport, you often will, if not wearing this amulet)</content></item>
+
+        <item><content>Versus poison is hard to identify if you're already poison resistant (see also the note in "Rings" if you're not),</content></item>
+
+        <item><content>Life saving is hard to put to the test (but you often find them round monsters' necks, the standard way of IDing them
+            hence, an amulet dropped by an intelligent necked monster is probably not life saving - but it's not impossible.</content></item>
+
+        <item><content>Vlad's always has life saving and strangulation.</content></item>
+    </section>
+
+    <section name="Stones">
+        <item><content>Grey stones come in four flavours; flint stones, luckstones, touchstones and loadstones.</content></item>
+
+        <item><content>They can be price-IDed; luckstones have a base value of 60, touchstones of 45; the other two have a base value of 1.</content></item>
+
+        <item><content>Loadstones are always generated cursed; other gems, uncursed, so apart from bones files you need not fear carrying around a cursed luckstone.</content></item>
+
+        <item><content>This also makes spotting loadstones very easy for Priests.</content></item>
+
+        <item><content>You can only kick a loadstone across the floor if your Strength is at least 22 and you are either wearing kicking boots or are a samurai, monk or sasquatch;
+            even then you will not move it reliably.</content></item>
+
+        <item><content>If you are on ice, an extra 1-3 is added to all kicking ranges (which might otherwise be negative);</content></item>
+
+        <item><content>A grey stone that cannot be kicked owing to an awkward position presents a difficulty; so does one in a chest or box.</content></item>
+
+        <item><content>Touchstones are easily identified provided you're not blind; #rub any unknown grey stone on a hard object that is not gold, silver or wood, like an iron weapon.
+            If it's a touchstone, you will hear "scritch, scritch".</content></item>
+
+        <item><content>Once you have a blessed touchstone - uncursed if you are a gnome or an archaeologist, the latter of which begin with a touchstone -
+            you may rub it on any gem or stone to identify it, which certainly helps with the other grey stones.</content></item>
+
+        <item><content>As for flint and luckstones, #name any grey stones you can't kick-test or determine are touchstones by #rubbing; once you have two flavours,
+            you know you have a luckstone.</content></item>
+
+        <item><content>Alternatively, only flint stones and touchstones are generated in piles of more than one; you may use enlightenment to tell that there is a
+            luckstone in your inventory (you will always have "extra luck" or "reduced luck");</content></item>
     </section>
 
     <section name="Gems">
-        <item><content></content></item>
+        <item><content>Unusually, gems of certain types are only created below certain depths in the main dungeon when creating new levels
+            (note, however, that unless you dig a gem out of the rock it's hard to be sure it was generated then).</content></item>
+
+        <item><content>Each gem in the table below lists its minimum depth in brackets where that depth is greater than 1.</content></item>
+
+        <item><content>Gems come in two flavours; soft and hard. You can engrave in the floor with hard gems,
+            but only write in the dust with soft ones. All hard gems are valuable (but not all soft gems are worthless).</content></item>
+
+        <item><content>This provides sufficient information for most purposes; you don't need every valuable gem to get all a shopkeeper's goodies
+            (but you _will_ need scrolls of identify to actually ID your valuable gems and sell them) or to get luck out of unicorns.</content></item>
+
+        <item><content>If you are interested in IDing gems at all, this is the technique that reveals the maximum information for the minimum amount of effort.</content></item>
+
+        <item><content>You can identify amethysts with the trick in the 'potions' section.</content></item>
+
+        <item><content>A second way to identify classes of gems is by flinging them to unicorns, see the unicorns section</content></item>
+
+        <item><content> Glass golems, when killed, create worthless glass but not valuable gems.</content></item>
+
+        <item><content>The spell of stone to flesh turns valuable gems into meatballs, but leaves worthless glass intact.
+            If you don't mind losing the test gems, you can #name unknown gems "valuable [colour]", zap them, and #name the ones left over "worthless [colour]".</content></item>
+
+        <item><content>Gem pricing in shops is curiously complicated. The buying price of each worthless gem is randomly set (each game, not each gem or each purchase) to that of one of two valuable gems of the same colour;</content></item>
+
+        <item><content>Hence if you find a soft gem of a given colour with a price that does not match one of the possible worthless glass prices, you know it is still valuable</content></item>
+
+        <item><content>In particular, the dilithium crystal qualifies here and sometimes the various variable-colour gems (see below).</content></item>
+
+        <item><content>The table below has a '*' next to the name of all gems that have a duplicate price for worthless glass.</content></item>
+
+        <item><content>Colour grouping can help sort out gems - unfortunately, various gem colours are shuffled at game start time.</content></item>
+
+        <item><content>The table below indicates the chance that the listed gem is of the listed colour
+            (but a given gem will always be the same colour in a particular game - if one turquoise is green, they all are.)</content></item>
+
+            <item><content>Colour|Hard|Soft<br/>
+            white|diamond* 4000 (25)|dilithium 4500 (28), opal* 800, fluorite 400 (25%)<br/>
+            red	ruby*|3500 (22)|garnet 700, jasper* 500<br/>
+            orange|jacinth* 3250 (19)|agate* 200<br/>
+            blue|sapphire* 3000 (16), aquamarine* 1500 (50%)|turquoise 2000 (50%) (7), fluorite 400 (25%)<br/>
+            black|black opal* 2500 (13)|jet* 850, obsidian 200<br/>
+            green|emerald 2500* (10), aquamarine 1500 (50%)|turquoise 2000 (50%) (7), jade* 300, fluorite 400 (25%)<br/>
+            yellow||citrine* 1500 (4), chrysoberyl* 700<br/>
+            y.brown|topaz* 900|amber* 1000<br/>
+            violet||amethyst* 600, fluorite* 400 (25%)</content></item>
+
+        <item><content>There's one kind of glass for each colour.</content></item>
     </section>
 
     <section name="Armour">
-        <item><content></content></item>
+        <item><content>Uncursed armor cannot be removed, make sure to BUC identify before donning!</content></item>
+
+        <item><content>You can discover the +/- status just by trying it on</content></item>
+
+        <item><content>Nearly all fumble boots, levitation boots, helms of opposite alignment, and gauntlets of fumbling are generated cursed</content></item>
+
+        <item><content>One type each of <b>magical gloves</b> (gauntlets of power) and boots (kicking) is made of metal, not leather, and so rusts and corrodes where the others burn and rot;
+            this might be useful if found in a bones pile or if you have spares and can change into a monster that eats metal or leather.</content></item>
+
+        <item><content>You might also try wearing non-cursed boots and looking for changes in your spellcasting chances </content></item>
+
+        <item><content>If you have an unidentified touchstone or any other grey stone, rubbing it on metal armour produces "scritch, scritch" or "scratch marks",
+            and non-metallic armour produces brown streaks. You can't do this with an identified touchstone. </content></item>
+
+        <item><content>If you use a stethoscope on monsters, you can gain a good idea of the enchantment of their armour.</content></item>
+
+        <item><content>The <b>'conical hats'</b> are the cornuthaum and dunce cap. If you're not a wizard, you don't care; if you are, you can either be prepared to uncurse the dunce cap (not with the spell of remove curse),
+            or use the fact that the base cost of a cornuthaum is 80 and that of a dunce cap is 1.</content></item>
+
+        <item><content>The <b>plain helmet</b>, helm of brilliance, helm of telepathy, and helm of opposite alignment - plumed, etched, crested and visored.
+            Plain helmets are cheaper (base cost 10 vs. 50), often found on soldiers and minetown guards, known to those classes that start with knowledge
+            of armour types, and if you sell (actually sell, not get an offer on) a plain helmet to a shopkeeper it will be identified.</content></item>
+
+        <item><content>The other three are hard to tell apart, and opposite alignment autocurses and blows away your divine protection; but, if you're willing to take a chance on it, telepathy is pretty handy</content></item>
+
+        <item><content>A 'slippery cloak' is always oilskin; a 'faded pall' is always elven; an 'apron' is an alchemy smock.</content></item>
+
+        <item><content>The cloaks with shuffled descriptions are protection, invisibility, magic resistance and displacement; the tattered cape, opera cloak, ornamental cope, and piece of cloth.</content></item>
+
+        <item><content>Protection and displacement both immediately ID themselves when you wear them.</content></item>
+
+        <item><content>If you're already invisible, it can be hard to tell invisibility from magic resistance (if you have the HP, zap yourself with a wand of magic missile or striking).</content></item>
+
+        <item><content>It may be sensible to try on these cloaks even if not known uncursed; they all do useful things, and a cursed cloak only prevents you from changing body armour (or shopping, if invisibility.)</content></item>
+
+        <item><content>Note that protection and displacement have a base cost of 50 where the other two have a base cost of 60.</content></item>
+
+        <item><content>A cloak of magic resistance could also be identified by walking into traps of types that it negates; teleport, drain energy, level teleport, polymorph
+            (carries its own risks) - or by suffering attacks that it negates, although taking a touch of death and seeing if you die does have certain drawbacks. You'd
+            obviously need not to be carrying any other magic resistance item.</content></item>
+
+        <item><content>A <b>polished silver shield</b> is always reflection; if blind, it's a 'smooth shield'.</content></item>
+
+        <item><content>Four kinds of <b>gloves</b> are shuffled; leather (again, classes who recognise armour get a bonus here, and actually selling one will ID it), fumbling, power, and dexterity; these are old, padded, riding and fencing gloves.</content></item>
+
+        <item><content>It's hard to justify trying these unless known uncursed; fumbling is awkward and +0 dexterity is useless.</content></item>
+
+        <item><content>You can't tell +0 dex from leather if you don't already know leather, which is a nuisance</content></item>.
+
+        <item><content>Gauntlets of power are made of metal. Leather is very much cheaper; base cost 8 versus 50 for the others.
+            Guards and soldiers, again, often have leather gloves.</content></item>
+
+        <item><content>Boots are pretty awkward, because there are many types. 'Walking shoes', 'hard shoes' and 'jackboots' are just low boots, iron shoes and high boots, respectively.
+            However; speed, water walking, jumping, elven, kicking, fumble and levitation boots are shuffled into jungle, combat, hiking, mud, buckled, riding and snow boots.</content></item>
+
+        <item><content>Elven and kicking boots are cheap, with a base cost of 8. Fumble and levitation boots cost 30 (and are nearly always cursed), and the others 50.
+            Since fumble are the only harmful kind (and the cost 50 boots do their job just as well if cursed), this can be useful.</content></item>
+
+        <item><content>Elven monsters are very likely to start with elven boots, and if you are an elf you began the game knowing elven boots</content></item>
+
+        <item><content>Levitation, elven and speed boots ID themselves right away, unless you are already levitating, stealthy or very fast;
+        not being stealthy can be hard to arrange, though. Jumping boots can be trivially identified by trying to jump; fumble boots (uncursed, I hope) by wandering around in them.</content></item>
+
+        <item><content>Kicking and water walking boots are more difficult. Kicking boots may be distinguished because of the fact that you will always
+            kick down doors when wearing them (if you have a lot of doors to spare - obviously, you can never be quite sure), but a more straightforward method
+            if you are not a monk, samurai or sasquatch is to kick any object with and without the boots on; with kicking boots on it will move between 1-3 further spaces.</content></item>
+
+        <item><content>Kicking ranges are also increased on ice, so don't compare on-ice with off-ice ranges. Monks, samurai and sasquatches can still try kicking doors, but they are
+            quite likely to kick down doors anyway. As mentioned above, jumping into pools IDs water walking right away, and will also sort out kicking boots when they rust.</content></item>
     </section>
 
     <section name="Tools">
-        <item><content></content></item>
+        <item><content>4 objects are described as 'bag'; the sack, oilskin sack, bag of holding, and bag of tricks.</content></item>
+
+        <item><content>The sack is considerably cheaper (2 vs. 100), and you may well start with one;</content></item>
+
+        <item><content>The bag of tricks is trivially identified by #looting or applying it.<br/>
+            Be equipped to handle the results:<br/>
+            #looting will do at most 10 damage, where applying may summon an arbitarily<br/>
+            nasty nasty and will cause a shopkeeper to charge you for that use, if it's not your bag.)</content></item>
+
+        <item><content>The other two can be sorted out by finding a bunch of junk objects (rocks, say) that just make one Burdened and stuffing them into the bag;
+            if you aren't Burdened, it was holding.</content></item>
+
+        <item><content>Take them out, drop two (now un-Burdened), and put them back in; if you are Burdened, it's cursed holding.</content></item>
+
+        <item><content>If objects disappear upon applying, it's cursed holding, and you want to take out all the remaining objects now. Use #name appropriately.</content></item>
+
+        <item><content>If you find a bag in a bones pile, it is mostly likely cursed and full of juicy loot.</content></item>
+
+        <item><content>You may not want to chance its being holding (and losing some of the loot), so if you can lift it at all,
+            it's probably a good idea to uncurse it first; if not, clear other objects away and give it a zap of cancellation (if possible) -
+            this doesn't harm the contents</content></item>
+
+        <item><content>Another way to sort out the bags which are not tricks is to put water-damageable objects such as junk potions and scrolls into them
+            (be sure it's not cursed holding, but since holding's easy this is best for oilskin sacks and plain sacks in the absence of price-ID) and immersing it repeatedly,
+            checking to see if the contents are damaged. With high Luck you may require many immersions.</content></item>
+
+        <item><content>There are two objects called 'lamp'; the oil lamp and magic lamp. Oil is cheaper (cost 10 vs. 50), and magic is inexhaustible -
+            either kind may 'splutter' and fail to light if cursed.</content></item>
+
+        <item><content>Four approaches to lamps; check the price, bless one and try #rubbing it, just light the first
+            you find and see if it ever gets used up, or try to refill it with a potion of oil (but you might as well wait and see if it gets exhausted,
+            unless you have 2 kinds of lamp and want to know which is which right away).</content></item>
+
+        <item><content>Regardless, it's worth #naming the first lamp you find 'lamp 1' or something, so you can tell if you've actually got both flavours.</content></item>
+
+        <item><content>There are two 'whistles'; tin and magic. Apply them; a high whistling noise is tin and strange is magic.</content></item>
+        <item><content>You may not need to #name magic, if you have a pet to be summoned.</content></item>
+        <item><content>Whistles are unlikely to be cursed, but 'high-pitched humming' is magic, 'shrill' is tin.</content></item>
+        <item><content>Watchmen are often generated with tin whistles.</content></item>
+
+        <item><content>For all musical instruments, you should improvise unless you are trying to open the Castle drawbridge</content></item>
+
+        <item><content>Two 'flutes'; magic and wooden. Magic flutes, if charged, produce 'soft music' (and put monsters to sleep); if not, they are like wooden flutes -
+            they 'trill' or 'toot' (and charm snakes, in the former case, which is likely if you have good Dex or XP level).</content></item>
+
+        <item><content>However, magic flutes are never generated uncharged, so this should not normally be an issue.</content></item>
+
+        <item><content>Four 'horns'; tooled, frost, fire and plenty. Frost and fire ask for a direction (same issue that an uncharged one is like a tooled horn);
+            a horn of plenty makes food (an uncharged one does nothing, but it's the only horn that does, so you know what it is.)</content></item>
+
+        <item><content>Beware; tooled horns awaken monsters.</content></item>
+
+        <item><content>Two 'harps'; magic and wooden. With the usual proviso about the uncharged magic version looking like a normal one, the magic harp produces
+            'very attractive music' (and charms monsters) and the normal one 'produces a lilting melody' or 'twangs' (and charms nymphs, in the former case.)</content></item>
+
+        <item><content>Two 'drums'; leather and earthquake. If charged, it's not hard to work out which one you have.</content></item>
+
+        <item><content>All bells and bugles are normal, except the 'silver' Bell of Opening.</content></item>
+
+        <item><content>Various tools are easily identified, but you may be unsure as to their cursedness status
+            although, as mentioned above, only light sources grease, crystal balls and figurines will normally be generated cursed)</content></item>
+        <item><content>With a cursed camera, you will photograph yourself half the time.</content></item>
+        <item><content>A cursed towel or blindfold cannot be removed, and (a)pplying a cursed towel covers you in gunk</content></item>
+        <item><content>A cursed stethoscope may well cause you to hear "your heart beat"</content></item>
+        <item><content>A cursed leash will strangle your pet - potentially fatally.</content></item>
+        <item><content>A cursed mirror will fog up and not reflect.</content></item>
+        <item><content>Cursed bells summon nymphs; the cursed Bell of Opening summons undead.</content></item>
+        <item><content>Cursed tinning kits make cursed tins.</content></item>
+        <item><content>A cursed unicorn horn gives you one of several nasty conditions, potentially fatally.</content></item>
+        <item><content>Cursed grease greases your hands.</content></item>
+        <item><content>Cursed land mines and bear traps tend to go off on you.</content></item>
+
+        <item><content>Wax candles burn for 400 turns where tallow candles burn for only 200,</content></item>
+        <item><content>So if you have some obscure need to identify candles (perhaps to eat wax candles without breaking vegetarian conduct)
+            you could light one, wait for it to burn down, and #name others that stacked with it. </content></item>
     </section>
 
     <section name='Stores'>
@@ -642,6 +893,7 @@
         <item><content>Use by dipping items into it, by quaffing its water, by digging down on it.</content></item>
         <item><content>Fountains on non-special levels have a 1/7 (14%) chance of being magic,<br/>an attribute that cannot be determined prior to use.</content></item>
         <item><content>Digging on a sink will create a non-magic fountain.</content></item>
+        <item><content>Kicking a fountain has a 2/3 chance to exercise dexterity and 1/3 of the time wet your boots. This can be used to identify kicking boots. </content></item>
         <item>
             <content>Quaffing from magic fountains w/ non-negative luck: (fountain will not dry up)<br/>
                 (3/10)<b>The cool draught refreshes you</b>": Your hunger is reduced slightly.<br/>
@@ -794,30 +1046,57 @@
             and you abuse your wisdom</content></item>
     </section>
 
+    <section name="Sinks">
+        <item><content>Sinks may be kicked or quaffed from with various effects</content></item>
+        <item><content>Rings may also be dropped down sinks to identify. Note with few exceptions, you will lose the ring, so only do this if you have two!</content></item>
+        <item><content>Kicking the sink may result in:<br/>
+            dexterity being excercised and nearby monsters woken (80%),<br/>
+            black pudding being summoned and dexterity excercised (once per sink),<br/>
+            opposite sex foocubus being summoned and dexterity excercised (once per sink),<br/>
+            dexterity and wisdom excercised (once per sink),<br/>
+            lose up to 5HP, abuse dexterity and strength, possibly break leg (other times)</content></item>
+        <item><content>Quaffing the sink may result in:<br/>
+            no effect (55%),<br/>
+            losing 1-6 hp (or none if fire resistant) (5%),<br/>
+            a sewer rat or water elemental being created (unless genocided/extinct) (5%),<br/>
+            random uncursed potion effect (5%),<br/>
+            random ring being found and wisdom excercised(5%),<br/>
+            the sink becoming a fountain (5%),<br/>
+            you gaining 1XP (5%),<br/>
+            your hunger increasing (5%),<br/>
+            you polymorphing (5%)
+        </content></item>
+
+        <item><content>Quaffing from sinks is generally a dangerous gamble without much reward. At best you get a ring, which you could already get by kicking it (which is much safer).
+            At worst, you get a potion of sickness or polymorph into something that will break your armor.
+            The chance of something bad is significantly higher than the chance of something good.</content></item>
+
+         <item><content>On the other hand, kicking sinks is fairly safe; provided you're past about experience level 5 you're not going to be killed by a foocubus,
+             and black puddings are slow enough that they won't kill you if you move carefully. In fact, both the pudding and the foocubus can be used to your benefit.</content></item>
+    </section>
+
     <section name="Thrones">
-        <item>
-            <content></content>
-        </item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name='Gnome Mines'>
-        <item><content></content></item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name='Sokoban'>
-        <item><content></content></item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name='Special Rooms'>
-        <item><content></content></item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name="Unicorns (and their horns)">
-        <item><content></content></item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name='Specific Monsters'>
-        <item><content></content></item>
+        <item><content>TBD</content></item>
     </section>
 
     <section name="Bad Ideas">

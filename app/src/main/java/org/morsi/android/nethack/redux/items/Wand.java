@@ -46,8 +46,8 @@ public class Wand extends Item {
         ArrayList<String> columns = new ArrayList<String>();
         columns.add("Wand");
         columns.add("Cost");
-        columns.add("Max Charges");
-        columns.add("Probability");
+        columns.add("Charges");
+        columns.add("%");
         columns.add("Type");
         return columns;
     }
@@ -56,9 +56,9 @@ public class Wand extends Item {
         ArrayList<Double> weights = new ArrayList<Double>();
         weights.add(0.32);
         weights.add(0.1);
+        weights.add(0.175);
         weights.add(0.125);
-        weights.add(0.125);
-        weights.add(0.35);
+        weights.add(0.30);
         return weights;
     }
 

@@ -2,7 +2,7 @@
 <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:layout_weight="1"
     android:background="?android:attr/listDivider">
 
@@ -11,29 +11,36 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Spinner
-            android:layout_weight="0.8"
+            android:layout_weight="0.6"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:prompt="@string/game_tracker_prompt"
             android:id="@+id/game_tracker_spinner" />
 
         <ImageView
-            android:layout_weight="0.1"
-            android:layout_width="60px"
-            android:layout_height="60px"
+            android:layout_weight="0.2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
             android:onClick="onClickNewTrackerButton"
             android:paddingLeft="15dp"
             android:paddingTop="15dp"
-            android:src="@drawable/new_tracker" />
+            android:paddingBottom="15dp"
+            android:src="@drawable/new_tracker"
+            android:adjustViewBounds="true" />
 
         <ImageView
-            android:layout_weight="0.1"
-            android:layout_width="60px"
-            android:layout_height="60px"
+            android:layout_weight="0.2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
             android:onClick="onClickResetTrackerButton"
             android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:paddingTop="15dp"
-            android:src="@drawable/reset_tracker" />
+            android:paddingBottom="15dp"
+            android:src="@drawable/reset_tracker"
+            android:adjustViewBounds="true" />
     </LinearLayout>
 
     <include android:id="@+id/player_tracker"  layout="@layout/player_tracker" />

@@ -12,14 +12,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.30"
             android:layout_gravity="center_vertical"
             android:text="@string/item_type" />
 
         <Spinner
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="0.75"
+            android:layout_weight="0.70"
             android:id="@+id/itemTypeInput"/>
     </LinearLayout>
 
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.30"
             android:layout_gravity="center_vertical"
             android:text="@string/item_name" />
 
@@ -39,7 +39,7 @@
             android:id="@+id/itemNameOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.70"
             android:ems="10"
             android:inputType="none"
             android:editable="false"/>
@@ -53,14 +53,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.30"
             android:layout_gravity="center_vertical"
             android:text="@string/item_appearance" />
 
         <Spinner
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="0.75"
+            android:layout_weight="0.70"
             android:id="@+id/itemAppearanceInput"/>
     </LinearLayout>
 
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
             android:ems="10"
-            android:inputType="none" />
+            android:inputType="number" />
 
         <TextView
             android:layout_marginRight="5dp"
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
             android:ems="10"
-            android:inputType="none" />
+            android:inputType="number" />
     </LinearLayout>
 
     <TextView

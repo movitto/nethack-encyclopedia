@@ -45,9 +45,9 @@ public class Potion extends Item {
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
         columns.add("Potion");
-        columns.add("Cost");
+        columns.add("$");
         columns.add("Weight");
-        columns.add("Prob");
+        columns.add("%");
         columns.add("Appearance");
         return columns;
     }

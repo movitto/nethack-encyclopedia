@@ -31,7 +31,7 @@ public class Corpse extends Item{
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
         columns.add("Name");
-        columns.add("Nutrtion");
+        columns.add("Nutr");
         columns.add("Initial Effect");
         columns.add("Final Effect");
         columns.add("Intrinsic");

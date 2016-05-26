@@ -33,9 +33,9 @@ public class Scroll extends Item {
     public static ArrayList<String> columnNames(){
         ArrayList<String> columns = new ArrayList<String>();
         columns.add("Scroll");
-        columns.add("Cost");
-        columns.add("Weight");
-        columns.add("Probability");
+        columns.add("$");
+        columns.add("Wgt");
+        columns.add("%");
         columns.add("Ink");
         columns.add("Appearance");
         return columns;
@@ -43,12 +43,12 @@ public class Scroll extends Item {
 
     public static ArrayList<Double> columnWeights(){
         ArrayList<Double> weights = new ArrayList<Double>();
-        weights.add(0.4);
+        weights.add(0.35);
         weights.add(0.1);
         weights.add(0.1);
         weights.add(0.1);
         weights.add(0.1);
-        weights.add(0.2);
+        weights.add(0.25);
         return weights;
     }
 

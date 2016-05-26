@@ -14,14 +14,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/strength_stat" />
 
         <TextView
             android:id="@+id/strengthOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right" />
     </LinearLayout>
@@ -36,14 +36,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/dexterity_stat" />
 
         <TextView
             android:id="@+id/dexterityOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right"/>
     </LinearLayout>
@@ -58,14 +58,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/constitution_stat" />
 
         <TextView
             android:id="@+id/constitutionOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right"/>
     </LinearLayout>
@@ -80,14 +80,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/intelligence_stat" />
 
         <TextView
             android:id="@+id/intelligenceOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right"/>
     </LinearLayout>
@@ -102,14 +102,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/wisdom_stat" />
 
         <TextView
             android:id="@+id/wisdomOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right"/>
     </LinearLayout>
@@ -124,14 +124,14 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.25"
+            android:layout_weight="0.55"
             android:text="@string/charisma_stat" />
 
         <TextView
             android:id="@+id/charismaOutput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
+            android:layout_weight="0.55"
             android:ems="10"
             android:gravity="right"/>
     </LinearLayout>

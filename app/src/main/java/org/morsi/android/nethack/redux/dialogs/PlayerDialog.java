@@ -185,6 +185,7 @@ public class PlayerDialog extends Dialog{
 
     private void updateFields(){
         strength(Input.validInt(strengthInputValueString())         ? strengthInputValue()     : 0);
+        dexterity(Input.validInt(dexterityInputValueString())       ? dexterityInputValue()    : 0);
         constitution(Input.validInt(constitutionInputValueString()) ? constitutionInputValue() : 0);
         intelligence(Input.validInt(intelligenceInputValueString()) ? intelligenceInputValue() : 0);
         wisdom(Input.validInt(wisdonInputValueString())             ? wisdomInputValue()       : 0);

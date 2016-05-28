@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.morsi.android.nethack.redux"
     android:installLocation="preferExternal"
-    android:versionCode="6"
-    android:versionName="6.9">
+    android:versionCode="7"
+    android:versionName="7.11">
 
     <uses-sdk android:minSdkVersion="8" />
 

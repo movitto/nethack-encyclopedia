@@ -2,6 +2,7 @@ package org.morsi.android.nethack.redux.trackers;
 
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -86,24 +87,25 @@ public class ItemTracker {
     private String itemsPref(){ return sharedPrefs().getString("items", ""); }
 
     public void restorePrefs() {
-        for(String item : itemsPref().split(","))
-            if(!item.equals(""))
-                items.add(Item.extract(item));
+        for(String item : itemsPref().split("="))
+            if(!item.equals("")) {
+                Item extracted = Item.extract(item);
+                if(extracted != null) items.add(extracted);
+            }
     }
 
-    private String levelsStr(){
+    private String itemsStr(){
         ArrayList<String> itms = new ArrayList<String>();
         for(Item i : items)
             itms.add(i.compact());
-        return TextUtils.join(",", itms);
+        return TextUtils.join("=", itms);
     }
 
     public void storeFields(){
         SharedPreferences.Editor editor = sharedPrefs().edit();
-        editor.putString("items", levelsStr());
+        editor.putString("items", itemsStr());
         editor.commit();
     }
-
 
     private void removeAllViews(){
         itemsList().removeAllViews();
@@ -122,30 +124,43 @@ public class ItemTracker {
         TextView properties_tv = new TextView(activity);
         ImageView remove       = new ImageView(activity);
 
-        type_tv.setText(item.type());
+        type_tv.setText(item.itemType());
         properties_tv.setText(item.toString());
         if(item.identified()) name_tv.setText(item.name);
         remove.setBackgroundResource(R.drawable.minus);
 
-        type_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
-        name_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
-        properties_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.65f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
+        type_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
+        name_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.35f));
+        properties_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.45f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(0, 30, 0.05f));
 
         type_tv.setPadding(10, 0, 0, 0);
         remove.setPadding(0, 0, 10, 0);
 
-        type_tv.setOnClickListener(new EditItemListener(item));
-        name_tv.setOnClickListener(new EditItemListener(item));
-        properties_tv.setOnClickListener(new EditItemListener(item));
-        remove.setOnClickListener(new RemoveItemListener(layout, item));
+        EditItemListener edit_listener = new EditItemListener(item);
+        RemoveItemListener remove_listener = new RemoveItemListener(layout, item);
+
+        type_tv.setOnClickListener(edit_listener);
+        name_tv.setOnClickListener(edit_listener);
+        properties_tv.setOnClickListener(edit_listener);
+        remove.setOnClickListener(remove_listener);
 
         layout.addView(type_tv);
         layout.addView(name_tv);
         layout.addView(properties_tv);
         layout.addView(remove);
-
         itemsList().addView(layout);
+
+        ImageView seperator = new ImageView(activity);
+        seperator.setBackgroundResource(R.drawable.divider);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 10, 0, 20);
+        seperator.setLayoutParams(params);
+        seperator.setPadding(0, 2, 0, 2);
+        itemsList().addView(seperator);
+
+        remove_listener.seperator_to_remove = seperator;
     }
 
     public Item editing_item;
@@ -167,14 +182,18 @@ public class ItemTracker {
         LinearLayout item_view_to_remove;
         Item item_to_remove;
 
+        ImageView seperator_to_remove;
+
         RemoveItemListener(LinearLayout item_view, Item item) {
             item_view_to_remove = item_view;
             item_to_remove = item;
+            seperator_to_remove = null;
         }
 
         public void onClick(View v) {
             items.remove(item_to_remove);
             itemsList().removeView(item_view_to_remove);
+            if(seperator_to_remove != null) itemsList().removeView(seperator_to_remove);
             storeFields();
         }
     }

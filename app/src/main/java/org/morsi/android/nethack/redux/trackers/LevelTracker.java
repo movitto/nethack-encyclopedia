@@ -126,22 +126,36 @@ public class LevelTracker {
 
         level_tv.setTypeface(null, Typeface.BOLD);
 
-        level_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
-        attrs_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.8f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
+        level_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.15f));
+        attrs_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.8f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(0, 30, 0.05f));
 
         level_tv.setPadding(10, 0, 0, 0);
         remove.setPadding(0, 0, 10, 0);
 
-        level_tv.setOnClickListener(new EditLevelListener(level));
-        attrs_tv.setOnClickListener(new EditLevelListener(level));
-        remove.setOnClickListener(new RemoveLevelListener(layout, level));
+        EditLevelListener edit_listener = new EditLevelListener(level);
+        RemoveLevelListener remove_listener = new RemoveLevelListener(layout, level);
+
+        level_tv.setOnClickListener(edit_listener);
+        attrs_tv.setOnClickListener(edit_listener);
+        remove.setOnClickListener(remove_listener);
 
         layout.addView(level_tv);
         layout.addView(attrs_tv);
         layout.addView(remove);
 
         levelsList().addView(layout);
+
+        ImageView seperator = new ImageView(activity);
+        seperator.setBackgroundResource(R.drawable.divider);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        params.setMargins(0, 10, 0, 20);
+        seperator.setLayoutParams(params);
+        seperator.setPadding(0, 2, 0, 2);
+        levelsList().addView(seperator);
+
+        remove_listener.seperator_to_remove = seperator;
     }
 
     public Level editing_level;
@@ -163,14 +177,18 @@ public class LevelTracker {
         LinearLayout level_view_to_remove;
         Level level_to_remove;
 
+        ImageView seperator_to_remove;
+
         RemoveLevelListener(LinearLayout level_view, Level level) {
             level_view_to_remove = level_view;
             level_to_remove = level;
+            seperator_to_remove = null;
         }
 
         public void onClick(View v) {
             levels.remove(level_to_remove);
             levelsList().removeView(level_view_to_remove);
+            if(seperator_to_remove != null) levelsList().removeView(seperator_to_remove);
             storeFields();
         }
     }

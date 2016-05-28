@@ -101,9 +101,9 @@ public class NoteTracker {
         value_tv.setText(value);
         remove.setBackgroundResource(R.drawable.minus);
 
-        label_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
-        value_tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT, 0.7f));
-        remove.setLayoutParams(new LinearLayout.LayoutParams(15, 30, 0.05f));
+        label_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.25f));
+        value_tv.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 0.7f));
+        remove.setLayoutParams(new LinearLayout.LayoutParams(0, 30, 0.05f));
 
         label_tv.setPadding(10, 0, 0, 0);
         remove.setPadding(0, 0, 10, 0);

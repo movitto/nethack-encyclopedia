@@ -82,8 +82,8 @@ public class Potion extends Item {
     public static Potion extract(String str) {
         String attrs[] = str.split("-");
         Potion potion = new Potion();
-        potion.quaff_effect = attrs[0];
-        potion.throw_effect = attrs[1];
+        if(attrs.length > 0) potion.quaff_effect = attrs[0];
+        if(attrs.length > 1) potion.throw_effect = attrs[1];
         return potion;
     }
 

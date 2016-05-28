@@ -90,14 +90,14 @@ public class DamageCalculator {
         return activity.getResources().getStringArray(R.array.monster_size_array)[0];
     }
 
-    private String defaultWithWithoutRindIncreasedDamage() {
+    private String defaultWithWithoutRingIncreasedDamage() {
         return activity.getResources().getStringArray(R.array.with_without_array)[0];
     }
 
     private void restoreUIPrefs() {
         restorePrefs();
         monsterSizeButton().setText(defaultMonsterSize());
-        ringIncreasedDamageButton().setText(defaultWithWithoutRindIncreasedDamage());
+        ringIncreasedDamageButton().setText(defaultWithWithoutRingIncreasedDamage());
         strengthInput().setText(Integer.toString(strength));
         minDmgInput().setText(Integer.toString(min_weapon_damage));
         maxDmgInput().setText(Integer.toString(max_weapon_damage));
@@ -206,6 +206,7 @@ public class DamageCalculator {
 
     private void setListeners() {
         event_listener = new DamageCalculatorInputChangedListener();
+        feature_event_listener = new DamageCalculatorFeatureToggledListener();
         monsterSizeButton().setOnClickListener(feature_event_listener);
         ringIncreasedDamageButton().setOnClickListener(feature_event_listener);
         strengthInput().addTextChangedListener(event_listener);
@@ -317,6 +318,19 @@ public class DamageCalculator {
         updateOutput();
     }
 
+    private void hideRingInput(){
+        EditText input = ringIncreasedDamageInput();
+        input.setVisibility(View.INVISIBLE);
+        input.setLayoutParams(new LayoutParams(0, 0, 0));
+        input.setText("0");
+    }
+
+    private void showRingInput(){
+        EditText input = ringIncreasedDamageInput();
+        input.setVisibility(View.VISIBLE);
+        input.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 0.5f));
+    }
+
     private String[] selectedFeature(View target){
         int id = target.getId();
 
@@ -352,48 +366,15 @@ public class DamageCalculator {
         return values[nextFeatureValueIndex(feature_button)];
     }
 
-    private boolean lastFeatureValue(Button feature_button){
-        String[] values = selectedFeature(feature_button);
-        return nextFeatureValueIndex(feature_button) == values.length - 1;
-    }
-
-    private int selectedInputId(View target){
-        return target.getId() == R.id.ring_increased_damage_button ? R.id.ringIncreasedDamageInput : -1;
-    }
-
-    private boolean selectedFeatureHasInput(View target){
-        return selectedInputId(target) != -1;
-    }
-
-    private EditText selectedInput(View target){
-        return ((EditText) activity.findViewById(selectedInputId(target)));
-    }
-
-    private void hideFeatureInput(Button feature_button){
-        EditText input = selectedInput(feature_button);
-        input.setVisibility(View.INVISIBLE);
-        input.setLayoutParams(new LayoutParams(0, 0, 0));
-        input.setText("0");
-    }
-
-    private void showFeatureInput(Button feature_button){
-        EditText input = selectedInput(feature_button);
-        input.setVisibility(View.VISIBLE);
-        input.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 0.5f));
-    }
 
     // manipulates the ui based on current state
     public void toggleDamageFeatures(View target) {
         Button feature_button = (Button) target;
         feature_button.setText(nextFeatureValue(feature_button));
 
-        if (selectedFeatureHasInput(feature_button)) {
-            if (lastFeatureValue(feature_button))
-                hideFeatureInput(feature_button);
-            else
-                showFeatureInput(feature_button);
-
-            updateView();
-        }
+        if(ringIncreasedDamageButton().getText().equals("with"))
+            showRingInput();
+        else
+            hideRingInput();
     }
 }

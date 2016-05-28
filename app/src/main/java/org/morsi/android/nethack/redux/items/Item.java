@@ -125,6 +125,17 @@ public class Item {
         String attrs[] = str.split("-");
         String type = attrs[0];
 
+        boolean valid_type = type.equals(Potion.type()) ||
+                type.equals(Scroll.type()) ||
+                type.equals(Wand.type()) ||
+                type.equals(SpellBook.type()) ||
+                type.equals(Ring.type()) ||
+                type.equals(Amulet.type()) ||
+                type.equals(Gem.type());
+
+        if(attrs.length < 5 || !valid_type)
+            return null;
+
         // XXX
         int num_remaining = attrs.length - 5;
         String remaining_attrs[] = new String[num_remaining];
@@ -158,7 +169,7 @@ public class Item {
     // should be overridden in subclasses (supprting game tracker)
     protected ArrayList<String> compactStringList(){
         ArrayList<String> s = new ArrayList<String>();
-        s.add(type());
+        s.add(itemType());
         s.add(name);
         s.add(appearance);
         s.add(Integer.toString(buy_price));

@@ -115,7 +115,10 @@
             What's more, the attack won't interrupt your engraving—once you start engraving, you can't protect yourself until
             you are done. For this reason, if you are under attack, you should only engrave by a fast method.</content></item>
 
-        <item><content>Methods:<br/><br/>
+    </section>
+
+    <section name="Engraving Methods">
+        <item><content>
             <b>Burning into the ground</b>. Text written with a wand of fire or lightning (with at least one charge) will be burnt into the ground, and will not erode.
             (It will vanish if you engrave over it with a wand of cold; you can also remove it by engraving in the ground; see below).
             Because this is done with wands, it is a fast method.<br/><br/>
@@ -326,7 +329,10 @@
         
         <item><content>Tinned food is eaten in one turn, so both initial and final effects (including intrinsic gains)
             happen on the same turn, the initial effects happening first. </content></item>
-        
+
+    </section>
+
+    <section name="Food Poisoning">
         <item><content>Corpses that have been left too long may give you food poisoning.<br/>
                 Lizard and lichen corpses never rot.<br/>
                 Corpses left on ice age half as quickly, corpses in iceboxes do not age at all.<br/>
@@ -351,8 +357,10 @@
             + #invoking the Staff of Aesculapius<br/>
             + a nurse's healing "attack"<br/>
             + polymorphing into your own form, or a sickness-resistant monster (a ghoul or any F)</content></item>
-        
-        <item><content>Monsters not leaving corpses <br/>d
+    </section>
+
+    <section name="Monsters not leaving corpses ">
+        <item><content>
                 air elemental<br/>
                 Aleax<br/>
                 Angel<br/>

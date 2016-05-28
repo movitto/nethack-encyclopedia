@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -92,6 +93,8 @@ public class GameTrackerActivity extends Activity {
     }
 
     public void onClickNewTrackerButton(View target) {
+        target.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
+
         if (playerSelected())
             player_tracker.newTrackerPopup();
         else if (levelSelected())
@@ -102,7 +105,8 @@ public class GameTrackerActivity extends Activity {
             note_tracker.newTrackerPopup();
     }
 
-    public void onClickResetTrackerButton(View target) {
+    public void onClickResetTrackerButton(View target){
+        target.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
         confirmTrackerReset();
     }
 

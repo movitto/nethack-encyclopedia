@@ -18,6 +18,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 
 // Main NethackEncyclopedia entry point activity,
 //   simply provide means which to access sub-activities
@@ -55,36 +57,60 @@ public class NethackEncyclopedia extends Activity {
     }
 
     public void onClickQuickStatsButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, QuickStatsActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.quickstats_button),
+                new Intent(NethackEncyclopedia.this, QuickStatsActivity.class));
     }
 
     public void onClickEncyclopediaButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, EncyclopediaActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.encyclopedia_button),
+                new Intent(NethackEncyclopedia.this, EncyclopediaActivity.class));
     }
 
     public void onClickMessagesButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, MessagesActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.messages_button),
+                new Intent(NethackEncyclopedia.this, MessagesActivity.class));
     }
 
     public void onClickCalculatorButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, CalculatorActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.calculator_button),
+                new Intent(NethackEncyclopedia.this, CalculatorActivity.class));
     }
 
     public void onClickGameTrackerButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, GameTrackerActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.game_tracker_button),
+                new Intent(NethackEncyclopedia.this, GameTrackerActivity.class));
     }
 
     public void onClickTutorialButton(View target) {
-        Intent myIntent = new Intent(NethackEncyclopedia.this, TutorialActivity.class);
-        NethackEncyclopedia.this.startActivity(myIntent);
+        animateSelection(findViewById(R.id.tutorial_button),
+                new Intent(NethackEncyclopedia.this, TutorialActivity.class));
     }
 
     public void onClickAboutButton(View target) {
         showDialog(AndroidMenu.DIALOG_ABOUT_ID);
+    }
+
+    private void animateSelection(View view, final Intent intent){
+        Animation anim = new ScaleAnimation(1.5f, 1.5f,                         // x start / end
+                                            1f, 1f,                             // y start / end
+                                            Animation.RELATIVE_TO_SELF, 0,      // x pivot
+                                            Animation.RELATIVE_TO_SELF, 1f);    // y pivot
+        anim.setDuration(250);
+        anim.setFillAfter(false); // discard result of the animation
+
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationEnd(Animation anim){
+                NethackEncyclopedia.this.startActivity(intent);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation anim) {}
+
+            @Override
+            public void onAnimationStart(Animation anim) {}
+        });
+
+        view.startAnimation(anim);
     }
 }

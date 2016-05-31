@@ -175,6 +175,7 @@ public class QuickStatsActivity extends Activity {
 
             label.setGravity(Gravity.CENTER);
             label.setLayoutParams(new LayoutParams(0, LayoutParams.FILL_PARENT, weights.get(i).floatValue()));
+            label.setPadding(0, 15, 0, 15);
             row.addView(label);
         }
 

@@ -72,7 +72,7 @@ public class EncyclopediaPage extends Activity
 	            @Override
 	            public boolean shouldOverrideUrlLoading(WebView view, String url)
 	            {
-	                if(url.startsWith("fake:///")){
+	                if(url.startsWith("file:///")){
 	            		int end = url.indexOf('#');
 	                    if(end == -1) end = url.length();
 
@@ -87,19 +87,10 @@ public class EncyclopediaPage extends Activity
 	           }
 	        });
 
-	        // XXX hack needed to introduce delay between loading of webview
-	        // and loading of the data to get anchors working properly
-	        // http://stackoverflow.com/questions/3039555/android-webview-anchor-link-jump-link-not-working
-	        Timer timer = new Timer();
-	        timer.schedule(new TimerTask() {
-	            @Override
-	            public void run() {
-	    	        // need to use loadDataWithBaseURL:
-	    	        // http://code.google.com/p/android-rss/issues/detail?id=15
-	            	web_view.loadDataWithBaseURL("fake:///" + current_page + current_anchor,
-	            								 entry.get_content(web_view.getContext()).toString(),  "text/html", "utf-8", null);
-	            }
-	        }, 400);
+            // need to use loadDataWithBaseURL & valid base url:
+            // http://code.google.com/p/android-rss/issues/detail?id=15
+            web_view.loadDataWithBaseURL("file:///" + current_page + current_anchor,
+                    entry.get_content(web_view.getContext()).toString(),  "text/html", "utf-8", null);
 
         }
 

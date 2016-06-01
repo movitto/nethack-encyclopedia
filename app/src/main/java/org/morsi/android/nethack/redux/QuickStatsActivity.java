@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
@@ -155,6 +156,10 @@ public class QuickStatsActivity extends Activity {
             statsTable().addView(statRow(category, stat), statRowLayout());
     }
 
+    private TextView tableHeader(QuickStatCategory category, String header){
+        return (TextView)((TableRow)statsTable().getChildAt(0)).getChildAt(category.column_names.indexOf(header));
+    }
+
     private TableRow tableHeader(QuickStatCategory category){
         List<String> columns = category.column_names;
         List<Double> weights = category.column_weights;
@@ -166,7 +171,9 @@ public class QuickStatsActivity extends Activity {
             label.setEllipsize(TruncateAt.MARQUEE);
 
             // wire up click listener to stort columns
-            label.setOnClickListener(new ColumnClickedListener());
+            ColumnClickedListener listener = new ColumnClickedListener();
+            listener.activity = this;
+            label.setOnClickListener(listener);
             label.setTextColor(getResources().getColor(R.color.light_blue));
 
             // if no weight specified, weigh all columns equally
@@ -247,12 +254,16 @@ public class QuickStatsActivity extends Activity {
 
     // Handles clicks to the column headers by sorting the table
     class ColumnClickedListener implements OnClickListener {
+        QuickStatsActivity activity;
+
         public void onClick(View v) {
             QuickStatCategory selected = selectedCategory();
             String sort_column = ((TextView) v).getText().toString();
             selected.sort_stats(sort_column);
             clearStats();
             displayStats(selected);
+
+            tableHeader(selected, sort_column).startAnimation(AnimationUtils.loadAnimation(activity, R.anim.scale_text));
         }
     }
 
